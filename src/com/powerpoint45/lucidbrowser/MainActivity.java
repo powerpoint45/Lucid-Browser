@@ -575,10 +575,7 @@ public class MainActivity extends BrowserHandler {
 			android.os.Process.killProcess(android.os.Process.myPid());
 			break;
 		case R.id.browser_exit:
-			if (Properties.webpageProp.clearonexit){
-				clearTraces();
-			}
-			finish();
+			doExiting();
 			break;
 		case R.id.browser_toggle_desktop:
 			mGlobalPrefs.edit().putBoolean("usedesktopview", !Properties.webpageProp.useDesktopView).commit();
@@ -599,6 +596,38 @@ public class MainActivity extends BrowserHandler {
 			break;
 		}
 	}
+	
+	private void exitBrowser(){
+		if (Properties.webpageProp.clearonexit){
+			clearTraces();
+		}
+		finish();
+	}
+
+	private void doExiting() {
+		if (Properties.webpageProp.exitconfirmation){
+			exitBrowserWithConfirmation();
+		} else {
+			exitBrowser();
+		}
+	}
+	
+	private void exitBrowserWithConfirmation() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.activity);
+		builder.setMessage(R.string.confirm_exit_text)
+		       .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+		           public void onClick(DialogInterface dialog, int id) {
+		        	   exitBrowser();
+		           }
+		       })
+		       .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+		           public void onClick(DialogInterface dialog, int id) {
+		           }
+		       });
+		Dialog d = builder.create();
+		d.show();
+	}
+	
 	
 	public void removeBookmark(int pos){
 		int numBooks=MainActivity.mPrefs.getInt("numbookmarkedpages", 0);
@@ -811,33 +840,14 @@ public class MainActivity extends BrowserHandler {
 			}
 			if ((WV!=null && WV.canGoBack()==false) || webWindows.size()==0){
 				// TODO Works fine now, but unless page isn't reloaded, user won't notice cleared cookies
-				if (Properties.webpageProp.clearonexit){
-					clearTraces();
-				}
-				
-				if (Properties.webpageProp.exitconfirmation){
-				AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.activity);
-		        builder.setMessage(R.string.confirm_exit_text)
-		               .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-		                   public void onClick(DialogInterface dialog, int id) {
-		                       finish();
-		                   }
-		               })
-		               .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-		                   public void onClick(DialogInterface dialog, int id) {
-		                   }
-		               });
-		        Dialog d = builder.create();
-		        d.show();
-				}else{
-					finish();
-				}
-				
+				doExiting();
 			}
 				return true;
         }
 	    return false;
-	};
+	}
+
+	
 	
 	@Override
 	public void onUserLeaveHint(){
