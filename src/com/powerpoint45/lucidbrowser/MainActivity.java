@@ -17,6 +17,7 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -315,10 +316,7 @@ public class MainActivity extends BrowserHandler {
 		            response = httpclient.execute(new HttpGet("http://suggestqueries.google.com/complete/search?client=firefox&q="+URLEncoder.encode(term[0], "utf-8")));
 		            StatusLine statusLine = response.getStatusLine();
 		            if(statusLine.getStatusCode() == HttpStatus.SC_OK){
-		                ByteArrayOutputStream out = new ByteArrayOutputStream();
-		                response.getEntity().writeTo(out);
-		                out.close();
-		                responseString = out.toString();
+		            	responseString = EntityUtils.toString(response.getEntity(), "UTF-8");
 		            } else{
 		                //Closes the connection.
 		                response.getEntity().getContent().close();
@@ -351,10 +349,7 @@ public class MainActivity extends BrowserHandler {
 		        		((AutoCompleteTextView) bar.findViewById(R.id.browser_searchbar)).setAdapter(suggestionsAdapter);
 		        	}
 		        	else
-		        		suggestionsAdapter.notifyDataSetChanged();
-		        	
-		        	
-		
+		        		suggestionsAdapter.notifyDataSetChanged();		
 	    		}
 	        	
 			} catch (JSONException e) {
