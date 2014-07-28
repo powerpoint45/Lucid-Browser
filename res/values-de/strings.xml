@@ -410,10 +410,6 @@
 <string name="apply">Anwenden</string>
 <string name="processing">Symbolthema wird übernommen</string>
 
-
-
-
-
-
+<string name="remove_browsing_traces">Browserspuren entfernen...</string>
 
 </resources>

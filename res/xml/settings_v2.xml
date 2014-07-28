@@ -104,8 +104,25 @@
                 android:summary=""
                 android:title="@string/enablecookies" />
             
+			<PreferenceScreen android:title="@string/remove_browsing_traces" >
+            <Preference
+                android:key="clearbrowserhistory"
+                android:title="@string/clearhistorytitle" />
+            <Preference
+                android:key="clearbrowsercache"
+                android:title="@string/clearcachetitle" />
+            <Preference
+                android:key="clearbrowsercookies"
+                android:title="@string/clearcookiestitle" />
+            
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="clearonexit"
+                android:summary="@string/clearonexitsummary"
+                android:title="@string/clearonexittitle" />
+			</PreferenceScreen>
+            
         </PreferenceCategory>
-        
         
         <PreferenceCategory android:title="@string/cat_title_appearance" >
            
@@ -136,22 +153,7 @@
         </PreferenceCategory>
         
         <PreferenceCategory android:title="@string/cat_title_tools" >
-            <Preference
-                android:key="clearbrowserhistory"
-                android:title="@string/clearhistorytitle" />
-            <Preference
-                android:key="clearbrowsercache"
-                android:title="@string/clearcachetitle" />
-            <Preference
-                android:key="clearbrowsercookies"
-                android:title="@string/clearcookiestitle" />
 
-            <CheckBoxPreference
-                android:defaultValue="false"
-                android:key="clearonexit"
-                android:summary="@string/clearonexitsummary"
-                android:title="@string/clearonexittitle" />
-            
             <CheckBoxPreference
                 android:defaultValue="false"
                 android:key="closetabsonexit"
