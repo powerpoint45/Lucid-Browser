@@ -237,13 +237,6 @@ public class MainActivity extends BrowserHandler {
         	}
         }
 		
-		
-		
-		
-		
-		
-		
-		
 		if (Properties.appProp.systemPersistent){
 			Intent notificationIntent = new Intent(this, MainActivity.class);  
 			PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,   
@@ -261,26 +254,7 @@ public class MainActivity extends BrowserHandler {
 			mNotificationManager.notify(1, mBuilder.build());
 		}
 		
-		
-		
-		((TextView) bar.findViewById(R.id.browser_searchbar)).addTextChangedListener(new TextWatcher() {
-			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				if (s.toString().compareTo(assetHomePage)==0){
-					((TextView) bar.findViewById(R.id.browser_searchbar)).setText(getResources().getString(R.string.urlbardefault));
-					MainActivity.browserListViewAdapter.notifyDataSetChanged();
-				}
-				
-				new RetrieveSearchTask().execute(s.toString());
-			}
-			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
-			}
-			@Override
-			public void afterTextChanged(Editable s) {
-			}
-		});
+		setupSuggestionListeners();
 		contentView.addView(webLayout);
 		setContentView(mainView);
 
@@ -302,6 +276,27 @@ public class MainActivity extends BrowserHandler {
 		    }
 		});
 		
+	}
+
+	private void setupSuggestionListeners() {
+		((TextView) bar.findViewById(R.id.browser_searchbar)).addTextChangedListener(new TextWatcher() {
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				if (s.toString().compareTo(assetHomePage)==0){
+					((TextView) bar.findViewById(R.id.browser_searchbar)).setText(getResources().getString(R.string.urlbardefault));
+					MainActivity.browserListViewAdapter.notifyDataSetChanged();
+				}
+				
+				new RetrieveSearchTask().execute(s.toString());
+			}
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+			}
+			@Override
+			public void afterTextChanged(Editable s) {
+			}
+		});
 	}
 	
 	class RetrieveSearchTask extends AsyncTask<String, Void, String> {
@@ -335,7 +330,6 @@ public class MainActivity extends BrowserHandler {
 	    	try {
 	    		if (feed!=null){
 		        	JSONArray jArray = new JSONArray(feed).getJSONArray(1);
-		        	
 		        	
 		        	responses.clear();
 		        	for (int i=0; i< jArray.length(); i++){
@@ -491,71 +485,16 @@ public class MainActivity extends BrowserHandler {
 			}
             break;
 		case R.id.browser_find_on_page:
-			RelativeLayout findView = (RelativeLayout) inflater.inflate(R.layout.find_on_page, null);
-			findView.getBackground().setColorFilter(Properties.appProp.actionBarColor | 0xFF000000, Mode.MULTIPLY);
+			SetupLayouts.setUpFindBar();
+			setUpFindBarListeners();
+			suggestionsAdapter = null;
 			
-			int textColor = Color.rgb(255-Color.red(Properties.appProp.actionBarColor),
-                    255-Color.green(Properties.appProp.actionBarColor),
-                    255-Color.blue(Properties.appProp.actionBarColor));
+			// Focus on Find Bar
+			TextView findText = (TextView) bar.findViewById(R.id.find_searchbar);
+			findText.requestFocus();
+			InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+			imm.showSoftInput(findText, InputMethodManager.SHOW_IMPLICIT);
 			
-			((EditText)findView.findViewById(R.id.find_input)).setTextColor(textColor);
-			((Button)findView.findViewById(R.id.find_back)).setTextColor(textColor);
-			((Button)findView.findViewById(R.id.find_forward)).setTextColor(textColor);
-			
-			((Button)findView.findViewById(R.id.find_back)).setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					WV.findNext(false);
-				}
-			});
-			
-			((Button)findView.findViewById(R.id.find_forward)).setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					WV.findNext(true);
-				}
-			});
-			
-			((EditText)findView.findViewById(R.id.find_input)).addTextChangedListener(new TextWatcher() {
-				
-				@Override
-				public void onTextChanged(CharSequence s, int start, int before, int count) {
-					WV.findAll(s.toString());	
-				}
-				
-				@Override
-				public void beforeTextChanged(CharSequence s, int start, int count,
-						int after) {
-					// TODO Auto-generated method stub
-					
-				}
-				
-				@Override
-				public void afterTextChanged(Editable s) {
-					// TODO Auto-generated method stub
-					
-				}
-			});
-			
-			PopupWindow pw = new PopupWindow(
-					findView, 
-				       android.widget.RelativeLayout.LayoutParams.WRAP_CONTENT, 
-				       android.widget.RelativeLayout.LayoutParams.WRAP_CONTENT, 
-				       true);
-				    // The code below assumes that the root container has an id called 'main'
-			pw.setFocusable(true);
-			pw.setBackgroundDrawable(new ColorDrawable());
-			pw.setOnDismissListener(new OnDismissListener() {
-				
-				@Override
-				public void onDismiss() {
-					WV.findAll("");
-				}
-			});
-			pw.showAsDropDown(bar, Properties.numtodp(5), 0);
-            //WV.findAllAsync(find);
 			break;
 		case R.id.browser_open_bookmarks:
             startActivity(new Intent(ctxt,BookmarksActivity.class));
@@ -595,6 +534,58 @@ public class MainActivity extends BrowserHandler {
 			}
 			break;
 		}
+	}
+
+	private void setUpFindBarListeners() {
+		
+		final CustomWebView WV = (CustomWebView) webLayout.findViewById(R.id.browser_page);
+		
+		// Setup Button Listeners
+		((ImageView)bar.findViewById(R.id.find_exit)).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				SetupLayouts.dismissFindBar();
+				setupSuggestionListeners();
+			}
+		});	
+		
+		((ImageView)bar.findViewById(R.id.find_back)).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				WV.findNext(false);
+			}
+		});
+		
+		((ImageView)bar.findViewById(R.id.find_forward)).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				WV.findNext(true);
+			}
+		});
+		
+		((EditText)bar.findViewById(R.id.find_searchbar)).addTextChangedListener(new TextWatcher() {
+			
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				WV.findAll(s.toString());
+			}
+			
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void afterTextChanged(Editable s) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 	}
 	
 	private void exitBrowser(){
@@ -814,8 +805,6 @@ public class MainActivity extends BrowserHandler {
 		    ClipData clip = ClipData.newPlainText("Copied URL", url);
 		    clipboard.setPrimaryClip(clip);
 
-			
-			
 		}	
 	}
 	
@@ -828,6 +817,13 @@ public class MainActivity extends BrowserHandler {
 			return true;
         }
 		if (event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
+			//Finder is active, close it then
+			if (bar.findViewById(R.id.finder)!=null){
+				SetupLayouts.dismissFindBar();
+				setupSuggestionListeners();
+				return true;
+			}
+			
 			CustomWebView WV = (CustomWebView) webLayout.findViewById(R.id.browser_page);
 			
 			if (WV!=null){

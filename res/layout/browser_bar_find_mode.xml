@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageButton
+        android:id="@+id/find_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/button"
+        android:onClick="browserActionClicked"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:src="@drawable/btn_toolbar_stop_loading_normal" />
+
+    <RelativeLayout
+        android:id="@+id/finder"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/find_back"
+        android:layout_toRightOf="@+id/find_exit" >
+
+        <ImageView
+            android:id="@+id/backdrop"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="7dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/round_edges_less" >
+        </ImageView>
+
+        <EditText
+            android:id="@+id/find_searchbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:imeOptions="actionGo"
+            android:inputType="textUri"
+            android:longClickable="true"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textCursorDrawable="@null" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/find_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_toLeftOf="@+id/find_forward"
+        android:background="@drawable/button"
+        android:onClick="browserActionClicked"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:src="@drawable/back" />
+
+    <ImageButton
+        android:id="@+id/find_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/button"
+        android:onClick="browserActionClicked"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:src="@drawable/forward" />
+
+</RelativeLayout>
