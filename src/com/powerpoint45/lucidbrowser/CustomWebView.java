@@ -43,6 +43,7 @@ public class CustomWebView extends WebView {
 	public CustomWebView(Context context, AttributeSet set, String url) {
 		super(context, set);
 		this.setId(R.id.browser_page);
+		setLayerType(View.LAYER_TYPE_HARDWARE, null);
 		if (url == null)
 			this.loadUrl(MainActivity.mPrefs.getString("browserhome",
 					MainActivity.assetHomePage));

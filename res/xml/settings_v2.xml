@@ -5,34 +5,30 @@
     <PreferenceScreen
         android:key="mainsettings"
         android:title="@string/mainsettingstitle" >
-        
-        <PreferenceCategory android:title="@string/cat_title_appearance"
-            android:key="mainsettings_appearance" >
+        <PreferenceCategory
+            android:key="mainsettings_appearance"
+            android:title="@string/cat_title_appearance" >
             <CheckBoxPreference
                 android:defaultValue="false"
                 android:key="fullscreen"
                 android:summary="@string/fullscreensummary"
                 android:title="@string/fullscreentitle" />
-            
             <CheckBoxPreference
-	            android:title="@string/transparentnavtitle"
-	            android:key="transparentnav"
-	            android:summary="@string/transparentnavsummary"
-	            android:defaultValue="false" />
-            
-        	<CheckBoxPreference
-	            android:title="@string/transparentstatustitle"
-	            android:key="transparentstatus"
-	            android:summary="@string/transparentstatussummary"
-	            android:defaultValue="true" />
-        	
-        	<CheckBoxPreference
-	            android:title="@string/holoDarkTitle"
-	            android:key="holodark"
-	            android:summary="@string/holoDarkSummary"
-	            android:defaultValue="false" />
+                android:defaultValue="false"
+                android:key="transparentnav"
+                android:summary="@string/transparentnavsummary"
+                android:title="@string/transparentnavtitle" />
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="transparentstatus"
+                android:summary="@string/transparentstatussummary"
+                android:title="@string/transparentstatustitle" />
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="holodark"
+                android:summary="@string/holoDarkSummary"
+                android:title="@string/holoDarkTitle" />
         </PreferenceCategory>
-        
         <PreferenceCategory android:title="@string/cat_title_actionbar" >
             <preferences.ColorPickerPreference
                 android:defaultValue="@color/urlback"
@@ -44,14 +40,14 @@
                 android:key="textcolor"
                 android:summary="@string/textcolorsummary"
                 android:title="@string/textcolortitle" />
-            
         </PreferenceCategory>
-        
     </PreferenceScreen>
-    
-    <PreferenceScreen android:title="@string/sidebarsettingstitle"
-        android:key="sidebarsettings">
-        <PreferenceCategory android:title="@string/cat_title_appearance" android:key="sideappearance">
+    <PreferenceScreen
+        android:key="sidebarsettings"
+        android:title="@string/sidebarsettingstitle" >
+        <PreferenceCategory
+            android:key="sideappearance"
+            android:title="@string/cat_title_appearance" >
             <ListPreference
                 android:defaultValue="b"
                 android:entries="@array/sidebarthemes"
@@ -59,13 +55,12 @@
                 android:key="sidebartheme"
                 android:summary="@string/sidebarthemesummary"
                 android:title="@string/sidebarthemetitle" />
-            
+
             <preferences.ColorPickerPreference
                 android:defaultValue="@android:color/black"
                 android:key="sidebarcolor"
                 android:summary="@string/sidebarcolorsummary"
                 android:title="@string/sidebarcolortitle" />
-            
             <preferences.ColorPickerPreference
                 android:defaultValue="@android:color/white"
                 android:key="sidebartextcolor"
@@ -73,59 +68,54 @@
                 android:title="@string/sidebartextcolortitle" />
 
             <CheckBoxPreference
-	            android:title="@string/sidebar_switched_title"
-	            android:key="swapLayout"
-	            android:summary="@string/sidebar_switched_summary"
-	            android:defaultValue="false"/>
+                android:defaultValue="false"
+                android:key="swapLayout"
+                android:summary="@string/sidebar_switched_summary"
+                android:title="@string/sidebar_switched_title" />
         </PreferenceCategory>
     </PreferenceScreen>
-    
     <PreferenceScreen android:title="@string/websettingstitle" >
         <PreferenceCategory android:title="@string/cat_title_content" >
-           
             <CheckBoxPreference
                 android:defaultValue="true"
                 android:key="enableimages"
                 android:summary=""
                 android:title="@string/enableimages" />
 
-           <!-- Uncomment if wanted by users
+            <!--
+            Uncomment if wanted by users
             <CheckBoxPreference
                 android:defaultValue="true"
                 android:key="enablejavascript"
                 android:summary=""
-                android:title="@string/enablejavascript" />
-                -->
-            
+                android:title="@string/enablejavascript" />
+            -->
 
             <CheckBoxPreference
                 android:defaultValue="true"
                 android:key="enablecookies"
                 android:summary=""
                 android:title="@string/enablecookies" />
-            
-			<PreferenceScreen android:title="@string/remove_browsing_traces" >
-            <Preference
-                android:key="clearbrowserhistory"
-                android:title="@string/clearhistorytitle" />
-            <Preference
-                android:key="clearbrowsercache"
-                android:title="@string/clearcachetitle" />
-            <Preference
-                android:key="clearbrowsercookies"
-                android:title="@string/clearcookiestitle" />
-            
-            <CheckBoxPreference
-                android:defaultValue="false"
-                android:key="clearonexit"
-                android:summary="@string/clearonexitsummary"
-                android:title="@string/clearonexittitle" />
-			</PreferenceScreen>
-            
+
+            <PreferenceScreen android:title="@string/remove_browsing_traces" >
+                <Preference
+                    android:key="clearbrowserhistory"
+                    android:title="@string/clearhistorytitle" />
+                <Preference
+                    android:key="clearbrowsercache"
+                    android:title="@string/clearcachetitle" />
+                <Preference
+                    android:key="clearbrowsercookies"
+                    android:title="@string/clearcookiestitle" />
+
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:key="clearonexit"
+                    android:summary="@string/clearonexitsummary"
+                    android:title="@string/clearonexittitle" />
+            </PreferenceScreen>
         </PreferenceCategory>
-        
         <PreferenceCategory android:title="@string/cat_title_appearance" >
-           
             <CheckBoxPreference
                 android:defaultValue="true"
                 android:key="showbrowserbackdrop"
@@ -138,37 +128,33 @@
                 android:key="urlbarcolor"
                 android:summary="@string/urlbarcolorsummary"
                 android:title="@string/urlbarcolortitle" />
+
             <CheckBoxPreference
                 android:defaultValue="false"
                 android:key="usedesktopview"
                 android:summary="@string/desktopviewsummary"
                 android:title="@string/desktopviewtitle" />
-            
+
             <preferences.SeekBarPreference
                 android:defaultValue="2"
                 android:key="webfontsize"
                 android:max="4"
                 android:summary="@string/font_size_summary"
-                android:title="@string/font_size_title"/>
+                android:title="@string/font_size_title" />
         </PreferenceCategory>
-        
         <PreferenceCategory android:title="@string/cat_title_tools" >
-
             <CheckBoxPreference
                 android:defaultValue="false"
                 android:key="closetabsonexit"
                 android:summary="@string/close_tabs_on_exit_summary"
                 android:title="@string/close_tabs_on_exit_title" />
-            
             <CheckBoxPreference
                 android:defaultValue="false"
                 android:key="exitconfirmation"
                 android:summary="@string/exit_confirmation_summary"
                 android:title="@string/exit_confirmation_title" />
-
-            </PreferenceCategory>
+        </PreferenceCategory>
     </PreferenceScreen>
-    
     <PreferenceScreen android:title="@string/advancedsettingstitle" >
         <PreferenceCategory android:title="@string/cat_title_setup" >
             <Preference
@@ -188,8 +174,8 @@
     <Preference
         android:icon="@drawable/pro"
         android:key="pro"
-        android:title="@string/pro_name"
-        android:summary="@string/prodescription" >
+        android:summary="@string/prodescription"
+        android:title="@string/pro_name" >
         <intent
             android:action="android.intent.action.VIEW"
             android:data="http://play.google.com/store/apps/details?id=com.powerpoint45.launcherpro" />
