@@ -33,6 +33,7 @@ public class Properties extends MainActivity {
 	public static class webpageProp{
 		static boolean showBackdrop;
 		static boolean useDesktopView;
+		static boolean disablesuggestions;
 		static boolean clearonexit;
 		static boolean closetabsonexit;
 		static boolean enableimages;
@@ -46,6 +47,7 @@ public class Properties extends MainActivity {
 	public static void update_preferences(){
 		webpageProp.showBackdrop=MainActivity.mGlobalPrefs.getBoolean("showbrowserbackdrop",true);
 		webpageProp.useDesktopView=MainActivity.mGlobalPrefs.getBoolean("usedesktopview",false);
+		webpageProp.disablesuggestions=MainActivity.mGlobalPrefs.getBoolean("disablesuggestions", false);
 		webpageProp.clearonexit=MainActivity.mGlobalPrefs.getBoolean("clearonexit",false);
 		webpageProp.enableimages=MainActivity.mGlobalPrefs.getBoolean("enableimages", true);
 		//webpageProp.enablejavascript=MainActivity.mGlobalPrefs.getBoolean("enablejavascript", true);

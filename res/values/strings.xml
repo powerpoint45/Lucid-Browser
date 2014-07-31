@@ -351,7 +351,9 @@
 
 <string name="holoDarkTitle">Use dark Theme</string>
 <string name="holoDarkSummary">Check to use a dark theme in settings and bookmarks (Will restart settings to apply theme)</string>
+<string name="remove_browsing_traces">Remove browser traces&#8230;</string>
 
-<string name="remove_browsing_traces">Remove browser traces...</string>
+<string name="disable_suggestions_title">Disable search suggestions</string>
+<string name="disable_suggestions_summary"></string>
 
 </resources>

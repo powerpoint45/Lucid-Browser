@@ -98,8 +98,6 @@ public class SetupLayouts extends MainActivity {
 			browserListView.setBackgroundColor(Color.argb(
 					254, 255, 255, 255));
 			activity.setContentView(R.layout.browser_item);
-
-			
 		} else {
            browserListView.setBackgroundColor(Properties.sidebarProp.sideBarColor);
 		}
@@ -273,16 +271,20 @@ public class SetupLayouts extends MainActivity {
 		final AutoCompleteTextView ET = ((AutoCompleteTextView) browserBar
 				.findViewById(R.id.browser_searchbar));
 		
-		responses    = new Vector<String>(0);
-		suggestionsAdapter        = new BrowserBarAdapter(activity, 0, responses);
-		
-		ET.setAdapter(suggestionsAdapter);
-		ET.setScrollContainer(true);
-		
-		ET.setDropDownAnchor(R.id.address_bar);
-    	ET.setDropDownWidth(LayoutParams.MATCH_PARENT);
+		// Suggestions
+		if (!Properties.webpageProp.disablesuggestions){
+			responses    = new Vector<String>(0);
+			suggestionsAdapter        = new BrowserBarAdapter(activity, 0, responses);
 
-    	ET.setThreshold(0);
+			ET.setAdapter(suggestionsAdapter);
+			ET.setScrollContainer(true);
+
+			ET.setDropDownAnchor(R.id.address_bar);
+			ET.setDropDownWidth(LayoutParams.MATCH_PARENT);
+
+			ET.setThreshold(0);
+		}
+		
 		ET.setOnLongClickListener(new OnLongClickListener() {
 			
 			@Override
