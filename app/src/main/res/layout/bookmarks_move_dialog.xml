@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/current_location"
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:background="#e0e0e0"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center|left"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text="/"
+        android:textAppearance="?android:attr/listSeparatorTextViewStyle"
+        android:textColor="@color/gray"/>
+
+    <RelativeLayout
+        android:id="@+id/folder_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/current_location"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/bookmark_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/bookmark_icon"
+            android:background="@drawable/button"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text=".."
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/gray"/>
+
+        <ImageView
+            android:id="@+id/bookmark_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_action_collection" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/bookmarksfolder_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_move_here"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/folder_back"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/btn_move_here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" 
+        android:text="@string/move_here" />
+
+</RelativeLayout>

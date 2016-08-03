@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/web_footer" >
+
+    <TextView
+        android:id="@+id/browser_open_bookmarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:clickable="true"
+        android:onClick="browserActionClicked"
+        android:fontFamily="sans-serif-light"
+        android:padding="10dp"
+        android:text="@string/bookmarks"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
+
+
+    <TextView
+        android:id="@+id/browser_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:fontFamily="sans-serif-light"
+        android:clickable="true"
+        android:onClick="browserActionClicked"
+        android:padding="10dp"
+        android:text="@string/home"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
+
+
+    <TextView
+        android:id="@+id/browser_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:clickable="true"
+        android:onClick="browserActionClicked"
+        android:fontFamily="sans-serif-light"
+        android:padding="10dp"
+        android:text="@string/share"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/browser_find_on_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:clickable="true"
+        android:fontFamily="sans-serif-light"
+        android:onClick="browserActionClicked"
+        android:padding="10dp"
+        android:text="@string/find_in_page"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/browser_set_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:clickable="true"
+        android:fontFamily="sans-serif-light"
+        android:onClick="browserActionClicked"
+        android:padding="10dp"
+        android:text="@string/set_home"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
+    
+    <TextView
+        android:id="@+id/browser_toggle_desktop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:clickable="true"
+        android:fontFamily="sans-serif-light"
+        android:onClick="browserActionClicked"
+        android:padding="10dp"
+        android:text="@string/toggle_desktop_mode"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/browser_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:clickable="true"
+        android:fontFamily="sans-serif-light"
+        android:onClick="browserActionClicked"
+        android:padding="10dp"
+        android:text="@string/menu_settings"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
+    
+    <TextView
+        android:id="@+id/browser_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:clickable="true"
+        android:fontFamily="sans-serif-light"
+        android:onClick="browserActionClicked"
+        android:padding="10dp"
+        android:text="@string/exit"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+		android:textColor="@android:color/white"/>
+
+</LinearLayout>

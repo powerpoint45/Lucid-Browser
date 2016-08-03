@@ -1,0 +1,154 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:2:1-84:12
+	xmlns:android
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:2:11-69
+	package
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:3:5-44
+		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:5:5-31
+		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:4:5-29
+		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+uses-sdk
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:22.2.1] /home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.1] /home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services:6.5.87] /home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:22.2.1] /home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:9:9-38
+		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:8:9-35
+		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:11:4-77
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:11:21-75
+uses-permission#android.permission.INTERNET
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:12:4-65
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:12:21-63
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:13:4-79
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:13:21-77
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:14:4-79
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:14:21-76
+application
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:16:5-82:19
+MERGED from [com.android.support:appcompat-v7:22.2.1] /home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.1] /home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services:6.5.87] /home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:22.2.1] /home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:20:9-38
+	android:allowBackup
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:17:9-35
+	android:icon
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:19:9-45
+	android:hardwareAccelerated
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:18:9-43
+meta-data#com.google.android.gms.version
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:23:9-24:71
+MERGED from [com.google.android.gms:play-services:6.5.87] /home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/AndroidManifest.xml:21:9-23:69
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:23:20-65
+	android:value
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:24:16-69
+activity#com.powerpoint45.lucidbrowser.MainActivity
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:25:9-53:20
+	android:label
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:26:13-42
+	android:configChanges
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:28:13-74
+	android:theme
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:31:13-44
+	android:stateNotNeeded
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:30:13-42
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:27:13-70
+	android:launchMode
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:29:13-44
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:32:13-35:29
+action#android.intent.action.MAIN
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:33:17-69
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:33:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:34:17-77
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:34:27-74
+intent-filter#android.intent.action.WEB_SEARCH+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:37:13-44:29
+action#android.intent.action.WEB_SEARCH
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:38:17-75
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:38:25-72
+category#android.intent.category.DEFAULT
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:39:17-76
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:39:27-73
+category#android.intent.category.BROWSABLE
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:40:17-78
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:40:27-75
+data
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:41:17-43
+	android:scheme
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:41:23-40
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:46:13-52:29
+action#android.intent.action.VIEW
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:47:17-69
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:47:25-66
+activity#com.powerpoint45.lucidbrowser.BookmarksActivity
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:57:9-66:20
+	android:label
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:58:13-46
+	android:configChanges
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:60:13-74
+	android:theme
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:61:13-52
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:59:13-75
+intent-filter#android.intent.category.DEFAULT+com.powerpoint45.lucidbrowser.BookmarksActivity
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:62:13-65:29
+action#com.powerpoint45.lucidbrowser.BookmarksActivity
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:63:17-90
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:63:25-87
+activity#com.powerpoint45.lucidbrowser.SettingsV2
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:68:9-77:20
+	android:label
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:69:13-50
+	android:configChanges
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:72:13-74
+	android:theme
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:70:13-52
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:71:13-68
+intent-filter#android.intent.category.DEFAULT+com.powerpoint45.lucidbrowser.SettingsV2
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:73:13-76:29
+action#com.powerpoint45.lucidbrowser.SettingsV2
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:74:17-83
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:74:25-80
+activity#com.google.android.gms.ads.AdActivity
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:79:9-80:125
+	android:configChanges
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:80:14-123
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:79:19-71

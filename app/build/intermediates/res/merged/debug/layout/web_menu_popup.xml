@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/openinnewtab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:drawableLeft="@drawable/ic_content_add_circle_outline"
+        android:onClick="webviewActionClicked"
+        android:text="@string/openinnewtab" />
+
+    <Button
+        android:id="@+id/copyurl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:drawableLeft="@drawable/ic_content_content_copy"
+        android:onClick="webviewActionClicked"
+        android:text="@string/copyurl" />
+
+    <Button
+        android:id="@+id/saveimage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:drawableLeft="@drawable/ic_content_save"
+        android:onClick="webviewActionClicked"
+        android:text="@string/saveimage" />
+
+</LinearLayout>

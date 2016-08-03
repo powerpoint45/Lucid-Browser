@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+<item android:id="@android:id/progress">
+     <clip>
+    <shape>
+        <!-- you don't want round edges, so I removed it here.
+             We dont even need a gradient, replace it with solid -->
+      <solid
+        android:color="@color/holo_blue_light" />
+    </shape>
+    </clip>
+</item>
+</layer-list>

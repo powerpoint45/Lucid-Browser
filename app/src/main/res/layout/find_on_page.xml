@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/find_bg"
+    android:padding="5dp"
+    android:layout_marginLeft="5dp" >
+
+    <EditText
+        android:id="@+id/find_input"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:inputType="textNoSuggestions"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/find_back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/find_input"
+        android:background="@drawable/button"
+        android:text="&lt;" />
+
+    <Button
+        android:id="@+id/find_forward"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/find_back"
+        android:background="@drawable/button"
+        android:text=">" />
+
+</RelativeLayout>

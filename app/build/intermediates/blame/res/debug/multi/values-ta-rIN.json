@@ -1,0 +1,786 @@
+[
+    {
+        "outputFile": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/values-ta-rIN/values-ta-rIN.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 113,
+                    "endOffset": 214
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-ta-rIN/values-ta-rIN.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 295,
+                        "endColumn": 113,
+                        "endOffset": 404
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 219,
+                    "endColumn": 104,
+                    "endOffset": 319
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-ta-rIN/values-ta-rIN.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 409,
+                        "endColumn": 104,
+                        "endOffset": 509
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 324,
+                    "endColumn": 114,
+                    "endOffset": 434
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-ta-rIN/values-ta-rIN.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 514,
+                        "endColumn": 114,
+                        "endOffset": 624
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 439,
+                    "endColumn": 88,
+                    "endOffset": 523
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-ta-rIN/values-ta-rIN.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 629,
+                        "endColumn": 88,
+                        "endOffset": 713
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 528,
+                    "endColumn": 106,
+                    "endOffset": 630
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-ta-rIN/values-ta-rIN.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 718,
+                        "endColumn": 106,
+                        "endOffset": 820
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 635,
+                    "endColumn": 125,
+                    "endOffset": 756
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-ta-rIN/values-ta-rIN.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 825,
+                        "endColumn": 125,
+                        "endOffset": 946
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 761,
+                    "endColumn": 101,
+                    "endOffset": 858
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-ta-rIN/values-ta-rIN.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 951,
+                        "endColumn": 101,
+                        "endOffset": 1048
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 863,
+                    "endColumn": 103,
+                    "endOffset": 962
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-ta-rIN/values-ta-rIN.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1053,
+                        "endColumn": 103,
+                        "endOffset": 1152
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 967,
+                    "endColumn": 96,
+                    "endOffset": 1059
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-ta-rIN/values-ta-rIN.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1157,
+                        "endColumn": 96,
+                        "endOffset": 1249
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1064,
+                    "endColumn": 109,
+                    "endOffset": 1169
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-ta-rIN/values-ta-rIN.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1254,
+                        "endColumn": 109,
+                        "endOffset": 1359
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1174,
+                    "endColumn": 101,
+                    "endOffset": 1271
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-ta-rIN/values-ta-rIN.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1364,
+                        "endColumn": 101,
+                        "endOffset": 1461
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1276,
+                    "endColumn": 106,
+                    "endOffset": 1378
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-ta-rIN/values-ta-rIN.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1466,
+                        "endColumn": 106,
+                        "endOffset": 1568
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1383,
+                    "endColumn": 118,
+                    "endOffset": 1497
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-ta-rIN/values-ta-rIN.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1573,
+                        "endColumn": 118,
+                        "endOffset": 1687
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1502,
+                    "endColumn": 162,
+                    "endOffset": 1660
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 655,
+                        "endColumn": 162,
+                        "endOffset": 813
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1665,
+                    "endColumn": 150,
+                    "endOffset": 1811
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 2620,
+                        "endColumn": 150,
+                        "endOffset": 2766
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1816,
+                    "endColumn": 115,
+                    "endOffset": 1927
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 2333,
+                        "endColumn": 115,
+                        "endOffset": 2444
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1932,
+                    "endColumn": 126,
+                    "endOffset": 2054
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 2076,
+                        "endColumn": 126,
+                        "endOffset": 2198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 2059,
+                    "endColumn": 168,
+                    "endOffset": 2223
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1907,
+                        "endColumn": 168,
+                        "endOffset": 2071
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 2228,
+                    "endColumn": 124,
+                    "endOffset": 2348
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1782,
+                        "endColumn": 124,
+                        "endOffset": 1902
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 2353,
+                    "endColumn": 171,
+                    "endOffset": 2520
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 976,
+                        "endColumn": 175,
+                        "endOffset": 1147
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2525,
+                    "endColumn": 128,
+                    "endOffset": 2649
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1653,
+                        "endColumn": 128,
+                        "endOffset": 1777
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2654,
+                    "endColumn": 186,
+                    "endOffset": 2836
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 1278,
+                        "endColumn": 186,
+                        "endOffset": 1460
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2841,
+                    "endColumn": 187,
+                    "endOffset": 3024
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1465,
+                        "endColumn": 187,
+                        "endOffset": 1648
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 3029,
+                    "endColumn": 125,
+                    "endOffset": 3150
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 1152,
+                        "endColumn": 125,
+                        "endOffset": 1273
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 3155,
+                    "endColumn": 186,
+                    "endOffset": 3337
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 3162,
+                        "endColumn": 186,
+                        "endOffset": 3344
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 3342,
+                    "endColumn": 120,
+                    "endOffset": 3458
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 3041,
+                        "endColumn": 120,
+                        "endOffset": 3157
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 3463,
+                    "endColumn": 157,
+                    "endOffset": 3616
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 818,
+                        "endColumn": 157,
+                        "endOffset": 971
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 3621,
+                    "endColumn": 152,
+                    "endOffset": 3769
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2888,
+                        "endColumn": 152,
+                        "endOffset": 3036
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 3774,
+                    "endColumn": 116,
+                    "endOffset": 3886
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 2771,
+                        "endColumn": 116,
+                        "endOffset": 2883
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 3891,
+                    "endColumn": 172,
+                    "endOffset": 4059
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 301,
+                        "endColumn": 172,
+                        "endOffset": 469
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 4064,
+                    "endColumn": 180,
+                    "endOffset": 4240
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 474,
+                        "endColumn": 180,
+                        "endOffset": 650
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 4245,
+                    "endColumn": 130,
+                    "endOffset": 4371
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 170,
+                        "endColumn": 130,
+                        "endOffset": 296
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 4376,
+                    "endColumn": 148,
+                    "endOffset": 4520
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 3349,
+                        "endColumn": 148,
+                        "endOffset": 3493
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 4525,
+                    "endColumn": 231,
+                    "endOffset": 4752
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 3622,
+                        "endColumn": 231,
+                        "endOffset": 3849
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 4757,
+                    "endColumn": 123,
+                    "endOffset": 4876
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 3498,
+                        "endColumn": 123,
+                        "endOffset": 3617
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 4881,
+                    "endColumn": 108,
+                    "endOffset": 4985
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 3854,
+                        "endColumn": 108,
+                        "endOffset": 3958
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 4990,
+                    "endColumn": 170,
+                    "endOffset": 5156
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 2449,
+                        "endColumn": 170,
+                        "endOffset": 2615
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 5161,
+                    "endColumn": 129,
+                    "endOffset": 5286
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 2203,
+                        "endColumn": 129,
+                        "endOffset": 2328
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 5291,
+                    "endColumn": 89,
+                    "endOffset": 5376
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 4166,
+                        "endColumn": 89,
+                        "endOffset": 4251
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 5381,
+                    "endColumn": 92,
+                    "endOffset": 5469
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 3963,
+                        "endColumn": 92,
+                        "endOffset": 4051
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 5474,
+                    "endColumn": 109,
+                    "endOffset": 5579
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ta-rIN/common_strings.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 4056,
+                        "endColumn": 109,
+                        "endOffset": 4161
+                    }
+                }
+            }
+        ]
+    }
+]

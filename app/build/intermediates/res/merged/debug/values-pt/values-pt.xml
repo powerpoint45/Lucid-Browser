@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Navegar para a página inicial"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Navegar para cima"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Mais opções"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Concluído"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Ver tudo"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Selecione um aplicativo"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Limpar consulta"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Consulta de pesquisa"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Pesquisar"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Enviar consulta"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Pesquisa por voz"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Compartilhar com"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Compartilhar com %s"</string>
+    <string name="about">About</string>
+    <string name="action_lock_screen">Desligue a Tela</string>
+    <string name="action_openapp">Lançar Aplicativo</string>
+    <string name="action_openapp_animationnormal">Animação de abertura normal do aplicativo</string>
+    <string name="action_openapp_animationslide">Animação de abertura do aplicativo deslizando para a esquerda</string>
+    <string name="action_opennotificationpanel">Abrir painel de notificação</string>
+    <string name="action_openrecents">Abrir recentes</string>
+    <string name="action_shortcut">Atalho de Lançamento</string>
+    <string name="action_start_search">Start Search</string>
+    <string name="action_togglestatusbar">Alternar Barra de Notificação</string>
+    <string name="actionbar_item_color_summary">Set the color of items in the action bar</string>
+    <string name="actionbar_item_color_title">Action Bar Item Color</string>
+    <string name="actionbarcolorsummary">"Defina a cor da Barra de Ação"</string>
+    <string name="actionbarcolortitle">"Cor da Barra de Ação"</string>
+    <string name="actionbartextstylesummary">Set ActionBar Item Style</string>
+    <string name="actionbartextstyletitle">ActionBar Item Style</string>
+    <string name="addToFavorites">"Adicionar aos favoritos"</string>
+    <string name="addToHome">"Adicionar para Página Inicial"</string>
+    <string name="add_apps">Adicionar Apps</string>
+    <string name="add_bookmark_folder">Adicionar nova pasta</string>
+    <string name="add_bookmark_folder_hint">Digite nome da nova pasta</string>
+    <string name="addshortcut">Adicionar Atalho</string>
+    <string name="adjustwallpapersummary">Ajustar o tamanho do papel de parede para ajustar à tela</string>
+    <string name="adjustwallpapertitle">Ajustar Papel de Parede</string>
+    <string name="advancedsettingstitle">"Configurações Avançadas"</string>
+    <string name="alert_leftswipegesture">Gesto foi definido. Desabilite o navegador para usá-lo</string>
+    <string name="appInfo">"Informações do App"</string>
+    <string name="app_drawer">Gaveta de Aplicativos</string>
+    <string name="apply">Aplicar</string>
+    <string name="autohide_apps_summary">Hide apps upon adding an app to a folder in drawer</string>
+    <string name="autohide_apps_title">Auto Hide Apps</string>
+    <string name="backupsummary">"Backup de todos os seus ajustes e configurações"</string>
+    <string name="backuptitle">"Backup"</string>
+    <string name="bookmark_move">Mover</string>
+    <string name="bookmarks">"Marcadores"</string>
+    <string name="bottompaddinglandsummary">Se necessário, isto removerá qualquer preenchimento próximo à barra de navegação</string>
+    <string name="bottompaddinglandtitle">Remover preenchimento inferior (Paisagem)</string>
+    <string name="bottompaddingportsummary">Se necessário, isto removerá qualquer preenchimento próximo à barra de navegação</string>
+    <string name="bottompaddingporttitle">Remover preenchimento inferior (Retrato)</string>
+    <string name="browser">Navegador</string>
+    <string name="browser_removed_dialog">Este aplicativo será removido da loja devido à complicações com a política de uso. Por favor clique no próximo link para ser redirecionado para o novo Lucid Browser:</string>
+    <string name="browsercompactmodesummary">Habilita a adaptação de layout do navegador para dispositivos pequenos</string>
+    <string name="browsercompactmodetitle">Habilitar modo compacto</string>
+    <string name="browserfullscreensummary">Remover preenchimento da parte inferior do navegador</string>
+    <string name="browserfullscreentitle">Navegador Imersivo</string>
+    <string name="cat_title_actionbar">Barra de Ação</string>
+    <string name="cat_title_appearance">Aparência</string>
+    <string name="cat_title_content">Conteúdo</string>
+    <string name="cat_title_gestures">Gestos</string>
+    <string name="cat_title_icons">Ícones</string>
+    <string name="cat_title_layout">Layout</string>
+    <string name="cat_title_other">Outros</string>
+    <string name="cat_title_setup">Setup</string>
+    <string name="cat_title_tools">Ferramentas</string>
+    <string name="chooseshortcut">Escolher Atalho</string>
+    <string name="clearcachetitle">Limpar Cache</string>
+    <string name="clearcookiestitle">Limpar Cookies</string>
+    <string name="clearhistorytitle">Limpar Histórico</string>
+    <string name="clearonexitsummary">Sair do navegador limpa histórico, cache e cookies</string>
+    <string name="clearonexittitle">Limpar rastreamento do navegador na saída</string>
+    <string name="close">"Fechar"</string>
+    <string name="close_tabs_on_exit_summary">Sair do navegador fecha todas as abas</string>
+    <string name="close_tabs_on_exit_title">Fechar Abas na Saída</string>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Um app exige uma atualização do app Android Wear."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Este app só funciona com uma versão atualizada do app Android Wear."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Atualizar o Android Wear"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Ativar o Google Play Services"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Este app só funciona com o Google Play Services ativado."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Ative o Google Play Services"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Solicitado por <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Instalar o Google Play Services"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Este app não funciona sem o Google Play Services, que não está instalado em seu telefone."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Este app não funciona sem o Google Play Services, que não está instalado em seu tablet."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Instale o Google Play Services"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"A conta especificada não existe no dispositivo. Escolha outra conta."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Conta inválida"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Um app requer a ativação do Google Play Services."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"É necessária uma conexão de dados para conectar ao Google Play Services."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Erro na rede"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"Um app requer a instalação do Google Play Services."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Um app requer a atualização do Google Play Services."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Erro do Google Play Services"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Problema desconhecido com o Google Play Services."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"O Google Play Services, necessário para alguns dos apps, não é compatível com seu dispositivo. Entre em contato com o fabricante para obter assistência."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Play Services"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Atualizar"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Este app só funciona com uma versão atualizada do Google Play Services."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Atualize o Google Play Services"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Abrir no smartphone"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Login"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Fazer login com o Google"</string>
+    <string name="community">Visit community on Google+</string>
+    <string name="complete">Ação completa</string>
+    <string name="confirm_exit_text">Você tem certeza que deseja sair?</string>
+    <string name="confirmunlock">Você tem certeza que deseja desbloquear a área de trabalho?</string>
+    <string name="contact">Contact Us</string>
+    <string name="copyurl">Copiar Link</string>
+    <string name="def">Padrão</string>
+    <string name="defaulthomepagesummary">Definir a página inicial padrão</string>
+    <string name="defaulthomepagetitle">Página Inicial Padrão</string>
+    <string name="desktopviewsummary">Exibir páginas como navegador da área de trabalho</string>
+    <string name="desktopviewtitle">Habilitar visão da área de trabalho</string>
+    <string name="dimwebpagesummary">"Escurece o fundo na página do browser"</string>
+    <string name="dimwebpagetitle">"Escurecimento da Página do Navegador"</string>
+    <string name="disable_new_app_glow_summary">Disable the new app glow in the app drawer</string>
+    <string name="disable_new_app_glow_title">Disable New App Glow</string>
+    <string name="disable_suggestions_title">Desativar sugestões de busca</string>
+    <string name="disablebrowsersummary">Selecione para desabilitar o navegador</string>
+    <string name="disablebrowsertitle">Desabilitar</string>
+    <string name="disabledrawersummary">Selecione para desabilitar a gaveta de aplicativos</string>
+    <string name="disablesidebarsummary">Selecione para desabilitar barra lateral de favoritos</string>
+    <string name="drawer_style_summary">Selecione um estilo de gaveta</string>
+    <string name="drawer_style_title">Estilo de gaveta</string>
+    <string name="drawerlabelcolorsummary">"Definir a cor do texto para rótulos de ícones"</string>
+    <string name="drawerlabelcolortitle">"Etiqueta colorida"</string>
+    <string name="drawersettingstitle">"Configurações da gaveta de apps"</string>
+    <string name="edit">Editar</string>
+    <string name="edit_bookmark">Editar Favoritos</string>
+    <string name="edit_bookmark_folder">Editar marcador de pasta</string>
+    <string name="enablecookies">Permitir Cookies</string>
+    <string name="enablefloatoptionsummary">Em ROM suportada você pode flutuar um aplicativo (toque longo no aplicativo para opções)</string>
+    <string name="enablefloatoptiontitle">Habilitar aplicativo flutuante</string>
+    <string name="enableimages">Carregar Imagens</string>
+    <string name="enablejavascript">Habilitar JavaScript</string>
+    <string name="exit">Sair</string>
+    <string name="exit_confirmation_summary">Marque para habilitar a confirmação de saída</string>
+    <string name="exit_confirmation_title">Confirmação de Saída</string>
+    <string name="failed">Ação falhou</string>
+    <string name="fav_gesture_down_summary">Select an action for swiping down from the top of the sidebar</string>
+    <string name="fav_gesture_up_summary">Select an action for swiping up from the bottom of the sidebar</string>
+    <string name="find_in_page">Encontre na Página</string>
+    <string name="first_letter_search_summary">search based off the beginning of the titles</string>
+    <string name="first_letter_search_title">First letter search</string>
+    <string name="floatapp">Aplicativo flutuante</string>
+    <string name="folder_apps_size_summary">Set the size of apps inside folders</string>
+    <string name="folder_apps_size_title">Folder Apps Size</string>
+    <string name="folder_color_summary">Defina a cor do interior das pastas</string>
+    <string name="folder_color_title">Cor da Pasta</string>
+    <string name="folder_columns_summary">Set the number of columns in folders</string>
+    <string name="folder_label_blank">Pasta Sem Nome</string>
+    <string name="folder_settings">Folder Settings</string>
+    <string name="folder_style_summary">Escolha um estilo do ícone da pasta</string>
+    <string name="folder_style_title">Estilo da Pasta</string>
+    <string name="folderhidelabelsummary">Mostrar ou esconder os rótulos de cada pasta</string>
+    <string name="folderhidelabeltitle">Rótulo da Pasta</string>
+    <string name="folderlabelcolorsummary">Defina a cor dos rótulos dentro das pastas</string>
+    <string name="folderlabelcolortitle">Cor do Rótulo da Pasta de Aplicativos</string>
+    <string name="font_size_summary">Defina o tamanho da fonte do texto</string>
+    <string name="font_size_title">Tamanho da Fonte</string>
+    <string name="fullscreensummary">"Mostrar ou ocultar a barra de status"</string>
+    <string name="fullscreentitle">"Tela Cheia"</string>
+    <string name="gallery">Galeria</string>
+    <string name="gesture_alert">Gesto foi definido mas as telas devem ser reorganizadas para uso</string>
+    <string name="gesturedoubletapsummary">Selecione uma ação para o toque duplo da tela inicial</string>
+    <string name="gesturedoubletaptitle">Toque Duplo</string>
+    <string name="gesturedownsummary">Selecionar uma ação para deslizar para baixo no topo da página inicial</string>
+    <string name="gesturedowntitle">Deslizar para Baixo</string>
+    <string name="gestureleftsummary">Selecione uma ação ao deslizar para esquerda</string>
+    <string name="gesturelefttitle">Deslizar para Esquerda</string>
+    <string name="gesturerightsummary">Selecione uma ação ao deslizar para direita</string>
+    <string name="gesturerighttitle">Deslizar para Direita</string>
+    <string name="gestureupsummary">Selecionar uma ação para deslizar para cima na parte inferior da página inicial</string>
+    <string name="gestureuptitle">Deslizar para Cima</string>
+    <string name="grid">Grade</string>
+    <string name="gridsnapsummary">"Ativar ou desativar a grade para apps"</string>
+    <string name="gridsnaptitle">"Grade de aplicativo"</string>
+    <string name="hide_actionbar_summary">Esconder a barra de ação quando rolar a página para baixo</string>
+    <string name="hide_actionbar_title">Esconder Barra de Ação</string>
+    <string name="hide_app">Hide App</string>
+    <string name="hide_from_drawer">Hide from Drawer</string>
+    <string name="hidesearchbarsummary">Esconder barra de pesquina na tela inicial</string>
+    <string name="hidesearchbartitle">Esconder barra de pesquisa</string>
+    <string name="holoDarkSummary">Marque para o uso do tema escuro nas configurações e favoritos (Irá reiniciar as configurações para aplicar o tema)</string>
+    <string name="holoDarkTitle">Usar Tema Escuro</string>
+    <string name="home">"Início"</string>
+    <string name="home_folder">Adicionar pasta</string>
+    <string name="home_screen">Tela Inicial</string>
+    <string name="home_settings">"Configurações do Lançador"</string>
+    <string name="home_wallpaper">"Alterar Wallpaper"</string>
+    <string name="home_widgets">"Adicionar Widget"</string>
+    <string name="homeiconsizemessage">"Selecione o tamanho do ícone:"</string>
+    <string name="homeiconsizesummary">"Defina o tamanho dos ícones na página inicial"</string>
+    <string name="homeiconsizetitle">"Tamanho dos Ícones"</string>
+    <string name="homeindicatorsummary">"Ativar ou desativar Indicadores de área de trabalho"</string>
+    <string name="homeindicatortitle">"Indicadores de área de trabalho"</string>
+    <string name="homelandcolsmessage">"Selecione o número de colunas no modo paisagem:"</string>
+    <string name="homelandcolssummary">"Defina o número de colunas em modo paisagem"</string>
+    <string name="homelandcolstitle">"Número de colunas do modo Paisagem"</string>
+    <string name="homelandrowsmessage">"Selecione o número de linhas no modo paisagem:"</string>
+    <string name="homelandrowssummary">"Defina o número de linhas no modo paisagem"</string>
+    <string name="homelandrowstitle">"Número de linhas do modo Paisagem"</string>
+    <string name="homenumpagesmessage">"Selecione o número de áreas de trabalho:"</string>
+    <string name="homenumpagessummary">"Defina o número de áreas de trabalho"</string>
+    <string name="homenumpagestitle">"Número de áreas de trabalho"</string>
+    <string name="homeportcolsmessage">"Selecione o número de colunas no modo retrato:"</string>
+    <string name="homeportcolssummary">"Defina o número de colunas no modo retrato"</string>
+    <string name="homeportcolstitle">"Número de colunas do modo Retrato"</string>
+    <string name="homeportrowsmessage">"Selecione o número de linhas no modo retrato:"</string>
+    <string name="homeportrowssummary">"Defina o número de linhas no modo retrato"</string>
+    <string name="homeportrowstitle">"Número de linhas do modo Retrato"</string>
+    <string name="homesettingstitle">"Configurações Página Inicial"</string>
+    <string name="horizontalscrollsummary">Habilitar ou desabilitar animação de rolagem de papel de parede na horizontal</string>
+    <string name="horizontalscrolltitle">Rolagem de Papel de Parede na Horizontal</string>
+    <string name="iconpaddingmessage">"Selecione o preenchimento do ícone:"</string>
+    <string name="iconpaddingsummary">"Defina o preenchimento em torno de cada ícone"</string>
+    <string name="iconpaddingtitle">"Preenchimento do Ícone"</string>
+    <string name="iconsizemessage">"Selecione o tamanho do ícone:"</string>
+    <string name="iconsizesummary">"Defina o tamanho do ícone na gaveta de aplicativos"</string>
+    <string name="iconsizetitle">"Tamanho do Ícone"</string>
+    <string name="launcher_settings">"Configurações do Lançador"</string>
+    <string name="libraries">Libraries</string>
+    <string name="licence_apache20_github">Apache 2.0.\nTap to view project on GitHub</string>
+    <string name="licence_beer_github">THE BEER-WARE LICENSE" (Rev42).\nTap to view project on GitHub</string>
+    <string name="list">Lista</string>
+    <string name="lock_desktop">"Bloquear área de trabalho "</string>
+    <string name="lock_page">"Bloqueio de página no lugar"</string>
+    <string name="lucidactionbrowser">Browser</string>
+    <string name="lucidactiondrawer">Gaveta de aplicativos</string>
+    <string name="lucidactionfavorites">Barra lateral de favoritos</string>
+    <string name="lucidactionlockunlock">Bloquear/Desbloquear Desktop</string>
+    <string name="lucidactionrecents">Aplicativos recentes</string>
+    <string name="lucidactionstitle">Ações do Lucid Launcher</string>
+    <string name="mainsettingstitle">"Configurações Principais"</string>
+    <string name="manage_screens">Gerenciar Telas</string>
+    <string name="menu_settings">"Configurações"</string>
+    <string name="more">More</string>
+    <string name="more_apps">More Apps</string>
+    <string name="move_here">Mover aqui</string>
+    <string name="move_to_home">Mover para Home</string>
+    <string name="no">Não</string>
+    <string name="no_icons">Tema não contém ícones</string>
+    <string name="nobackup">Nackup não encontrado</string>
+    <string name="nobookmarks">Nenhum favorito definido</string>
+    <string name="numcolumnsmessage">"Selecione o Número de colunas:"</string>
+    <string name="numcolumnssummary">"Defina o número de colunas na gaveta de aplicativos"</string>
+    <string name="numcolumnstitle">"Número de colunas"</string>
+    <string name="openinnewtab">"Abrir em nova aba"</string>
+    <string name="orientation_auto">Rotação automática</string>
+    <string name="orientation_landscape">Paisagem</string>
+    <string name="orientation_portrait">Retrato</string>
+    <string name="orientationsummary">"Definir a orientação do lançador"</string>
+    <string name="orientationtitle">"Orientação do Lançador"</string>
+    <string name="package_info">Package info</string>
+    <string name="pagetransformationsummary">"Definir a animação de rolagem"</string>
+    <string name="pagetransformationtitle">"Animação de rolagem"</string>
+    <string name="pagetransparencysummary">"Definir a transparência do Aplicativo e na página do navegador"</string>
+    <string name="pagetransparencytitle">"Transparência Página"</string>
+    <string name="paste">Colar</string>
+    <string name="persistentsummary">Manter lançador na memória. Isto mostrará uma notificação</string>
+    <string name="persistenttitle">Persistência do Sistema</string>
+    <string name="pick_icon">Selecionar ícone</string>
+    <string name="please_wait">Por favor, espere...</string>
+    <string name="processing">Processando tema de ícone</string>
+    <string name="prodescription">Ajude o projeto comprando Lucid Launcher Pro</string>
+    <string name="rate">Rate</string>
+    <string name="refresh">"Atualizar"</string>
+    <string name="remove">Remover</string>
+    <string name="removeFromFavorites">"Remover dos Favoritos"</string>
+    <string name="remove_bookmark_folder_confirm">Você realmente quer deletar essa pasta? O conteúdo dela também será deletado.</string>
+    <string name="remove_browsing_traces">Remover traços do navegador</string>
+    <string name="remove_from_folder">Remover da Pasta</string>
+    <string name="resetsummary">"Restaurar todas as configurações para seu valor padrão"</string>
+    <string name="resettitle">"Restaurar configurações para o padrão"</string>
+    <string name="restart_launcher">Reiniciar lançador</string>
+    <string name="restoresummary">"Restaurar o backup"</string>
+    <string name="restoretitle">"Restaurar"</string>
+    <string name="savedimage">Salvar imagem para</string>
+    <string name="saveimage">"Salvar imagem"</string>
+    <string name="search">"Pesquisa"</string>
+    <string name="search_engine">Search Engine</string>
+    <string name="search_hidden_apps_summary">Mostrar apps escondidos quando buscar</string>
+    <string name="search_hidden_apps_title">Buscar apps escondidos</string>
+    <string name="search_icon_action_summary">Select the action when the search icon is pressed</string>
+    <string name="search_icon_action_title">Search Icon Action</string>
+    <string name="searchcontactssummary">Enable or disable searching contacts</string>
+    <string name="searchcontactstitle">Search Contacts</string>
+    <string name="searchpackagessummary">Habilitar ou desabilitar pesquisa de nome de pacote como com.google.calendar</string>
+    <string name="searchpackagestitle">Pesquisa de Pacotes</string>
+    <string name="searchtextmessage">"Digitar texto da barra de ação:"</string>
+    <string name="searchtextsummary">"Definir texto da barra ação"</string>
+    <string name="searchtexttitle">"Texto da barra de ação personalizado"</string>
+    <string name="select_apps">Selecionar Apps para adicionar</string>
+    <string name="select_screen">Selecione uma nova Tela</string>
+    <string name="send_mail">Send mail with</string>
+    <string name="send_mail_error">There are no email clients installed</string>
+    <string name="set_home">"Definir como Área de trabalho Inicial"</string>
+    <string name="shortcutlabelssummary">Mostrar ou esconder rótulos sob cada atalho</string>
+    <string name="shortcutlabelstitle">Rótulo de Atalho</string>
+    <string name="show_app">Show App</string>
+    <string name="show_search_icon_summary">Show the search icon on the searchbar</string>
+    <string name="show_search_icon_title">Search Icon</string>
+    <string name="showbackgroundonurlbarsummary">Adiciona plano de fundo à Barra de Endereços</string>
+    <string name="showbackgroundonurlbartitle">Mostrar plano de fundo na Barra de Endereços</string>
+    <string name="showlabelssummary">"Mostrar ou ocultar os rótulos abaixo de cada ícone"</string>
+    <string name="showlabelstitle">"Rótulo do Ícone de Aplicativo"</string>
+    <string name="sidebar_custom">Personalizado</string>
+    <string name="sidebar_dark">Escuro</string>
+    <string name="sidebar_light">Claro</string>
+    <string name="sidebar_switched_summary">Barras Laterais trocarão de lado na tela</string>
+    <string name="sidebar_switched_title">Trocar para barra lateral de localização</string>
+    <string name="sidebar_transparent">Transparent</string>
+    <string name="sidebarcolorsummary">Defina a cor da barra lateral</string>
+    <string name="sidebarcolortitle">Cor da Barra Lateral</string>
+    <string name="sidebariconpaddingmessage">"Selecione o preenchimento do ícone da Barra Lateral:"</string>
+    <string name="sidebariconpaddingsummary">"Defina o preenchimento ao redor dos ícones da Barra Lateral"</string>
+    <string name="sidebariconpaddingtitle">"Preenchimento do ícone da Barra Lateral"</string>
+    <string name="sidebariconsizemessage">"Selecione o tamanho do ícone:"</string>
+    <string name="sidebariconsizesummary">"Defina o tamanho do ícone na barra lateral"</string>
+    <string name="sidebariconsizetitle">"Tamanho do Ícone da Barra Lateral"</string>
+    <string name="sidebarsettingstitle">"Configurações da barra lateral"</string>
+    <string name="sidebartextcolorsummary">Defina a cor do texto da barra lateral</string>
+    <string name="sidebartextcolortitle">Cor do Texto da Barra Lateral</string>
+    <string name="sidebarthememessage">"Escolha um tema:"</string>
+    <string name="sidebarthemesummary">"Definir Tema da Barra Lateral"</string>
+    <string name="sidebarthemetitle">"Tema da Barra Lateral"</string>
+    <string formatted="false" name="sslExpiredMessage">A página at\n\n%1s\n\nhas um certificado SSL expirado. Ele expirou depois de %2s.</string>
+    <string name="sslExpiredTitle">Certificado SSL expirado</string>
+    <string formatted="false" name="sslIdMismatchMessage">A página at\n\n%1s\n\nhas um certificado SSL que é válido somente por %2s.</string>
+    <string name="sslIdMismatchTitle">Certificado SSL não é válido para esta página</string>
+    <string formatted="false" name="sslNotYetValidMessage">A página at\n\n%1s\n\nhas um certificado SSL que ainda não é válido. Ele será válido a partir de %2s.</string>
+    <string name="sslNotYetValidTitle">Certificado SSL não é válido</string>
+    <string name="sslProceedQuestion">Você deseja aceitar este certificado?</string>
+    <string formatted="false" name="sslUntrustedMessage">A página at\n\n%s\n\nhas um certificado SSL auto-assinado.</string>
+    <string name="sslUntrustedTitle">Certificado SSL não confiável</string>
+    <string name="sslWebsiteWarning">Como o certificado não pôde ser verificado, a página é provavelmente insegura. Por favor prossiga com cuidado.</string>
+    <string name="step_basic_actions_title">Tap the search icon to start searching \nTap the three dot icon for more actions</string>
+    <string name="step_browser_sidebar_summary">Access the browser sidebar by swiping from the edge of the screen</string>
+    <string name="step_browser_sidebar_title">Browser Sidebar</string>
+    <string name="step_browser_summary">This is the browser. You can disable or rearrange this page from within \"Manage Screens\"</string>
+    <string name="step_browser_title">Web Browser</string>
+    <string name="step_drawer_app_long_press_summary">You can long press on an item to get more options such as adding to home or favorites</string>
+    <string name="step_drawer_app_long_press_title">More Options</string>
+    <string name="step_drawer_summary">This is the app drawer. You can disable or rearrange this page from within \"Manage Screens\"</string>
+    <string name="step_drawer_title">App Drawer</string>
+    <string name="step_favorite_action_summary">Tap the three-lined button or swipe from the edge of the screen to access your favorited apps</string>
+    <string name="step_favorite_title">Favorite Apps</string>
+    <string name="step_favorites_summary">All your favorited apps will show here. An app can be added to favorites from the app drawer</string>
+    <string name="step_orientation_summary">The home screen layout is different based off the orientation. You can place separate apps based off orientation</string>
+    <string name="step_orientation_title">Launcher Orientation</string>
+    <string name="step_welcome_summary">This is your home screen. Here you can place apps, widgets and more. You can swipe vertically to switch between home screens and horizontally for other pages</string>
+    <string name="step_welcome_title">Welcome to Lucid Launcher</string>
+    <string name="stop">"Parar"</string>
+    <string name="system_settings">"Configurações do Sistema "</string>
+    <string name="toggle_desktop_mode">Alterne para o Modo Desktop</string>
+    <string name="trans_coverflow">Coverflow</string>
+    <string name="trans_cubezoom">Cube Zoom</string>
+    <string name="trans_doorclose">Porta Fechada</string>
+    <string name="trans_flipin">Virar Em</string>
+    <string name="trans_flyin">Fly In</string>
+    <string name="trans_none">Nenhum</string>
+    <string name="trans_pagestack">Pilha de Páginas</string>
+    <string name="trans_spinin">Girar</string>
+    <string name="trans_stackin">Pilhar</string>
+    <string name="trans_tiltin">Inclinar</string>
+    <string name="trans_zoomout">Diminuir Zoom</string>
+    <string name="transparentnavsummary">"Ativar ou desativar transparência na barra de navegação"</string>
+    <string name="transparentnavtitle">"Barra de navegação transparente"</string>
+    <string name="transparentstatussummary">"Ativar ou Desativar barra de status transparente"</string>
+    <string name="transparentstatustitle">"Barra de status Transparente"</string>
+    <string name="tutorial">Start Tutorial</string>
+    <string name="uninstall">"Desinstalar "</string>
+    <string name="unlock_desktop">"Desbloquear área de trabalho"</string>
+    <string name="unlock_page">"Desbloquear esta Página"</string>
+    <string name="upgrade">Upgrade para Lucid Launcher Pro para mais opções</string>
+    <string name="urlbarcolorsummary">Defina a cor de fundo da barra de endereços</string>
+    <string name="urlbarcolortitle">Cor da Barra de Endereços</string>
+    <string name="urlbardefault">Entre com endereço ou termo de busca</string>
+    <string name="version">Version</string>
+    <string name="verticalscrollsummary">Habilitar ou desabilitar animação de rolagem de papel de parede na vertical</string>
+    <string name="verticalscrolltitle">Rolar Papel de Parede na Vertical</string>
+    <string name="verticalspacingmessage">"Selecione o espaçamento vertical:"</string>
+    <string name="verticalspacingsummary">"Espaçamento vertical situado na gaveta de aplicativos"</string>
+    <string name="verticalspacingtitle">"Espaçamento Vertical"</string>
+    <string name="wallpaper">"Alterar Papel de Parede"</string>
+    <string name="wallpaper_instructions">"Selecionar ação"</string>
+    <string name="wallpaper_offset">Move wallpaper based off the</string>
+    <string name="wallpaper_offset_summary">Move wallpaper to the way you like</string>
+    <string name="wallpaper_offset_title">Set Wallpaper Offsets</string>
+    <string name="wallpaper_settings">Configurações de Papel de Parede</string>
+    <string name="websettingstitle">"Configurações do navegador"</string>
+    <string name="widgetgridsnapsummary">"Ativar ou desativar a grade para widgets"</string>
+    <string name="widgetgridsnaptitle">"Grade de widget"</string>
+    <string name="widgetpaddingmessage">Selecione o preenchimento do Widget:</string>
+    <string name="widgetpaddingsummary">Defina o preenchimento ao redor dos Widgets</string>
+    <string name="widgetpaddingtitle">Preenchimento do Widget</string>
+    <string name="widgetsetupfail">Falha ao abrir setup do widget</string>
+    <string name="yes">Sim</string>
+    <string name="zoompercentsummary">Defina a porcentagem de zoom para o fundo</string>
+    <string name="zoompercenttitle">Porcentagem de diminuição do Zoom</string>
+</resources>

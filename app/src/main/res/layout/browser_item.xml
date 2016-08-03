@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:layout_marginLeft="10dp"
+     >
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/close_tb_button"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_vertical"
+		android:maxLines="1"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true" 
+        android:ellipsize="marquee"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/close_tb_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/tab_text"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tab_text"
+        android:focusable="false"
+        android:background="@drawable/circle_button"
+        android:gravity="center"
+        android:onClick="closeCurrentTab"
+        android:src="@drawable/btn_toolbar_stop_loading_normal"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/tab_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_new_window_holo_dark" />
+
+</RelativeLayout>

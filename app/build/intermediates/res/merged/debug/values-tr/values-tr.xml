@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Ana ekrana git"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Yukarı git"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Diğer seçenekler"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Tamamlandı"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Tümünü göster"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Bir uygulama seçin"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Sorguyu temizle"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Arama sorgusu"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Ara"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Sorguyu gönder"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Sesli arama"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Şununla paylaş"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"%s ile paylaş"</string>
+    <string name="about">Hakkında</string>
+    <string name="action_lock_screen">Ekranı Kapat</string>
+    <string name="action_openapp">Uygulamayı Başlat</string>
+    <string name="action_openapp_animationnormal">Normal uygulama açma animasyonu</string>
+    <string name="action_openapp_animationslide">Sola kaydırma uygulama açma animasyonu</string>
+    <string name="action_opennotificationpanel">Bildirim Panelini Aç</string>
+    <string name="action_openrecents">Son Kullanılanları Aç</string>
+    <string name="action_shortcut">Kısayolu Başlat</string>
+    <string name="action_start_search">Aramayı Başlat</string>
+    <string name="action_togglestatusbar">Bildirim Çubuğunu Gizle/Göster</string>
+    <string name="actionbar_item_color_summary">Eylem çubuğundaki ögelerin rengini ayarlayın</string>
+    <string name="actionbar_item_color_title">Eylem Çubuğu Öğe Rengi</string>
+    <string name="actionbarcolorsummary">Eylem çubuğunun rengini ayarlayın</string>
+    <string name="actionbarcolortitle">Eylem Çubuğu rengi</string>
+    <string name="actionbartextstylesummary">Eylem Çubuğu Öğe Stilini ayarlayın</string>
+    <string name="actionbartextstyletitle">Eylem Çubuğu Öğe Stili</string>
+    <string name="addToFavorites">Favorilere ekle</string>
+    <string name="addToHome">Ana ekrana ekle</string>
+    <string name="add_apps">Uygulama Ekle</string>
+    <string name="add_bookmark_folder">Yeni Klasör ekle</string>
+    <string name="add_bookmark_folder_hint">Yeni Klasör adını girin…</string>
+    <string name="addshortcut">Kısayol Ekle</string>
+    <string name="adjustwallpapersummary">Duvar kağıdı boyutunu ekrana sığacak şekilde ayarlayın</string>
+    <string name="adjustwallpapertitle">Duvar Kağıdı Ayarla</string>
+    <string name="advancedsettingstitle">Gelişmiş Ayarlar</string>
+    <string name="alert_leftswipegesture">Hareket ayarlanmış. Bunu kullanmak için tarayıcıyı devre dışı bırakın</string>
+    <string name="appInfo">Uygulama Bilgileri</string>
+    <string name="app_drawer">Uygulama Menüsü</string>
+    <string name="apply">Uygula</string>
+    <string name="autohide_apps_summary">Uygulama menüsünde klasöre eklenen uygulamaları gizle</string>
+    <string name="autohide_apps_title">Uygulamaları Otomatik Gizle</string>
+    <string name="backup_delete">Yedeği sil</string>
+    <string name="backup_select">Yedek seç</string>
+    <string name="backup_title">Yedek adını gir</string>
+    <string name="backupsummary">Tüm ayarları ve kurulumu yedekle</string>
+    <string name="backuptitle">Yedekle</string>
+    <string name="bookmark_move">Taşı</string>
+    <string name="bookmarks">Favoriler</string>
+    <string name="bottompaddinglandsummary">Gerekirse, gezinme çubuğunun yakınındaki dolguyu kaldıracaktır</string>
+    <string name="bottompaddinglandtitle">Alt Dolguyu (Yatay) Kaldır</string>
+    <string name="bottompaddingportsummary">Gerekirse, gezinme çubuğunun yakınındaki dolguyu kaldıracaktır</string>
+    <string name="bottompaddingporttitle">Alt Dolguyu (Dikey) Kaldır</string>
+    <string name="browser">Tarayıcı</string>
+    <string name="browser_removed_dialog">Bu uygulama yasal komplikasyonlar nedeniyle mağazadan kaldırıldı. Lütfen aşağıdaki bağlantıdan yeni Lucid Tarayıcıyı indirin:</string>
+    <string name="browsercompactmodesummary">Tarayıcı küçük ekranlı cihazlara uyum sağlar</string>
+    <string name="browsercompactmodetitle">Kompakt Modu Etkinleştir</string>
+    <string name="browserfullscreensummary">Tarayıcının altından dolguyu kaldır</string>
+    <string name="browserfullscreentitle">Tam Ekran Tarayıcı</string>
+    <string name="cat_title_actionbar">Eylem Çubuğu</string>
+    <string name="cat_title_appearance">Görünüm</string>
+    <string name="cat_title_content">İçerik</string>
+    <string name="cat_title_gestures">Hareketler</string>
+    <string name="cat_title_icons">Simgeler</string>
+    <string name="cat_title_layout">Düzen</string>
+    <string name="cat_title_other">Diğer</string>
+    <string name="cat_title_setup">Kurulum</string>
+    <string name="cat_title_tools">Araçlar</string>
+    <string name="choose_upload">Yüklenecek dosyayı seçin</string>
+    <string name="chooseshortcut">Kısayol Seç</string>
+    <string name="clearcachetitle">Önbelleği Temizle</string>
+    <string name="clearcookiestitle">Çerezleri Temizle</string>
+    <string name="clearhistorytitle">Geçmişi Temizle</string>
+    <string name="clearonexitsummary">Çıkarken tarayıcı geçmişi, önbelleği ve çerezleri temizler</string>
+    <string name="clearonexittitle">Çıkışta tarayıcı izlerini temizle</string>
+    <string name="close">Kapat</string>
+    <string name="close_tabs_on_exit_summary">Tarayıcıdan çıkarken tüm sekmeleri kapatır</string>
+    <string name="close_tabs_on_exit_title">Çıkışta Sekmeleri Kapat</string>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Bir uygulama, Android Wear uygulamasında güncelleme yapılmasını gerektiriyor."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Android Wear uygulaması güncelleninceye kadar bu uygulama çalışmayacak."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Android Wear\'ı Güncelle"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Google Play hizmetlerini etkinleştir"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Bu uygulama, Google Play Hizmetleri etkinleştirilmeden çalışmaz"</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Google Play hizmetlerini etkinleştir"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"İstekte bulunan: <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Google Play hizmetlerini edin"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Google Play Hizmetleri telefonunuzda yok ve bu uygulama Google Play Hizmetleri olmadan çalışmaz."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Google Play Hizmetleri tabletinizde yok ve bu uygulama Google Play Hizmetleri olmadan çalışmaz."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Google Play hizmetlerini edinin"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"Belirtilen hesap bu cihazda mevcut değil. Lütfen farklı bir hesap seçin."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Geçersiz Hesap"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Bir uygulama, Google Play Hizmetleri\'nin etkin olmasını gerektiriyor."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Google Play hizmetlerine bağlanmak için bir veri bağlantısı gerekiyor."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Ağ Hatası"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"Bir uygulama, Google Play hizmetlerinin yüklenmesini gerektiriyor."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Bir uygulama, Google Play Hizmetleri için bir güncelleme gerektiriyor."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Google Play Hizmetleri hatası"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Google Play hizmetleriyle ilgili bilinmeyen sorun."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Cihazınız, uygulamalarınızdan bazıları için gerekli olan Google Play hizmetlerini desteklemiyor. Lütfen yardım için üreticiyle iletişim kurun."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Google Play hizmetleri"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Güncelle"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Bu uygulama Google Play Hizmetleri güncellenmeden çalışmaz."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Google Play hizmetlerini güncelle"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Telefonda aç"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Oturum aç"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Google\'da oturum aç"</string>
+    <string name="community">Google+ topluluğunu ziyaret et</string>
+    <string name="complete">işlem tamamlandı</string>
+    <string name="confirm_exit_text">Çıkmak istediğinize emin misiniz?</string>
+    <string name="confirmunlock">Masaüstü kilidini açmak istediğinizden emin misiniz?</string>
+    <string name="contact">Bize Ulaş</string>
+    <string name="copyurl">Bağlantıyı Kopyala</string>
+    <string name="def">Varsayılan</string>
+    <string name="defaulthomepagesummary">Varsayılan sayfayı ayarlayın</string>
+    <string name="defaulthomepagetitle">Varsayılan Ana Ekran</string>
+    <string name="desktopviewsummary">İnternet sayfalarını masaüstü tarayıcısı gibi göster</string>
+    <string name="desktopviewtitle">Masaüstü Görünümünü Etkinleştir</string>
+    <string name="dimwebpagesummary">Tarayıcı sayfasındaki arkaplanı karart</string>
+    <string name="dimwebpagetitle">Tarayıcı Sayfasını Karart</string>
+    <string name="disable_ads">Reklamları Kapat</string>
+    <string name="disable_new_app_glow_summary">Uygulama menüsündeki yeni uygulama parıltısını kapat</string>
+    <string name="disable_new_app_glow_title">Yeni Uygulama Parıltısını Kapat</string>
+    <string name="disable_suggestions_title">Arama önerilerini devre dışı bırakın</string>
+    <string name="disablebrowsersummary">Tarayıcıyı devre dışı bırakmak için seçin</string>
+    <string name="disablebrowsertitle">Devre dışı bırak</string>
+    <string name="disabledrawersummary">Uygulama menüsünü devre dışı bırakmak için seçin</string>
+    <string name="disablesidebarsummary">Favoriler kenar çubuğunu devre dışı bırakmak için seçin</string>
+    <string name="download_started">İndirme başlatıldı</string>
+    <string name="drawer_style_summary">Bir uygulama menüsü stili seçin</string>
+    <string name="drawer_style_title">Uygulama Menüsü Stili</string>
+    <string name="drawerlabelcolorsummary">Simge etiketleri metin rengini ayarlayın</string>
+    <string name="drawerlabelcolortitle">Etiket Rengi</string>
+    <string name="drawersettingstitle">Uygulama Menüsü Ayarları</string>
+    <string name="edit">Düzenle</string>
+    <string name="edit_bookmark">Favoriyi Düzenle</string>
+    <string name="edit_bookmark_folder">Yer İmi Klasörlerini Düzenle</string>
+    <string name="enablecookies">Çerezlere İzin Ver</string>
+    <string name="enablefloatoptionsummary">Desteklenen ROM\'larda bir uygulama yüzebilir (bu seçenek için uygulamada uzun basın)</string>
+    <string name="enablefloatoptiontitle">Yüzer Uygulamaları Etkinleştir</string>
+    <string name="enableimages">Resimleri Yükle</string>
+    <string name="enablejavascript">JavaScript\'i Etkinleştir</string>
+    <string name="exit">Çıkış</string>
+    <string name="exit_confirmation_summary">Çıkış onayını etkinleştirmek için seçin</string>
+    <string name="exit_confirmation_title">Çıkış Onayı</string>
+    <string name="failed">işlem başarısız</string>
+    <string name="fav_gesture_down_summary">Kenar çubuğunun üstünden aşağı kaydırma için bir eylem seçin</string>
+    <string name="fav_gesture_up_summary">Kenar çubuğunun altından yukarı kaydırma için bir eylem seçin</string>
+    <string name="find_in_page">Sayfada Bul</string>
+    <string name="first_letter_search_summary">Sadece ilk harfe göre arama yap</string>
+    <string name="first_letter_search_title">İlk Harfi Ara</string>
+    <string name="floatapp">Yüzer Uygulama</string>
+    <string name="folder_apps_size_summary">Klasörlerin içindeki uygulamaların boyutunu ayarlayın</string>
+    <string name="folder_apps_size_title">Klasör Uygulamaları Boyutu</string>
+    <string name="folder_color_summary">Klasör içindeki rengi ayarlayın</string>
+    <string name="folder_color_title">Klasör Rengi</string>
+    <string name="folder_columns_summary">Klasörlerdeki sütunların sayısını ayarlayın</string>
+    <string name="folder_label_blank">Yeni Klasör</string>
+    <string name="folder_mode_adaptive">Uyabilen Klasör Boyutu</string>
+    <string name="folder_mode_centered">Ortalanmış Klasör</string>
+    <string name="folder_mode_fullscreen">Tam Ekran Klasör</string>
+    <string name="folder_mode_summary">Klasörlerin nasıl görüneceğini seçin</string>
+    <string name="folder_mode_title">Klasör Görünümü Modu</string>
+    <string name="folder_settings">Klasör Ayarları</string>
+    <string name="folder_style_summary">Klasör simgesi stili seçin</string>
+    <string name="folder_style_title">Klasör Stili</string>
+    <string name="folderhidelabelsummary">Klasör altındaki etiketleri göster veya gizle</string>
+    <string name="folderhidelabeltitle">Klasör Etiketi</string>
+    <string name="folderlabelcolorsummary">Klasörlerin içindeki etiketlerin rengini ayarlayın</string>
+    <string name="folderlabelcolortitle">Klasör Uygulaması Etiket Rengi</string>
+    <string name="font_size_summary">Metin yazı tipi boyutunu ayarlayın</string>
+    <string name="font_size_title">Yazı Tipi Boyutu</string>
+    <string name="fullscreensummary">Durum Çubuğunu göster veya gizle</string>
+    <string name="fullscreentitle">Tam ekran</string>
+    <string name="gadget_error_text">Widget yükleme hatası</string>
+    <string name="gallery">Galeri</string>
+    <string name="gesture_alert">Hareket ayarlandı ancak ekranlar kullanmak için yeniden düzenlenmelidir</string>
+    <string name="gesturedoubletapsummary">Ana ekranda çift tıklama için bir eylem seçin</string>
+    <string name="gesturedoubletaptitle">Çift Tıklama</string>
+    <string name="gesturedownsummary">Üst ana ekranda aşağı kaydırma için bir eylem seçin</string>
+    <string name="gesturedowntitle">Aşağı Kaydırma</string>
+    <string name="gestureleftsummary">Sola kaydırma için bir eylem seçin</string>
+    <string name="gesturelefttitle">Sola Kaydırma</string>
+    <string name="gesturerightsummary">Sağa kaydırma için bir eylem seçin</string>
+    <string name="gesturerighttitle">Sağa Kaydırma</string>
+    <string name="gestureupsummary">Alt ana ekranda kaydırma için bir eylem seçin</string>
+    <string name="gestureuptitle">Yukarı Kaydırma</string>
+    <string name="grid">Izgara</string>
+    <string name="gridsnapsummary">Izgaraya ayarlamayı etkinleştirin veya devre dışı bırakın</string>
+    <string name="gridsnaptitle">Uygulamayı Izgaraya Ayarla</string>
+    <string name="hide_actionbar_summary">Sayfayı aşağı kaydırırken eylem çubuğunu gösterme</string>
+    <string name="hide_actionbar_title">Eylem Çubuğunu Gizle</string>
+    <string name="hide_app">Uygulamayı Gizle</string>
+    <string name="hide_apps">Uygulamaları gizle</string>
+    <string name="hide_appssummary">Uygulama menüsünden uygulamaları gizleyin</string>
+    <string name="hide_from_drawer">Uygulama menüsünden gizle</string>
+    <string name="hidesearchbarsummary">Ana ekranda arama çubuğunu gösterme</string>
+    <string name="hidesearchbartitle">Arama Çubuğunu Gizle</string>
+    <string name="history">Geçmiş</string>
+    <string name="holoDarkSummary">Ayarlar ve favorilerde karanlık bir tema kullanmak için seçin (Temayı uygulamak için ayarlar yeniden başlatılır)</string>
+    <string name="holoDarkTitle">Karanlık Temayı kullan</string>
+    <string name="home">Ana ekran</string>
+    <string name="home_folder">Klasör Ekle</string>
+    <string name="home_screen">Ana Ekran</string>
+    <string name="home_settings">Lucid Launcher Ayarları</string>
+    <string name="home_store">Lucid Mağazası</string>
+    <string name="home_wallpaper">Duvar Kağıdını Değiştir</string>
+    <string name="home_widgets">Widget Ekle</string>
+    <string name="homeiconsizemessage">Simge Boyutu seçin:</string>
+    <string name="homeiconsizesummary">Ana ekrandaki simgelerin boyutunu ayarlayın</string>
+    <string name="homeiconsizetitle">Simge Boyutu</string>
+    <string name="homeindicatorsummary">Sayfa Göstergelerini etkinleştirin veya devre dışı bırakın</string>
+    <string name="homeindicatortitle">Sayfa Göstergeleri</string>
+    <string name="homelandcolsmessage">Yatay Moddaki Sütun Sayısını seçin:</string>
+    <string name="homelandcolssummary">Yatay moddaki sütun sayısını ayarlayın</string>
+    <string name="homelandcolstitle">Yatay Sütun Sayısı</string>
+    <string name="homelandrowsmessage">Yatay Moddaki Satır Sayısını seçin:</string>
+    <string name="homelandrowssummary">Yatay moddaki satır sayısını ayarlayın</string>
+    <string name="homelandrowstitle">Yatay Satır Sayısı</string>
+    <string name="homenumpagesmessage">Ana Ekran Sayısını seçin:</string>
+    <string name="homenumpagessummary">Ana ekran sayısını ayarlayın</string>
+    <string name="homenumpagestitle">Ana Ekran Sayısı</string>
+    <string name="homeportcolsmessage">Dikey Moddaki Sütun Sayısını seçin:</string>
+    <string name="homeportcolssummary">Dikey moddaki sütun sayısını ayarlayın</string>
+    <string name="homeportcolstitle">Dikey Sütun Sayısı</string>
+    <string name="homeportrowsmessage">Dikey Moddaki Satır Sayısını seçin:</string>
+    <string name="homeportrowssummary">Dikey moddaki satır sayısını ayarlayın</string>
+    <string name="homeportrowstitle">Dikey Satır Sayısı</string>
+    <string name="homesettingstitle">Ana Ekran Ayarları</string>
+    <string name="horizontalscrollsummary">Yatay duvar kağıdı kaydırma animasyonunu etkinleştirin veya devre dışı bırakın</string>
+    <string name="horizontalscrolltitle">Yatay Duvar Kağıdı Kaydırma</string>
+    <string name="icon_theme">Simge Teması</string>
+    <string name="iconpaddingmessage">Simge Dolgusu seçin:</string>
+    <string name="iconpaddingsummary">Simgelerin etrafındaki dolguyu ayarlayın</string>
+    <string name="iconpaddingtitle">Simge Dolgusu</string>
+    <string name="iconsizemessage">Simge Boyutu seçin:</string>
+    <string name="iconsizesummary">Uygulama menüsünün simge boyutunu ayarlayın</string>
+    <string name="iconsizetitle">Simge Boyutu</string>
+    <string name="launcher_settings">Başlatıcı Ayarları</string>
+    <string name="libraries">Kütüphaneler</string>
+    <string name="licence_apache20_github">Apache 2.0.\nProjeyi GitHub\'da görüntülemek için dokunun</string>
+    <string name="licence_beer_github">\"BEER-WARE LİSANSI\" (Rev42).\nProjeyi GitHub\'da görüntülemek için dokunun</string>
+    <string name="list">Liste</string>
+    <string name="lock_desktop">Masaüstünü Kilitle</string>
+    <string name="lock_page">Sayfayı Kilitle</string>
+    <string name="lucidactionbrowser">Tarayıcı</string>
+    <string name="lucidactiondrawer">Uygulama Menüsü</string>
+    <string name="lucidactionfavorites">Favoriler Kenar Çubuğu</string>
+    <string name="lucidactionlockunlock">Masaüstünü Kilitle/Aç</string>
+    <string name="lucidactionrecents">Son Uygulamalar</string>
+    <string name="lucidactionstitle">Lucid Launcher Eylemleri</string>
+    <string name="mainsettingstitle">Ana Ayarlar</string>
+    <string name="manage_screens">Ekranları Yönet</string>
+    <string name="menu_settings">Ayarlar</string>
+    <string name="more">Diğer</string>
+    <string name="more_apps">Diğer Uygulamalar</string>
+    <string name="move_here">BURAYA TAŞI</string>
+    <string name="move_to_home">Ana Ekrana Taşı</string>
+    <string name="no">Hayır</string>
+    <string name="no_icons">Tema hiçbir simge içermiyor</string>
+    <string name="nobackup">yedek bulunamadı</string>
+    <string name="nobookmarks">Hiçbir Favori Ayarlanmadı</string>
+    <string name="numcolumnsmessage">Sütun Sayısı seçin:</string>
+    <string name="numcolumnssummary">Uygulama menüsünün sütun sayısını ayarlayın</string>
+    <string name="numcolumnstitle">Sütun sayısı</string>
+    <string name="openinnewtab">Yeni Sekmede Aç</string>
+    <string name="orientation_auto">Otomatik Döndür</string>
+    <string name="orientation_landscape">Yatay</string>
+    <string name="orientation_portrait">Dikey</string>
+    <string name="orientationsummary">Başlatıcının yönünü ayarlayın</string>
+    <string name="orientationtitle">Ekran Yönlendirme</string>
+    <string name="package_info">Paket bilgisi</string>
+    <string name="pagetransformationsummary">Sayfa kaydırma animasyonunu ayarlayın</string>
+    <string name="pagetransformationtitle">Kaydırma Animasyonu</string>
+    <string name="pagetransparencysummary">Uygulama ve Tarayıcı sayfası saydamlığını ayarlayın</string>
+    <string name="pagetransparencytitle">Sayfa Saydamlığı</string>
+    <string name="paste">Yapıştır</string>
+    <string name="persistentsummary">Uygulamayı bellekte tutar. Bir bildirim görüntüler</string>
+    <string name="persistenttitle">Bellekte Tut</string>
+    <string name="pick_icon">Simge Seç</string>
+    <string name="please_wait">Lütfen Bekleyin\.\.\.</string>
+    <string name="processing">Simge teması işleniyor</string>
+    <string name="prodescription">Lucid Launcher Pro\'yu satın alarak projeye destek olun</string>
+    <string name="rate">Oyla</string>
+    <string name="refresh">Yenile</string>
+    <string name="remove">Kaldır</string>
+    <string name="removeFromFavorites">Favorilerden kaldır</string>
+    <string name="remove_bookmark_folder_confirm">Gerçekten bu klasörü kaldırmak istiyor musunuz? İçeriği de silinecektir.</string>
+    <string name="remove_browsing_traces">Tarayıcı izlerini kaldır…</string>
+    <string name="remove_from_folder">Klasörden Kaldır</string>
+    <string name="resetsummary">Tüm ayarları varsayılan haline getir</string>
+    <string name="resettitle">Varsayılan ayarları geri yükle</string>
+    <string name="restart_launcher">Uygulamayı Yeniden Başlat</string>
+    <string name="restoresummary">Yedeği geri yükle</string>
+    <string name="restoretitle">Geri yükle</string>
+    <string name="savedimage">resim kaydedildi</string>
+    <string name="saveimage">Resmi Kaydet</string>
+    <string name="search">Ara</string>
+    <string name="search_engine">Arama Motoru</string>
+    <string name="search_hidden_apps_summary">Ararken gizli uygulamaları göster</string>
+    <string name="search_hidden_apps_title">Gizli Uygulamaları Ara</string>
+    <string name="search_icon_action_summary">Arama simgesine basıldığındaki eylemi seçin</string>
+    <string name="search_icon_action_title">Arama Simgesi Eylemi</string>
+    <string name="searchcontactssummary">Kişileri aramayı etkinleştirin veya devre dışı bırakın</string>
+    <string name="searchcontactstitle">Kişileri Ara</string>
+    <string name="searchpackagessummary">com.google.calendar gibi paket adlarını aramayı etkinleştirin veya devre dışı bırakın</string>
+    <string name="searchpackagestitle">Paketleri Ara</string>
+    <string name="searchtextmessage">Özel Arama Metnini girin:</string>
+    <string name="searchtextsummary">Eylem Çubuğundaki arama metnini ayarlayın</string>
+    <string name="searchtexttitle">Özel Arama Metni</string>
+    <string name="select_apps">Eklenecek Uygulamaları Seçin</string>
+    <string name="select_screen">Yeni Ekran seçin</string>
+    <string name="send_mail">Posta gönder</string>
+    <string name="send_mail_error">Yüklü hiçbir e-posta istemcisi yok</string>
+    <string name="set_home">Ana ekran olarak ayarla</string>
+    <string name="share">Paylaş</string>
+    <string name="shortcutlabelssummary">Kısayol altındaki etiketleri göster veya gizle</string>
+    <string name="shortcutlabelstitle">Kısayol Etiketleri</string>
+    <string name="show_app">Uygulamayı Göster</string>
+    <string name="show_search_icon_summary">Arama çubuğunda arama simgesini göster</string>
+    <string name="show_search_icon_title">Arama Simgesi</string>
+    <string name="showbackgroundonurlbarsummary">Adres çubuğuna bir fon ekler</string>
+    <string name="showbackgroundonurlbartitle">Adres çubuğunda fon göster</string>
+    <string name="showlabelssummary">Simgelerin yanındaki etiketleri göster veya gizle</string>
+    <string name="showlabelstitle">Uygulama Simgesi Etiketleri</string>
+    <string name="sidebar_custom">Özel</string>
+    <string name="sidebar_dark">Karanlık</string>
+    <string name="sidebar_light">Aydınlık</string>
+    <string name="sidebar_switched_summary">Kenar çubuğu ekrandaki diğer tarafa geçecektir</string>
+    <string name="sidebar_switched_title">Kenar çubuğu konumunu değiştir</string>
+    <string name="sidebar_transparent">Şeffaf</string>
+    <string name="sidebarcolorsummary">Kenar çubuğunun rengini ayarlayın</string>
+    <string name="sidebarcolortitle">Kenar Çubuğu Rengi</string>
+    <string name="sidebarhidelabelsummary">Simgelerin yanındaki etiketleri göster veya gizle</string>
+    <string name="sidebarhidelabeltitle">Uygulama Etiketi</string>
+    <string name="sidebariconpaddingmessage">Kenar Çubuğu Simge Dolgusunu seçin:</string>
+    <string name="sidebariconpaddingsummary">Kenar Çubuğu Simgeleri çevresindeki dolguyu ayarlayın</string>
+    <string name="sidebariconpaddingtitle">Kenar Çubuğu Simge Dolgusu</string>
+    <string name="sidebariconsizemessage">Simge Boyutu seçin:</string>
+    <string name="sidebariconsizesummary">Kenar çubuğu simge boyutunu ayarlayın</string>
+    <string name="sidebariconsizetitle">Kenar Çubuğu Simge Boyutu</string>
+    <string name="sidebarsettingstitle">Kenar Çubuğu Ayarları</string>
+    <string name="sidebartextcolorsummary">Kenar çubuğunun metin rengini ayarlayın</string>
+    <string name="sidebartextcolortitle">Kenar Çubuğu Metin Rengi</string>
+    <string name="sidebarthememessage">Tema seçin:</string>
+    <string name="sidebarthemesummary">Kenar Çubuğu Temasını ayarlayın</string>
+    <string name="sidebarthemetitle">Kenar Çubuğu Teması</string>
+    <string name="sidebartransparencysummary">Kenar çubuğunun saydamlığını ayarlayın</string>
+    <string name="sidebartransparencytitle">Kenar Çubuğu Saydamlığı</string>
+    <string name="sort_az">Alfabetik Sıra (A-Z)</string>
+    <string name="sort_new">Yükleme Tarihi (Önce Yeni)</string>
+    <string name="sort_old">Yükleme Tarihi (Önce Eski)</string>
+    <string name="sort_summary">Uygulamaların nasıl sıralanacağını seçin</string>
+    <string name="sort_title">Sıralama Yöntemi</string>
+    <string name="sort_za">Alfabetik Sıra (Z-A)</string>
+    <string formatted="false" name="sslExpiredMessage">\n\n%1s\n\nweb sayfasının SSL sertifikasının süresi doldu. %2s tarihinde süresi doldu.</string>
+    <string name="sslExpiredTitle">SSL Sertifikası süresi doldu</string>
+    <string formatted="false" name="sslIdMismatchMessage">\n\n%1s\n\nweb sayfasının sadece %2s için geçerli bir SSL sertifikası vardır.</string>
+    <string name="sslIdMismatchTitle">Bu web sayfasının SSL Sertifikası geçerli değil</string>
+    <string formatted="false" name="sslNotYetValidMessage">\n\n%1s\n\nweb sayfasının SSL sertifikası henüz geçerli değil. %2s tarihinde geçerli olacak.</string>
+    <string name="sslNotYetValidTitle">SSL sertifikası henüz geçerli değil</string>
+    <string name="sslProceedQuestion">Bu sertifikayı kabul etmek istiyor musunuz?</string>
+    <string formatted="false" name="sslUntrustedMessage">\n\n%s\n\nweb sayfasının kendinden imzalı bir SSL sertifikası vardır.</string>
+    <string name="sslUntrustedTitle">SSL Sertifikası güvenilir değil</string>
+    <string name="sslWebsiteWarning">Sertifika doğrulanamıyor gibi web sayfası büyük olasılıkla güvenli değil. Lütfen dikkatle ilerleyin.</string>
+    <string name="step_basic_actions_summary">Aramaya başlamak için arama simgesine dokunun \nDiğer eylemler için üç noktalı simgeye dokunun</string>
+    <string name="step_basic_actions_title">Temel Eylemler</string>
+    <string name="step_browser_sidebar_summary">Ekranın kenarından kaydırarak tarayıcı kenar çubuğuna erişin</string>
+    <string name="step_browser_sidebar_title">Tarayıcı Kenar Çubuğu</string>
+    <string name="step_browser_summary">Bu tarayıcınızdır. Bu sayfayı \"Ekranları Yönet\" menüsünden yeniden düzenleyebilir veya kaldırabilirsiniz</string>
+    <string name="step_browser_title">Web Tarayıcı</string>
+    <string name="step_drawer_app_long_press_summary">Ana ekrana veya favorilere ekleme gibi diğer seçenekleri görmek için bir öğe üzerinde uzun basabilirsiniz</string>
+    <string name="step_drawer_app_long_press_title">Diğer Seçenekler</string>
+    <string name="step_drawer_summary">Bu uygulama menünüzdür. Bu sayfayı \"Ekranları Yönet\" menüsünden yeniden düzenleyebilir veya kaldırabilirsiniz</string>
+    <string name="step_drawer_title">Uygulama Menüsü</string>
+    <string name="step_favorite_action_summary">Favori uygulamalarınıza erişmek için 3 çizgili simgeye dokunun veya ekranın kenarından kaydırın</string>
+    <string name="step_favorite_title">Favori Uygulamalar</string>
+    <string name="step_favorites_summary">Tüm favori uygulamalarınız burada görünür. Uygulama menüsünden uygulama eklenebilir</string>
+    <string name="step_orientation_summary">Ana ekran düzeni farklı yönlere dayanır. Yatay ve dikey yöne farklı uygulamalar yerleştirebilirsiniz</string>
+    <string name="step_orientation_title">Başlatıcı Yönlendirme</string>
+    <string name="step_welcome_summary">Bu sizin ana ekranınızdır. Buraya uygulamalar, widget\'lar ve daha fazlasını koyabilirsiniz. Ana ekranlar arasında geçiş yapmak için yatay, diğer sayfalar için dikey kaydırabilirsiniz</string>
+    <string name="step_welcome_title">Lucid Launcher\'a hoş geldiniz</string>
+    <string name="stop">Durdur</string>
+    <string name="system_settings">Sistem Ayarları</string>
+    <string name="toggle_desktop_mode">Masaüstü Moduna Geç</string>
+    <string name="trans_coverflow">Akış</string>
+    <string name="trans_cubezoom">Küp Yakınlaştırma</string>
+    <string name="trans_doorclose">Kapı Kapanması</string>
+    <string name="trans_flipin">Çevirme</string>
+    <string name="trans_flyin">Uçma</string>
+    <string name="trans_none">Hiçbiri</string>
+    <string name="trans_pagestack">Yığın</string>
+    <string name="trans_spinin">Dönüş</string>
+    <string name="trans_stackin">Yığın</string>
+    <string name="trans_tiltin">Eğim</string>
+    <string name="trans_zoomout">Uzaklaştırma</string>
+    <string name="transparentnavsummary">Şeffaf Gezinti Çubuğunu etkinleştirin veya devre dışı bırakın</string>
+    <string name="transparentnavtitle">Şeffaf Gezinti Çubuğu</string>
+    <string name="transparentstatussummary">Şeffaf Durum Çubuğunu etkinleştirin veya devre dışı bırakın</string>
+    <string name="transparentstatustitle">Şeffaf Durum Çubuğu</string>
+    <string name="tutorial">Öğreticiyi Başlat</string>
+    <string name="uninstall">Kaldır</string>
+    <string name="unlock_desktop">Masaüstü Kilidini Aç</string>
+    <string name="unlock_page">Sayfa Kilidini Aç</string>
+    <string name="unread_count_summary">Uygulamalarda okunmamış sayısını göster. Şu anda birkaç uygulamada çalışıyor</string>
+    <string name="unread_count_title">Okunmamış Sayısı (Beta)</string>
+    <string name="upgrade">Daha fazla özellik için Lucid Launcher Pro\'ya yükseltin</string>
+    <string name="urlbarcolorsummary">Adres çubuğunun arkaplan rengini ayarlayın</string>
+    <string name="urlbarcolortitle">Adres çubuğu rengi</string>
+    <string name="urlbardefault">Arayın veya Adres girin</string>
+    <string name="version">Sürüm</string>
+    <string name="verticalscrollsummary">Dikey duvar kağıdı kaydırma animasyonunu etkinleştirin veya devre dışı bırakın</string>
+    <string name="verticalscrolltitle">Dikey Duvar Kağıdı Kaydırma</string>
+    <string name="verticalspacingmessage">Dikey Aralığı seçin:</string>
+    <string name="verticalspacingsummary">Uygulama menüsündeki dikey boşluğu ayarlayın</string>
+    <string name="verticalspacingtitle">Dikey Boşluk</string>
+    <string name="wallpaper">Duvar Kağıdını Değiştir</string>
+    <string name="wallpaper_instructions">Eylem seçin</string>
+    <string name="wallpaper_offset">Duvar kağıdını taşı</string>
+    <string name="wallpaper_offset_summary">Duvar kağıdını istediğiniz yere taşıyın</string>
+    <string name="wallpaper_offset_title">Duvar Kağıdını Taşı</string>
+    <string name="wallpaper_settings">Duvar Kağıdı Ayarları</string>
+    <string name="websettingstitle">Tarayıcı Ayarları</string>
+    <string name="widgetgridsnapsummary">Izgaraya ayarlamayı etkinleştirin veya devre dışı bırakın</string>
+    <string name="widgetgridsnaptitle">Widget\'ı Izgaraya Ayarla</string>
+    <string name="widgetpaddingmessage">Widget Dolgusu seçin:</string>
+    <string name="widgetpaddingsummary">Widget çevresindeki dolguyu ayarlayın</string>
+    <string name="widgetpaddingtitle">Widget Dolgusu</string>
+    <string name="widgetsetupfail">widget kurulumu açılamadı</string>
+    <string name="yes">Evet</string>
+    <string name="zoompercentsummary">Arkaplana yakınlaştırma yüzdesini ayarlayın</string>
+    <string name="zoompercenttitle">Uzaklaştırma Yüzdesi</string>
+</resources>

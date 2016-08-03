@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+    <string-array name="transformation_values" translatable="false">
+        <item>t1</item>
+        <item>t2</item>
+        <item>t3</item>
+        <item>t4</item>
+        <item>t5</item>
+        <item>t6</item>
+        <item>t7</item>
+        <item>t8</item>
+        <item>t9</item>
+        <item>t10</item>
+        <item>t11</item>
+    </string-array>
+    
+    <string-array name="orientation_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    
+    <string-array name="sidebartheme_values" translatable="false">
+        <item>b</item>
+        <item>w</item>
+        <item>c</item>
+    </string-array>
+    
+    <string-array name="searchengines_values" translatable="false">
+        <item>g</item>
+        <item>y</item>
+        <item>b</item>
+        <item>d</item>
+        <item>a</item>
+        <item>i</item>
+        <item>bl</item>
+    </string-array>
+</resources>

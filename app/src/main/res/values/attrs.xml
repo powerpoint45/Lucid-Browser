@@ -1,0 +1,22 @@
+<resources>
+ 
+    <!-- note: to re-use an existing Android attribute not already used by the superclass, name should have prefix "android:" and do not define a format -->
+    <declare-styleable name="NumberPickerPreference">
+        <attr name="android:max" />
+        <attr name="min" format="integer" />
+    </declare-styleable>
+ 
+
+<declare-styleable name="ColorPickerPreference">
+		<attr name="showDialogTitle" format="boolean|reference" />
+		<attr name="showSelectedColorInList" format="boolean|reference" />
+    </declare-styleable>
+    
+    <declare-styleable name="ColorPickerView">
+        <attr name="alphaChannelVisible" format="boolean|reference"/>
+        <attr name="alphaChannelText" format="string|reference" />
+        <attr name="colorPickerSliderColor" format="color|reference" />
+       	<attr name="colorPickerBorderColor" format="color|reference" />
+    </declare-styleable>
+    
+    </resources>

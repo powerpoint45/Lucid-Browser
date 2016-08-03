@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Přejít na plochu"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Přejít nahoru"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Více možností"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Hotovo"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Zobrazit vše"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Vybrat aplikaci"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Smazat dotaz"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Vyhledávací dotaz"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Hledat"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Odeslat dotaz"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Hlasové vyhledávání"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Sdílet pomocí"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Sdílet pomocí %s"</string>
+    <string name="about">O nás</string>
+    <string name="action_lock_screen">Vypnutí obrazovky</string>
+    <string name="action_openapp">Spustit aplikaci</string>
+    <string name="action_openapp_animationnormal">Normální animace při otevření aplikace</string>
+    <string name="action_openapp_animationslide">Přejeďte vlevo pro změnu animace</string>
+    <string name="action_opennotificationpanel">Otevřít panel oznámení</string>
+    <string name="action_openrecents">Otevřít nový</string>
+    <string name="action_shortcut">Spusťte zástupce</string>
+    <string name="action_start_search">Zahájení vyhledávání</string>
+    <string name="action_togglestatusbar">Přepnout oznámení v notifikační liště</string>
+    <string name="actionbarcolorsummary">Nastavit barvu lišty</string>
+    <string name="actionbarcolortitle">Barva lišty</string>
+    <string name="actionbartextstylesummary">Nastavte styl lišty</string>
+    <string name="actionbartextstyletitle">Styl lišty</string>
+    <string name="addToFavorites">Přidat k oblíbeným</string>
+    <string name="addToHome">Přidat na domácí obrazovku</string>
+    <string name="add_apps">Přidat aplikace</string>
+    <string name="add_bookmark_folder">Vytvořit novou složku</string>
+    <string name="add_bookmark_folder_hint">Zadejte název nové složky…</string>
+    <string name="addshortcut">Přidat zástupce</string>
+    <string name="adjustwallpapersummary">Upravit velikost tapety na celou obrazovku</string>
+    <string name="adjustwallpapertitle">Úprava tapety</string>
+    <string name="advancedsettingstitle">Pokročilá nastavení</string>
+    <string name="alert_leftswipegesture">Gesto bylo nastaveno, používání prohlížeče je zakázáno</string>
+    <string name="appInfo">Info o aplikaci</string>
+    <string name="app_drawer">Stránka aplikací</string>
+    <string name="apply">Aplikovat</string>
+    <string name="backupsummary">Zálohovat všechna vaše nastavení</string>
+    <string name="backuptitle">Zálohovat</string>
+    <string name="bookmark_move">Vložit</string>
+    <string name="bookmarks">Záložky</string>
+    <string name="bottompaddinglandsummary">V případě potřeby bude odstraněna výplň navigační lišty</string>
+    <string name="bottompaddinglandtitle">Odstranit spodní okraj (na šířku)</string>
+    <string name="bottompaddingportsummary">V případě potřeby bude odstraněna výplň navigační lišty</string>
+    <string name="bottompaddingporttitle">Odstranit spodní okraj (na výšku)</string>
+    <string name="browser">Prohlížeč</string>
+    <string name="browser_removed_dialog">Tato aplikace bude odstraněna z úložiště v důsledku politických komplikací. Prosím, klikněte na následující který zaměřen na nejnovější Lucid aplikace:</string>
+    <string name="browsercompactmodesummary">Zapnout rozložení prohlížeče pro menší zařízení</string>
+    <string name="browsercompactmodetitle">Zapnout kompaktní režim</string>
+    <string name="browserfullscreensummary">Odstranit výplň z dolní části prohlížeče</string>
+    <string name="browserfullscreentitle">Prohlížeč s pohlcujícími zážitky</string>
+    <string name="cat_title_actionbar">Lišta</string>
+    <string name="cat_title_appearance">Vzhled</string>
+    <string name="cat_title_content">Obsah</string>
+    <string name="cat_title_gestures">Gesta</string>
+    <string name="cat_title_icons">Ikony</string>
+    <string name="cat_title_layout">Uspořádání</string>
+    <string name="cat_title_other">Ostatní</string>
+    <string name="cat_title_setup">Nastavení</string>
+    <string name="cat_title_tools">Nástroje</string>
+    <string name="chooseshortcut">Vyberte zástupce</string>
+    <string name="clearcachetitle">Vymazat mezipaměť</string>
+    <string name="clearcookiestitle">Vymazat soubory Cookies</string>
+    <string name="clearhistorytitle">Vymazat historii procházení</string>
+    <string name="clearonexitsummary">Ukončit prohlížeč vymazat historii, cache a cookies</string>
+    <string name="clearonexittitle">Ukončit prohlížeč a smazat stopy po prohlížení</string>
+    <string name="close">Zavřít</string>
+    <string name="close_tabs_on_exit_summary">Ukončení prohlížeče zavře všechny záložky</string>
+    <string name="close_tabs_on_exit_title">Zavřít karty při ukončení</string>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Některá aplikace vyžaduje aktualizaci aplikace Android Wear."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Aplikace bude fungovat po aktualizaci aplikace Android Wear."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Aktualizujte aplikaci Android Wear"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Aktivovat služby Google Play"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Ke spuštění této aplikace je třeba aktivovat služby Google Play."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Aktivovat služby Google Play"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Požadováno aplikací <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Instalovat služby Google Play"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Ke spuštění této aplikace jsou potřeba služby Google Play, které v telefonu nemáte."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Ke spuštění této aplikace jsou potřeba služby Google Play, které v tabletu nemáte."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Instalovat služby Google Play"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"Zadaný účet v tomto zařízení neexistuje. Zvolte prosím jiný účet."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Neplatný účet"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Aplikace vyžaduje aktivaci služeb Google Play."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Připojení ke službám Google Play vyžaduje datové připojení."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Chyba sítě"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"Aplikace vyžaduje instalaci služeb Google Play."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Aplikace vyžaduje aktualizaci služeb Google Play."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Chyba služeb Google Play"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Nastal neznámý problém se službami Google Play."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Některé vaše aplikace vyžadují služby Google Play, které ve vašem zařízení nejsou podporovány. S žádostí o pomoc se prosím obraťte na výrobce."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Služby Google Play"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Aktualizovat"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Ke spuštění této aplikace je třeba aktualizovat služby Google Play."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Aktualizace služeb Google Play"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Otevřít v telefonu"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Přihlásit se"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Přihlásit se účtem Google"</string>
+    <string name="complete">Akce dokončena</string>
+    <string name="confirm_exit_text">Jste si jisti, že chcete skončit?</string>
+    <string name="confirmunlock">Jste si jisti, že chcete odemknout plochu?</string>
+    <string name="contact">Kontaktujte nás</string>
+    <string name="copyurl">Kopírovat odkaz</string>
+    <string name="def">Standardní</string>
+    <string name="defaulthomepagesummary">Nastavit výchozí domovskou stránku</string>
+    <string name="defaulthomepagetitle">Výchozí domovská stránka</string>
+    <string name="desktopviewsummary">Zobrazení webové stránky jako na stolním počítači</string>
+    <string name="desktopviewtitle">Povolit desktopové zobrazení</string>
+    <string name="dimwebpagesummary">Ztmavit pozadí na stránce prohlížeče</string>
+    <string name="dimwebpagetitle">Ztmavit stránku prohlížeče</string>
+    <string name="disable_ads">Zakázat reklamy</string>
+    <string name="disable_suggestions_title">Zakázat našeptávač</string>
+    <string name="disablebrowsersummary">Vybrat vypnutí prohlížeče</string>
+    <string name="disablebrowsertitle">Deaktivovat integrovaný prohlížeč</string>
+    <string name="disabledrawersummary">Vyberte pro vypnutí stránky aplikací</string>
+    <string name="disablesidebarsummary">Vypnutí obrazovky oblíbených</string>
+    <string name="drawer_style_summary">Vyberte styl</string>
+    <string name="drawer_style_title">Styl stránky aplikací</string>
+    <string name="drawerlabelcolorsummary">Nastavte barvu textu popisku ikon</string>
+    <string name="drawerlabelcolortitle">Barva štítku</string>
+    <string name="drawersettingstitle">Nastavení stránky aplikací</string>
+    <string name="edit">Editovat</string>
+    <string name="edit_bookmark">Upravit záložku</string>
+    <string name="edit_bookmark_folder">Upravit složku záložek</string>
+    <string name="enablecookies">Povolit Cookies</string>
+    <string name="enablefloatoptionsummary">Na podporovaných ROM, můžete zrychlit aplikace (dlouhé stisknutí aplikace pro volbu)</string>
+    <string name="enablefloatoptiontitle">Zapnout zrychlení aplikací</string>
+    <string name="enableimages">Načíst obrázky</string>
+    <string name="enablejavascript">Povolit JavaScript</string>
+    <string name="exit">Konec</string>
+    <string name="exit_confirmation_summary">Kontrola potvrzení o ukončení</string>
+    <string name="exit_confirmation_title">Potvrdit ukončení</string>
+    <string name="failed">Akce se nezdařila</string>
+    <string name="find_in_page">Najít na stránce</string>
+    <string name="floatapp">Zrychlení aplikací</string>
+    <string name="folder_color_summary">Nastavte barvu uvnitř složek</string>
+    <string name="folder_color_title">Barva složky</string>
+    <string name="folder_label_blank">Složka bez názvu</string>
+    <string name="folder_style_summary">Vyberte styl pro složku ikon</string>
+    <string name="folder_style_title">Styl složek</string>
+    <string name="folderhidelabelsummary">Zobrazit nebo skrýt názvy složek</string>
+    <string name="folderhidelabeltitle">Pojmenovat složku</string>
+    <string name="folderlabelcolorsummary">Nastavit barvu názvu složky</string>
+    <string name="folderlabelcolortitle">Barva názvu složky</string>
+    <string name="font_size_summary">Nastavit velikost písma</string>
+    <string name="font_size_title">Velikost písma</string>
+    <string name="fullscreensummary">Skrýt nebo zobrazit lištu</string>
+    <string name="fullscreentitle">Celá obrazovka</string>
+    <string name="gadget_error_text">Problém s načtením widgetu</string>
+    <string name="gallery">Galerie</string>
+    <string name="gesture_alert">Gesto bylo nastaveno, ale musí být přenastaveno k použití</string>
+    <string name="gesturedoubletapsummary">Vyberte akci pro dvojklik</string>
+    <string name="gesturedoubletaptitle">Dvojklik</string>
+    <string name="gesturedownsummary">Vyberte akci pro přejetí dolů na Domovské stránce</string>
+    <string name="gesturedowntitle">Přejeďte dolů</string>
+    <string name="gestureleftsummary">Vyberte akci pro přejetí vlevo</string>
+    <string name="gesturelefttitle">Přejeďte vlevo</string>
+    <string name="gesturerightsummary">Vyberte akci pro přejetí vpravo</string>
+    <string name="gesturerighttitle">Přejeďte vpravo</string>
+    <string name="gestureupsummary">Vyberte akci pro přejetí vzhůru na domovské stránce</string>
+    <string name="gestureuptitle">Přejeďte nahoru</string>
+    <string name="grid">Mřížka</string>
+    <string name="gridsnapsummary">Zapnout nebo vypnout ukotvení</string>
+    <string name="gridsnaptitle">Ukotvit ikony pomocí mřížky</string>
+    <string name="hide_actionbar_summary">Skrýt lištu při rolování stránky dolů</string>
+    <string name="hide_actionbar_title">Skrýt lištu</string>
+    <string name="hide_apps">Skrýt aplikace</string>
+    <string name="hide_appssummary">Skrýt aplikace na stránce aplikací</string>
+    <string name="hidesearchbarsummary">Skrýt vyhledávací lištu na domovské obrazovce</string>
+    <string name="hidesearchbartitle">Skrýt vyhledávací lištu</string>
+    <string name="history">Historie</string>
+    <string name="holoDarkSummary">Zkontrolujte nastavení tmavého motivu v nastavení a záložkách (Restartujte nastavení pro aplikování motivu)</string>
+    <string name="holoDarkTitle">Použít tmavý motiv</string>
+    <string name="home">Domů</string>
+    <string name="home_folder">Přidat složku</string>
+    <string name="home_screen">Domovská obrazovka</string>
+    <string name="home_settings">Lucid Launcher nastavení</string>
+    <string name="home_store">Lucid obchod</string>
+    <string name="home_wallpaper">Změnit tapetu</string>
+    <string name="home_widgets">Přidat Widget</string>
+    <string name="homeiconsizemessage">Vyberte velikost ikon:</string>
+    <string name="homeiconsizesummary">Nastavit velikost ikon na domovské obrazovce</string>
+    <string name="homeiconsizetitle">IVelikost ikon</string>
+    <string name="homeindicatorsummary">Zapnout nebo vypnout indikátor stránek</string>
+    <string name="homeindicatortitle">Indikátor stránek</string>
+    <string name="homelandcolsmessage">Vyberte počet sloupců v režimu na šířku:</string>
+    <string name="homelandcolssummary">Nastavit počet sloupcú v režimu na šířku</string>
+    <string name="homelandcolstitle">Počet sloupců (na šířku)</string>
+    <string name="homelandrowsmessage">Vyberte počet řádkú v režimu na šířku:</string>
+    <string name="homelandrowssummary">Nastavit počet řádkú v režimu na šířku</string>
+    <string name="homelandrowstitle">Počet řádků (na šířku)</string>
+    <string name="homenumpagesmessage">Vyberte počet domovských stránek:</string>
+    <string name="homenumpagessummary">Nastavit počet domovských stránek</string>
+    <string name="homenumpagestitle">Počet domovských stránek</string>
+    <string name="homeportcolsmessage">Vyberte počet sloupců v režimu na výšku:</string>
+    <string name="homeportcolssummary">Nastavit počet sloupců v režimu na výšku</string>
+    <string name="homeportcolstitle">Počet sloupců (na výšku)</string>
+    <string name="homeportrowsmessage">Vyberte počet řádků v režimu na výšku:</string>
+    <string name="homeportrowssummary">Nastavit počet řádků v režimu na výšku</string>
+    <string name="homeportrowstitle">Počet řádků (Na výšku)</string>
+    <string name="homesettingstitle">Nastavení domovské stránky</string>
+    <string name="horizontalscrollsummary">Povolit nebo zakázat horizontální rolování tapety</string>
+    <string name="horizontalscrolltitle">Posun tapety horizontální</string>
+    <string name="icon_theme">Téma ikon</string>
+    <string name="iconpaddingmessage">Vyberte pozadí ikon:</string>
+    <string name="iconpaddingsummary">Nastavte pozadí ikon</string>
+    <string name="iconpaddingtitle">Pozadí ikon</string>
+    <string name="iconsizemessage">Vyberte velikost ikon:</string>
+    <string name="iconsizesummary">Nastavte velikost ikon na obrazovce aplikací</string>
+    <string name="iconsizetitle">Velikost ikon</string>
+    <string name="launcher_settings">Nastavení launcheru</string>
+    <string name="libraries">Knihovny</string>
+    <string name="list">Seznam</string>
+    <string name="lock_desktop">Zamknout Desktop</string>
+    <string name="lock_page">Zamknout stránku</string>
+    <string name="lucidactionbrowser">Prohlížeč</string>
+    <string name="lucidactiondrawer">Stránka aplikací</string>
+    <string name="lucidactionfavorites">Stránka oblíbených</string>
+    <string name="lucidactionlockunlock">Zamknout/Odemknout Desktop</string>
+    <string name="lucidactionrecents">Poslední aplikace</string>
+    <string name="mainsettingstitle">Moje nastavení</string>
+    <string name="manage_screens">Manažer obrazovek</string>
+    <string name="menu_settings">Nastavení</string>
+    <string name="more">Více</string>
+    <string name="more_apps">Více aplikací</string>
+    <string name="move_here">Přesunout sem</string>
+    <string name="move_to_home">move to home</string>
+    <string name="no">Ne</string>
+    <string name="no_icons">Téma neobsahuje žádné ikony</string>
+    <string name="nobackup">Žádná záloha nalezena</string>
+    <string name="nobookmarks">Žádné záložky nenastaveny</string>
+    <string name="numcolumnsmessage">Vyberte počet sloupců:</string>
+    <string name="numcolumnssummary">Nastavit počet sloupců v panelu aplikací</string>
+    <string name="numcolumnstitle">Počet sloupců</string>
+    <string name="openinnewtab">Otevřít v novém panelu</string>
+    <string name="orientation_auto">Automatické otočení</string>
+    <string name="orientation_landscape">Na šířku</string>
+    <string name="orientation_portrait">Na výšku</string>
+    <string name="orientationsummary">Nastavit orientaci pro Launcher</string>
+    <string name="orientationtitle">Orientace launcheru</string>
+    <string name="package_info">Info balíčku</string>
+    <string name="pagetransformationsummary">Animace při přechodu stránky</string>
+    <string name="pagetransformationtitle">Nastavení animací</string>
+    <string name="pagetransparencysummary">Nastavit prúhlednost pro prohlížeč a stránku aplikací</string>
+    <string name="pagetransparencytitle">Průhlednost stránky</string>
+    <string name="paste">Vložit</string>
+    <string name="persistentsummary">Mějte launcher v operační paměti. Bude zobrazeno oznámení</string>
+    <string name="persistenttitle">Trvalý systém</string>
+    <string name="pick_icon">Vyberte ikonu</string>
+    <string name="please_wait">Čekejte prosím...</string>
+    <string name="processing">Zpracování tématu ikon</string>
+    <string name="prodescription">Podpořte projekt tím, že koupíte Lucid Launcher Pro</string>
+    <string name="rate">Ohodnotit</string>
+    <string name="refresh">Znovu načíst</string>
+    <string name="remove">Odebrat</string>
+    <string name="removeFromFavorites">Odebrat z oblíbených</string>
+    <string name="remove_bookmark_folder_confirm">Opravdu chcete odstranit tuto složku?Obsah, bude také smazán.</string>
+    <string name="remove_browsing_traces">Odstraňit stopy prohlížeče ...</string>
+    <string name="remove_from_folder">Odebrat ze složky</string>
+    <string name="resetsummary">Obnovit všechna nastavení do výchozího nastavení</string>
+    <string name="resettitle">Obnovit výchozí nastavení</string>
+    <string name="restart_launcher">Restart Launcheru</string>
+    <string name="restoresummary">Obnovit ze zálohy</string>
+    <string name="restoretitle">Obnovit</string>
+    <string name="savedimage">Uložit obrázek</string>
+    <string name="saveimage">Uložit obrázek</string>
+    <string name="search">Najít</string>
+    <string name="search_engine">Vyhledávač</string>
+    <string name="search_hidden_apps_summary">Zobrazit skryté aplikace při vyhledávání</string>
+    <string name="search_hidden_apps_title">Hledat skryté aplikace</string>
+    <string name="search_icon_action_summary">Zvolte akci při kliknutí na ikonu vyhledávání</string>
+    <string name="search_icon_action_title">Akce ikony vyhledávání</string>
+    <string name="searchcontactssummary">Povolte či zakažte vyhledávání kontaktů</string>
+    <string name="searchcontactstitle">Vyhledávání kontaktů</string>
+    <string name="searchpackagessummary">Povolit nebo zakázat vyhledávání jmen balíků, jako jsou com.google.calendar</string>
+    <string name="searchpackagestitle">Vyhledávání balíčků</string>
+    <string name="searchtextmessage">Vložte vlastní text pro vyhledávání:</string>
+    <string name="searchtextsummary">Nastavit vlastní text pro vyhledávání v liště</string>
+    <string name="searchtexttitle">Vlastní text pro vyhledávání</string>
+    <string name="select_apps">Vyberte aplikace pro přidání</string>
+    <string name="select_screen">Vyberte novou obrazovku</string>
+    <string name="send_mail">Pošlete mail s</string>
+    <string name="send_mail_error">Není nainstalován žádný emailový klient</string>
+    <string name="set_home">Nastavit jako domácí stránku</string>
+    <string name="share">Sdílet</string>
+    <string name="shortcutlabelssummary">Zobrazit nebo skrýt popisky všech zástupců</string>
+    <string name="shortcutlabelstitle">Popisek zástupce</string>
+    <string name="show_search_icon_summary">Zobrazit ikonu vyhledávání ve vyhledávácí liště</string>
+    <string name="show_search_icon_title">Ikona vyhledávání</string>
+    <string name="showbackgroundonurlbarsummary">Přidat pozadí do adresního řádku</string>
+    <string name="showbackgroundonurlbartitle">Zobrazit pozadí na adresním řádku</string>
+    <string name="showlabelssummary">Zobrazit nebo skrýt popisky ikon</string>
+    <string name="showlabelstitle">Štítky ikon v panelu aplikací</string>
+    <string name="sidebar_custom">Vlastní</string>
+    <string name="sidebar_dark">Tmavý</string>
+    <string name="sidebar_light">Světlý</string>
+    <string name="sidebar_switched_summary">Zapne postraní lišty na orazovce</string>
+    <string name="sidebar_switched_title">Přepnout umístnění vyhledávací lišty</string>
+    <string name="sidebar_transparent">Průhledné</string>
+    <string name="sidebarcolorsummary">Nastavit barvu lišty</string>
+    <string name="sidebarcolortitle">Barva lišty</string>
+    <string name="sidebarhidelabelsummary">Zobrazit nebo skrýt štítek u každé ikony</string>
+    <string name="sidebarhidelabeltitle">Štítek aplikací</string>
+    <string name="sidebariconpaddingmessage">Vyberte pozadí ikon v postraním panelu:</string>
+    <string name="sidebariconpaddingsummary">Nastavit pozadí ikon v postraním panelu</string>
+    <string name="sidebariconpaddingtitle">Pozadí ikon v postraním panelu</string>
+    <string name="sidebariconsizemessage">Vyberte velikost ikon:</string>
+    <string name="sidebariconsizesummary">Nastavit velikost ikon v postraním panelu</string>
+    <string name="sidebariconsizetitle">Velikost ikon v postraním panelu</string>
+    <string name="sidebarsettingstitle">Nastavení postraního panelu</string>
+    <string name="sidebartextcolorsummary">Nastavit barvu textu v liště</string>
+    <string name="sidebartextcolortitle">Barva textu v liště</string>
+    <string name="sidebarthememessage">Vyberte téma:</string>
+    <string name="sidebarthemesummary">Nastavit téma postraního panelu</string>
+    <string name="sidebarthemetitle">Téma postraního panelu</string>
+    <string name="sidebartransparencysummary">Nastavit průhlednost postraního panelu</string>
+    <string name="sidebartransparencytitle">Průhlednost postraního panelu</string>
+    <string formatted="false" name="sslExpiredMessage">Webové stránky na adrese \ n \ n% 1s \ n \ má SSL certifikát platnost vypršela. Vypršel po% 2s.</string>
+    <string name="sslExpiredTitle">SSL certifikát vypršel</string>
+    <string formatted="false" name="sslIdMismatchMessage">Webové stránky na adrese \ n \ n% 1 \ n \ je SSL certifikát, který je platný pouze pro% 2s.</string>
+    <string name="sslIdMismatchTitle">SSL Certifikát není platný pro tuto webovou stránku</string>
+    <string formatted="false" name="sslNotYetValidMessage">Webové stránky na adrese \ n \ n% 1 \ je SSL certifikát, který není ještě platný. To bude platit od% 2s.</string>
+    <string name="sslNotYetValidTitle">SSL Certifikát není platný</string>
+    <string name="sslProceedQuestion">Chcete akceptovat tento certifikát?</string>
+    <string formatted="false" name="sslUntrustedMessage">Webové stránky na adrese \ n \ n% s \ n \ je SSL certifikát s vlastním podpisem.</string>
+    <string name="sslUntrustedTitle">SSL certifikát není důvěryhodný</string>
+    <string name="sslWebsiteWarning">Webová stránka je možná nebezpečné, protože nelze ověřit certifikát. Prosím, postupujte opatrně.</string>
+    <string name="step_basic_actions_summary">Klikněte na vyhledávací ikonu pro zahájení vyhledávání \nKlikněte na tři tečky pro více možností</string>
+    <string name="step_basic_actions_title">Základní akce</string>
+    <string name="step_browser_sidebar_summary"> Vstupte do postranního panelu tahem od kraje obrazovky</string>
+    <string name="step_browser_sidebar_title">Postranní panel prohlížeče</string>
+    <string name="step_browser_summary">Toto je prohlížeč. Tuto stránku můžete vypnout nebo přeskupit z \"Spravovat obrazovky\" </string>
+    <string name="step_browser_title">Prohlížeč</string>
+    <string name="step_drawer_app_long_press_summary">Dlouhým podržením na objektu můžete zobrazit více možností jako přidat domu nebo do oblíbených</string>
+    <string name="step_drawer_app_long_press_title">Více možností</string>
+    <string name="step_drawer_summary">Toto je seznam aplikací. Tuto stránku můžete vypnout či přeskupit z  \"Spravovat obrazovky\" </string>
+    <string name="step_drawer_title">Seznam aplikací</string>
+    <string name="step_favorite_action_summary">Klikněte na tři tečky nebo táhněte od kraje obrazovky pro vstup k oblíbeným aplikacím</string>
+    <string name="step_favorite_title">Oblíbené aplikace</string>
+    <string name="step_favorites_summary">Veškeré oblíbené aplikace budou zobrazeny zde. Aplikace může být přidána do oblíbených ze seznamu aplikací</string>
+    <string name="step_orientation_summary">Rozložení domovské obrazovky je jiné v návaznosti na orientaci</string>
+    <string name="step_orientation_title">Orientace launcheru</string>
+    <string name="step_welcome_summary">Toto je vaše domovská stránka. Zde můžete umisťovat ikony, widgety a další. Svislým tahem můžete měnit domovské obrazovky a vertikální tah pro změnu stránek. </string>
+    <string name="step_welcome_title">Vítejte v Lucid Launcheru</string>
+    <string name="stop">Stop</string>
+    <string name="system_settings">Nastavení systému</string>
+    <string name="toggle_desktop_mode">Přepnout do reřimu stolního počítače</string>
+    <string name="trans_coverflow">Coverflow</string>
+    <string name="trans_cubezoom">Krychle</string>
+    <string name="trans_doorclose">Zavřít dveře</string>
+    <string name="trans_flipin">Otočit kartu</string>
+    <string name="trans_flyin">Náhled</string>
+    <string name="trans_none">Žádný</string>
+    <string name="trans_pagestack">Stránka ze zásobníku</string>
+    <string name="trans_spinin">Točit</string>
+    <string name="trans_stackin">Zásobník</string>
+    <string name="trans_tiltin">Překlopit</string>
+    <string name="trans_zoomout">Oddálit</string>
+    <string name="transparentnavsummary">Zapnout nebo vypnout průhlednost navigační lišty</string>
+    <string name="transparentnavtitle">Průhlednost navigační lišty</string>
+    <string name="transparentstatussummary">Zapnout nebo vypnout průhlednost lišty</string>
+    <string name="transparentstatustitle">Průhlednost lišty</string>
+    <string name="tutorial">Začít cvičení</string>
+    <string name="uninstall">Odinstalovat</string>
+    <string name="unlock_desktop">Odemknout Desktop</string>
+    <string name="unlock_page">Odemknout stránku</string>
+    <string name="upgrade">Upgradujte na Lucid Launcher Pro pro více funkcí</string>
+    <string name="urlbarcolorsummary">Nastavte barvu pozadí adresního řádku</string>
+    <string name="urlbarcolortitle">Barva adresního řádku</string>
+    <string name="urlbardefault">Zadejte vyhledávaný výraz nebo adresu</string>
+    <string name="verticalscrollsummary">Povolit nebo zakázat vertikální rolování tapety</string>
+    <string name="verticalscrolltitle">Posun tapety vertikální</string>
+    <string name="verticalspacingmessage">Vyberte velikost svislých mezer:</string>
+    <string name="verticalspacingsummary">Nastavit svislé mezery v panelu aplikací</string>
+    <string name="verticalspacingtitle">Svislé mezery</string>
+    <string name="wallpaper">Změnit tapetu</string>
+    <string name="wallpaper_instructions">Výběr akce</string>
+    <string name="wallpaper_settings">Nastavení tapety</string>
+    <string name="websettingstitle">Nastavení prohlížeče</string>
+    <string name="widgetgridsnapsummary">Zapnout nebo vypnout ukotvení</string>
+    <string name="widgetgridsnaptitle">Ukotvit Widgety pomocí mřížky</string>
+    <string name="widgetpaddingmessage">Vyberte pozadí vidgetu:</string>
+    <string name="widgetpaddingsummary">Nastavit pozadí Widgetu</string>
+    <string name="widgetpaddingtitle">Pozadí Widgetu</string>
+    <string name="widgetsetupfail">Nepodařilo se otevřít nastavení widgetu</string>
+    <string name="yes">Ano</string>
+    <string name="zoompercentsummary">Nastavit oddálení pozadí v procentech</string>
+    <string name="zoompercenttitle">Oddálení v procentech</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="APPWIDGET_HOST_ID" type="id"/>
+    <item name="REQUEST_CREATE_APPWIDGET" type="id"/>
+    <item name="REQUEST_PICK_APPWIDGET" type="id"/>
+    <item name="home_container" type="id"/>
+    <item name="home_pager" type="id"/>
+    <item name="floating_app" type="id"/>
+     <item name="grid_icon" type="id"/>
+    <item name="del_home" type="id"/>
+    <item name="home_widget_frame" type="id"/>
+    <item name="home_widget_holder" type="id"/>
+    <item name="main_menu_button" type="id"/>
+    <item name="add_widget_button" type="id"/>
+    <item name="browser_page" type="id"/>
+    <item name="float_hold_bg" type="id"/>
+    <item name="loading_circle" type="id"/>
+</resources>

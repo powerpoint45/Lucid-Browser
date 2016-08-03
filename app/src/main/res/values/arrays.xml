@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+    <string-array name="transformations">
+        <item>@string/trans_zoomout</item>
+        <item>@string/trans_pagestack</item>
+        <item>@string/trans_flipin</item>
+        <item>@string/trans_doorclose</item>
+        <item>@string/trans_tiltin</item>
+        <item>@string/trans_spinin</item>
+        <item>@string/trans_stackin</item>
+        <item>@string/trans_coverflow</item>
+        <item>@string/trans_flyin</item>
+        <item>@string/trans_cubezoom</item>
+        <item>@string/trans_none</item>
+    </string-array>
+    
+    <string-array name="orientations">
+        <item>@string/orientation_auto</item>
+        <item>@string/orientation_portrait</item>
+        <item>@string/orientation_landscape</item>
+    </string-array>
+    
+    <string-array name="sidebarthemes">
+        <item>@string/sidebar_dark</item>
+        <item>@string/sidebar_light</item>
+        <item>@string/sidebar_custom</item>
+    </string-array>
+    
+    <string-array name="searchengines">
+        <item>@string/engine_google</item>
+        <item>@string/engine_yahoo</item>
+        <item>@string/engine_bing</item>
+        <item>@string/engine_duckduckgo</item>
+        <item>@string/engine_ask</item>
+        <item>@string/engine_ixquick</item>
+        <item>@string/engine_blekko</item>
+    </string-array>
+    
+    
+</resources>

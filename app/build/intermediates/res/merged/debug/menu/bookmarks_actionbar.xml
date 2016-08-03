@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Search, should appear as action button -->
+    <item android:id="@+id/addbookmarkfolder"
+          android:icon="@drawable/ic_action_new_folder"
+          android:title="@string/add_bookmark_folder"
+          android:showAsAction="ifRoom" />
+</menu>
