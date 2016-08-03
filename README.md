@@ -5,4 +5,4 @@ Lucid Browser is a free and open source browser designed to be small, light, fas
 ### Download the App
   - Lucid Browser Free: [Play Store](https://play.google.com/store/apps/details?id=com.powerpoint45.lucidbrowser)
   - Lucid Browser Donate: [Play Store](https://play.google.com/store/apps/details?id=com.powerpoint45.lucidbrowserpro)
-  - Lucid Browser Free APK: [GitHub](https://github.com/powerpoint45/Lucid-Browser/blob/master/APK/LucidBrowser.apk)
+  - Lucid Browser Free APK: [GitHub](https://github.com/powerpoint45/Lucid-Browser/blob/master/app/app-release.apk)
