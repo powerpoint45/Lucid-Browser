@@ -8,7 +8,7 @@ ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifes
 		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
 		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:5:5-31
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:5:5-32
 		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
 		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
 	android:versionCode
