@@ -1,0 +1,4 @@
+#Sun Jan 29 16:40:37 CST 2017
+base.0=/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/transforms/dex/release/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/transforms/dex/release/folders/1000/1f/main/classes.dex

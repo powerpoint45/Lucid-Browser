@@ -4,20 +4,15 @@
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity" 
         xmlns:app="http://schemas.android.com/apk/res-auto"
         >
     <!-- The main content view -->
-    
-    
 
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
          >
-         
-         
         
         <views.CustomToolbar
             android:id="@+id/toolbar"
@@ -27,7 +22,6 @@
         	app:contentInsetLeft="0dp"
 			app:contentInsetStart="0dp"
         	>
-        	
             
         </views.CustomToolbar>
 

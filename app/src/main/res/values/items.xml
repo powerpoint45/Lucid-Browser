@@ -25,8 +25,9 @@
         <item>w</item>
         <item>c</item>
     </string-array>
-    
+
     <string-array name="searchengines_values" translatable="false">
+        <item>ec</item>
         <item>g</item>
         <item>y</item>
         <item>b</item>
@@ -34,5 +35,6 @@
         <item>a</item>
         <item>i</item>
         <item>bl</item>
+        <item>yd</item>
     </string-array>
 </resources>

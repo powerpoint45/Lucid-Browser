@@ -1,5 +1,8 @@
 package bookmarkModel;
 
+import android.app.Activity;
+import android.content.Context;
+
 import java.io.EOFException;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -7,10 +10,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-
-import android.content.Context;
-
-import com.powerpoint45.lucidbrowser.MainActivity;
 
 public class BookmarksManager implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -27,10 +26,10 @@ public class BookmarksManager implements Serializable {
 		this.displayedFolder = this.root;
 	}
 
-	public void saveBookmarksManager() {
+	public void saveBookmarksManager(Activity a) {
 		FileOutputStream fos;
 		try {
-			fos = MainActivity.ctxt.openFileOutput("bookmarkData",
+			fos = a.openFileOutput("bookmarkData",
 					Context.MODE_PRIVATE);
 			ObjectOutputStream os = new ObjectOutputStream(fos);
 			os.writeObject(this);
@@ -44,12 +43,12 @@ public class BookmarksManager implements Serializable {
 		}
 	}
 
-	public static BookmarksManager loadBookmarksManager() {
+	public static BookmarksManager loadBookmarksManager(Activity a) {
 		ObjectInputStream inputStream = null;
 
 		try {
 			// Construct the ObjectInputStream object
-			inputStream = new ObjectInputStream(MainActivity.ctxt.openFileInput("bookmarkData"));
+			inputStream = new ObjectInputStream(a.openFileInput("bookmarkData"));
 
 			Object obj = null;
 

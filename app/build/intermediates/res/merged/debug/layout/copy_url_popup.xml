@@ -2,21 +2,18 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-    android:orientation="vertical"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center_horizontal">
+    android:layout_gravity="center_horizontal"
+	android:paddingTop="5dp">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/triangle_up" />
-
-    <LinearLayout
-        android:layout_width="170dp"
+	<LinearLayout
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/circle_dark"
+        android:background="@drawable/round_edges_white"
         android:padding="5dp"
         android:orientation="vertical" >
 
@@ -24,20 +21,20 @@
         <Button
 		   android:id="@+id/copyurlbutton"
 		   android:layout_width="fill_parent"
-		   android:textColor="@android:color/white"
+		   android:textColor="@android:color/black"
 		   android:text="@string/copyurl"
-		   android:background="@drawable/button"
-		   android:layout_height="50dp"
+		   android:background="@android:color/transparent"
+		   android:layout_height="40dp"
 		   android:onClick="copyURLButtonClicked" />
 
         <Button
             android:id="@+id/pastebutton"
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/button"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
             android:onClick="copyURLButtonClicked"
             android:text="@android:string/paste"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/black" />
         
     </LinearLayout>
 

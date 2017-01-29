@@ -161,7 +161,7 @@ public class ColorPickerView extends View{
 	private RectF 	mHueRect;
 	private RectF	mAlphaRect;
 	
-	private AlphaPatternDrawable	mAlphaPattern;
+	private AlphaPatternDrawable mAlphaPattern;
 	
 	private Point	mStartTouchPoint = null;
 	

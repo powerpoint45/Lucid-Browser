@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "com.powerpoint45.lucidbrowser"
@@ -13,7 +13,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            shrinkResources true
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
@@ -25,5 +25,6 @@ android {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:22.2.1'
-    compile 'com.google.android.gms:play-services:6.+'
+    compile 'com.google.android.gms:play-services-ads:9.4.0'
+    compile 'com.github.amlcurran.showcaseview:library:5.4.3'
 }

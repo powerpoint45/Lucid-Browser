@@ -1,21 +1,22 @@
 package com.powerpoint45.lucidbrowser;
 
+import android.content.ContentValues;
+import android.content.Context;
+import android.os.Environment;
+import android.os.Message;
+import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 
-import android.content.ContentValues;
-import android.os.Environment;
-import android.os.Message;
-import android.provider.MediaStore;
-import android.support.v7.app.ActionBarActivity;
 
+public class BrowserHandler extends  AppCompatActivity{
 
-public class BrowserHandler extends ActionBarActivity{
-
-public static void dlImage(URL url){
+public static void dlImage(URL url, final MainActivity activity){
 	final URL rl = url;
 	new Thread(new Runnable() {
 		
@@ -49,25 +50,25 @@ public static void dlImage(URL url){
 				finally {     
 					Message msg = new Message();
  	         	    msg.what = 1;
- 	         	    msg.obj = MainActivity.activity.getResources().getString(R.string.savedimage)+" "+storagePath.toString()+"/"+finalFileName;
- 	                MainActivity.messageHandler.sendMessage(msg);
- 	                addImageGallery(finalFile);
+ 	         	    msg.obj = activity.getResources().getString(R.string.savedimage)+" "+storagePath.toString()+"/"+finalFileName;
+					activity.messageHandler.sendMessage(msg);
+ 	                addImageGallery(finalFile, activity.getApplicationContext());
 				    input.close(); 
 				}
 				}catch(Exception e){
 					Message msg = new Message();
  	         	    msg.what = 1;
- 	         	    msg.obj = MainActivity.activity.getResources().getString(R.string.failed);
- 	                MainActivity.messageHandler.sendMessage(msg);
+ 	         	    msg.obj = activity.getResources().getString(R.string.failed);
+				activity.messageHandler.sendMessage(msg);
 				}
 		}
 	}).start();
 }
-		static void addImageGallery( File file ) {
+		static void addImageGallery(File file , Context activity) {
 		    ContentValues values = new ContentValues();
 		    values.put(MediaStore.Images.Media.DATA, file.getAbsolutePath());
 		    values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg"); // setar isso
-		    MainActivity.activity.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+			activity.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
 		}
 
     }

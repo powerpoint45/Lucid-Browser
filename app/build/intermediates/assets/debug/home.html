@@ -3,70 +3,96 @@
 
 <html>
 <head>
-<meta charset="utf-8">
-<link href="style.css" type="text/css" rel="stylesheet"/>
-
-<meta name="HandheldFriendly" content="true" />
-<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
 </head>
 <style type="text/css">
-FORM {
-  background-color: transparent;
-  border: 0;
-  padding: 0;
+@font-face {
+    font-family: robots;
+    src: url(fonts/Roboto-Regular.ttf);
 }
 
-input.in {
-  padding:5px 20px; 
-  background:#E0E0E0;
-  border-radius:5px;
-  border-color:transparent;
+* {
+    margin:0;
+    padding:0;
+    font:12pt robots;
 }
 
-body
-{
-	background: #EDEDED; 
+.container-4{
+  white-space: nowrap;
+  display:flex;
+  position:realtive;
+  margin:3em auto;
+  width:70%;
 }
 
-input.button{
-	padding:5px 25px; /*add some padding to the inside of the button*/
-	background:#739FFF; /*the colour of the button*/
-	border-radius: 5px;
-	color:#f3f3f3;
-	border-color:transparent;
+.logo{
+  white-space: nowrap;
+  position:realtive;
+
+  width : 50%;
+  height: auto;/*to preserve the aspect ratio of the image*/
 }
+
+.container-4 input#search{
+  width: 100%;
+  height: 40px;
+  background: #f3f3f3;
+  border: none;
+  font-size: 12pt;
+  float: left;
+  color: gray;
+  padding-left: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+
+.container-4 button.icon{
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  border: none;
+  background: #6ca3ff;
+  height: 40px;
+  width: 40px;
+  color: #4f5b66;
+  font-size: 10pt;
+
+  -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -ms-transition: all .55s ease;
+  -o-transition: all .55s ease;
+  transition: all .55s ease;
+}
+
+.container-4 button.icon, button.icon{
+  outline: none;
+  margin-left: -39px;
+}
+
+.container-4:hover button.icon:hover{
+  background: #b5d1ff;
+}
+
+
 </style>
-
 <center>
-	<img alt="Google" height="95" src="google.png" style="padding-top:112px" width="269">
-
-	<FORM method=GET action="http://www.google.com/search">
-	<input type=hidden name=ie value=UTF-8>
-	<input type=hidden name=oe value=UTF-8>
-	<TABLE bgcolor="#EDEDED"><tr><td>
-	<A HREF="http://www.google.com/">
-	</A>
-	<INPUT  id="input" class="in" TYPE=text name=q size=20 maxlength=255 value="">
-	<INPUT class="button" id="searchbtn" type=submit name=btnG VALUE="Search">
-
-	</td></tr></TABLE>
-	</FORM>
-	  </fieldset>
-	</form>
+	<img alt="Google" src="google.png" style="padding-top:4em" class="logo">
 </center>
 
+<div class="box">
+	<FORM method=GET action="https://www.google.com/search" class="container-4" onsubmit="this.submit(); setTimeout(this.reset();,1000) return false;" id="searchform">
+		<input type="search" id="search" name=q placeholder="Search" autocomplete="off"/>
+		<button class="icon"><i class="fa fa-search"></i><img width=20px height=20px src="toolbar_find.png"/></button>
+	</FORM>
+</div>
 
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js" type="text/javascript"></script>
-<script src="autocomplete.js" type="text/javascript"></script>
-<script>
-$.each("web".split(" "), function(i, v){
-  $("input").googleSuggest({ service: v });
-
-});
-</script>
-
-</body>
 </html>
 

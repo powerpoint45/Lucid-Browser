@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/bookmark_url_title"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/bookmark_title"
+        android:layout_toRightOf="@+id/bookmark_icon"
+        android:background="@drawable/button"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center|left"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text="URLLLkzldsvuhsdfluieduillshdfhldis"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/bookmark_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/bookmark_icon"
+        android:background="@drawable/button"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center|left"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text="A Website"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:id="@+id/bookmark_check" />
+
+    <ImageView
+        android:id="@+id/bookmark_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_collections_view_as_list"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/bookmark_check"
+        android:layout_toEndOf="@+id/bookmark_check"/>
+
+</RelativeLayout>

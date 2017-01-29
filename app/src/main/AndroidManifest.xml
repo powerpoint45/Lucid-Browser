@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.powerpoint45.lucidbrowser"
-    android:versionCode="47"
-    android:versionName="4.891" >
+    android:versionCode="52"
+    android:versionName="5.2" >
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -12,6 +12,7 @@
    <uses-permission android:name="android.permission.INTERNET"/>
    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
    
     <application
         android:allowBackup="true"
@@ -67,7 +68,7 @@
         
         <activity
             android:label="@string/menu_settings"
-            android:theme="@style/CustomLightTheme"
+            android:theme="@style/NewAppTheme"
             android:name="com.powerpoint45.lucidbrowser.SettingsV2" 
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter >
@@ -75,6 +76,29 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:label="@string/import_bookmarks_external"
+            android:theme="@style/NewAppTheme"
+            android:name="com.powerpoint45.lucidbrowser.ImportBookmarksActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter >
+                <action android:name="com.powerpoint45.lucidbrowser.ImportBookmarksActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:label="@string/import_bookmarks"
+            android:theme="@style/NewAppTheme"
+            android:name="com.powerpoint45.lucidbrowser.OpenFileActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter >
+                <action android:name="com.powerpoint45.lucidbrowser.OpenFileActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
 
         <activity android:name="com.google.android.gms.ads.AdActivity"
              android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>

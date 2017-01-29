@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--:::::::::::This is the localization file for German:::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <resources>
 	<string name="trans_zoomout">Herauszoomen</string>
 	<string name="trans_pagestack">Kartenstapel</string>
@@ -393,5 +398,22 @@
 	<string name="folder_mode_summary">Darstellung von Ordnern auswählen</string>
 	<string name="folder_mode_fullscreen">Vollbild</string>
 	<string name="folder_mode_adaptive">Angepasst</string>
-	<string name="folder_mode_centered">Zentriert</string>﻿
+	<string name="folder_mode_centered">Zentriert</string>
+	
+    <!-- Added 12-12-16 -->
+    <string name="lock_screen_permission_request">Um mit Lucid Launcher das Gerät zu sperren, muss er zu den Geräteadministratoren hinzugefügt werden. Solange Lucid Launcher ein Geräteadministrator ist, kannst er nicht deinstalliert werden.</string>
+
+    <!-- Added 11-22-16 -->
+    <string name="no_bookmarks">Keine Lesezeichen gefunden</string>
+    <string name="export_bookmarks">Lesezeichen exportieren</string>
+    <string name="import_bookmarks">Lesezeichen importieren</string>
+    <string name="import_bookmarks_external">Lesezeichen aus Browser-Apps importieren</string>
+    <string name="bookmark_settings">Einstellungen der Lesezeichen</string>
+    <string name="delete_bookmarks">Alle Lesezeichen löschen</string>
+    
+    <!--Added 1-21-17-->
+    <string name="licensing_failed">Die Lizenzprüfung schlug fehl. Bitte prüfen Sie, ob die App korrekt gekauft wurde.</string>
+    <string name="export_bookmarks_summary">Lesezeichen in eine Datei exportieren</string>
+    <string name="import_bookmarks_summary">Lesezeichen aus einer Datei importieren</string>
+	
 </resources>

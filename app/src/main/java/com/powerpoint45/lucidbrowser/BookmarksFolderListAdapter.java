@@ -1,8 +1,5 @@
 package com.powerpoint45.lucidbrowser;
 
-import java.net.URL;
-import java.util.List;
-
 import android.graphics.Color;
 import android.graphics.PorterDuff.Mode;
 import android.view.View;
@@ -12,6 +9,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import java.net.URL;
+import java.util.List;
+
 import bookmarkModel.BookmarkFolder;
 
 public class BookmarksFolderListAdapter extends BaseAdapter {

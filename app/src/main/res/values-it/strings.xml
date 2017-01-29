@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::This is the localization file for Italian:::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <resources>
 	<string name="trans_zoomout">Riduci</string>
 	<string name="trans_pagestack">Pila di pagine</string>
@@ -342,38 +347,38 @@
 	<string name="step_orientation_title">Orientamento Launcher</string>
 	<string name="step_orientation_summary">Il layout della Home page è differente in base all\'orientamento. Puoi scegliere diverse app mostrate a seconda dell\'orientamento</string>
 	<string name="sidebar_transparent">Transparente</string>
-	<string name="search_engine">Search Engine</string>
+	<string name="search_engine">Engine di ricerca</string>
 	<string name="searchcontactstitle">Cerca Contatti</string>
-	<string name="searchcontactssummary">Enable or disable searching contacts</string>
+	<string name="searchcontactssummary">Attiva o disattiva ricerca contatti</string>
 	<string name="actionbartextstyletitle">Stile oggetti ActionBar</string>
 	<string name="actionbartextstylesummary">Imposta lo stile degli oggetti nell\'ActionBar</string>
 	<string name="action_lock_screen">Spegni Schermo</string>
 	<string name="history">Cronologia</string>
 	<string name="lucidactionstitle">Azioni Lucid Launcher</string>
-	<string name="version">Version</string>
-	<string name="community">Visit community on Google+</string>
-	<string name="licence_beer_github">THE BEER-WARE LICENSE" (Rev42).\nTap to view project on GitHub</string>
-	<string name="licence_apache20_github">Apache 2.0.\nTap to view project on GitHub</string>
-	<string name="first_letter_search_title">First letter search</string>
-	<string name="first_letter_search_summary">search based off the beginning of the titles</string>
-	<string name="wallpaper_offset">Move wallpaper based off the</string>
-	<string name="wallpaper_offset_title">Set Wallpaper Offsets</string>
-	<string name="wallpaper_offset_summary">Move wallpaper to the way you like</string>
-	<string name="fav_gesture_down_summary">Select an action for swiping down from the top of the sidebar</string>
-	<string name="fav_gesture_up_summary">Select an action for swiping up from the bottom of the sidebar</string>
-	<string name="hide_app">Hide App</string>
-	<string name="show_app">Show App</string>
-	<string name="hide_from_drawer">Hide from Drawer</string>
-	<string name="autohide_apps_title">Auto Hide Apps</string>
-	<string name="autohide_apps_summary">Hide apps upon adding an app to a folder in drawer</string>
-	<string name="folder_settings">Folder Settings</string>
-	<string name="folder_apps_size_title">Folder Apps Size</string>
-	<string name="folder_apps_size_summary">Set the size of apps inside folders</string>
-	<string name="folder_columns_summary">Set the number of columns in folders</string>
-	<string name="actionbar_item_color_title">Action Bar Item Color</string>
-	<string name="actionbar_item_color_summary">Set the color of items in the action bar</string>
-	<string name="disable_new_app_glow_title">Disable New App Glow</string>
-	<string name="disable_new_app_glow_summary">Disable the new app glow in the app drawer</string>
+	<string name="version">Versione</string>
+	<string name="community">Visita la community su Google+</string>
+	<string name="licence_beer_github">THE BEER-WARE LICENSE" (Rev42).\nTap per vedere il progetto s GitHub</string>
+	<string name="licence_apache20_github">Apache 2.0.\nTap per vedere il progetto su GitHub</string>
+	<string name="first_letter_search_title">Ricerca per prima lettera</string>
+	<string name="first_letter_search_summary">Ricerca basata sull\'inizio del titolo</string>
+	<string name="wallpaper_offset">Muovi lo sfondo basando sul</string>
+	<string name="wallpaper_offset_title">Imposta gli Offset dello sfondo</string>
+	<string name="wallpaper_offset_summary">Muovi lo sfondo come ti piace</string>
+	<string name="fav_gesture_down_summary">Scegli un\'azione per lo swiping down dal top della sidebar</string>
+	<string name="fav_gesture_up_summary">Scegli una azione per lo swiping up dal centro della sidebar</string>
+	<string name="hide_app">Nascondi App</string>
+	<string name="show_app">Mostra App</string>
+	<string name="hide_from_drawer">Nascondi dal Drawer</string>
+	<string name="autohide_apps_title">Nascondi automaticamente Apps</string>
+	<string name="autohide_apps_summary">Nascondi apps dopo averle aggiunte in una cartella nel drawer</string>
+	<string name="folder_settings">Impostazioni cartella</string>
+	<string name="folder_apps_size_title">Misura delle app nelle cartelle</string>
+	<string name="folder_apps_size_summary">Imposta la misura delle app nelle cartelle</string>
+	<string name="folder_columns_summary">Imposta il numero delle colonne nelle cartelle</string>
+	<string name="actionbar_item_color_title">Colore elementi Action Bar</string>
+	<string name="actionbar_item_color_summary">Imposta i colori degli elemti nella action bar</string>
+	<string name="disable_new_app_glow_title">Disabilita New App Glow</string>
+	<string name="disable_new_app_glow_summary">Disabilita la nuova app glow nel drawer</string>
 	<string name="download_started">Download avviato</string>
 	<string name="choose_upload">Seleziona file da caricare</string>
 	<string name="unread_count_title">Unread Count (Beta)</string>
@@ -382,4 +387,28 @@
 	<string name="backup_select">Seleziona backup</string>
 	<string name="backup_delete">Elimina backup</string>
 	<string name="lb_pro_description">Supporta il progetto comprando la versione Donate di Lucid Browser</string>
+	
+
+	<string name="sort_title">Metodo di listaggio</string>
+	<string name="sort_summary">Scegli come le app vengono listate</string>
+	<string name="sort_az">Ordine Alfabetico (A-Z)</string>
+	<string name="sort_za">Ordine Alfabetico (Z-A)</string>
+	<string name="sort_new">Data di installazione (dalla più recente)</string>
+	<string name="sort_old">Data di installazione (dalla meno recente)</string>
+	
+	<string name="folder_mode_title">Modalità display cartelle</string>
+	<string name="folder_mode_summary">Scegli come vengono presentate le cartelle</string>
+	<string name="folder_mode_fullscreen">Cartella a schermo intero</string>
+	<string name="folder_mode_adaptive">Misure cartella Adattiva</string>
+	<string name="folder_mode_centered">cartella centrata</string>
+
+	<string name="no_bookmarks">Nessun preferito trovato</string>
+    <string name="export_bookmarks">Esporta preferiti</string>
+    <string name="import_bookmarks">Importa preferiti</string>
+    <string name="import_bookmarks_external">Importa i preferiti da un altro browser</string>
+    <string name="bookmark_settings">impostazioni preferite</string>
+    <string name="delete_bookmarks">Cancella tutti i preferiti</string>
+    
+    <string name="lock_screen_permission_request">Abilita Amministratore Dispositivo a far bloccare lo schermo a Lucid Launcher.Devi disabilitare Amministratore Dispositivo per poter disinstallare Lucid Launcher</string>
+	
 </resources>

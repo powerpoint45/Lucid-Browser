@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_search_url_text.xml",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/common_google_signin_btn_text_light.xml",
+        "source": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_secondary_text_material_dark.xml",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/common_plus_signin_btn_text_dark.xml",
+        "source": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/color/common_plus_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/switch_thumb_material_dark.xml",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_secondary_text_material_light.xml",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/common_google_signin_btn_text_dark.xml",
+        "source": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_primary_text_material_dark.xml",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/switch_thumb_material_light.xml",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_primary_text_material_light.xml",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/common_plus_signin_btn_text_light.xml",
+        "source": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/color/common_plus_signin_btn_text_light.xml"
+    }
+]

@@ -1,10 +1,8 @@
 package com.powerpoint45.lucidbrowser;
 
-import java.io.IOException;
-import java.net.URLEncoder;
-import java.util.List;
-import java.util.Locale;
-import java.util.Vector;
+import android.content.Context;
+import android.widget.ArrayAdapter;
+import android.widget.Filter;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -16,9 +14,11 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 
-import android.content.Context;
-import android.widget.ArrayAdapter;
-import android.widget.Filter;
+import java.io.IOException;
+import java.net.URLEncoder;
+import java.util.List;
+import java.util.Locale;
+import java.util.Vector;
 
 public class BrowserBarAdapter extends ArrayAdapter<String> {
     private List<String> suggestions;
@@ -42,7 +42,7 @@ public class BrowserBarAdapter extends ArrayAdapter<String> {
 
                 String responseString = null;
                 suggestions.clear();
-    	    	if (!constraint.toString().equals(MainActivity.activity.getResources().getString(R.string.urlbardefault))){
+    	    	if (!constraint.toString().equals(getContext().getResources().getString(R.string.urlbardefault))){
     		    	HttpClient httpclient = new DefaultHttpClient();
     		        HttpResponse response;
     		        try {
@@ -97,7 +97,7 @@ public class BrowserBarAdapter extends ArrayAdapter<String> {
 	            if(results != null && results.count > 0) {
 	                clear();
 	                for (String c : filteredList) {
-	                    add(c);
+						add(c);
 	                }
 	                notifyDataSetChanged();
 	            }

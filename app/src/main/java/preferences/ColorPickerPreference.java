@@ -1,7 +1,5 @@
 package preferences;
 
-import views.ColorPanelView;
-import views.ColorPickerView;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Parcel;
@@ -13,6 +11,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.powerpoint45.lucidbrowser.R;
+
+import views.ColorPanelView;
+import views.ColorPickerView;
 
 public class ColorPickerPreference extends DialogPreference implements ColorPickerView.OnColorChangedListener{
 

@@ -1,8 +1,5 @@
 package com.powerpoint45.lucidbrowser;
 
-import java.util.Vector;
-
-import views.CustomWebView;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.content.ClipboardManager;
@@ -10,7 +7,6 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.drawable.ColorDrawable;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Handler;
 import android.support.v4.widget.DrawerLayout;
@@ -36,130 +32,85 @@ import android.widget.PopupWindow.OnDismissListener;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.Vector;
+
+import views.CustomWebView;
+
 public class SetupLayouts extends MainActivity {
 	static int actionBarNum;
 	public static PopupWindow popup;
 
 	@SuppressLint("NewApi")
-	public static void setuplayouts() {
+	public static void setuplayouts(final MainActivity activity) {
 		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-		bar.setClickable(true);
-		bar.setFocusable(true); 
-		bar.setFocusableInTouchMode(true);
-		Tools.setActionBarColor(Properties.appProp.actionBarColor);
-		setupWindow();
-		webLayout.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
+		activity.bar.setClickable(true);
+		activity.bar.setFocusable(true);
+		activity.bar.setFocusableInTouchMode(true);
+		setupWindow(activity);
+		activity.webLayout.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
 			
 			@Override
 			public void onGlobalLayout() {
 				//MainActivity.actionBarControls.show();
-				webLayout.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+				activity.webLayout.getViewTreeObserver().removeGlobalOnLayoutListener(this);
 			}
 		});
 		
 		//bar.setBackgroundColor(Color.TRANSPARENT);
 		//contentFrame.setFitsSystemWindows(true);
-		setUpActionBar();
-		actionBar.setCustomView(bar
+		setUpActionBar(activity);
+		actionBar.setCustomView(activity.bar
 				,new android.support.v7.app.ActionBar.LayoutParams(android.support.v7.app.ActionBar.LayoutParams.MATCH_PARENT
 				,android.support.v7.app.ActionBar.LayoutParams.MATCH_PARENT));
 		//actionBar.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-		LinearLayout LL = (LinearLayout) inflater.inflate(
-				R.layout.web_sidebar_footer, null);
-		
-		if (Properties.sidebarProp.theme.compareTo("w") == 0) {
-			((TextView) LL.findViewById(R.id.browser_open_bookmarks))
-					.setTextColor(Color.BLACK);
-			((TextView) LL.findViewById(R.id.browser_home))
-					.setTextColor(Color.BLACK);
-			((TextView) LL.findViewById(R.id.browser_share))
-					.setTextColor(Color.BLACK);
-			((TextView) LL.findViewById(R.id.browser_set_home))
-					.setTextColor(Color.BLACK);
-			((TextView) LL.findViewById(R.id.browser_find_on_page))
-					.setTextColor(Color.BLACK);
-			((TextView) LL.findViewById(R.id.browser_settings))
-					.setTextColor(Color.BLACK);
-			((TextView) LL.findViewById(R.id.browser_toggle_desktop))
-			.setTextColor(Color.BLACK);
-			((TextView) LL.findViewById(R.id.browser_exit))
-				.setTextColor(Color.BLACK);
-		} else if (Properties.sidebarProp.theme.compareTo("c") == 0) {
-			int sidebarTextColor = Properties.sidebarProp.sideBarTextColor;
 
-			((TextView) LL.findViewById(R.id.browser_open_bookmarks))
-					.setTextColor(sidebarTextColor);
-			((TextView) LL.findViewById(R.id.browser_home))
-					.setTextColor(sidebarTextColor);
-			((TextView) LL.findViewById(R.id.browser_share))
-					.setTextColor(sidebarTextColor);
-			((TextView) LL.findViewById(R.id.browser_set_home))
-					.setTextColor(sidebarTextColor);
-			((TextView) LL.findViewById(R.id.browser_find_on_page))
-				.setTextColor(sidebarTextColor);
-			((TextView) LL.findViewById(R.id.browser_settings))
-					.setTextColor(sidebarTextColor);
-			((TextView) LL.findViewById(R.id.browser_toggle_desktop))
-			.setTextColor(sidebarTextColor);
-			((TextView) LL.findViewById(R.id.browser_exit))
-					.setTextColor(sidebarTextColor);
 
-		}
-		browserListView.addFooterView(LL);
-		MainActivity.browserListView
-				.setAdapter(MainActivity.browserListViewAdapter);
+		colorizeSidebar(activity);
+		activity.browserListView.setAdapter(MainActivity.browserListViewAdapter);
 
-		if (Properties.sidebarProp.theme.compareTo("b") == 0) {
-			browserListView.setBackgroundColor(Color.argb(
-					254, 17, 17, 17));
-		} else if (Properties.sidebarProp.theme.compareTo("w") == 0) {
-			browserListView.setBackgroundColor(Color.argb(
-					254, 255, 255, 255));
-		} else {
-           browserListView.setBackgroundColor(Properties.sidebarProp.sideBarColor);
-		}
 
-		browserListView.setOnItemClickListener(new OnItemClickListener() {
+
+		activity.browserListView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int pos,long arg3) {
 				
-				if (bar.findViewById(R.id.finder)!=null)
-					SetupLayouts.dismissFindBar();
+				if (activity.bar.findViewById(R.id.finder)!=null)
+					SetupLayouts.dismissFindBar(activity);
 				
-				MainActivity.imm.hideSoftInputFromInputMethod(((EditText) bar.findViewById(R.id.browser_searchbar)).getWindowToken(), 0);
+				MainActivity.imm.hideSoftInputFromInputMethod(((EditText) activity.bar.findViewById(R.id.browser_searchbar)).getWindowToken(), 0);
 				
-				ImageButton BookmarkButton = (ImageButton) MainActivity.bar.findViewById(R.id.browser_bookmark);
-				ImageButton refreshButton = (ImageButton) MainActivity.bar.findViewById(R.id.browser_refresh);
+				ImageButton BookmarkButton = (ImageButton) activity.bar.findViewById(R.id.browser_bookmark);
+				ImageButton refreshButton = (ImageButton) activity.bar.findViewById(R.id.browser_refresh);
 				
-				if (((EditText) bar.findViewById(R.id.browser_searchbar))!=null)
-					((EditText) bar.findViewById(R.id.browser_searchbar)).clearFocus();
+				if (((EditText) activity.bar.findViewById(R.id.browser_searchbar))!=null)
+					((EditText) activity.bar.findViewById(R.id.browser_searchbar)).clearFocus();
 				
 				if (pos==webWindows.size()){
-					contentView.closeDrawer(browserListView);
-					webWindows.add(new CustomWebView(MainActivity.activity,null,null));
-					if (webLayout!=null)
-						if (((ViewGroup) webLayout.findViewById(R.id.webviewholder))!=null){
-							((ViewGroup) webLayout.findViewById(R.id.webviewholder)).removeAllViews();
-							((ViewGroup) webLayout.findViewById(R.id.webviewholder)).addView(webWindows.get(pos));
+					activity.contentView.closeDrawer(activity.browserListView);
+					webWindows.add(new CustomWebView(activity,null,null));
+					if (activity.webLayout!=null)
+						if (((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder))!=null){
+							((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).removeAllViews();
+							((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).addView(webWindows.get(pos));
 						}
-					if (((EditText) bar.findViewById(R.id.browser_searchbar))!=null)
-						((EditText) bar.findViewById(R.id.browser_searchbar)).setText("");
+					if (((EditText) activity.bar.findViewById(R.id.browser_searchbar))!=null)
+						((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setText("");
 					
 				}
 				else{
-					contentView.closeDrawer(browserListView);
-					((ViewGroup) webLayout.findViewById(R.id.webviewholder)).removeAllViews();
-					((ViewGroup) webLayout.findViewById(R.id.webviewholder)).addView(webWindows.get(pos));
-					if (MainActivity.webLayout.findViewById(R.id.webpgbar)!=null){
+					activity.contentView.closeDrawer(activity.browserListView);
+					((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).removeAllViews();
+					((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).addView(webWindows.get(pos));
+					if (activity.webLayout.findViewById(R.id.webpgbar)!=null){
 						if (webWindows.get(pos).getProgress()<100){
 							refreshButton.setImageResource(R.drawable.btn_toolbar_stop_loading_normal);
-							MainActivity.webLayout.findViewById(R.id.webpgbar).setVisibility(View.VISIBLE);
+							activity.webLayout.findViewById(R.id.webpgbar).setVisibility(View.VISIBLE);
 						}
 						else{
 							refreshButton.setImageResource(R.drawable.btn_toolbar_reload_normal);
-							MainActivity.webLayout.findViewById(R.id.webpgbar).setVisibility(View.INVISIBLE);
+							activity.webLayout.findViewById(R.id.webpgbar).setVisibility(View.INVISIBLE);
 						}
 					}
 					
@@ -179,15 +130,15 @@ public class SetupLayouts extends MainActivity {
 					
 					
 					if (webWindows.get(pos).getUrl()!=null){
-						if (webWindows.get(pos).getUrl().equals(MainActivity.assetHomePage)){
-							((EditText) bar.findViewById(R.id.browser_searchbar)).setText("");
-							((EditText) bar.findViewById(R.id.browser_searchbar)).setHint(R.string.urlbardefault);
+						if (webWindows.get(pos).getUrl().startsWith("file:///android_asset/")){
+							((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setText("");
+							((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setHint(R.string.urlbardefault);
 						}
 						else
-							((EditText) bar.findViewById(R.id.browser_searchbar)).setText(webWindows.get(pos).getUrl().replace("http://", "").replace("https://", ""));
+							((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setText(webWindows.get(pos).getUrl().replace("http://", "").replace("https://", ""));
 					}
 					else
-						((EditText) bar.findViewById(R.id.browser_searchbar)).setText("");
+						((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setText("");
 				}
 				MainActivity.browserListViewAdapter.notifyDataSetChanged();
 			}
@@ -196,12 +147,12 @@ public class SetupLayouts extends MainActivity {
 		
 		//Padding and adjustments start-----
 		//enabling transparent statusbar or navbar messes with padding so this will fix it
-		if (Properties.appProp.transparentNav || Properties.appProp.TransparentStatus){		
-		    MainActivity.webLayout.setPadding(0, MainActivity.NavMargine, 0, 0);
+		if (Properties.appProp.transparentNav || Properties.appProp.TransparentStatus){
+			activity.webLayout.setPadding(0, MainActivity.NavMargine, 0, 0);
 		}
 		//Padding and adjustments end-----
-		
-		contentView.setDrawerListener(new DrawerListener() {
+
+		activity.contentView.setDrawerListener(new DrawerListener() {
 
 			@Override
 			public void onDrawerStateChanged(int state) {
@@ -211,11 +162,11 @@ public class SetupLayouts extends MainActivity {
 				handler.post(new Runnable() {
 					@Override
 					public void run() {
-						closeVideoViewIfOpen();
+						activity.closeVideoViewIfOpen();
 					}
 				});
 				
-				if (state == DrawerLayout.STATE_IDLE && contentView.isDrawerOpen(MainActivity.browserListView)){
+				if (state == DrawerLayout.STATE_IDLE && activity.contentView.isDrawerOpen(activity.browserListView)){
 					MainActivity.actionBarControls.clearFocuses();
 				}
 			    
@@ -259,8 +210,8 @@ public class SetupLayouts extends MainActivity {
 
 	}
 
-	static public void setUpActionBar() {
-		bar.removeAllViews();
+	static public void setUpActionBar(final MainActivity activity) {
+		activity.bar.removeAllViews();
 
 		View browserBar = (RelativeLayout) inflater.inflate(
 				R.layout.browser_bar, null);
@@ -269,7 +220,7 @@ public class SetupLayouts extends MainActivity {
 				.findViewById(R.id.backdrop);
 
 		RelativeLayout.LayoutParams relativeParams = new RelativeLayout.LayoutParams(
-				LayoutParams.MATCH_PARENT, Properties.numtodp(3));
+				LayoutParams.MATCH_PARENT, Properties.numtodp(3, activity));
 		relativeParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 
 		// URL bar backdrop color
@@ -286,36 +237,9 @@ public class SetupLayouts extends MainActivity {
 			urlBarBackdrop.setColorFilter(Color.TRANSPARENT, Mode.CLEAR);
 		}
 
-//		// Paint the buttons and text with the user selected color
-//		((ImageButton) browserBar.findViewById(R.id.browser_back))
-//				.setColorFilter(Properties.appProp.primaryIntColor,
-//						Mode.MULTIPLY);
-//		((ImageButton) browserBar.findViewById(R.id.browser_forward))
-//				.setColorFilter(Properties.appProp.primaryIntColor,
-//						Mode.MULTIPLY);
-//		((ImageButton) browserBar.findViewById(R.id.browser_refresh))
-//				.setColorFilter(Properties.appProp.primaryIntColor,
-//						Mode.MULTIPLY);
-//		((ImageButton) browserBar.findViewById(R.id.browser_bookmark))
-//				.setColorFilter(Properties.appProp.primaryIntColor,
-//						Mode.MULTIPLY);
-//		((EditText) browserBar.findViewById(R.id.browser_searchbar))
-//				.setTextColor(Properties.appProp.primaryIntColor);
-		
-		int hintRed = Color.red(Properties.appProp.primaryIntColor)-50;
-		if (hintRed<0)
-			hintRed = 0;
-		
-		int hintGreen = Color.green(Properties.appProp.primaryIntColor)-50;
-		if (hintGreen<0)
-			hintGreen = 0;
-		
-		int hintBlue = Color.blue(Properties.appProp.primaryIntColor)-50;
-		if (hintBlue<0)
-			hintBlue = 0;
-		
+
 		((EditText) browserBar.findViewById(R.id.browser_searchbar))
-		.setHintTextColor(Color.argb(255, hintRed, hintGreen, hintBlue));
+		.setHintTextColor(Properties.appProp.primaryIntColor);
 
 		final AutoCompleteTextView ET = ((AutoCompleteTextView) browserBar
 				.findViewById(R.id.browser_searchbar));
@@ -335,60 +259,59 @@ public class SetupLayouts extends MainActivity {
 		}
 		
 		ET.setOnLongClickListener(new OnLongClickListener() {
-			
+
 			@Override
 			public boolean onLongClick(View v) {
-				
+
 				boolean noCopyOption = false;
 				boolean noPasteOption = false;
-				
-				if (((EditText) bar.findViewById(R.id.browser_searchbar))!=null){
-					((EditText) bar.findViewById(R.id.browser_searchbar)).setFocusable(false);
-		    		((EditText) bar.findViewById(R.id.browser_searchbar)).selectAll();
-		    		if (((EditText) bar.findViewById(R.id.browser_searchbar)).getText().toString().compareTo("")==0)
+
+				if (((EditText) activity.bar.findViewById(R.id.browser_searchbar))!=null){
+					((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setFocusable(false);
+		    		((EditText) activity.bar.findViewById(R.id.browser_searchbar)).selectAll();
+		    		if (((EditText) activity.bar.findViewById(R.id.browser_searchbar)).getText().toString().compareTo("")==0)
 		    			noCopyOption = true;
 				}
-				
-				
+
+
 				System.out.println("LONG PRESSED");
-				popup = new PopupWindow(inflater.inflate(R.layout.copy_url_popup, null), ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
-				
+				popup = new PopupWindow(inflater.inflate(R.layout.copy_url_popup, null), LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, true);
+
 				ClipboardManager clipboard = (ClipboardManager)
-			 	        MainActivity.activity.getSystemService(Context.CLIPBOARD_SERVICE);
-				
+						activity.activity.getSystemService(Context.CLIPBOARD_SERVICE);
+
 				if (!clipboard.hasPrimaryClip())
 					noPasteOption = true;
-				
+
 				if (noPasteOption)
 					popup.getContentView().findViewById(R.id.pastebutton).setVisibility(View.GONE);
-				
+
 				if (noCopyOption)
 					popup.getContentView().findViewById(R.id.copyurlbutton).setVisibility(View.GONE);
-				
+
 				popup.setFocusable(true);
 				popup.setBackgroundDrawable(new ColorDrawable());
-				popup.setAnimationStyle(R.style.AnimationPopup);
 				int[] loc = new int[2];
 				v.getLocationOnScreen(loc);
-				
+
 				if (noCopyOption && noPasteOption)
-					System.out.println("DO NOTHING");
+					((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setFocusableInTouchMode(true);
 				else
-					popup.showAtLocation(MainActivity.bar, Gravity.NO_GRAVITY, loc[0], loc[1]+v.getHeight());
-				
+					popup.showAtLocation(activity.bar, Gravity.NO_GRAVITY, loc[0], loc[1]+v.getHeight());
+
 				OnDismissListener dismissListener = new OnDismissListener() {
-					
+
 					@Override
 					public void onDismiss() {
 						// TODO Auto-generated method stub
-						if (((EditText) bar.findViewById(R.id.browser_searchbar))!=null){
-							((EditText) bar.findViewById(R.id.browser_searchbar)).setFocusableInTouchMode(true);
+						if (((EditText) activity.bar.findViewById(R.id.browser_searchbar))!=null){
+							((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setFocusableInTouchMode(true);
 						}
 					}
 				};
-				
+
 				popup.setOnDismissListener(dismissListener);
-				
+
 				return false;
 			}
 		});
@@ -399,20 +322,16 @@ public class SetupLayouts extends MainActivity {
 				if ((event.getAction() == KeyEvent.ACTION_DOWN)
 						&& (keyCode == KeyEvent.KEYCODE_ENTER)) {
 					System.out.println("key press");
-					new AsyncTask<Void, Void, Void>() {
+
+					activity.webLayout.postDelayed(new Runnable() {
 						@Override
-						protected void onPostExecute(Void result) {
-							super.onPostExecute(result);
+						public void run() {
 							imm.hideSoftInputFromWindow(ET.getWindowToken(), 0);
-							browserSearch();
+							activity.browserSearch();
 							ET.clearFocus();
 						}
+					}, 300);
 
-						@Override
-						protected Void doInBackground(Void... params) {
-							return null;
-						}
-					}.execute();
 					return true;
 				}
 				return false;
@@ -424,21 +343,16 @@ public class SetupLayouts extends MainActivity {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1,
 					int arg2, long arg3) {
-				new AsyncTask<Void, Void, Void>() {
+
+				activity.webLayout.postDelayed(new Runnable() {
 					@Override
-					protected void onPostExecute(Void result) {
-						super.onPostExecute(result);
-						final EditText ET = ((AutoCompleteTextView) bar.findViewById(R.id.browser_searchbar));
+					public void run() {
+						final EditText ET = ((AutoCompleteTextView) activity.bar.findViewById(R.id.browser_searchbar));
 						imm.hideSoftInputFromWindow(ET.getWindowToken(), 0);
-						browserSearch();
+						activity.browserSearch();
 						ET.clearFocus();
 					}
-
-					@Override
-					protected Void doInBackground(Void... params) {
-						return null;
-					}
-				}.execute();
+				}, 300);
 			}
 		});
 		
@@ -452,11 +366,12 @@ public class SetupLayouts extends MainActivity {
 //			}
 //		});
 
-		bar.addView(browserBar);
+		activity.bar.addView(browserBar);
+		Tools.setActionBarColor(Properties.appProp.actionBarColor);
 	}
 	
-	static public void setUpFindBar() {
-		bar.removeAllViews();
+	static public void setUpFindBar(MainActivity activity) {
+		activity.bar.removeAllViews();
 
 		View finderBar = (RelativeLayout) inflater.inflate(
 				R.layout.browser_bar_find_mode, null);
@@ -465,7 +380,7 @@ public class SetupLayouts extends MainActivity {
 				.findViewById(R.id.backdrop);
 
 		RelativeLayout.LayoutParams relativeParams = new RelativeLayout.LayoutParams(
-				LayoutParams.MATCH_PARENT, Properties.numtodp(3));
+				LayoutParams.MATCH_PARENT, Properties.numtodp(3,activity));
 		relativeParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 
 		// URL bar backdrop color
@@ -501,105 +416,167 @@ public class SetupLayouts extends MainActivity {
 		((EditText) finderBar.findViewById(R.id.find_searchbar))
 				.setTextColor(Properties.appProp.primaryIntColor);
 
-		bar.addView(finderBar);
+		activity.bar.addView(finderBar);
 	}
 
-	static public void dismissFindBar(){
+	static public void dismissFindBar(MainActivity activity){
 		actionBarControls.lock(false);
-		if (bar.findViewById(R.id.find_searchbar)!=null)
-			MainActivity.imm.hideSoftInputFromWindow(bar.findViewById(R.id.find_searchbar).getWindowToken(),0);
+		if (activity.bar.findViewById(R.id.find_searchbar)!=null)
+			MainActivity.imm.hideSoftInputFromWindow(activity.bar.findViewById(R.id.find_searchbar).getWindowToken(),0);
 		
-		setUpActionBar();
+		setUpActionBar(activity);
 
-		CustomWebView WV = (CustomWebView) webLayout.findViewById(R.id.browser_page);
+		CustomWebView WV = (CustomWebView) activity.webLayout.findViewById(R.id.browser_page);
 		WV.clearMatches();
 
 		if (WV.getUrl()!=null && WV.getUrl().startsWith("file:///android_asset/")){
-			((EditText) bar.findViewById(R.id.browser_searchbar)).setText("");
-			((EditText) bar.findViewById(R.id.browser_searchbar)).setHint(R.string.urlbardefault);
+			((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setText("");
+			((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setHint(R.string.urlbardefault);
 			//((TextView) bar.findViewById(R.id.browser_searchbar)).setText(activity.getResources().getString(R.string.urlbardefault));					
 		} else if (WV.getUrl()!=null){
-			((EditText) bar.findViewById(R.id.browser_searchbar)).setText(WV.getUrl().replace("http://", "").replace("https://", ""));					
+			((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setText(WV.getUrl().replace("http://", "").replace("https://", ""));
 		} else {
-			((EditText) bar.findViewById(R.id.browser_searchbar)).setText("");
+			((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setText("");
 		}
 	}
 	
-	
+
+	public static void colorizeSidebar(MainActivity activity){
+		LinearLayout LL = (LinearLayout) inflater.inflate(
+				R.layout.web_sidebar_footer, null);
+
+		if (Properties.sidebarProp.theme.compareTo("w") == 0) {
+
+			((TextView) LL.findViewById(R.id.browser_open_bookmarks))
+					.setTextColor(Color.BLACK);
+			((TextView) LL.findViewById(R.id.browser_home))
+					.setTextColor(Color.BLACK);
+			((TextView) LL.findViewById(R.id.browser_share))
+					.setTextColor(Color.BLACK);
+			((TextView) LL.findViewById(R.id.browser_set_home))
+					.setTextColor(Color.BLACK);
+			((TextView) LL.findViewById(R.id.browser_find_on_page))
+					.setTextColor(Color.BLACK);
+			((TextView) LL.findViewById(R.id.browser_settings))
+					.setTextColor(Color.BLACK);
+			((TextView) LL.findViewById(R.id.browser_toggle_desktop))
+					.setTextColor(Color.BLACK);
+			((TextView) LL.findViewById(R.id.browser_exit))
+					.setTextColor(Color.BLACK);
+		} else if (Properties.sidebarProp.theme.compareTo("c") == 0) {
+			int sidebarTextColor = Properties.sidebarProp.sideBarTextColor;
+
+			((TextView) LL.findViewById(R.id.browser_open_bookmarks))
+					.setTextColor(sidebarTextColor);
+			((TextView) LL.findViewById(R.id.browser_home))
+					.setTextColor(sidebarTextColor);
+			((TextView) LL.findViewById(R.id.browser_share))
+					.setTextColor(sidebarTextColor);
+			((TextView) LL.findViewById(R.id.browser_set_home))
+					.setTextColor(sidebarTextColor);
+			((TextView) LL.findViewById(R.id.browser_find_on_page))
+					.setTextColor(sidebarTextColor);
+			((TextView) LL.findViewById(R.id.browser_settings))
+					.setTextColor(sidebarTextColor);
+			((TextView) LL.findViewById(R.id.browser_toggle_desktop))
+					.setTextColor(sidebarTextColor);
+			((TextView) LL.findViewById(R.id.browser_exit))
+					.setTextColor(sidebarTextColor);
+
+		}
+
+		for (int i = 0; i<activity.browserListView.getChildCount(); i++){
+			if (activity.browserListView.getChildAt(i) instanceof  LinearLayout)
+				activity.browserListView.removeFooterView(activity.browserListView.getChildAt(i));
+		}
+		activity.browserListView.addFooterView(LL);
+
+		if (Properties.sidebarProp.theme.compareTo("b") == 0) {
+			activity.browserListView.setBackgroundColor(Color.argb(
+					254, 17, 17, 17));
+		} else if (Properties.sidebarProp.theme.compareTo("w") == 0) {
+			activity.browserListView.setBackgroundColor(Color.argb(
+					254, 255, 255, 255));
+		} else {
+			activity.browserListView.setBackgroundColor(Properties.sidebarProp.sideBarColor);
+		}
+
+
+	}
 	
 	
 	
 	@SuppressLint({ "InlinedApi", "NewApi" })
-	public static void setupWindow(){
+	public static void setupWindow(MainActivity activity){
 		//enable fullscreen
 		if (Properties.appProp.fullscreen)
-			MainActivity.activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+			activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 					
-		int id = MainActivity.activity.getResources().getIdentifier("config_enableTranslucentDecor", "bool", "android");
+		int id =activity.getResources().getIdentifier("config_enableTranslucentDecor", "bool", "android");
 		
 		
 		if (Properties.appProp.transparentNav || Properties.appProp.TransparentStatus)
 			if (id == 0) {
 				if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT)
-					contentView.setSystemUiVisibility(4096);
+					activity.contentView.setSystemUiVisibility(4096);
 			}
 		
-		if (tintManager!=null){
-			tintManager.setStatusBarTintEnabled(false);
-			tintManager.setNavigationBarTintEnabled(false);
-			tintManager = null;
+		if (activity.tintManager!=null){
+			activity.tintManager.setStatusBarTintEnabled(false);
+			activity.tintManager.setNavigationBarTintEnabled(false);
+			activity.tintManager = null;
 		}
-		
-		MainActivity.activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-		MainActivity.activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+		activity.activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+		activity.activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 		
 		if (Properties.appProp.transparentNav || Properties.appProp.TransparentStatus){
 			if (id != 0) {
 				if (Build.VERSION.SDK_INT<Build.VERSION_CODES.LOLLIPOP){
 			        if (Properties.appProp.transparentNav)
-			        	MainActivity.activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+						activity.activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 			        
 			        if (Properties.appProp.TransparentStatus)
-			        	MainActivity.activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+						activity.activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 				}
 		        
 		        if (Properties.appProp.TransparentStatus){
-		        	tintManager = new SystemBarTintManager(MainActivity.activity);
-		        	tintManager.setStatusBarTintEnabled(true);
-		        	tintManager.setStatusBarTintColor(Properties.appProp.actionBarColor);
+					activity.tintManager = new SystemBarTintManager(activity);
+					activity.tintManager.setStatusBarTintEnabled(true);
+					activity.tintManager.setStatusBarTintColor(Properties.appProp.actionBarColor);
 		        	if (Properties.appProp.fullscreen)
-		        		tintManager.setStatusBarAlpha(0.0f);
+						activity.tintManager.setStatusBarAlpha(0.0f);
 		        }
 		        
 		        if (Properties.appProp.transparentNav){
-					if (tintManager==null)
-						tintManager = new SystemBarTintManager(MainActivity.activity);
-					tintManager.setNavigationBarTintEnabled(true);
-					tintManager.setNavigationBarAlpha(0f);
+					if (activity.tintManager==null)
+						activity.tintManager = new SystemBarTintManager(activity);
+					activity.tintManager.setNavigationBarTintEnabled(true);
+					activity.tintManager.setNavigationBarAlpha(0f);
 				}else{
-					if (tintManager!= null){
-						tintManager.setNavigationBarAlpha(0f);
-						tintManager.setNavigationBarTintEnabled(false);
+					if (activity.tintManager!= null){
+						activity.tintManager.setNavigationBarAlpha(0f);
+						activity.tintManager.setNavigationBarTintEnabled(false);
 					}
 				}
 		    }
 		}
-		
-		contentView.setScrimColor(Color.TRANSPARENT);
-		contentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
-		contentFrame.setFitsSystemWindows(true);
-		browserListView.setY(Tools.getStatusMargine());
-		MainActivity.webLayout.setY(Properties.ActionbarSize);
+
+		activity.contentView.setScrimColor(Color.TRANSPARENT);
+		activity.contentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+		activity.contentFrame.setFitsSystemWindows(true);
+		activity.browserListView.setY(Tools.getStatusMargine(activity));
+		activity.webLayout.setY(Properties.ActionbarSize);
 		
 
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-			MainActivity.activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+			activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
 			if (Properties.appProp.transparentNav)
-				MainActivity.activity.getWindow().setNavigationBarColor(Properties.appProp.actionBarColor);
+				activity.getWindow().setNavigationBarColor(Properties.appProp.actionBarColor);
 			if (Properties.appProp.TransparentStatus)
-				MainActivity.activity.getWindow().setStatusBarColor(Properties.appProp.actionBarColor);
+				activity.getWindow().setStatusBarColor(Properties.appProp.actionBarColor);
 			else
-				MainActivity.activity.getWindow().setStatusBarColor(Color.BLACK);
+				activity.getWindow().setStatusBarColor(Color.BLACK);
 	    }
 		
 

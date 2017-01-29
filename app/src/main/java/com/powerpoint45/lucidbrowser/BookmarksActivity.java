@@ -1,25 +1,14 @@
 package com.powerpoint45.lucidbrowser;
 
-import java.io.BufferedInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.List;
-import java.util.Vector;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.PorterDuff.Mode;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -27,8 +16,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
@@ -40,6 +27,17 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+import java.util.Vector;
+
 import bookmarkModel.Bookmark;
 import bookmarkModel.BookmarkFolder;
 import bookmarkModel.BookmarksManager;
@@ -53,11 +51,10 @@ public class BookmarksActivity extends Activity{
 	static BookmarksListAdapter bookmarksListAdapter;
 	static BookmarksFolderListAdapter bookmarksFolderListAdapter;
 	
-	public static Context activity;
+	BookmarksActivity activity;
 	RelativeLayout bookmarkActivityLayout;
 	Dialog dialog;
-	Dialog editDialog;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
@@ -65,10 +62,10 @@ public class BookmarksActivity extends Activity{
 		bookmarksMgr.displayedFolder = bookmarksMgr.root;
 		
 		super.onCreate(savedInstanceState);
-		LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+		final LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
 		bookmarkActivityLayout = (RelativeLayout) inflater.inflate(R.layout.bookmarks, null);
 		activity = this;
-		
+
 		// Set Theme
 		if (Properties.appProp.holoDark){
 			setTheme(R.style.CustomDarkTheme);
@@ -79,44 +76,31 @@ public class BookmarksActivity extends Activity{
 		} else {
 			// uses light theme
 		}
+
+        bookmarksListAdapter = new BookmarksListAdapter();
+        bookmarksFolderListAdapter = new BookmarksFolderListAdapter();
+
+        // Take care of Listeners
+        bookmarksListView = (ListView) bookmarkActivityLayout.findViewById(R.id.bookmarks_list);
+        bookmarksFolderListView = (ListView) bookmarkActivityLayout.findViewById(R.id.bookmarksfolder_list);
+
+        bookmarksFolderListView.setAdapter(bookmarksFolderListAdapter);
+        bookmarksListView.setAdapter(bookmarksListAdapter);
 		
 		setContentView(bookmarkActivityLayout);
 
-		bookmarksListAdapter = new BookmarksListAdapter();
-		bookmarksFolderListAdapter = new BookmarksFolderListAdapter();
 
-		// Take care of Listeners
-		bookmarksListView = (ListView) findViewById(R.id.bookmarks_list);
-		bookmarksFolderListView = (ListView) findViewById(R.id.bookmarksfolder_list);
-		
-		bookmarksListView.setAdapter(bookmarksListAdapter);
-		bookmarksFolderListView.setAdapter(bookmarksFolderListAdapter);
 		
 		OnItemClickListener clickItemListener = new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int pos,
 					long arg3) {
-				
 				String url = ((Bookmark) arg1.getTag()).getUrl();
-				WebView WV = (WebView) ((ViewGroup) MainActivity.webLayout.findViewById(R.id.webviewholder)).findViewById(R.id.browser_page);
-				
-				if (WV!=null && url!=null){
-					
-					if (url.contains(".") && !url.contains(" ")){
-						if (url.startsWith("http://")||url.startsWith("https://"))
-							WV.loadUrl(url);
-						else if (url.startsWith("www."))
-							WV.loadUrl("http://"+url);
-						else if (url.startsWith("about:")||url.startsWith("file:"))
-							WV.loadUrl(url);
-						else
-							WV.loadUrl("http://"+url);
-					}
-					else
-						WV.loadUrl("http://www.google.com/search?q="+url.replace(" ", "+"));
-					
-				}
+				Intent intent = new Intent();
+				intent.putExtra("newtab",false);
+				intent.putExtra("url",url);
+				setResult(RESULT_OK,intent);
 				finish();
 			}
 			
@@ -167,7 +151,12 @@ public class BookmarksActivity extends Activity{
 						Bookmark clickedBookmark = bookmarksMgr.displayedFolder.getBookmark(pos);
 						switch (dialogPos){
 						case 0:   //new tab
-							MainActivity.openURLInNewTab(clickedBookmark.getUrl());
+//							MainActivity.openURLInNewTab(clickedBookmark.getUrl());
+//							finish();
+
+							Intent intent = new Intent();
+							intent.putExtra("url",clickedBookmark.getUrl());
+							setResult(RESULT_OK,intent);
 							finish();
 							break;
 						case 1:   //edit
@@ -178,7 +167,7 @@ public class BookmarksActivity extends Activity{
 							((EditText) editLayout.findViewById(R.id.edit_bookmark_title)).setText(clickedBookmark.getDisplayName());
 							
 							// For URL Editing
-							if (clickedBookmark.getUrl().compareTo(MainActivity.assetHomePage)==0)
+							if (clickedBookmark.getUrl().compareTo(Properties.webpageProp.assetHomePage)==0)
 								((EditText) editLayout.findViewById(R.id.edit_bookmark_url)).setText("about:home");
 							else
 								((EditText) editLayout.findViewById(R.id.edit_bookmark_url)).setText(clickedBookmark.getUrl());
@@ -210,7 +199,7 @@ public class BookmarksActivity extends Activity{
 											if (!url.matches("\\s*")&&!title.matches("\\s*")){
 												
 												if (url.compareTo("about:home")==0)
-													url = MainActivity.assetHomePage;
+													url = Properties.webpageProp.assetHomePage;
 												
 												bookmarksMgr.displayedFolder.getBookmark(pos).setUrl(url);
 												bookmarksMgr.displayedFolder.getBookmark(pos).setDisplayName(title);
@@ -337,13 +326,13 @@ public class BookmarksActivity extends Activity{
 							// Confirmation dialog
 							builder = new AlertDialog.Builder(activity);
 						    builder.setMessage(R.string.remove_bookmark_folder_confirm)
-						        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+						        .setPositiveButton(android.R.string.ok, new OnClickListener() {
 						        	public void onClick(DialogInterface dialog, int id) {
 						                	   bookmarksMgr.displayedFolder.removeFolder(pos);
 											   refreshBookmarksView();
 						                   }
 						               })
-						        .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+						        .setNegativeButton(android.R.string.cancel, new OnClickListener() {
 						        	public void onClick(DialogInterface dialog, int id) {
 						        		}
 						        });
@@ -394,43 +383,47 @@ public class BookmarksActivity extends Activity{
 		
 		//Start Downloading missing Favicons
 		List <Bookmark> currentBooks = BookmarksActivity.bookmarksMgr.root.getAllBookMarks();
-		int numURLsToDownload = 0;
 		File imageFile = null;
 		URL curURL = null;
-		
+
 		Vector<Bookmark> urlsToDownload = new Vector<Bookmark>();
-		
+
 		for (int i = 0; i < currentBooks.size() ; i++){
 			curURL = currentBooks.get(i).getURL();
-			if (curURL!=null && curURL.getHost().compareTo("")!=0 && curURL.getPath().compareTo(MainActivity.assetHomePage)!=0){
-				imageFile = new File(MainActivity.ctxt.getApplicationInfo().dataDir+"/icons/"+ curURL.getHost());
+			if (curURL!=null && curURL.getHost().compareTo("")!=0
+					&& curURL.getPath().compareTo(Properties.webpageProp.assetHomePage)!=0){
+				imageFile = new File(activity.getApplicationInfo().dataDir+"/icons/"+ curURL.getHost());
 				if (!imageFile.exists() || currentBooks.get(i).getPathToFavicon()==null){
-					numURLsToDownload++;
 					urlsToDownload.add(currentBooks.get(i));
 				}
 			}
 		}
-		
-		Log.d("LB", numURLsToDownload+" favicons should download");
-		if (numURLsToDownload>0){
+
+		Log.d("LB", urlsToDownload.size()+" favicons should download");
+		if (urlsToDownload.size()>0){
 			Bookmark arrayURLsToDownload[] = new Bookmark[urlsToDownload.size()];
-			
+
 			for (int i = 0; i<urlsToDownload.size(); i++){
 				arrayURLsToDownload[i] = urlsToDownload.get(i);
 			}
-			new DownloadFilesTask().execute(arrayURLsToDownload);
+			new DownloadIco(arrayURLsToDownload).start();
 		}
 
 	}
-	
-	private class DownloadFilesTask extends AsyncTask<Bookmark, Integer, Long> {
-	    protected Long doInBackground(Bookmark... urls) {
-	        int count = urls.length;
-	        long totalSize = 0;
-	        for (int i = 0; i < count; i++) {
-	        	
-	        	URL curURL = urls[i].getURL();
-	        	URL urlToAdd = null;
+
+	private class DownloadIco extends Thread{
+		Bookmark urls[];
+
+		public DownloadIco(Bookmark urlsToDownload[]){
+			urls = urlsToDownload;
+		}
+
+		public void run() {
+			int count = urls.length;
+			long totalSize = 0;
+			for (int i = 0; i < count; i++) {
+				URL curURL = urls[i].getURL();
+				URL urlToAdd = null;
 				try {
 					urlToAdd = new URL(curURL.getProtocol() + "://" + curURL.getHost() + "/favicon.ico");
 				} catch (MalformedURLException e) {
@@ -438,25 +431,27 @@ public class BookmarksActivity extends Activity{
 					e.printStackTrace();
 				}
 				if (urlToAdd!=null){
-		        	downloadImage(urlToAdd, urls[i]);
-		        	Log.d("LB", "DOWNLOADING INDEX "+i +"AND URL " +urlToAdd.getPath());
-		        	publishProgress(0);
+					boolean sucess = downloadImage(urlToAdd, urls[i]);
+
+					if (sucess){
+						Log.d("LB", "DOWNLOADED INDEX "+i +"AND URL " +urlToAdd.toString());
+						runOnUiThread(new Runnable() {
+							@Override
+							public void run() {
+                                Log.d("LB", "DSCHANGED");
+								bookmarksListAdapter.notifyDataSetChanged();
+							}
+						});
+					}else {
+						Log.d("LB", "FAILED DOWNLOADING INDEX " + i + "AND URL " + urlToAdd.toString());
+					}
 				}
-	            if (isCancelled()) break;
-	        }
-	        return totalSize;
-	    }
-
-	    protected void onProgressUpdate(Integer... progress) {
-	    	bookmarksListAdapter.notifyDataSetChanged();
-	    }
-
-	    protected void onPostExecute(Long result) {
-	    	bookmarksListAdapter.notifyDataSetChanged();
-	    }
+			}
+		}
 	}
+
 	
-	public void downloadImage(URL url, Bookmark b){
+	public boolean downloadImage(URL url, Bookmark b){
 		try{
 			InputStream in = new BufferedInputStream(url.openStream());
 			ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -469,20 +464,23 @@ public class BookmarksActivity extends Activity{
 			out.close();
 			in.close();
 			byte[] response = out.toByteArray();
-			new File(MainActivity.ctxt.getApplicationInfo().dataDir+"/icons/").mkdirs();
-			FileOutputStream fos = new FileOutputStream((MainActivity.ctxt.getApplicationInfo().dataDir+"/icons/"+ url.getHost()));
-			fos.write(response);
-			fos.close();
-			b.setPathToFavicon(MainActivity.ctxt.getApplicationInfo().dataDir+"/icons/"+ url.getHost());
-			bookmarksMgr.saveBookmarksManager();
+			if (response!=null) {
+				new File(activity.getApplicationInfo().dataDir + "/icons/").mkdirs();
+				FileOutputStream fos = new FileOutputStream((activity.getApplicationInfo().dataDir + "/icons/" + url.getHost()));
+				fos.write(response);
+				fos.close();
+				b.setPathToFavicon(BookmarksActivity.this.getApplicationInfo().dataDir + "/icons/" + url.getHost());
+				bookmarksMgr.saveBookmarksManager(BookmarksActivity.this);
+				return true;
+			}else
+				return false;
 		}catch(Exception e){};
-		
-		
+		return false;
 	}
 	
 	@Override
 	public void onPause(){
-		bookmarksMgr.saveBookmarksManager();
+		bookmarksMgr.saveBookmarksManager(BookmarksActivity.this);
 		super.onPause();
 	}
 	

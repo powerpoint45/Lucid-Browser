@@ -312,7 +312,7 @@
 	<string name="libraries">Libraries</string>
 	<string name="package_info">Package info</string>
 	<string name="send_mail">Send mail with</string>
-	<string name="send_mail_error">There are no email clients installed</string>
+	<string name="send_mail_error">nao tem um cliente por email instalado</string>
 	<string name="step_welcome_title">Welcome to Lucid Launcher</string>
 	<string name="step_welcome_summary">This is your home screen. Here you can place apps, widgets and more. You can swipe vertically to switch between home screens and horizontally for other pages</string>
 	<string name="step_basic_actions_title">Tap the search icon to start searching \nTap the three dot icon for more actions</string>

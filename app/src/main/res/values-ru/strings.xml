@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::This is the localization file for Russian:::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <resources>
+	<string name="sslIdMismatchMessage" formatted="false">Страница на\n\n%1s\n\nимеет сертификат SSL, действующий только для %2s.</string>
+	<string name="sslExpiredMessage" formatted="false">Страница на\n\n%1s\n\nимеет истёкший сертификат SSL. Срок действия истёк после %2s.</string>
+	<string name="sslNotYetValidMessage" formatted="false">Страница на\n\n%1s\n\nимеет сертификат SSL, который ещё не действителен. Он будет действовать с %2s.</string>
+	<string name="sslUntrustedMessage" formatted="false">Страница на\n\n%s\n\nимеет самоподписанный сертификат SSL.</string>
+	
 	<string name="trans_zoomout">Уменьшение</string>
 	<string name="trans_pagestack">Стопка</string>
 	<string name="trans_flipin">Переворот</string>
@@ -16,6 +26,7 @@
 	<string name="orientation_landscape">Ландшафтный</string>
 	<string name="sidebar_dark">Тёмная</string>
 	<string name="sidebar_light">Светлая</string>
+	<string name="sidebar_transparent">Прозрачная</string>
 	<string name="menu_settings">Настройки</string>
 	<string name="wallpaper_instructions">Выбор действия</string>
 	<string name="search">Поиск</string>
@@ -41,7 +52,7 @@
 	<string name="close">Закрыть</string>
 	<string name="home_widgets">Добавить виджет</string>
 	<string name="home_wallpaper">Изменить обои</string>
-	<string name="home_settings">Настроки Lucid Launcher</string>
+	<string name="home_settings">Настройки Lucid Launcher</string>
 	<string name="home_store">Магазин Lucid</string>
 	<string name="saveimage">Сохранить изображение</string>
 	<string name="openinnewtab">Открыть в новой вкладке</string>
@@ -79,8 +90,6 @@
 	<string name="sidebariconpaddingmessage">Выберите заполнение:</string>
 	<string name="sidebarhidelabeltitle">Подпись</string>
 	<string name="sidebarhidelabelsummary">Отображение/скрытие подписи к значкам</string>
-	<string name="zoompercenttitle">Процент увеличения</string>
-	<string name="zoompercentsummary">Установка процента увеличения в фоне</string>
 	<string name="sidebartransparencytitle">Прозрачность панели</string>
 	<string name="sidebartransparencysummary">Установка прозрачности боковой панели</string>
 	<string name="numcolumnstitle">Число столбцов</string>
@@ -101,9 +110,7 @@
 	<string name="verticalspacingmessage">Выберите интервал по вертикали:</string>
 	<string name="homenumpagestitle">Количество домашних страниц</string>
 	<string name="homenumpagessummary">Установка количества домашних страниц</string>
-	<string name="homenumpagesmessage">Выберите количество домашних страниц</string>
-	<string name="hidesearchbartitle">Скрытие строки поиска</string>
-	<string name="hidesearchbarsummary">Скрытие строки поиска на главной странице</string>
+	<string name="homenumpagesmessage">Выберите количество домашних страниц:</string>
 	<string name="gridsnaptitle">Привязка прил. к сетке</string>
 	<string name="gridsnapsummary">Включение/отключение привязки к сетке</string>
 	<string name="widgetgridsnaptitle">Привязка виджетов к сетке</string>
@@ -125,8 +132,6 @@
 	<string name="homeiconsizemessage">Выберите размер значков:</string>
 	<string name="homeindicatortitle">Индикаторы страницы</string>
 	<string name="homeindicatorsummary">Включение/отключение индикаторов страницы</string>
-	<string name="disablebrowsertitle">Отключение</string>
-	<string name="disablebrowsersummary">Отключение браузера</string>
 	<string name="dimwebpagetitle">Затемнение страницы браузера</string>
 	<string name="dimwebpagesummary">Уменьшение яркости фона на странице браузера</string>
 	<string name="icon_theme">Стиль значков</string>
@@ -138,6 +143,12 @@
 	<string name="backupsummary">Резервное копирование всех Ваших настроек и установок</string>
 	<string name="restoretitle">Восстановление</string>
 	<string name="restoresummary">Восстановление резервной копии</string>
+	<string name="zoompercenttitle">Процент уменьшения</string>
+	<string name="zoompercentsummary">Установите процент уменьшения к фону</string>
+	<string name="disablebrowsertitle">Отключить</string>
+	<string name="disablebrowsersummary">Выберите для отключения браузера</string>
+	<string name="hidesearchbartitle">Скрыть панель поиска</string>
+	<string name="hidesearchbarsummary">Скрыть панель поиска на домашнем экране</string>
 	<string name="floatapp">Плавающие приложения</string>
 	<string name="enablefloatoptiontitle">Включение плавающих приложений</string>
 	<string name="enablefloatoptionsummary">На поддерживаемых прошивках Вы можете запускать приложения в плавающем режиме (удержание нажатия на приложении для опций)</string>
@@ -154,10 +165,10 @@
 	<string name="clearhistorytitle">Очистка истории</string>
 	<string name="clearcachetitle">Очистка кэша</string>
 	<string name="clearcookiestitle">Очистка cookie</string>
-	<string name="shortcutlabelstitle">Подписи ярлыков</string>
-	<string name="shortcutlabelssummary">Отображение/скрытие подписей под ярлыками</string>
 	<string name="addshortcut">Добавление ярлыка</string>
 	<string name="chooseshortcut">Выбор ярлыка</string>
+	<string name="shortcutlabelstitle">Подписи ярлыков</string>
+	<string name="shortcutlabelssummary">Отображение/скрытие подписей под ярлыками</string>
 	<string name="upgrade">Обновление до Lucid Launcher Pro для доп. функций</string>
 	<string name="persistenttitle">Удержание в системе</string>
 	<string name="persistentsummary">Удержание лончера в памяти. Будет отображено уведомление</string>
@@ -220,11 +231,11 @@
 	<string name="enableimages">Загрузка изображений</string>
 	<string name="prodescription">Поддержите проект покупкой Lucid Launcher Pro</string>
 	<string name="urlbardefault">Введите поисковый запрос или адрес</string>
-	<string name="exit">Выход</string>
 	<string name="font_size_title">Размер шрифта</string>
 	<string name="font_size_summary">Установка размера шрифта текста</string>
 	<string name="sidebar_switched_title">Переключение расположения панели</string>
 	<string name="sidebar_switched_summary">Переключение сторон экрана для расположения боковой панели</string>
+	<string name="exit">Выход</string>
 	<string name="browserfullscreentitle">Полноэкранный браузер</string>
 	<string name="browserfullscreensummary">Удаление свободного места внизу браузера</string>
 	<string name="folderhidelabeltitle">Названия папок</string>
@@ -239,14 +250,10 @@
 	<string name="remove">Удалить</string>
 	<string name="browser_removed_dialog">Приложение будет удалено из магазина из-за возникших осложнений. Пожалуйста, нажмите на следующую ссылку для перехода к  последней версии Lucid Browser:</string>
 	<string name="sslUntrustedTitle">Сертификат SSL не является доверенным</string>
-	<string name="sslUntrustedMessage" formatted="false">Страница на\n\n%s\n\nимеет самоподписанный сертификат SSL.</string>
 	<string name="sslIdMismatchTitle">Сертификат SSL не является действующим для данной страницы</string>
-	<string name="sslIdMismatchMessage" formatted="false">Страница на\n\n%1s\n\nимеет сертификат SSL, действующий только для %2s.</string>
-	<string name="sslExpiredTitle">Срок действия сертификата SSL истёк</string>
-	<string name="sslExpiredMessage" formatted="false">Страница на\n\n%1s\n\nимеет истёкший сертификат SSL. Срок действия истёк после %2s.</string>
-	<string name="sslNotYetValidTitle">SSL Certificate ещё не действителен</string>
-	<string name="sslNotYetValidMessage" formatted="false">Страница на\n\n%1s\n\nимеет сертификат SSL, который ещё не действителен. Он будет действовать с %2s.</string>
-	<string name="sslWebsiteWarning">Страница, возможно, небезопасна, поскольку сертификат не может быть проверен. Пожалуйста, продолжайте с осторожностью.</string>
+		<string name="sslExpiredTitle">Срок действия сертификата SSL истёк</string>
+		<string name="sslNotYetValidTitle">SSL Certificate ещё не действителен</string>
+		<string name="sslWebsiteWarning">Страница, возможно, небезопасна, поскольку сертификат не может быть проверен. Пожалуйста, продолжайте с осторожностью.</string>
 	<string name="sslProceedQuestion">Хотите принять этот сертификат?</string>
 	<string name="browser">Браузер</string>
 	<string name="app_drawer">Меню приложений</string>
@@ -277,7 +284,8 @@
 	<string name="folder_color_summary">Установка цвета внутри папок</string>
 	<string name="folder_style_title">Стиль папок</string>
 	<string name="folder_style_summary">Выбор стиля значков папок</string>
-	<string name="action_shortcut">Ярлык запуска</string>
+	<string name="action_shortcut">Запуск ярлыка</string>
+	<string name="action_lock_screen">Отключить экран</string>
 	<string name="drawer_style_title">Стиль меню</string>
 	<string name="drawer_style_summary">Выбор стиля меню</string>
 	<string name="grid">Сетка</string>
@@ -292,15 +300,15 @@
 	<string name="disable_suggestions_title">Отключение предложений поиска</string>
 	<string name="search_hidden_apps_title">Поиск скрытых приложений</string>
 	<string name="search_hidden_apps_summary">Отображение скрытых приложений при поиске</string>
-	<string name="disable_ads">Отключить рекламу</string>
 	<string name="action_openrecents">Открыть недавние</string>
 	<string name="action_opennotificationpanel">Открыть панель уведомлений</string>
-	<string name="move_here">ПЕРЕМЕСТИТЬ СЮДА</string>
 	<string name="add_bookmark_folder">Добавить новую папку</string>
 	<string name="add_bookmark_folder_hint">Ввод имени новой папки…</string>
-	<string name="edit_bookmark_folder">Изменение папки закладок</string>
+	<string name="edit_bookmark_folder">Изменение папки</string>
 	<string name="remove_bookmark_folder_confirm">Вы действительно хотите удалить эту папку? Её содержимое также будет удалено.</string>
 	<string name="bookmark_move">Переместить</string>
+	<string name="move_here">ПЕРЕМЕСТИТЬ СЮДА</string>
+	<string name="lucidactionstitle">Действия Lucid Launcher</string>
 	<string name="lucidactionfavorites">Боковая панель избранного</string>
 	<string name="lucidactionbrowser">Браузер</string>
 	<string name="lucidactionlockunlock">Закрепить/открепить раб. стол</string>
@@ -326,7 +334,7 @@
 	<string name="send_mail_error">Нет установленных почтовых клиентов</string>
 	<string name="step_welcome_title">Добро пожаловать в Lucid Launcher</string>
 	<string name="step_welcome_summary">Это Ваш домашний экран. Здесь Вы можете размещать приложения, виджеты и др. Можете листать экраны по вертикали и другие страницы по горизонтали</string>
-	<string name="step_basic_actions_title">Нажмите на значке поиска для начала поиска \nНажмите на значок троеточия для дополнительных действий</string>
+	<string name="step_basic_actions_title">Основные действия</string>
 	<string name="step_basic_actions_summary">Нажмите на значок поиска для начала поиска \nНажмите три точки для дополнительных действий</string>
 	<string name="step_favorite_title">Избранные приложения</string>
 	<string name="step_favorite_action_summary">Нажмите на кнопку с тремя линиями или вытяните из края экрана панель доступа к избранным приложениям</string>
@@ -341,21 +349,17 @@
 	<string name="step_browser_sidebar_summary">Боковая панель браузера вытягивается из края экрана</string>
 	<string name="step_orientation_title">Ориентация лончера</string>
 	<string name="step_orientation_summary">Раскладка домашнего экрана отличается в зависимости от ориентации. Вы можете размещать разные приложения для разной ориентации</string>
-	<string name="sidebar_transparent">Прозрачность</string>
-	<string name="search_engine">Поисковая система</string>
+	<string name="actionbartextstyletitle">Стиль элементов строки меню</string>
+	<string name="actionbartextstylesummary">Установка стиля элементов строки меню</string>
 	<string name="searchcontactstitle">Поиск контактов</string>
 	<string name="searchcontactssummary">Включение/отключение поиска контактов</string>
-	<string name="actionbartextstyletitle">Стиль элемента строки меню</string>
-	<string name="actionbartextstylesummary">Установка стиля элемента строки меню</string>
-	<string name="action_lock_screen">Отключение экрана</string>
-	<string name="history">История</string>
-	<string name="lucidactionstitle">Действия Lucid Launcher</string>
 	<string name="version">Версия</string>
 	<string name="community">Посетите сообщество на Google+</string>
 	<string name="licence_beer_github">THE BEER-WARE LICENSE" (Rev42).\nНажмите для просмотра проекта на GitHub</string>
 	<string name="licence_apache20_github">Apache 2.0.\nНажмите для просмотра проекта на GitHub</string>
+	<string name="search_engine">Поисковая система</string>
 	<string name="first_letter_search_title">По первой букве</string>
-	<string name="first_letter_search_summary">поиск, основанный на начале заголовка</string>
+	<string name="first_letter_search_summary">Поиск, основанный на начале заголовка</string>
 	<string name="wallpaper_offset">Сдвиг обоев</string>
 	<string name="wallpaper_offset_title">Установка смещения обоев</string>
 	<string name="wallpaper_offset_summary">Перемещайте обои, как Вам нравится</string>
@@ -381,7 +385,8 @@
 	<string name="backup_title">Введите заголовок копии</string>
 	<string name="backup_select">Выбрать копию</string>
 	<string name="backup_delete">Удалить копию</string>
-	<string name="lb_pro_description">Поддержите проект покупкой версии для пожертвований Lucid Browser</string>
+	<string name="disable_ads">Отключить рекламу</string>
+	<string name="history">Поддержите проект покупкой версии для пожертвований Lucid Browser</string>
 	<string name="sort_title">Сортировка</string>
 	<string name="sort_summary">Выбрать метод сортировки </string>
 	<string name="sort_az">По алфавиту (A-Z)</string>
@@ -389,10 +394,25 @@
 	<string name="sort_new">По дате установки (сперва новые)</string>
 	<string name="sort_old">По дате установки (сперва старые)</string>
 	
+	<string name="lb_pro_description">Обновитесь до платной версии Lucid Browser для поддержки проекта</string>
 	<string name="folder_mode_title">Режим отображения папок</string>
 	<string name="folder_mode_summary">Выберите способ отображения папок</string>
 	<string name="folder_mode_fullscreen">Папка на полный экран</string>
 	<string name="folder_mode_adaptive">Адаптивный размер папки</string>
 	<string name="folder_mode_centered">Папка по центру</string>
 	
+	<string name="no_bookmarks">Закладки не найдены</string>
+	<string name="export_bookmarks">Экспорт закладок</string>
+	<string name="import_bookmarks">Импорт закладок</string>
+	<string name="import_bookmarks_external">Импорт закладок из внешних браузеров</string>
+	<string name="bookmark_settings">Параметры закладок</string>
+    <string name="delete_bookmarks">Удалить все закладки</string>
+    
+   <string name="lock_screen_permission_request">Включить администратора устройства, чтобы разрешить Lucid Launcher блокировку экрана. Для удаления Lucid Launcher будет необходимо отключение администратора устройства</string>
+
+    <string name="licensing_failed">Ошибка проверки лицензии. Пожалуйста, убедитесь, что Вы купили приложение</string>
+    <string name="export_bookmarks_summary">Экспорт закладок в файл</string>
+    <string name="import_bookmarks_summary">Импорт закладок из файла</string>
+    
+    
 </resources>

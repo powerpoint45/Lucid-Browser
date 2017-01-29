@@ -343,4 +343,6 @@
 	<string name="actionbartextstyletitle">Estilo de barra de acción</string>
 	<string name="actionbartextstylesummary">Establece estilo del objeto de la barra de acción</string>
 	<string name="history">Historial</string>
+	
+	
 </resources>

@@ -1,6 +1,5 @@
 package views;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
@@ -18,11 +17,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.powerpoint45.lucidbrowser.MainActivity;
 import com.powerpoint45.lucidbrowser.Properties;
 import com.powerpoint45.lucidbrowser.R;
 
-public class CustomToolbar extends Toolbar{
+public class CustomToolbar extends Toolbar {
 
 	public CustomToolbar(Context context, AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
@@ -42,7 +40,7 @@ public class CustomToolbar extends Toolbar{
 	@Override 
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
-        colorizeToolbar(this, Properties.appProp.primaryIntColor, MainActivity.activity);
+        colorizeToolbar(this, Properties.appProp.primaryIntColor, getContext());
     } 
 	
 	
@@ -53,16 +51,16 @@ public class CustomToolbar extends Toolbar{
 	 * @param toolbarIconsColor the target color of toolbar icons
 	 * @param activity reference to activity needed to register observers
 	 */
-	public static void colorizeToolbar(Toolbar toolbarView, int toolbarIconsColor, Activity activity) {
+	public static void colorizeToolbar(Toolbar toolbarView, int toolbarIconsColor, Context activity) {
 	    final PorterDuffColorFilter colorFilter
 	            = new PorterDuffColorFilter(toolbarIconsColor, PorterDuff.Mode.SRC_IN);
-	 
+
 	    for(int i = 0; i < toolbarView.getChildCount(); i++) {
 	        final View v = toolbarView.getChildAt(i);
-	 
+
 	        doColorizing(v, colorFilter, toolbarIconsColor);
 	    }
-	    
+
 	  //Step 3: Changing the color of title and subtitle.
         toolbarView.setTitleTextColor(toolbarIconsColor);
         toolbarView.setSubtitleTextColor(toolbarIconsColor);
@@ -70,7 +68,7 @@ public class CustomToolbar extends Toolbar{
 	
 	public static void doColorizing(View v, final ColorFilter colorFilter, int toolbarIconsColor){
 		
-		if (!(v.getId() == R.id.backdrop)){
+		if (!(v.getId() == R.id.backdrop) && !(v.getId() == R.id.close_tab_button)){
 			if(v instanceof ImageButton) {
 				((ImageButton)v).getDrawable().setAlpha(255);
 	            ((ImageButton)v).getDrawable().setColorFilter(colorFilter);

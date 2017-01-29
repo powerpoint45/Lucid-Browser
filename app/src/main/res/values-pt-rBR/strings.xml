@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--:::::::This is the localization file for Portuguese Brazil::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <resources>
 	<string name="trans_zoomout">Diminuir Zoom</string>
 	<string name="trans_pagestack">Pilha de Páginas</string>
@@ -298,4 +303,97 @@
 	<string name="add_apps">Adicionar Apps</string>
 	<string name="select_apps">Selecionar Apps para adicionar</string>
 	<string name="def">Padrão</string>
+	<string name="show_search_icon_title">Procurar ícone</string>
+	<string name="show_search_icon_summary">Mostrar ícone de pesquisa na barra de pesquisa</string>
+	<string name="search_icon_action_title">Pesquisar ação do ícone</string>
+	<string name="search_icon_action_summary">Selecione a ação quando o ícone de pesquisa é pressionado</string>
+	<string name="action_start_search">Pesquisar</string>
+	<string name="about">Sobre</string>
+	<string name="contact">Nos contate</string>
+	<string name="tutorial">Iniciar Tutorial</string>
+	<string name="rate">Avalie</string>
+	<string name="more_apps">Mais Apps</string>
+	<string name="more">Mais</string>
+	<string name="libraries">Bibliotecas</string>
+	<string name="package_info">Informação do pacote</string>
+	<string name="send_mail">Enviar email com</string>
+	<string name="send_mail_error">Não há clientes de email instalados</string>
+	<string name="step_welcome_title">Tela Inicial</string>
+	<string name="step_welcome_summary">Esta é a sua tela inicial. Aqui você pode colocar seus apps, widgets e mais. Você pode deslizar verticalmente entre telas de início e horizontalmente para outras páginas</string>
+	<string name="step_basic_actions_title">Ações Básicas</string>
+	<string name="step_basic_actions_summary">Toque no ícone de pesquisa para iniciar a pesquisa \nToque nas reticências para mais ações</string>
+	<string name="step_favorite_title">Aplicativos Favoritos</string>
+	<string name="step_favorite_action_summary">Toque no botão de reticências ou deslize o dedo pela borda da tela para acessar seus apps favoritos</string>
+	<string name="step_favorites_summary">Todos seus aplicativos favoritos serão mostrados aqui. Um aplicativo pode ser adicionado aos favoritos através da gaveta de aplicativos</string>
+	<string name="step_drawer_title">Gaveta de Aplicativos</string>
+	<string name="step_drawer_summary">Esta é a Gaveta de Aplicativos. Você pode desativar ou reorganizar esta página a partir de \"Gerenciar Telas\"</string>
+	<string name="step_drawer_app_long_press_title">Mais Opções</string>
+	<string name="step_drawer_app_long_press_summary">Você pode manter pressionado um ítem longamente para ter mais opções como adicioná-lo à tela inicial ou aos favoritos</string>
+	<string name="step_browser_title">Navegador</string>
+	<string name="step_browser_summary">Este é o Navegador. Você pode desativá-lo ou reorganizar esta página a partir de \"Gerenciar Telas\"</string>
+	<string name="step_browser_sidebar_title">Barra lateral do navegador</string>
+	<string name="step_browser_sidebar_summary">Acesse a barra lateral do Navegador deslizando o dedo da borda da tela</string>
+	<string name="step_orientation_title">Orientação do Launcher</string>
+	<string name="step_orientation_summary">O layout da tela inicial varia de acordo com a orientação. Você pode colocar apps diferentes baseado na orientação</string>
+	<string name="actionbartextstyletitle">Estilo de ícone da ActionBar</string>
+	<string name="actionbartextstylesummary">Selecionar estilo de ítem da ActionBar</string>
+	<string name="searchcontactstitle">Procurar Contatos</string>
+	<string name="searchcontactssummary">Ativar ou desativar pesquisa de contatos</string>
+	<string name="version">Versão</string>
+	<string name="community">Visite nossa comunidade no Google+</string>
+	<string name="licence_beer_github">THE BEER-WARE LICENSE" (Rev42).\nToque para ver o projeto em GitHub</string>
+	<string name="licence_apache20_github">Apache 2.0.\nToque para ver o projeto on GitHub</string>
+	<string name="search_engine">Mecanismo de busca</string>
+	<string name="first_letter_search_title">Pesquisa por primeira letra</string>
+	<string name="first_letter_search_summary">pesquisa baseada no início dos títulos</string>
+	<string name="wallpaper_offset">Mover o papel de parede baseado</string>
+	<string name="wallpaper_offset_title">Definir compensações de papel de parede</string>
+	<string name="wallpaper_offset_summary">Mover o papel de parede da maneira que preferir</string>
+	<string name="fav_gesture_down_summary">Selecione uma ação ao deslizar para baixo a partir do topo da barra lateral</string>
+	<string name="fav_gesture_up_summary">Selecionar uma ação ao deslizar para cima a partir da parte inferior da barra lateral</string>
+	<string name="hide_app">Ocultar App</string>
+	<string name="show_app">Mostrar App</string>
+	<string name="hide_from_drawer">Ocultar da gaveta</string>
+	<string name="autohide_apps_title">Auto ocultar Apps</string>
+	<string name="autohide_apps_summary">Ocultar aplicativos ao adicionar um aplicativo a uma pasta na gaveta</string>
+	<string name="folder_settings">Configurações de pastas</string>
+	<string name="folder_apps_size_title">Tamanho de apps nas pastas</string>
+	<string name="folder_apps_size_summary">Selecione o tamanho dos apps dentro das pastas</string>
+	<string name="folder_columns_summary">Selecione o número de colunas nas pastas</string>
+	<string name="actionbar_item_color_title">Cor de ítens na barra de ação</string>
+	<string name="actionbar_item_color_summary">Selecionar as cores dos ícones na barra de ação</string>
+	<string name="disable_new_app_glow_title">Desative o destaque de novos apps</string>
+	<string name="disable_new_app_glow_summary">Desative o destaque de novos apps na gaveta de aplicativos</string>
+	<string name="download_started">Download iniciado</string>
+	<string name="choose_upload">Escolha o arquivo para upload</string>
+	<string name="unread_count_title">Unread Count (Beta)</string>
+	<string name="unread_count_summary">Exibir a contagem de não lidas em aplicativos. Poucos aplicativos funcionam no momento</string>
+	<string name="backup_title">Digite o título do backup</string>
+	<string name="backup_select">Selecione backup</string>
+	<string name="backup_delete">Delete backup</string>
+	<string name="disable_ads">Desative Ads</string>
+	<string name="history">História</string>
+	<string name="sort_title">Método de classificação</string>
+	<string name="sort_summary">Escolha como os aplicativos são classificados</string>
+	<string name="sort_az">Ordem Alfabética (A-Z)</string>
+	<string name="sort_za">Ordem Alfabética (Z-A)</string>
+	<string name="sort_new">Data de Instalação (Mais novos primeiro)</string>
+	<string name="sort_old">Data de Instalação (Mais antigos primeiro)</string>
+
+	<string name="lb_pro_description">Atualize para versão de doação do Lucid Browser afim de dar suporte a este projeto</string>
+	<string name="folder_mode_title">Modo de exibição de pasta</string>
+	
+	<string name="folder_mode_summary">Escolha a forma como as pastas são mostradas</string>
+	<string name="folder_mode_fullscreen">Pasta em Tela Cheia</string>
+	<string name="folder_mode_adaptive">Tamanho de Pasta Adaptativo</string>
+	<string name="folder_mode_centered">Pasta Centralizada</string>
+
+	<string name="no_bookmarks">Nenhum Favorito encontrado</string>
+    <string name="export_bookmarks">Exportar Favoritos</string>
+    <string name="import_bookmarks">Importar Favoritos</string>
+    <string name="import_bookmarks_external">Importar Favoritos de Navegadores externos</string>
+    <string name="bookmark_settings">Cnofirguações de Favoritos</string>
+    <string name="delete_bookmarks">Delete Todos os Favoritos</string>
+    
+    <string name="lock_screen_permission_request">Ativa ro modo administrador do dispositivo para permitir que o Lucid Launcher bloqueie a tela. Você deve desativar o administrador do dispositivo para desinstalar o Lucid Launcher</string>
 </resources>

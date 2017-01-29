@@ -1,38 +1,10 @@
 [
     {
-        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/forward.png",
-        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/forward.png"
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/common_ic_googleplayservices.png",
+        "source": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/drawable-ldpi-v4/common_ic_googleplayservices.png"
     },
     {
-        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_stat_location_web_site.png",
-        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/ic_stat_location_web_site.png"
-    },
-    {
-        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/btn_toolbar_reload_normal.png",
-        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/btn_toolbar_reload_normal.png"
-    },
-    {
-        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/btn_omnibox_bookmark_normal.png",
-        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/btn_omnibox_bookmark_normal.png"
-    },
-    {
-        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/btn_toolbar_stop_loading_normal.png",
-        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/btn_toolbar_stop_loading_normal.png"
-    },
-    {
-        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/back.png",
-        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/back.png"
-    },
-    {
-        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/btn_omnibox_bookmark_selected_normal.png",
-        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/btn_omnibox_bookmark_selected_normal.png"
-    },
-    {
-        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_new_window_holo_dark.png",
-        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/ic_new_window_holo_dark.png"
-    },
-    {
-        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_new_window_holo_light.png",
-        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/ic_new_window_holo_light.png"
+        "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/common_ic_googleplayservices.png",
+        "source": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/drawable-ldpi-v4/common_ic_googleplayservices.png"
     }
 ]

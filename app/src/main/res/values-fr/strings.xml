@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::This is the localization file for French::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <resources>
 	<string name="trans_zoomout">Dézoome</string>
 	<string name="trans_pagestack">Pile</string>
@@ -394,4 +399,21 @@
 	<string name="folder_mode_fullscreen">Mode plein écran</string>
 	<string name="folder_mode_adaptive">Mode Adaptatif</string>
 	<string name="folder_mode_centered">Mode centré</string>
+	<!--Added 12-12-16-->
+<string name="lock_screen_permission_request">Activez l\'administrateur de l\'appareil pour permettre à Lucid Launcher de verrouiller l\'écran. Vous devez désactiver l\'administrateur de l\'appareil afin de désinstaller Lucid Launche</string>
+
+
+<!--Added 11-22-16-->
+<string name="no_bookmarks">Aucun favori trouvé</string>
+<string name="export_bookmarks">Exporter Favoris</string>
+<string name="import_bookmarks">Importer Favoris</string>
+<string name="import_bookmarks_external">Importer favoris à partir d\'autres browsers</string>
+<string name="bookmark_settings">Paramétrage des Favoris</string>
+<string name="delete_bookmarks">Supprimer tous les Favoris</string>
+
+<!--Added 1-21-17-->
+<string name="licensing_failed">Contrôle de licence échoué. Vérifiez que vous avez bien acheté l\'application</string>
+<string name="export_bookmarks_summary">Exporter les Favoris vers un fichier</string>
+<string name="import_bookmarks_summary">Importer les Favoris depuis un fichier</string>
+
 </resources>

@@ -1,9 +1,13 @@
 package bookmarkModel;
 
 import java.io.Serializable;
+import java.text.Collator;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.UUID;
 
 public class BookmarkFolder implements Serializable{
@@ -101,6 +105,21 @@ public class BookmarkFolder implements Serializable{
 	public void addBookmark(Bookmark newBookmark) {
 		newBookmark.setInFolder(this);
 		containedBookmarks.add(newBookmark);
+
+		//sort bookmarks
+		final Collator collator = Collator.getInstance(Locale
+				.getDefault());
+		collator.setStrength(Collator.SECONDARY);
+
+		Collections.sort(getContainedBookmarks(), new Comparator<Bookmark>() {
+			@Override
+			public int compare(Bookmark b1, Bookmark b2) {
+				String label1 = b1.getDisplayName();
+				String label2 = b2.getDisplayName();
+
+				return collator.compare(label1, label2);
+			}
+		});
 	}
 	
 	/**

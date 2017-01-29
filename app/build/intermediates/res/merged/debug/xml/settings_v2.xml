@@ -33,10 +33,10 @@
             <preferences.ColorPickerPreference
                 android:defaultValue="@color/urlback"
                 android:key="actionbarcolor"
-                android:summary="@string/actionbarcolorsummary"
-                android:title="@string/actionbarcolortitle" />
+                android:summary="@string/actionbarcolortitle"
+                android:title="@string/actionbarcolorsummary" />
             <preferences.ColorPickerPreference
-                android:defaultValue="@android:color/white"
+                android:defaultValue="@android:color/black"
                 android:key="textcolor"
                 android:summary="@string/actionbar_item_color_summary"
                 android:title="@string/actionbar_item_color_title" />
@@ -49,7 +49,7 @@
             android:key="sideappearance"
             android:title="@string/cat_title_appearance" >
             <ListPreference
-                android:defaultValue="b"
+                android:defaultValue="w"
                 android:entries="@array/sidebarthemes"
                 android:entryValues="@array/sidebartheme_values"
                 android:key="sidebartheme"
@@ -118,7 +118,7 @@
         </PreferenceCategory>
         <PreferenceCategory android:title="@string/cat_title_appearance" >
             <CheckBoxPreference
-                android:defaultValue="false"
+                android:defaultValue="true"
                 android:key="showbrowserbackdrop"
                 android:summary="@string/showbackgroundonurlbarsummary"
                 android:title="@string/showbackgroundonurlbartitle" />
@@ -145,10 +145,10 @@
         </PreferenceCategory>
         <PreferenceCategory android:title="@string/cat_title_tools" >
             <ListPreference
-                android:defaultValue="g"
+                android:defaultValue="ec"
                 android:entries="@array/searchengines"
                 android:entryValues="@array/searchengines_values"
-                android:key="searchengine"
+                android:key="setsearchengine"
                 android:title="@string/search_engine" />
             <CheckBoxPreference
                 android:defaultValue="false"
@@ -166,6 +166,12 @@
                 android:title="@string/exit_confirmation_title" />
         </PreferenceCategory>
     </PreferenceScreen>
+    <PreferenceScreen android:title="@string/bookmark_settings" android:key="browsersettings_tools">
+        <Preference android:title="@string/export_bookmarks" android:summary="@string/export_bookmarks_summary" android:key="bookmark_export" />
+        <Preference android:title="@string/import_bookmarks" android:summary="@string/import_bookmarks_summary" android:key="bookmark_import" />
+        <Preference android:title="@string/import_bookmarks_external" android:key="import_bookmark_external" />
+        <Preference android:title="@string/delete_bookmarks" android:key="delete_bookmarks" />
+    </PreferenceScreen>
     <PreferenceScreen android:title="@string/advancedsettingstitle" >
         <PreferenceCategory android:title="@string/cat_title_setup" >
             <Preference
@@ -179,6 +185,7 @@
                 android:key="systempersistent"
                 android:summary="@string/persistentsummary"
                 android:title="@string/persistenttitle" />
+
             <CheckBoxPreference
                 android:defaultValue="false"
                 android:key="disableads"
@@ -195,17 +202,14 @@
             android:action="android.intent.action.VIEW"
             android:data="http://play.google.com/store/apps/details?id=com.powerpoint45.launcherpro" />
     </Preference>
-    
+
     <Preference
         android:icon="@drawable/lb_pro"
         android:key="pro"
         android:summary="@string/lb_pro_description"
-        android:title="@string/lb_pro_title" >
+        android:title="@string/pro_name" >
         <intent
             android:action="android.intent.action.VIEW"
             android:data="http://play.google.com/store/apps/details?id=com.powerpoint45.lucidbrowserpro" />
     </Preference>
-
-
-
 </PreferenceScreen>

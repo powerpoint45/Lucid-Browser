@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import bookmarkModel.Bookmark;
 import bookmarkModel.BookmarkFolder;
 
@@ -45,11 +46,11 @@ public class BookmarkMoveDialog extends Dialog {
 		// TODO Auto-generated constructor stub
 	}
 
-	public BookmarkMoveDialog(Context context) {
+	public BookmarkMoveDialog(BookmarksActivity context) {
 		super(context);
 
-		LayoutInflater inflater = (LayoutInflater) MainActivity.activity
-				.getSystemService(MainActivity.activity.LAYOUT_INFLATER_SERVICE);
+		LayoutInflater inflater = (LayoutInflater)context
+				.getSystemService(context.LAYOUT_INFLATER_SERVICE);
 		dialogLayout = (RelativeLayout) inflater.inflate(
 				R.layout.bookmarks_move_dialog, null);
 
@@ -69,7 +70,7 @@ public class BookmarkMoveDialog extends Dialog {
 
 		setContentView(dialogLayout);
 
-		this.setTitle(MainActivity.activity.getResources().getString(
+		this.setTitle(context.getResources().getString(
 				R.string.bookmark_move)
 				+ "...");
 

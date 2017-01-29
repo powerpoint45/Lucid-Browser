@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<color name="Black_transparent_50_percent">#50000000</color>
-<color name="Black_transparent_90_percent">#E6000000</color>
-<color name="Black_transparent_dark">#80000000</color>
-<color name="White_transparent_50_percent">#85ffffff</color>
-<color name="transparent_black_percent_5">#1A000000</color>
-<color name="holo_blue_light">#ff33b5e5</color>
-<color name="holo_red_light">#ffff4444</color>
-<color name="holo_blue_dark">#ff0099cc</color>
-<color name="gray">#454545</color>
-<color name="white">#e8e8e8</color>
-<color name="dark">#111</color>
+    <color name="Black_transparent_50_percent">#50000000</color>
+    <color name="Black_transparent_90_percent">#E6000000</color>
+    <color name="Black_transparent_dark">#80000000</color>
+    <color name="White_transparent_50_percent">#85ffffff</color>
+    <color name="transparent_black_percent_5">#1A000000</color>
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <color name="holo_red_light">#ffff4444</color>
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <color name="gray">#454545</color>
+    <color name="white">#e8e8e8</color>
+    <color name="dark">#111</color>
+    <color name="material_light_gray">#757575</color>
 
-<color name="urlback">#50000000</color>
-<color name="urlfront">#91ffffff</color>
+    <color name="urlback">#C1DFDFDF</color>
+    <color name="urlfront">#D1FFFFFF</color>
+
+    <color name="sv_backgroundColor">#F50A39B1</color>
 
 </resources>

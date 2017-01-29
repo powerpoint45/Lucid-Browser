@@ -1,5 +1,14 @@
 package bookmarkModel;
 
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Log;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -15,6 +24,8 @@ public class Bookmark implements Serializable{
 	private BookmarkFolder inFolder;
 	private String internalName;
 	private String pathToFavicon;
+
+	private transient Bitmap loadedIcon;
 	
 	public Bookmark(){
 		super();
@@ -28,7 +39,13 @@ public class Bookmark implements Serializable{
 		BookmarksManager.amountOfBookmarks++;
 		}
 	
-	
+	public Bitmap getIconBitmap(){
+		if (loadedIcon==null){
+			loadedIcon =  BitmapFactory.decodeFile(getPathToFavicon());
+			return loadedIcon;
+		}else
+			return loadedIcon;
+	}
 	
 	public String getPathToFavicon() {
 		return pathToFavicon;
@@ -38,6 +55,35 @@ public class Bookmark implements Serializable{
 		this.pathToFavicon = pathToFavicon;
 	}
 
+	public void setFavIcon(Activity a, Bitmap b){
+		if (b!=null) {
+			new File(a.getApplicationInfo().dataDir + "/icons/").mkdirs();
+			URL wvURL = null;
+			try {
+				wvURL = new URL(url);
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
+			String pathToFavicon = a.getApplicationInfo().dataDir + "/icons/" + wvURL.getHost();
+			FileOutputStream out = null;
+			try {
+				out = new FileOutputStream(pathToFavicon);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			if (out!=null) {
+				b.compress(Bitmap.CompressFormat.PNG, 100, out);
+				try {
+					out.flush();
+					out.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				Log.d("LB", "FAVICON SAVED AT " + pathToFavicon + "BITMAP IS " + b);
+				setPathToFavicon(pathToFavicon);
+			}
+		}
+	}
 	
 	public URL getURL() {
 		URL urlToReturn;

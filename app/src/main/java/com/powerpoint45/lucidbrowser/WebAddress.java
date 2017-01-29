@@ -16,13 +16,13 @@
 
 package com.powerpoint45.lucidbrowser;
 
-import static android.util.Patterns.GOOD_IRI_CHAR;
+import android.net.ParseException;
 
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import android.net.ParseException;
+import static android.util.Patterns.GOOD_IRI_CHAR;
 
 /**
  * {@hide}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:gravity="center_vertical">
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/homepage_url"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:paddingRight="30dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="about:home"
+        android:inputType="textUri" />
+
+    <ImageButton
+        android:id="@+id/reset_homepage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_button"
+        android:onClick="browserActionClicked"
+        android:src="@drawable/btn_toolbar_reload_normal"
+        android:layout_alignTop="@+id/homepage_url"
+        android:layout_alignRight="@+id/homepage_url"
+        android:layout_alignEnd="@+id/homepage_url" />
+
+
+</RelativeLayout>

@@ -6,7 +6,7 @@
         <!-- you don't want round edges, so I removed it here.
              We dont even need a gradient, replace it with solid -->
       <solid
-        android:color="@color/holo_blue_light" />
+        android:color="@color/material_deep_teal_200" />
     </shape>
     </clip>
 </item>

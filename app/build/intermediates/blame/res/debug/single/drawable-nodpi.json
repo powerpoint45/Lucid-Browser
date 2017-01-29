@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-nodpi/web_logo.png",
+        "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-nodpi/web_logo.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-nodpi/pro.png",
+        "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-nodpi/pro.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-nodpi/ic_browser.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-nodpi/ic_browser.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-nodpi/button_f.png",
+        "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-nodpi/button_f.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-nodpi/button_f.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-nodpi/button_f.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-nodpi/lb_pro.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-nodpi/lb_pro.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-nodpi/ic_launcher.png",
+        "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-nodpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-nodpi/ic_chrome.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-nodpi/ic_chrome.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-nodpi/ic_chrome.png",
+        "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-nodpi/ic_chrome.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-nodpi/ic_browser.png",
+        "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-nodpi/ic_browser.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-nodpi/web_logo.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-nodpi/web_logo.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-nodpi/pro.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-nodpi/pro.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-nodpi/ic_launcher.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-nodpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-nodpi/lb_pro.png",
+        "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-nodpi/lb_pro.png"
+    }
+]

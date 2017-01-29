@@ -1,7 +1,5 @@
 package com.powerpoint45.lucidbrowser;
 
-import java.util.Calendar;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
@@ -9,6 +7,8 @@ import android.util.Log;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
+
+import java.util.Calendar;
 
 public class AdPreference extends Object {
 

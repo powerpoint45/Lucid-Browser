@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/drawable-ldpi/ic_new_window_holo_light.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/ic_new_window_holo_light.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/drawable-ldpi/btn_toolbar_stop_loading_normal.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/btn_toolbar_stop_loading_normal.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/drawable-ldpi/btn_toolbar_reload_normal.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/btn_toolbar_reload_normal.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/drawable-ldpi/ic_stat_location_web_site.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/ic_stat_location_web_site.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/drawable-ldpi/btn_omnibox_bookmark_selected_normal.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/btn_omnibox_bookmark_selected_normal.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/drawable-ldpi/ic_new_window_holo_dark.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/ic_new_window_holo_dark.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/drawable-ldpi/btn_omnibox_bookmark_normal.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/btn_omnibox_bookmark_normal.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/drawable-ldpi/back.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/back.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/drawable-ldpi/forward.png",
+        "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-ldpi/forward.png"
+    }
+]

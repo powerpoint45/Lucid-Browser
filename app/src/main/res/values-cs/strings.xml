@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--:::::::This is the localization file for Czech::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <resources>
 	<string name="trans_zoomout">Oddálit</string>
 	<string name="trans_pagestack">Stránka ze zásobníku</string>
@@ -349,4 +354,32 @@
 	<string name="actionbartextstylesummary">Nastavte styl lišty</string>
 	<string name="action_lock_screen">Vypnutí obrazovky</string>
 	<string name="history">Historie</string>
+
+	<string name="sort_title">Způsob řazení</string>
+	<string name="sort_summary">Vyberte způsob řazení aplikací</string>
+	<string name="sort_az">Abecedně vzestupně (A-Z)</string>
+	<string name="sort_za">Abecedně sestupně (Z-A)</string>
+	<string name="sort_new">Datum instalace (od nejnovější)</string>
+	<string name="sort_old">Datum instalace (od nejstarší)</string>
+
+	<string name="lb_pro_description">Prosím podpořte tento projek aktualizací na Lucid Browser donate.</string>
+	<string name="folder_mode_title">Způsob zobrazení složek</string>
+	<string name="folder_mode_summary">Vyberte jak budou zobrazeny složky</string>
+	<string name="folder_mode_fullscreen">Přes celou obrazovku</string>
+	<string name="folder_mode_adaptive">Automatická velikost</string>
+	<string name="folder_mode_centered">Na středu obrazovky</string>
+
+	<string name="no_bookmarks">Žádné záložky nenalezeny</string>
+	<string name="export_bookmarks">Exportovat záložky</string>
+	<string name="import_bookmarks">Importovat záložky</string>
+	<string name="import_bookmarks_external">Importovat záložky y jiných prohlížečů</string>
+	<string name="bookmark_settings">Nastavení záložek</string>
+	<string name="delete_bookmarks">Smazat všechny záložky</string>
+
+	<string name="lock_screen_permission_request">Povolte správce zařízení pro umožnění zamknutí obrazovky Lucid Launcherem. Před odinstalací Lucid Launcheru musíte správce zařízení opět zakázat.</string>
+
+	<string name="licensing_failed">Kontrola licence se nepodařila. Prosím ujistěte se že byla aplikace skutečně zakoupena.</string>
+	<string name="export_bookmarks_summary">Export záložek do souboru</string>
+	<string name="import_bookmarks_summary">Import záložek ze souboru</string>
+
 </resources>

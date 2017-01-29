@@ -10,44 +10,72 @@
             backward-compatibility can go here.
             
         -->
+
+    </style>
+
+    <style name="NewAppTheme" parent="Theme.AppCompat">
+
+    </style>
+
+    <style name="NewAppThemeLight" parent="Theme.AppCompat.Light">
+
     </style>
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light">
-  	    <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowShowWallpaper">true</item>
         <item name="windowActionBar">false</item>
         <item name="actionBarSize">@dimen/actionBarSize</item>
         <item name="windowNoTitle">true</item>
         <item name="windowActionModeOverlay">true</item>
-<!--         <item name="android:fitsSystemWindows">true</item> -->
+        <!--         <item name="android:fitsSystemWindows">true</item> -->
     </style>
-    
-     <style name="BookmarksTheme" parent="Theme.AppCompat.Light">
-        <item name="android:windowActionBar">true</item>
-    	<item name="android:windowNoTitle">false</item>
-    </style>
-    
-	<style name="AnimationPopup" parent="android:Animation">
-	    <item name="android:windowEnterAnimation">@anim/popup_enter</item>
-	    <item name="android:windowExitAnimation">@anim/popup_exit</item>
-	</style>
 
-	<style name="dialog_color_pciker_view_portrait">
+    <style name="BookmarksTheme" parent="Theme.AppCompat.Light">
+        <item name="android:windowActionBar">true</item>
+        <item name="android:windowNoTitle">false</item>
+    </style>
+
+    <style name="AnimationPopup" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+
+    <style name="dialog_color_pciker_view_portrait">
         <item name="android:layout_width">240dp</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-    
-	
-	<style name="CustomLightTheme" parent="Theme.AppCompat.Light">
+
+
+    <style name="CustomLightTheme" parent="Theme.AppCompat.Light">
         <item name="android:windowActionBar">true</item>
-    	<item name="android:windowNoTitle">false</item>
+        <item name="android:windowNoTitle">false</item>
     </style>
-    
-	<style name="CustomDarkTheme" parent="Theme.AppCompat">
+
+    <style name="CustomDarkTheme" parent="Theme.AppCompat">
         <item name="android:windowActionBar">true</item>
-    	<item name="android:windowNoTitle">false</item>
+        <item name="android:windowNoTitle">false</item>
     </style>
-   
+
+
+    <style name="CustomShowcaseTheme2" parent="ShowcaseView">
+        <item name="sv_backgroundColor">#ab1249d9</item>
+        <item name="sv_showcaseColor">@android:color/transparent</item>
+        <item name="sv_buttonText">@string/ok</item>
+        <item name="sv_titleTextAppearance">@style/CustomTitle2</item>
+        <item name="sv_detailTextAppearance">@style/CustomText2</item>
+    </style>
+
+    <style name="CustomTitle2" parent="TextAppearance.ShowcaseView.Title.Light">
+        <item name="android:textColor">#deffffff</item>
+    </style>
+
+    <style name="CustomText2" parent="TextAppearance.ShowcaseView.Detail.Light">
+        <item name="android:textColor">#e8e9ff</item>
+    </style>
+
+
+
 </resources>

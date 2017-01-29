@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

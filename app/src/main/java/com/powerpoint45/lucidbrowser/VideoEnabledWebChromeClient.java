@@ -3,21 +3,25 @@ package com.powerpoint45.lucidbrowser;
 import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnErrorListener;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
+import android.util.Log;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import java.lang.ref.WeakReference;
+
 import views.CustomWebView;
 
 public class VideoEnabledWebChromeClient extends WebChromeClient implements OnPreparedListener, OnCompletionListener, OnErrorListener
@@ -27,9 +31,8 @@ public class VideoEnabledWebChromeClient extends WebChromeClient implements OnPr
         public void toggledFullscreen(boolean fullscreen);
     }
 
-    private CustomWebView activityNonVideoView;
-    private View loadingView;
     private CustomWebView webView;
+    private View loadingView;
     private ProgressBar PB;
 
     private boolean isVideoFullscreen; // Indicates if the video is being displayed using a custom view (typically full-screen)
@@ -37,6 +40,8 @@ public class VideoEnabledWebChromeClient extends WebChromeClient implements OnPr
     private CustomViewCallback videoViewCallback;
 
     private ToggledFullscreenCallback toggledFullscreenCallback;
+
+    protected WeakReference<MainActivity> activityRef;
 
     /**
      * Never use this constructor alone.
@@ -48,24 +53,23 @@ public class VideoEnabledWebChromeClient extends WebChromeClient implements OnPr
 
     /**
      * Builds a video enabled WebChromeClient.
-     * @param activityNonVideoView A View in the activity's layout that contains every other view that should be hidden when the video goes full-screen.
-     * @param activityVideoView A ViewGroup in the activity's layout that will display the video. Typically you would like this to fill the whole layout.
+     * @param webView A View in the activity's layout that contains every other view that should be hidden when the video goes full-screen.
      */
-    public VideoEnabledWebChromeClient(CustomWebView activityNonVideoView)
+    public VideoEnabledWebChromeClient(CustomWebView webView, MainActivity activity)
     {
-        this.activityNonVideoView = activityNonVideoView;
+        activityRef = new WeakReference<MainActivity>(activity);
+        this.webView = webView;
         this.loadingView = null;
-        this.webView = null;
         this.isVideoFullscreen = false;
     }
 
     public void onProgressChanged(WebView view, int progress) 
     {	
-    	CustomWebView WV = (CustomWebView) MainActivity.webLayout.findViewById(R.id.browser_page);
+    	CustomWebView WV = (CustomWebView) activityRef.get().webLayout.findViewById(R.id.browser_page);
     	if (WV!=null){
-    		if (WV==activityNonVideoView){
+    		if (WV== webView){
 		    	if (PB==null)
-					PB = (ProgressBar) MainActivity.webLayout.findViewById(R.id.webpgbar);
+					PB = (ProgressBar) activityRef.get().webLayout.findViewById(R.id.webpgbar);
 			    if (PB!=null)
 			        PB.setProgress(progress);
     		}
@@ -91,48 +95,34 @@ public class VideoEnabledWebChromeClient extends WebChromeClient implements OnPr
     {
         this.toggledFullscreenCallback = callback;
     }
-    
-    public void showActionBar(){
-//    	MainActivity.actionBar.show();
-//    	Properties.ActionbarSize= Tools.getActionBarSize();
-//		MainActivity.StatusMargine = Tools.getStatusMargine();
-//    	MainActivity.browserListView.setPadding(0, 0, 0, MainActivity.NavMargine+MainActivity.StatusMargine);
-//    	MainActivity.browserListView.setY(MainActivity.StatusMargine);			
-//		MainActivity.webLayout.setPadding(0, MainActivity.StatusMargine, 0, 0);
-//		if (MainActivity.tintManager!=null && Properties.appProp.TransparentStatus)
-//    		MainActivity.tintManager.setStatusBarAlpha(1.0f);
-    }
-    
-    public void hideActionBar(){
-//    	MainActivity.actionBar.hide();
-//    	MainActivity.webLayout.setPadding(0, 0, 0, 0);
-//    	if (MainActivity.tintManager!=null && Properties.appProp.TransparentStatus)
-//    		MainActivity.tintManager.setStatusBarAlpha(0);
-    }
+
 
     @Override
     public void onShowCustomView(View view, CustomViewCallback callback)
     {
         if (view instanceof FrameLayout)
         {
-        	hideActionBar();
+            MainActivity.actionBarControls.hide();
             // A video wants to be shown
             FrameLayout frameLayout = (FrameLayout) view;
             View focusedChild = frameLayout.getFocusedChild();
 
             // Save video related variables
-            activityNonVideoView.setVideoPlaying(true);
+            webView.setVideoPlaying(true);
             this.isVideoFullscreen = true;
             this.videoViewContainer = frameLayout;
             this.videoViewCallback = callback;
 
             // Hide the non-video view, add the video view, and show it
-            activityNonVideoView.setVisibility(View.GONE);
-            ViewGroup activityVideoView = ((ViewGroup) MainActivity.webLayout.findViewById(R.id.webviewholder));
+            webView.setVisibility(View.GONE);
+            ViewGroup activityVideoView = ((ViewGroup) activityRef.get().webLayout.findViewById(R.id.webviewholder));
 
-            System.out.println("VIDV1"+activityVideoView);
 
-            activityVideoView.addView(videoViewContainer, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+            videoViewContainer.setBackgroundColor(Color.BLACK);
+            activityVideoView.addView(videoViewContainer);
+            webView.scrollTo(0,0);  // centers full screen view
+
+            //activityVideoView.addView(videoViewContainer, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
             activityVideoView.setVisibility(View.VISIBLE);
 
             if (focusedChild instanceof android.widget.VideoView)
@@ -140,40 +130,30 @@ public class VideoEnabledWebChromeClient extends WebChromeClient implements OnPr
                 // android.widget.VideoView (typically API level <11)
                 android.widget.VideoView videoView = (android.widget.VideoView) focusedChild;
 
+                Log.d("LL","video view");
                 // Handle all the required events
                 videoView.setOnPreparedListener(this);
                 videoView.setOnCompletionListener(this);
                 videoView.setOnErrorListener(this);
-            }
-            else
-            {
-                // Other classes, including:
-                // - android.webkit.HTML5VideoFullScreen$VideoSurfaceView, which inherits from android.view.SurfaceView (typically API level 11-18)
-                // - android.webkit.HTML5VideoFullScreen$VideoTextureView, which inherits from android.view.TextureView (typically API level 11-18)
-                // - com.android.org.chromium.content.browser.ContentVideoView$VideoSurfaceView, which inherits from android.view.SurfaceView (typically API level 19+)
-
-                // Handle HTML5 video ended event only if the class is a SurfaceView
-                // Test case: TextureView of Sony Xperia T API level 16 doesn't work fullscreen when loading the javascript below
-                if (webView != null && webView.getSettings().getJavaScriptEnabled() && focusedChild instanceof SurfaceView)
+            }else if (webView != null && webView.getSettings().getJavaScriptEnabled() && focusedChild instanceof SurfaceView) {
+                // Run javascript code that detects the video end and notifies the Javascript interface
+                String js = "javascript:";
+                js += "var _ytrp_html5_video_last;";
+                js += "var _ytrp_html5_video = document.getElementsByTagName('video')[0];";
+                js += "if (_ytrp_html5_video != undefined && _ytrp_html5_video != _ytrp_html5_video_last) {";
                 {
-                    // Run javascript code that detects the video end and notifies the Javascript interface
-                    String js = "javascript:";
-                    js += "var _ytrp_html5_video_last;";
-                    js += "var _ytrp_html5_video = document.getElementsByTagName('video')[0];";
-                    js += "if (_ytrp_html5_video != undefined && _ytrp_html5_video != _ytrp_html5_video_last) {";
+                    js += "_ytrp_html5_video_last = _ytrp_html5_video;";
+                    js += "function _ytrp_html5_video_ended() {";
                     {
-                        js += "_ytrp_html5_video_last = _ytrp_html5_video;";
-                        js += "function _ytrp_html5_video_ended() {";
-                        {
-                            js += "_VideoEnabledWebView.notifyVideoEnd();"; // Must match Javascript interface name and method of VideoEnableWebView
-                        }
-                        js += "}";
-                        js += "_ytrp_html5_video.addEventListener('ended', _ytrp_html5_video_ended);";
+                        js += "_VideoEnabledWebView.notifyVideoEnd();"; // Must match Javascript interface name and method of VideoEnableWebView
                     }
                     js += "}";
-                    webView.loadUrl(js);
+                    js += "_ytrp_html5_video.addEventListener('ended', _ytrp_html5_video_ended);";
                 }
+                js += "}";
+                webView.loadUrl(js);
             }
+
 
             // Notify full-screen change
             if (toggledFullscreenCallback != null)
@@ -195,12 +175,12 @@ public class VideoEnabledWebChromeClient extends WebChromeClient implements OnPr
         // This method must be manually called on back key press (from this class' onBackPressed() method).
 
         if (isVideoFullscreen)
-        {	showActionBar();
-        	activityNonVideoView.setVideoPlaying(false);
+        {	MainActivity.actionBarControls.show();
+        	webView.setVideoPlaying(false);
             // Hide the video view, remove it, and show the non-video view
-        	ViewGroup activityVideoView = ((ViewGroup) MainActivity.webLayout.findViewById(R.id.webviewholder));
+        	ViewGroup activityVideoView = ((ViewGroup) activityRef.get().webLayout.findViewById(R.id.webviewholder));
             activityVideoView.removeView(videoViewContainer);
-            activityNonVideoView.setVisibility(View.VISIBLE);
+            webView.setVisibility(View.VISIBLE);
 
             // Call back (only in API level <19, because in API level 19+ with chromium webview it crashes)
             if (videoViewCallback != null && !videoViewCallback.getClass().getName().contains(".chromium."))
@@ -216,8 +196,15 @@ public class VideoEnabledWebChromeClient extends WebChromeClient implements OnPr
             // Notify full-screen change
             if (toggledFullscreenCallback != null)
             {
+                Log.d("LL", "adv toggle");
                 toggledFullscreenCallback.toggledFullscreen(false);
             }
+
+            String js = "javascript:";
+            js += "var _ytrp_html5_video = document.getElementsByTagName('video')[0];";
+            js += "_ytrp_html5_video.webkitExitFullscreen();";
+            webView.loadUrl(js);
+
         }
     }
 
@@ -238,6 +225,7 @@ public class VideoEnabledWebChromeClient extends WebChromeClient implements OnPr
     @Override
     public void onPrepared(MediaPlayer mp) // Video will start playing, only called in the case of android.widget.VideoView (typically API level <11)
     {
+        Log.d("LL","onPrepared ");
         if (loadingView != null)
         {
             loadingView.setVisibility(View.GONE);
@@ -253,6 +241,7 @@ public class VideoEnabledWebChromeClient extends WebChromeClient implements OnPr
     @Override
     public boolean onError(MediaPlayer mp, int what, int extra) // Error while playing video, only called in the case of android.widget.VideoView (typically API level <11)
     {
+        Log.d("LL","error + "+what);
         return false; // By returning false, onCompletion() will be called
     }
     
@@ -277,10 +266,6 @@ public class VideoEnabledWebChromeClient extends WebChromeClient implements OnPr
     
     
     
-    
-    
-    
-    
     public static ValueCallback<Uri> mUploadMessage;  
     public static ValueCallback<Uri[]> mUploadMessageLol;
     public final static int FILECHOOSER_RESULTCODE=1;  
@@ -288,27 +273,26 @@ public class VideoEnabledWebChromeClient extends WebChromeClient implements OnPr
     //The undocumented magic method override   
     //Eclipse will swear at you if you try to put @Override here   
 	// For Android 3.0+
-	public void openFileChooser(ValueCallback<Uri> uploadMsg) {  
-
-     mUploadMessage = uploadMsg;  
-     Intent i = new Intent(Intent.ACTION_GET_CONTENT);  
-     i.addCategory(Intent.CATEGORY_OPENABLE);  
-     i.setType("image/*");  
-     MainActivity.activity.startActivityForResult(Intent.createChooser(i,
-    		 MainActivity.activity.getResources().getString(R.string.choose_upload)), FILECHOOSER_RESULTCODE);  
+	public void openFileChooser(ValueCallback<Uri> uploadMsg) {
+        mUploadMessage = uploadMsg;
+        Intent i = new Intent(Intent.ACTION_GET_CONTENT);
+        i.addCategory(Intent.CATEGORY_OPENABLE);
+        i.setType("image/*");
+        activityRef.get().startActivityForResult(Intent.createChooser(i,
+                activityRef.get().getResources().getString(R.string.choose_upload)), FILECHOOSER_RESULTCODE);
 
     } 
 
     // For Android 3.0+
     public void openFileChooser( ValueCallback uploadMsg, String acceptType ) {
-    mUploadMessage = uploadMsg;
-    Intent i = new Intent(Intent.ACTION_GET_CONTENT);
-    i.addCategory(Intent.CATEGORY_OPENABLE);
-    i.setType("*/*");
-    MainActivity.activity.startActivityForResult(
-    Intent.createChooser(i, 
-    		MainActivity.activity.getResources().getString(R.string.choose_upload)),
-    FILECHOOSER_RESULTCODE);
+        mUploadMessage = uploadMsg;
+        Intent i = new Intent(Intent.ACTION_GET_CONTENT);
+        i.addCategory(Intent.CATEGORY_OPENABLE);
+        i.setType("*/*");
+        activityRef.get().startActivityForResult(
+        Intent.createChooser(i,
+                activityRef.get().getResources().getString(R.string.choose_upload)),
+        FILECHOOSER_RESULTCODE);
     }
     
     
@@ -318,9 +302,9 @@ public class VideoEnabledWebChromeClient extends WebChromeClient implements OnPr
         mUploadMessage = uploadMsg;  
         Intent i = new Intent(Intent.ACTION_GET_CONTENT);  
         i.addCategory(Intent.CATEGORY_OPENABLE);  
-        i.setType("image/*");  
-        MainActivity.activity.startActivityForResult( Intent.createChooser( i, 
-        		MainActivity.activity.getResources().getString(R.string.choose_upload) ), FILECHOOSER_RESULTCODE );
+        i.setType("image/*");
+        activityRef.get().startActivityForResult( Intent.createChooser( i,
+                activityRef.get().getResources().getString(R.string.choose_upload) ), FILECHOOSER_RESULTCODE );
 
     }
     
@@ -336,15 +320,22 @@ public class VideoEnabledWebChromeClient extends WebChromeClient implements OnPr
         mUploadMessageLol = filePathCallback;
  
         Intent intent = fileChooserParams.createIntent();
-        try { 
-            MainActivity.activity.startActivityForResult(intent, FILECHOOSER_RESULTCODE);
+        try {
+            activityRef.get().startActivityForResult(intent, FILECHOOSER_RESULTCODE);
         } catch (ActivityNotFoundException e) {
         	mUploadMessageLol = null; 
-            Toast.makeText(MainActivity.activity, "Cannot open file chooser", Toast.LENGTH_LONG).show();
+            Toast.makeText(activityRef.get(), "Cannot open file chooser", Toast.LENGTH_LONG).show();
             return false; 
         } 
  
         return true; 
-    } 
+    }
+
+    @Override
+    public void onConsoleMessage(String message, int lineNumber, String sourceID) {
+        Log.d("LL", message + " -- From line "
+                + lineNumber + " of "
+                + sourceID);
+    }
 
 }

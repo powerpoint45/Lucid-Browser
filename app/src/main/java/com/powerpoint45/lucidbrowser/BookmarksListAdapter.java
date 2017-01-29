@@ -1,24 +1,22 @@
 package com.powerpoint45.lucidbrowser;
 
-import java.util.List;
-
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import java.util.List;
+
 import bookmarkModel.Bookmark;
 
 public class BookmarksListAdapter extends BaseAdapter {
 
 	List<Bookmark> bookmarks = BookmarksActivity.bookmarksMgr.displayedFolder.getContainedBookmarks();
-	
-	
-	
+
+
 	public void setBookmarkList(List<Bookmark> newBookmarkList){
 		this.bookmarks = newBookmarkList;
 	}
@@ -40,16 +38,41 @@ public class BookmarksListAdapter extends BaseAdapter {
 		return 0;
 	}
 
+	class ViewHolder{
+		TextView title;
+		TextView url;
+		ImageView icon;
+	}
+
 	@Override
-	public View getView(int arg0, View arg1, ViewGroup arg2) {
-		RelativeLayout RL = (RelativeLayout) MainActivity.inflater.inflate(
-				R.layout.bookmark_item, null);
+	public View getView(int arg0, View convertView, ViewGroup arg2) {
+		ViewHolder holder;
+
+		if (convertView==null) {
+			convertView = (RelativeLayout) MainActivity.inflater.inflate(
+					R.layout.bookmark_item, null);
+			holder = new ViewHolder();
+			holder.title = ((TextView)(convertView.findViewById(R.id.bookmark_title)));
+			holder.url = ((TextView)(convertView.findViewById(R.id.bookmark_url_title)));
+			holder.icon = ((ImageView) convertView.findViewById(R.id.bookmark_icon));
+			holder.url.setTag(holder);
+		}else {
+			holder = (ViewHolder) ((TextView)(convertView.findViewById(R.id.bookmark_url_title))).getTag();
+			//performance:
+			//if icon exists then just return cached view but if not then do not because the icon may have been downloaded
+			//and if url view is the same as the current url
+			if (((Boolean)holder.icon.getTag())!=null && holder.url.getText()!=null&&
+					((Boolean)holder.icon.getTag())==true && holder.url.getText().equals(bookmarks.get(arg0).getUrl())
+					&& holder.title.getText().toString().equals(bookmarks.get(arg0).getDisplayName())) {
+				return convertView;
+			}
+		}
 
 		if (Properties.appProp.holoDark) {
-			((TextView)(RL.findViewById(R.id.bookmark_title))).setTextColor(Color.WHITE);
-			((TextView)(RL.findViewById(R.id.bookmark_url_title))).setTextColor(Color.WHITE);
+			holder.title.setTextColor(Color.WHITE);
+			holder.url.setTextColor(Color.WHITE);
 		} else {
-		// Use sight theme
+		// Use light theme
 		}
 		
 		Bookmark bookmark = bookmarks.get(arg0);
@@ -58,40 +81,41 @@ public class BookmarksListAdapter extends BaseAdapter {
 		
 		boolean hasFavicon = checkBookmarkForFavicon(bookmark);
 		
-		((TextView) RL.findViewById(R.id.bookmark_title)).setText(bookmarkTitle);
+		holder.title.setText(bookmarkTitle);
 		
-		if (bookmarkURL.compareTo(MainActivity.assetHomePage)==0){
-			((TextView) RL.findViewById(R.id.bookmark_url_title)).setText("about:home");
+		if (bookmarkURL.equals(Properties.webpageProp.assetHomePage)){
+			holder.title.setText("about:home");
 			
 			if (!Properties.appProp.holoDark)
-				((ImageView) RL.findViewById(R.id.bookmark_icon)).setColorFilter(Color.BLACK);
-			((ImageView) RL.findViewById(R.id.bookmark_icon)).setImageResource(R.drawable.ic_collections_view_as_list);
+				holder.icon.setColorFilter(Color.BLACK);
+			holder.icon.setImageResource(R.drawable.ic_collections_view_as_list);
 			
 		}
 		else{
-			((TextView) RL.findViewById(R.id.bookmark_url_title)).setText(bookmarkURL);
+			((TextView) convertView.findViewById(R.id.bookmark_url_title)).setText(bookmarkURL);
 		
 			//Try to set Favicon
 			if (hasFavicon){
 				try {
-					((ImageView) RL.findViewById(R.id.bookmark_icon)).setColorFilter(null);
-					((ImageView) RL.findViewById(R.id.bookmark_icon)).setImageBitmap(BitmapFactory.decodeFile(bookmark.getPathToFavicon()));
+					holder.icon.setColorFilter(null);
+					holder.icon.setTag(true);
+					holder.icon.setImageBitmap(bookmark.getIconBitmap());
 				} catch (Exception e) {}
 			}else{
 				if (!Properties.appProp.holoDark)
-					((ImageView) RL.findViewById(R.id.bookmark_icon)).setColorFilter(Color.BLACK);
-				((ImageView) RL.findViewById(R.id.bookmark_icon)).setImageResource(R.drawable.ic_collections_view_as_list);
+					holder.icon.setColorFilter(Color.BLACK);
+				holder.icon.setTag(false);
+				holder.icon.setImageResource(R.drawable.ic_collections_view_as_list);
 			}
 		
 		}
-		
-		RL.setTag(bookmark);
-		return RL;
+
+		convertView.setTag(bookmark);
+		return convertView;
 	}
 	
 	public boolean checkBookmarkForFavicon(Bookmark b){
 		if (b.getPathToFavicon()==null){
-			Log.d("LB", "the bookmark "+ b.getDisplayName() + " does not have a favicon");
 			return false;
 		}else{
 			return true;

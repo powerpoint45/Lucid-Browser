@@ -1,23 +1,28 @@
 package com.powerpoint45.lucidbrowser;
 
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.List;
-
 import android.annotation.SuppressLint;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.view.ViewConfiguration;
 import android.webkit.MimeTypeMap;
 import android.widget.Toast;
+
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+
 import views.CustomWebView;
 
 public abstract class Tools {
@@ -29,14 +34,14 @@ public abstract class Tools {
 			if (q.startsWith("http://")||q.startsWith("https://"))
 				return q;
 			else if (q.startsWith("www."))
-				return "http://"+q;
+				return "https://"+q;
 			else if (q.startsWith("file:"))
 				return q;
 			else
-				return "http://"+q;
+				return "https://"+q;
 		}
 		else if (q.startsWith("about:home"))
-			return Properties.assetHomePage;
+			return Properties.webpageProp.assetHomePage;
 		else if (q.startsWith("about:")||q.startsWith("file:"))
 			return q;
 		else
@@ -69,10 +74,12 @@ public abstract class Tools {
 	    String header;
 	    String mimetype;
 	    String userAgent;
+		MainActivity activity;
 	 
-	    public DownloadAsyncTask(String url) {
+	    public DownloadAsyncTask(String url, MainActivity activity) {
+			this.activity = activity;
 	    	urlToDownload = url;
-	    	userAgent = MainActivity.webWindows.get(MainActivity.getTabNumber()).getSettings().getUserAgentString();
+	    	userAgent = MainActivity.webWindows.get(activity.getTabNumber()).getSettings().getUserAgentString();
 	    }
 
 		@Override
@@ -91,6 +98,7 @@ public abstract class Tools {
 				fileName = Tools.getFileName(actualURL);
 			Log.d("browser", "fileName:"+fileName);
 	        if (actualURL!=null){
+	        	
 				HttpURLConnection con;
 				try {
 					con = (HttpURLConnection) actualURL.openConnection();
@@ -138,7 +146,7 @@ public abstract class Tools {
 		@Override 
 	    protected void onPostExecute(Boolean download) {
 			if (download)
-				CustomWebView.onDownloadStartNoStream(MainActivity.activity, urlToDownload, userAgent, header, mimetype, fileName, false);
+				CustomWebView.onDownloadStartNoStream(activity, urlToDownload, userAgent, header, mimetype, fileName, false);
 	    } 
 
 	} 
@@ -257,29 +265,29 @@ public abstract class Tools {
       return px / context.getResources().getDisplayMetrics().density;
   }
   
-  public static int getStatusMargine(){
+  public static int getStatusMargine(Context context){
 	  int margine =0;
-		int id = MainActivity.activity.getResources().getIdentifier("config_enableTranslucentDecor", "bool", "android");
+		int id = context.getResources().getIdentifier("config_enableTranslucentDecor", "bool", "android");
 		if (Properties.appProp.transparentNav || Properties.appProp.TransparentStatus){
 			if (id != 0) {
 		        if (Properties.appProp.fullscreen && Properties.appProp.transparentNav){
 		        	//do nothing
 		        }else if (Properties.appProp.fullscreen){
-		        	margine=Properties.ActionbarSize;
+		        	margine= Properties.ActionbarSize;
 		        }else if (Properties.appProp.transparentNav){
 		        	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-		        		margine=Properties.ActionbarSize;
+		        		margine= Properties.ActionbarSize;
 		        	else
-		        		margine=Properties.ActionbarSize+Tools.getStatusBarHeight(MainActivity.activity.getResources());
+		        		margine= Properties.ActionbarSize+ Tools.getStatusBarHeight(context.getResources());
 		        }else{
 		        	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-		        		margine=Properties.ActionbarSize;
+		        		margine= Properties.ActionbarSize;
 		        	else
-		        		margine=Properties.ActionbarSize+Tools.getStatusBarHeight(MainActivity.activity.getResources());
+		        		margine= Properties.ActionbarSize+ Tools.getStatusBarHeight(context.getResources());
 		        }
 
 		        if (Properties.appProp.fullscreen){
-		        	margine=Properties.ActionbarSize;
+		        	margine= Properties.ActionbarSize;
 		        }
 		    }else
 		    	margine = Properties.ActionbarSize;
@@ -289,9 +297,9 @@ public abstract class Tools {
 		return margine;
 	}
   
-  public static int getStatusSize(){
+  public static int getStatusSize(Context context){
 	  int margine =0;
-		int id = MainActivity.activity.getResources().getIdentifier("config_enableTranslucentDecor", "bool", "android");
+		int id = context.getResources().getIdentifier("config_enableTranslucentDecor", "bool", "android");
 		if (Properties.appProp.transparentNav || Properties.appProp.TransparentStatus)
 			if (id != 0) {
 		        if (Properties.appProp.fullscreen && Properties.appProp.transparentNav){
@@ -302,18 +310,18 @@ public abstract class Tools {
 		        	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
 		        		margine=0;
 		        	else
-		        		margine=Tools.getStatusBarHeight(MainActivity.activity.getResources());
+		        		margine= Tools.getStatusBarHeight(context.getResources());
 		        }else{
 		        	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
 		        		margine=0;
 		        	else
-		        		margine=Tools.getStatusBarHeight(MainActivity.activity.getResources());
+		        		margine= Tools.getStatusBarHeight(context.getResources());
 		        }
 		    }
 		return margine;
 	}
   
-  public static int getActionBarSize(){
+  public static int getActionBarSize(Context context){
 //	  int actionBarHeight = LayoutParams.MATCH_PARENT;//fallback size
 //		TypedValue tv = new TypedValue();
 //		if (MainActivity.activity.getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true))
@@ -321,8 +329,30 @@ public abstract class Tools {
 //		    actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,MainActivity.activity.getResources().getDisplayMetrics());
 //		}
 		
-		return (int) MainActivity.activity.getResources().getDimension(R.dimen.actionBarSize);
+		return (int) context.getResources().getDimension(R.dimen.actionBarSize);
   }
+
+	public static NotificationManager setUpSystemPersistence(Context c){
+		if (Properties.appProp.systemPersistent){
+			NotificationManager mNotificationManager;
+			Intent notificationIntent = new Intent(c, MainActivity.class);
+			PendingIntent contentIntent = PendingIntent.getActivity(c, 0, notificationIntent,
+					PendingIntent.FLAG_UPDATE_CURRENT);
+			NotificationCompat.Builder mBuilder =
+					new NotificationCompat.Builder(c)
+							.setSmallIcon(R.drawable.ic_stat_location_web_site)
+							.setLargeIcon(BitmapFactory.decodeResource(c.getResources(), R.drawable.ic_launcher))
+							.setOngoing(true)
+							.setContentIntent(contentIntent)
+							.setPriority(2)
+							.setContentTitle(c.getResources().getString(R.string.label));
+			mNotificationManager =
+					(NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE);
+			mNotificationManager.notify(8, mBuilder.build());
+			return mNotificationManager;
+		}
+		return null;
+	}
 
   
 }

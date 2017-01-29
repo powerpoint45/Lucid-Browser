@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::This is the localization file for Indonesian::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <resources>
 	<string name="trans_zoomout">Perkecil</string>
 	<string name="trans_pagestack">Halaman Bertumpuk</string>
@@ -76,7 +81,33 @@
 	<string name="sidebariconsizemessage">Pilih ukuran ikon:</string>
 	<string name="sidebariconpaddingtitle">Jarak ikon Sidebar</string>
 	<string name="sidebariconpaddingsummary">Atur jarak antar ikon Sidebar</string>
-	<string name="sidebariconpaddingmessage">Select the Sidebar Icon Padding:</string>
+	<string name="manage_screens">Pengaturan Layar</string>
+	<string name="version">Versi</string>
+	<string name="community">Kunjungi komunitas di Google+</string>
+	<string name="first_letter_search_title">Pencarian huruf pertama</string>
+	<string name="first_letter_search_summary">Cari berdasarkan huruf awal dari judul</string>
+	<string name="wallpaper_offset_title">Atur batas tepi wallpaper</string>
+	<string name="download_started">Download dimulai</string>
+	<string name="choose_upload">Pilih file untuk di-upload</string>
+	<string name="unread_count_title">Penghitung notifikasi tak terbaca</string>
+	<string name="unread_count_summary">Tampilkan jumlah notifikasi yang belum terbaca di aplikasi.</string>
+	<string name="backup_title">Atur nama backup</string>
+	<string name="backup_select">Pilih backup</string>
+	<string name="lb_pro_description">Bantu pengembangan proyek ini dengan membeli Lucid Browser versi donasi</string>
+	<string name="history">Riwayat</string>
+
+
+
+	<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+	<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+	<!--::::::::::Below are strings that need to be translated::::::::::-->
+	<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+	<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+	
+	
+	
+	
+    <string name="sidebariconpaddingmessage">Select the Sidebar Icon Padding:</string>
 	<string name="sidebarhidelabeltitle">App Label</string>
 	<string name="sidebarhidelabelsummary">Show or hide the labels beside each icon</string>
 	<string name="zoompercenttitle">Zoom Out Percentage</string>
@@ -235,7 +266,7 @@
 	<string name="remove_from_folder">Remove from Folder</string>
 	<string name="move_to_home">Move to Home</string>
 	<string name="copyurl">Copy Link</string>
-	<string name="manage_screens">Pengaturan Layar</string>
+	
 	<string name="remove">Remove</string>
 	<string name="browser_removed_dialog">This app will be removed from the store due to policy complications. Please click on the following link to be directed to the newest Lucid Browser app:</string>
 	<string name="sslUntrustedTitle">SSL Certificate is not trusted</string>
@@ -348,19 +379,28 @@
 	<string name="actionbartextstyletitle">ActionBar Item Style</string>
 	<string name="actionbartextstylesummary">Set ActionBar Item Style</string>
 	<string name="action_lock_screen">Turn off Screen</string>
-	<string name="history">Riwayat</string>
 	<string name="lucidactionstitle">Lucid Launcher Actions</string>
-	<string name="version">Versi</string>
-	<string name="community">Kunjungi komunitas di Google+</string>
-	<string name="first_letter_search_title">Pencarian huruf pertama</string>
-	<string name="first_letter_search_summary">Cari berdasarkan huruf awal dari judul</string>
-	<string name="wallpaper_offset_title">Atur batas tepi wallpaper</string>
-	<string name="download_started">Download dimulai</string>
-	<string name="choose_upload">Pilih file untuk di-upload</string>
-	<string name="unread_count_title">Penghitung notifikasi tak terbaca</string>
-	<string name="unread_count_summary">Tampilkan jumlah notifikasi yang belum terbaca di aplikasi.</string>
-	<string name="backup_title">Atur nama backup</string>
-	<string name="backup_select">Pilih backup</string>
-	<string name="backup_delete">Hapus backup</string>
-	<string name="lb_pro_description">Bantu pengembangan proyek ini dengan membeli Lucid Browser versi donasi</string>
+	
+	<string name="sort_title">Sort Method</string>
+	<string name="sort_summary">Choose how apps are sorted</string>
+	<string name="sort_az">Alphabetical Order (A-Z)</string>
+	<string name="sort_za">Alphabetical Order (Z-A)</string>
+	<string name="sort_new">Install Date (Newest First)</string>
+	<string name="sort_old">Install Date (Oldest First)</string>
+
+	<string name="folder_mode_title">Folder Display Mode</string>
+	<string name="folder_mode_summary">Pilih cara folder ditampilkan</string>
+	<string name="folder_mode_fullscreen">Folder Layar Penuh</string>
+	<string name="folder_mode_adaptive">Folder Ukuran Adaptif</string>
+	<string name="folder_mode_centered">Folder Berpusat</string>
+
+	<string name="no_bookmarks">Penunjuk Halaman tidak ditemukan</string>
+    <string name="export_bookmarks">Ekspor Penunjuk Halaman</string>
+    <string name="import_bookmarks">Impor Penunjuk Halaman</string>
+    <string name="import_bookmarks_external">Impor Penunjuk Halaman dari Peramban Lain</string>
+    <string name="bookmark_settings">Pengaturan Penunjuk Halaman</string>
+    <string name="delete_bookmarks">Hapus Semua Penunjuk Halaman</string>
+    
+    <string name="lock_screen_permission_request">Aktifkan administrator sehingga Lucid Launcher dapat mengunci layar. Anda harus menonaktifkan administrator untuk dapat uninstall Lucid Launcher</string>
+    
 </resources>

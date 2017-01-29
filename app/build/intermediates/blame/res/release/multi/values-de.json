@@ -1,0 +1,5309 @@
+[
+    {
+        "outputFile": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-de/values-de.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 104,
+                    "endOffset": 205
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/values-de/values-de.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 210,
+                    "endColumn": 97,
+                    "endOffset": 303
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/values-de/values-de.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 308,
+                    "endColumn": 111,
+                    "endOffset": 415
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/values-de/values-de.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 420,
+                    "endColumn": 85,
+                    "endOffset": 501
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/values-de/values-de.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 506,
+                    "endColumn": 104,
+                    "endOffset": 606
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/values-de/values-de.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 611,
+                    "endColumn": 114,
+                    "endOffset": 721
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/values-de/values-de.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 726,
+                    "endColumn": 110,
+                    "endOffset": 832
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/values-de/values-de.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 837,
+                    "endColumn": 102,
+                    "endOffset": 935
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/values-de/values-de.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 940,
+                    "endColumn": 98,
+                    "endOffset": 1034
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/values-de/values-de.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1039,
+                    "endColumn": 110,
+                    "endOffset": 1145
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/values-de/values-de.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1150,
+                    "endColumn": 101,
+                    "endOffset": 1247
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/values-de/values-de.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1252,
+                    "endColumn": 106,
+                    "endOffset": 1354
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/values-de/values-de.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1359,
+                    "endColumn": 121,
+                    "endOffset": 1476
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/values-de/values-de.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1481,
+                    "endColumn": 38,
+                    "endOffset": 1515
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1520,
+                    "endColumn": 69,
+                    "endOffset": 1585
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1590,
+                    "endColumn": 54,
+                    "endOffset": 1640
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1645,
+                    "endColumn": 90,
+                    "endOffset": 1731
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1736,
+                    "endColumn": 88,
+                    "endOffset": 1820
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1825,
+                    "endColumn": 87,
+                    "endOffset": 1908
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1913,
+                    "endColumn": 71,
+                    "endOffset": 1980
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1985,
+                    "endColumn": 63,
+                    "endOffset": 2044
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2049,
+                    "endColumn": 61,
+                    "endOffset": 2106
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2111,
+                    "endColumn": 79,
+                    "endOffset": 2186
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2191,
+                    "endColumn": 107,
+                    "endOffset": 2294
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2299,
+                    "endColumn": 86,
+                    "endOffset": 2381
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2386,
+                    "endColumn": 42,
+                    "endOffset": 2424
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2429,
+                    "endColumn": 71,
+                    "endOffset": 2496
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 2501,
+                    "endColumn": 114,
+                    "endOffset": 2611
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 2616,
+                    "endColumn": 91,
+                    "endOffset": 2703
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 2708,
+                    "endColumn": 66,
+                    "endOffset": 2770
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 2775,
+                    "endColumn": 66,
+                    "endOffset": 2837
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 2842,
+                    "endColumn": 52,
+                    "endOffset": 2890
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 2895,
+                    "endColumn": 71,
+                    "endOffset": 2962
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 2967,
+                    "endColumn": 79,
+                    "endOffset": 3042
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 3047,
+                    "endColumn": 62,
+                    "endOffset": 3105
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 3110,
+                    "endColumn": 94,
+                    "endOffset": 3200
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 3205,
+                    "endColumn": 69,
+                    "endOffset": 3270
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 3275,
+                    "endColumn": 74,
+                    "endOffset": 3345
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 3350,
+                    "endColumn": 113,
+                    "endOffset": 3459
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 3464,
+                    "endColumn": 44,
+                    "endOffset": 3504
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 3509,
+                    "endColumn": 49,
+                    "endOffset": 3554
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 3559,
+                    "endColumn": 42,
+                    "endOffset": 3597
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 3602,
+                    "endColumn": 122,
+                    "endOffset": 3720
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 3725,
+                    "endColumn": 69,
+                    "endOffset": 3790
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 3795,
+                    "endColumn": 59,
+                    "endOffset": 3850
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 3855,
+                    "endColumn": 61,
+                    "endOffset": 3912
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 3917,
+                    "endColumn": 69,
+                    "endOffset": 3982
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 3987,
+                    "endColumn": 68,
+                    "endOffset": 4051
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 4056,
+                    "endColumn": 47,
+                    "endOffset": 4099
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 4104,
+                    "endColumn": 53,
+                    "endOffset": 4153
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 4158,
+                    "endColumn": 75,
+                    "endOffset": 4229
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml",
+                    "position": {
+                        "startLine": 410,
+                        "startColumn": 4,
+                        "startOffset": 29352,
+                        "endColumn": 75,
+                        "endOffset": 29423
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 4234,
+                    "endColumn": 49,
+                    "endOffset": 4279
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 4284,
+                    "endColumn": 105,
+                    "endOffset": 4385
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 4390,
+                    "endColumn": 81,
+                    "endOffset": 4467
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 4472,
+                    "endColumn": 105,
+                    "endOffset": 4573
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 4578,
+                    "endColumn": 81,
+                    "endOffset": 4655
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 4660,
+                    "endColumn": 43,
+                    "endOffset": 4699
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 59,
+                    "startColumn": 4,
+                    "startOffset": 4704,
+                    "endColumn": 205,
+                    "endOffset": 4905
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 4910,
+                    "endColumn": 102,
+                    "endOffset": 5008
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 61,
+                    "startColumn": 4,
+                    "startOffset": 5013,
+                    "endColumn": 75,
+                    "endOffset": 5084
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 5089,
+                    "endColumn": 104,
+                    "endOffset": 5189
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 63,
+                    "startColumn": 4,
+                    "startOffset": 5194,
+                    "endColumn": 69,
+                    "endOffset": 5259
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 5264,
+                    "endColumn": 61,
+                    "endOffset": 5321
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 65,
+                    "startColumn": 4,
+                    "startOffset": 5326,
+                    "endColumn": 65,
+                    "endOffset": 5387
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 66,
+                    "startColumn": 4,
+                    "startOffset": 5392,
+                    "endColumn": 52,
+                    "endOffset": 5440
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 67,
+                    "startColumn": 4,
+                    "startOffset": 5445,
+                    "endColumn": 53,
+                    "endOffset": 5494
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 68,
+                    "startColumn": 4,
+                    "startOffset": 5499,
+                    "endColumn": 51,
+                    "endOffset": 5546
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 69,
+                    "startColumn": 4,
+                    "startOffset": 5551,
+                    "endColumn": 51,
+                    "endOffset": 5598
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 70,
+                    "startColumn": 4,
+                    "startOffset": 5603,
+                    "endColumn": 52,
+                    "endOffset": 5651
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 71,
+                    "startColumn": 4,
+                    "startOffset": 5656,
+                    "endColumn": 57,
+                    "endOffset": 5709
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 72,
+                    "startColumn": 4,
+                    "startOffset": 5714,
+                    "endColumn": 50,
+                    "endOffset": 5760
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 73,
+                    "startColumn": 4,
+                    "startOffset": 5765,
+                    "endColumn": 68,
+                    "endOffset": 5829
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 74,
+                    "startColumn": 4,
+                    "startOffset": 5834,
+                    "endColumn": 64,
+                    "endOffset": 5894
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 75,
+                    "startColumn": 4,
+                    "startOffset": 5899,
+                    "endColumn": 56,
+                    "endOffset": 5951
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 76,
+                    "startColumn": 4,
+                    "startOffset": 5956,
+                    "endColumn": 63,
+                    "endOffset": 6015
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 77,
+                    "startColumn": 4,
+                    "startOffset": 6020,
+                    "endColumn": 60,
+                    "endOffset": 6076
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 78,
+                    "startColumn": 4,
+                    "startOffset": 6081,
+                    "endColumn": 115,
+                    "endOffset": 6192
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 79,
+                    "startColumn": 4,
+                    "startOffset": 6197,
+                    "endColumn": 73,
+                    "endOffset": 6266
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 80,
+                    "startColumn": 4,
+                    "startOffset": 6271,
+                    "endColumn": 43,
+                    "endOffset": 6310
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 81,
+                    "startColumn": 4,
+                    "startOffset": 6315,
+                    "endColumn": 100,
+                    "endOffset": 6411
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 82,
+                    "startColumn": 4,
+                    "startOffset": 6416,
+                    "endColumn": 80,
+                    "endOffset": 6492
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 83,
+                    "startColumn": 4,
+                    "startOffset": 6497,
+                    "endColumn": 110,
+                    "endOffset": 6603
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 84,
+                    "startColumn": 4,
+                    "startOffset": 6608,
+                    "endColumn": 195,
+                    "endOffset": 6799
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 85,
+                    "startColumn": 4,
+                    "startOffset": 6804,
+                    "endColumn": 129,
+                    "endOffset": 6929
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 86,
+                    "startColumn": 4,
+                    "startOffset": 6934,
+                    "endColumn": 133,
+                    "endOffset": 7063
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 87,
+                    "startColumn": 4,
+                    "startOffset": 7068,
+                    "endColumn": 243,
+                    "endOffset": 7307
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 88,
+                    "startColumn": 4,
+                    "startOffset": 7312,
+                    "endColumn": 240,
+                    "endOffset": 7548
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 89,
+                    "startColumn": 4,
+                    "startOffset": 7553,
+                    "endColumn": 132,
+                    "endOffset": 7681
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 90,
+                    "startColumn": 4,
+                    "startOffset": 7686,
+                    "endColumn": 147,
+                    "endOffset": 7829
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 91,
+                    "startColumn": 4,
+                    "startOffset": 7834,
+                    "endColumn": 242,
+                    "endOffset": 8072
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/6a3c647ee58e7d74ee142f137d17f30a2c93789d/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 92,
+                    "startColumn": 4,
+                    "startOffset": 8077,
+                    "endColumn": 303,
+                    "endOffset": 8376
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 93,
+                    "startColumn": 4,
+                    "startOffset": 8381,
+                    "endColumn": 122,
+                    "endOffset": 8499
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 94,
+                    "startColumn": 4,
+                    "startOffset": 8504,
+                    "endColumn": 113,
+                    "endOffset": 8613
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 95,
+                    "startColumn": 4,
+                    "startOffset": 8618,
+                    "endColumn": 199,
+                    "endOffset": 8813
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 96,
+                    "startColumn": 4,
+                    "startOffset": 8818,
+                    "endColumn": 132,
+                    "endOffset": 8946
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 97,
+                    "startColumn": 4,
+                    "startOffset": 8951,
+                    "endColumn": 220,
+                    "endOffset": 9167
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 98,
+                    "startColumn": 4,
+                    "startOffset": 9172,
+                    "endColumn": 140,
+                    "endOffset": 9308
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 99,
+                    "startColumn": 4,
+                    "startOffset": 9313,
+                    "endColumn": 205,
+                    "endOffset": 9514
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 100,
+                    "startColumn": 4,
+                    "startOffset": 9519,
+                    "endColumn": 100,
+                    "endOffset": 9615
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 101,
+                    "startColumn": 4,
+                    "startOffset": 9620,
+                    "endColumn": 92,
+                    "endOffset": 9708
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 102,
+                    "startColumn": 4,
+                    "startOffset": 9713,
+                    "endColumn": 108,
+                    "endOffset": 9817
+                },
+                "from": {
+                    "file": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/values-de/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 103,
+                    "startColumn": 4,
+                    "startOffset": 9822,
+                    "endColumn": 68,
+                    "endOffset": 9886
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 104,
+                    "startColumn": 4,
+                    "startOffset": 9891,
+                    "endColumn": 43,
+                    "endOffset": 9930
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 105,
+                    "startColumn": 4,
+                    "startOffset": 9935,
+                    "endColumn": 89,
+                    "endOffset": 10020
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 106,
+                    "startColumn": 4,
+                    "startOffset": 10025,
+                    "endColumn": 82,
+                    "endOffset": 10103
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 107,
+                    "startColumn": 4,
+                    "startOffset": 10108,
+                    "endColumn": 43,
+                    "endOffset": 10147
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 108,
+                    "startColumn": 4,
+                    "startOffset": 10152,
+                    "endColumn": 49,
+                    "endOffset": 10197
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 109,
+                    "startColumn": 4,
+                    "startOffset": 10202,
+                    "endColumn": 40,
+                    "endOffset": 10238
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 110,
+                    "startColumn": 4,
+                    "startOffset": 10243,
+                    "endColumn": 89,
+                    "endOffset": 10328
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 111,
+                    "startColumn": 4,
+                    "startOffset": 10333,
+                    "endColumn": 66,
+                    "endOffset": 10395
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 112,
+                    "startColumn": 4,
+                    "startOffset": 10400,
+                    "endColumn": 69,
+                    "endOffset": 10465
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml",
+                    "position": {
+                        "startLine": 411,
+                        "startColumn": 4,
+                        "startOffset": 29428,
+                        "endColumn": 69,
+                        "endOffset": 29493
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 113,
+                    "startColumn": 4,
+                    "startOffset": 10470,
+                    "endColumn": 91,
+                    "endOffset": 10557
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 114,
+                    "startColumn": 4,
+                    "startOffset": 10562,
+                    "endColumn": 60,
+                    "endOffset": 10618
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 115,
+                    "startColumn": 4,
+                    "startOffset": 10623,
+                    "endColumn": 95,
+                    "endOffset": 10714
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 116,
+                    "startColumn": 4,
+                    "startOffset": 10719,
+                    "endColumn": 72,
+                    "endOffset": 10787
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 117,
+                    "startColumn": 4,
+                    "startOffset": 10792,
+                    "endColumn": 60,
+                    "endOffset": 10848
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 118,
+                    "startColumn": 4,
+                    "startOffset": 10853,
+                    "endColumn": 109,
+                    "endOffset": 10958
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 119,
+                    "startColumn": 4,
+                    "startOffset": 10963,
+                    "endColumn": 90,
+                    "endOffset": 11049
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 120,
+                    "startColumn": 4,
+                    "startOffset": 11054,
+                    "endColumn": 81,
+                    "endOffset": 11131
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 121,
+                    "startColumn": 4,
+                    "startOffset": 11136,
+                    "endColumn": 114,
+                    "endOffset": 11246
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 122,
+                    "startColumn": 4,
+                    "startOffset": 11251,
+                    "endColumn": 60,
+                    "endOffset": 11307
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 123,
+                    "startColumn": 4,
+                    "startOffset": 11312,
+                    "endColumn": 76,
+                    "endOffset": 11384
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 124,
+                    "startColumn": 4,
+                    "startOffset": 11389,
+                    "endColumn": 98,
+                    "endOffset": 11483
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 125,
+                    "startColumn": 4,
+                    "startOffset": 11488,
+                    "endColumn": 63,
+                    "endOffset": 11547
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 126,
+                    "startColumn": 4,
+                    "startOffset": 11552,
+                    "endColumn": 76,
+                    "endOffset": 11624
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 127,
+                    "startColumn": 4,
+                    "startOffset": 11629,
+                    "endColumn": 58,
+                    "endOffset": 11683
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 128,
+                    "startColumn": 4,
+                    "startOffset": 11688,
+                    "endColumn": 44,
+                    "endOffset": 11728
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 129,
+                    "startColumn": 4,
+                    "startOffset": 11733,
+                    "endColumn": 74,
+                    "endOffset": 11803
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 130,
+                    "startColumn": 4,
+                    "startOffset": 11808,
+                    "endColumn": 77,
+                    "endOffset": 11881
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 131,
+                    "startColumn": 4,
+                    "startOffset": 11886,
+                    "endColumn": 43,
+                    "endOffset": 11925
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 132,
+                    "startColumn": 4,
+                    "startOffset": 11930,
+                    "endColumn": 64,
+                    "endOffset": 11990
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 133,
+                    "startColumn": 4,
+                    "startOffset": 11995,
+                    "endColumn": 66,
+                    "endOffset": 12057
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 134,
+                    "startColumn": 4,
+                    "startOffset": 12062,
+                    "endColumn": 58,
+                    "endOffset": 12116
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 135,
+                    "startColumn": 4,
+                    "startOffset": 12121,
+                    "endColumn": 159,
+                    "endOffset": 12276
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 136,
+                    "startColumn": 4,
+                    "startOffset": 12281,
+                    "endColumn": 77,
+                    "endOffset": 12354
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 137,
+                    "startColumn": 4,
+                    "startOffset": 12359,
+                    "endColumn": 53,
+                    "endOffset": 12408
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 138,
+                    "startColumn": 4,
+                    "startOffset": 12413,
+                    "endColumn": 66,
+                    "endOffset": 12475
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 139,
+                    "startColumn": 4,
+                    "startOffset": 12480,
+                    "endColumn": 40,
+                    "endOffset": 12516
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 140,
+                    "startColumn": 4,
+                    "startOffset": 12521,
+                    "endColumn": 80,
+                    "endOffset": 12597
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 141,
+                    "startColumn": 4,
+                    "startOffset": 12602,
+                    "endColumn": 70,
+                    "endOffset": 12668
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 142,
+                    "startColumn": 4,
+                    "startOffset": 12673,
+                    "endColumn": 68,
+                    "endOffset": 12737
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml",
+                    "position": {
+                        "startLine": 407,
+                        "startColumn": 4,
+                        "startOffset": 29119,
+                        "endColumn": 68,
+                        "endOffset": 29183
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 143,
+                    "startColumn": 4,
+                    "startOffset": 12742,
+                    "endColumn": 90,
+                    "endOffset": 12828
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml",
+                    "position": {
+                        "startLine": 415,
+                        "startColumn": 4,
+                        "startOffset": 29656,
+                        "endColumn": 90,
+                        "endOffset": 29742
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 144,
+                    "startColumn": 4,
+                    "startOffset": 12833,
+                    "endColumn": 49,
+                    "endOffset": 12878
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 145,
+                    "startColumn": 4,
+                    "startOffset": 12883,
+                    "endColumn": 129,
+                    "endOffset": 13008
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 146,
+                    "startColumn": 4,
+                    "startOffset": 13013,
+                    "endColumn": 129,
+                    "endOffset": 13138
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 147,
+                    "startColumn": 4,
+                    "startOffset": 13143,
+                    "endColumn": 47,
+                    "endOffset": 13186
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 148,
+                    "startColumn": 4,
+                    "startOffset": 13191,
+                    "endColumn": 92,
+                    "endOffset": 13279
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 149,
+                    "startColumn": 4,
+                    "startOffset": 13284,
+                    "endColumn": 82,
+                    "endOffset": 13362
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 150,
+                    "startColumn": 4,
+                    "startOffset": 13367,
+                    "endColumn": 50,
+                    "endOffset": 13413
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 151,
+                    "startColumn": 4,
+                    "startOffset": 13418,
+                    "endColumn": 95,
+                    "endOffset": 13509
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 152,
+                    "startColumn": 4,
+                    "startOffset": 13514,
+                    "endColumn": 72,
+                    "endOffset": 13582
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 153,
+                    "startColumn": 4,
+                    "startOffset": 13587,
+                    "endColumn": 86,
+                    "endOffset": 13669
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 154,
+                    "startColumn": 4,
+                    "startOffset": 13674,
+                    "endColumn": 58,
+                    "endOffset": 13728
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 155,
+                    "startColumn": 4,
+                    "startOffset": 13733,
+                    "endColumn": 83,
+                    "endOffset": 13812
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 156,
+                    "startColumn": 4,
+                    "startOffset": 13817,
+                    "endColumn": 56,
+                    "endOffset": 13869
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 157,
+                    "startColumn": 4,
+                    "startOffset": 13874,
+                    "endColumn": 58,
+                    "endOffset": 13928
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 158,
+                    "startColumn": 4,
+                    "startOffset": 13933,
+                    "endColumn": 58,
+                    "endOffset": 13987
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 159,
+                    "startColumn": 4,
+                    "startOffset": 13992,
+                    "endColumn": 59,
+                    "endOffset": 14047
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 160,
+                    "startColumn": 4,
+                    "startOffset": 14052,
+                    "endColumn": 81,
+                    "endOffset": 14129
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 161,
+                    "startColumn": 4,
+                    "startOffset": 14134,
+                    "endColumn": 59,
+                    "endOffset": 14189
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 162,
+                    "startColumn": 4,
+                    "startOffset": 14194,
+                    "endColumn": 64,
+                    "endOffset": 14254
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 163,
+                    "startColumn": 4,
+                    "startOffset": 14259,
+                    "endColumn": 78,
+                    "endOffset": 14333
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 164,
+                    "startColumn": 4,
+                    "startOffset": 14338,
+                    "endColumn": 58,
+                    "endOffset": 14392
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 165,
+                    "startColumn": 4,
+                    "startOffset": 14397,
+                    "endColumn": 99,
+                    "endOffset": 14492
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 166,
+                    "startColumn": 4,
+                    "startOffset": 14497,
+                    "endColumn": 65,
+                    "endOffset": 14558
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 167,
+                    "startColumn": 4,
+                    "startOffset": 14563,
+                    "endColumn": 114,
+                    "endOffset": 14673
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 168,
+                    "startColumn": 4,
+                    "startOffset": 14678,
+                    "endColumn": 75,
+                    "endOffset": 14749
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 169,
+                    "startColumn": 4,
+                    "startOffset": 14754,
+                    "endColumn": 38,
+                    "endOffset": 14788
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 170,
+                    "startColumn": 4,
+                    "startOffset": 14793,
+                    "endColumn": 56,
+                    "endOffset": 14845
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 171,
+                    "startColumn": 4,
+                    "startOffset": 14850,
+                    "endColumn": 90,
+                    "endOffset": 14936
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 172,
+                    "startColumn": 4,
+                    "startOffset": 14941,
+                    "endColumn": 52,
+                    "endOffset": 14989
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 173,
+                    "startColumn": 4,
+                    "startOffset": 14994,
+                    "endColumn": 80,
+                    "endOffset": 15070
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 174,
+                    "startColumn": 4,
+                    "startOffset": 15075,
+                    "endColumn": 43,
+                    "endOffset": 15114
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 175,
+                    "startColumn": 4,
+                    "startOffset": 15119,
+                    "endColumn": 105,
+                    "endOffset": 15220
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 176,
+                    "startColumn": 4,
+                    "startOffset": 15225,
+                    "endColumn": 113,
+                    "endOffset": 15334
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 177,
+                    "startColumn": 4,
+                    "startOffset": 15339,
+                    "endColumn": 64,
+                    "endOffset": 15399
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 178,
+                    "startColumn": 4,
+                    "startOffset": 15404,
+                    "endColumn": 120,
+                    "endOffset": 15520
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 179,
+                    "startColumn": 4,
+                    "startOffset": 15525,
+                    "endColumn": 61,
+                    "endOffset": 15582
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 180,
+                    "startColumn": 4,
+                    "startOffset": 15587,
+                    "endColumn": 87,
+                    "endOffset": 15670
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 181,
+                    "startColumn": 4,
+                    "startOffset": 15675,
+                    "endColumn": 61,
+                    "endOffset": 15732
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 182,
+                    "startColumn": 4,
+                    "startOffset": 15737,
+                    "endColumn": 89,
+                    "endOffset": 15822
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 183,
+                    "startColumn": 4,
+                    "startOffset": 15827,
+                    "endColumn": 63,
+                    "endOffset": 15886
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 184,
+                    "startColumn": 4,
+                    "startOffset": 15891,
+                    "endColumn": 118,
+                    "endOffset": 16005
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 185,
+                    "startColumn": 4,
+                    "startOffset": 16010,
+                    "endColumn": 58,
+                    "endOffset": 16064
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 186,
+                    "startColumn": 4,
+                    "startOffset": 16069,
+                    "endColumn": 39,
+                    "endOffset": 16104
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 187,
+                    "startColumn": 4,
+                    "startOffset": 16109,
+                    "endColumn": 80,
+                    "endOffset": 16185
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 188,
+                    "startColumn": 4,
+                    "startOffset": 16190,
+                    "endColumn": 67,
+                    "endOffset": 16253
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 189,
+                    "startColumn": 4,
+                    "startOffset": 16258,
+                    "endColumn": 99,
+                    "endOffset": 16353
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 190,
+                    "startColumn": 4,
+                    "startOffset": 16358,
+                    "endColumn": 72,
+                    "endOffset": 16426
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 191,
+                    "startColumn": 4,
+                    "startOffset": 16431,
+                    "endColumn": 50,
+                    "endOffset": 16477
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 192,
+                    "startColumn": 4,
+                    "startOffset": 16482,
+                    "endColumn": 52,
+                    "endOffset": 16530
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 193,
+                    "startColumn": 4,
+                    "startOffset": 16535,
+                    "endColumn": 73,
+                    "endOffset": 16604
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 194,
+                    "startColumn": 4,
+                    "startOffset": 16609,
+                    "endColumn": 68,
+                    "endOffset": 16673
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 195,
+                    "startColumn": 4,
+                    "startOffset": 16678,
+                    "endColumn": 41,
+                    "endOffset": 16715
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 196,
+                    "startColumn": 4,
+                    "startOffset": 16720,
+                    "endColumn": 67,
+                    "endOffset": 16783
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 197,
+                    "startColumn": 4,
+                    "startOffset": 16788,
+                    "endColumn": 43,
+                    "endOffset": 16827
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 198,
+                    "startColumn": 4,
+                    "startOffset": 16832,
+                    "endColumn": 101,
+                    "endOffset": 16929
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 199,
+                    "startColumn": 4,
+                    "startOffset": 16934,
+                    "endColumn": 65,
+                    "endOffset": 16995
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 200,
+                    "startColumn": 4,
+                    "startOffset": 17000,
+                    "endColumn": 43,
+                    "endOffset": 17039
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 201,
+                    "startColumn": 4,
+                    "startOffset": 17044,
+                    "endColumn": 57,
+                    "endOffset": 17097
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 202,
+                    "startColumn": 4,
+                    "startOffset": 17102,
+                    "endColumn": 55,
+                    "endOffset": 17153
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 203,
+                    "startColumn": 4,
+                    "startOffset": 17158,
+                    "endColumn": 70,
+                    "endOffset": 17224
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 204,
+                    "startColumn": 4,
+                    "startOffset": 17229,
+                    "endColumn": 50,
+                    "endOffset": 17275
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 205,
+                    "startColumn": 4,
+                    "startOffset": 17280,
+                    "endColumn": 65,
+                    "endOffset": 17341
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 206,
+                    "startColumn": 4,
+                    "startOffset": 17346,
+                    "endColumn": 58,
+                    "endOffset": 17400
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 207,
+                    "startColumn": 4,
+                    "startOffset": 17405,
+                    "endColumn": 84,
+                    "endOffset": 17485
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 208,
+                    "startColumn": 4,
+                    "startOffset": 17490,
+                    "endColumn": 87,
+                    "endOffset": 17573
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 209,
+                    "startColumn": 4,
+                    "startOffset": 17578,
+                    "endColumn": 57,
+                    "endOffset": 17631
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 210,
+                    "startColumn": 4,
+                    "startOffset": 17636,
+                    "endColumn": 41,
+                    "endOffset": 17673
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 211,
+                    "startColumn": 4,
+                    "startOffset": 17678,
+                    "endColumn": 73,
+                    "endOffset": 17747
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 212,
+                    "startColumn": 4,
+                    "startOffset": 17752,
+                    "endColumn": 74,
+                    "endOffset": 17822
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 213,
+                    "startColumn": 4,
+                    "startOffset": 17827,
+                    "endColumn": 80,
+                    "endOffset": 17903
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 214,
+                    "startColumn": 4,
+                    "startOffset": 17908,
+                    "endColumn": 70,
+                    "endOffset": 17974
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 215,
+                    "startColumn": 4,
+                    "startOffset": 17979,
+                    "endColumn": 73,
+                    "endOffset": 18048
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 216,
+                    "startColumn": 4,
+                    "startOffset": 18053,
+                    "endColumn": 79,
+                    "endOffset": 18128
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 217,
+                    "startColumn": 4,
+                    "startOffset": 18133,
+                    "endColumn": 69,
+                    "endOffset": 18198
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 218,
+                    "startColumn": 4,
+                    "startOffset": 18203,
+                    "endColumn": 65,
+                    "endOffset": 18264
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 219,
+                    "startColumn": 4,
+                    "startOffset": 18269,
+                    "endColumn": 85,
+                    "endOffset": 18350
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 220,
+                    "startColumn": 4,
+                    "startOffset": 18355,
+                    "endColumn": 62,
+                    "endOffset": 18413
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 221,
+                    "startColumn": 4,
+                    "startOffset": 18418,
+                    "endColumn": 74,
+                    "endOffset": 18488
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 222,
+                    "startColumn": 4,
+                    "startOffset": 18493,
+                    "endColumn": 80,
+                    "endOffset": 18569
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 223,
+                    "startColumn": 4,
+                    "startOffset": 18574,
+                    "endColumn": 70,
+                    "endOffset": 18640
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 224,
+                    "startColumn": 4,
+                    "startOffset": 18645,
+                    "endColumn": 73,
+                    "endOffset": 18714
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 225,
+                    "startColumn": 4,
+                    "startOffset": 18719,
+                    "endColumn": 79,
+                    "endOffset": 18794
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 226,
+                    "startColumn": 4,
+                    "startOffset": 18799,
+                    "endColumn": 69,
+                    "endOffset": 18864
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 227,
+                    "startColumn": 4,
+                    "startOffset": 18869,
+                    "endColumn": 80,
+                    "endOffset": 18945
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 228,
+                    "startColumn": 4,
+                    "startOffset": 18950,
+                    "endColumn": 44,
+                    "endOffset": 18990
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 229,
+                    "startColumn": 4,
+                    "startOffset": 18995,
+                    "endColumn": 81,
+                    "endOffset": 19072
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 230,
+                    "startColumn": 4,
+                    "startOffset": 19077,
+                    "endColumn": 50,
+                    "endOffset": 19123
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 231,
+                    "startColumn": 4,
+                    "startOffset": 19128,
+                    "endColumn": 80,
+                    "endOffset": 19204
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 232,
+                    "startColumn": 4,
+                    "startOffset": 19209,
+                    "endColumn": 86,
+                    "endOffset": 19291
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 233,
+                    "startColumn": 4,
+                    "startOffset": 19296,
+                    "endColumn": 58,
+                    "endOffset": 19350
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 234,
+                    "startColumn": 4,
+                    "startOffset": 19355,
+                    "endColumn": 70,
+                    "endOffset": 19421
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 235,
+                    "startColumn": 4,
+                    "startOffset": 19426,
+                    "endColumn": 78,
+                    "endOffset": 19500
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 236,
+                    "startColumn": 4,
+                    "startOffset": 19505,
+                    "endColumn": 53,
+                    "endOffset": 19554
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 237,
+                    "startColumn": 4,
+                    "startOffset": 19559,
+                    "endColumn": 68,
+                    "endOffset": 19623
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml",
+                    "position": {
+                        "startLine": 408,
+                        "startColumn": 4,
+                        "startOffset": 29188,
+                        "endColumn": 68,
+                        "endOffset": 29252
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 238,
+                    "startColumn": 4,
+                    "startOffset": 19628,
+                    "endColumn": 94,
+                    "endOffset": 19718
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml",
+                    "position": {
+                        "startLine": 409,
+                        "startColumn": 4,
+                        "startOffset": 29257,
+                        "endColumn": 94,
+                        "endOffset": 29347
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 239,
+                    "startColumn": 4,
+                    "startOffset": 19723,
+                    "endColumn": 92,
+                    "endOffset": 19811
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml",
+                    "position": {
+                        "startLine": 416,
+                        "startColumn": 4,
+                        "startOffset": 29747,
+                        "endColumn": 92,
+                        "endOffset": 29835
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 240,
+                    "startColumn": 4,
+                    "startOffset": 19816,
+                    "endColumn": 68,
+                    "endOffset": 19880
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 241,
+                    "startColumn": 4,
+                    "startOffset": 19885,
+                    "endColumn": 144,
+                    "endOffset": 20025
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 242,
+                    "startColumn": 4,
+                    "startOffset": 20030,
+                    "endColumn": 50,
+                    "endOffset": 20076
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 243,
+                    "startColumn": 4,
+                    "startOffset": 20081,
+                    "endColumn": 110,
+                    "endOffset": 20187
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 244,
+                    "startColumn": 4,
+                    "startOffset": 20192,
+                    "endColumn": 126,
+                    "endOffset": 20314
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 245,
+                    "startColumn": 4,
+                    "startOffset": 20319,
+                    "endColumn": 127,
+                    "endOffset": 20442
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml",
+                    "position": {
+                        "startLine": 414,
+                        "startColumn": 4,
+                        "startOffset": 29528,
+                        "endColumn": 127,
+                        "endOffset": 29651
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 246,
+                    "startColumn": 4,
+                    "startOffset": 20447,
+                    "endColumn": 38,
+                    "endOffset": 20481
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 247,
+                    "startColumn": 4,
+                    "startOffset": 20486,
+                    "endColumn": 57,
+                    "endOffset": 20539
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 248,
+                    "startColumn": 4,
+                    "startOffset": 20544,
+                    "endColumn": 55,
+                    "endOffset": 20595
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 249,
+                    "startColumn": 4,
+                    "startOffset": 20600,
+                    "endColumn": 249,
+                    "endOffset": 20845
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml",
+                    "position": {
+                        "startLine": 403,
+                        "startColumn": 4,
+                        "startOffset": 28772,
+                        "endColumn": 249,
+                        "endOffset": 29017
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 250,
+                    "startColumn": 4,
+                    "startOffset": 20850,
+                    "endColumn": 54,
+                    "endOffset": 20900
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 251,
+                    "startColumn": 4,
+                    "startOffset": 20905,
+                    "endColumn": 56,
+                    "endOffset": 20957
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 252,
+                    "startColumn": 4,
+                    "startOffset": 20962,
+                    "endColumn": 64,
+                    "endOffset": 21022
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 253,
+                    "startColumn": 4,
+                    "startOffset": 21027,
+                    "endColumn": 76,
+                    "endOffset": 21099
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 254,
+                    "startColumn": 4,
+                    "startOffset": 21104,
+                    "endColumn": 64,
+                    "endOffset": 21164
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 255,
+                    "startColumn": 4,
+                    "startOffset": 21169,
+                    "endColumn": 69,
+                    "endOffset": 21234
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 256,
+                    "startColumn": 4,
+                    "startOffset": 21239,
+                    "endColumn": 64,
+                    "endOffset": 21299
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 257,
+                    "startColumn": 4,
+                    "startOffset": 21304,
+                    "endColumn": 64,
+                    "endOffset": 21364
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 258,
+                    "startColumn": 4,
+                    "startOffset": 21369,
+                    "endColumn": 55,
+                    "endOffset": 21420
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 259,
+                    "startColumn": 4,
+                    "startOffset": 21425,
+                    "endColumn": 42,
+                    "endOffset": 21463
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 260,
+                    "startColumn": 4,
+                    "startOffset": 21468,
+                    "endColumn": 50,
+                    "endOffset": 21514
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 261,
+                    "startColumn": 4,
+                    "startOffset": 21519,
+                    "endColumn": 57,
+                    "endOffset": 21572
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 262,
+                    "startColumn": 4,
+                    "startOffset": 21577,
+                    "endColumn": 60,
+                    "endOffset": 21633
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 263,
+                    "startColumn": 4,
+                    "startOffset": 21638,
+                    "endColumn": 35,
+                    "endOffset": 21669
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 264,
+                    "startColumn": 4,
+                    "startOffset": 21674,
+                    "endColumn": 67,
+                    "endOffset": 21737
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml",
+                    "position": {
+                        "startLine": 406,
+                        "startColumn": 4,
+                        "startOffset": 29051,
+                        "endColumn": 67,
+                        "endOffset": 29114
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 265,
+                    "startColumn": 4,
+                    "startOffset": 21742,
+                    "endColumn": 64,
+                    "endOffset": 21802
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 266,
+                    "startColumn": 4,
+                    "startOffset": 21807,
+                    "endColumn": 61,
+                    "endOffset": 21864
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 267,
+                    "startColumn": 4,
+                    "startOffset": 21869,
+                    "endColumn": 67,
+                    "endOffset": 21932
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 268,
+                    "startColumn": 4,
+                    "startOffset": 21937,
+                    "endColumn": 74,
+                    "endOffset": 22007
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 269,
+                    "startColumn": 4,
+                    "startOffset": 22012,
+                    "endColumn": 80,
+                    "endOffset": 22088
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 270,
+                    "startColumn": 4,
+                    "startOffset": 22093,
+                    "endColumn": 55,
+                    "endOffset": 22144
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 271,
+                    "startColumn": 4,
+                    "startOffset": 22149,
+                    "endColumn": 60,
+                    "endOffset": 22205
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 272,
+                    "startColumn": 4,
+                    "startOffset": 22210,
+                    "endColumn": 58,
+                    "endOffset": 22264
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 273,
+                    "startColumn": 4,
+                    "startOffset": 22269,
+                    "endColumn": 60,
+                    "endOffset": 22325
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 274,
+                    "startColumn": 4,
+                    "startOffset": 22330,
+                    "endColumn": 59,
+                    "endOffset": 22385
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 275,
+                    "startColumn": 4,
+                    "startOffset": 22390,
+                    "endColumn": 79,
+                    "endOffset": 22465
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 276,
+                    "startColumn": 4,
+                    "startOffset": 22470,
+                    "endColumn": 63,
+                    "endOffset": 22529
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 277,
+                    "startColumn": 4,
+                    "startOffset": 22534,
+                    "endColumn": 51,
+                    "endOffset": 22581
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 278,
+                    "startColumn": 4,
+                    "startOffset": 22586,
+                    "endColumn": 77,
+                    "endOffset": 22659
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 279,
+                    "startColumn": 4,
+                    "startOffset": 22664,
+                    "endColumn": 68,
+                    "endOffset": 22728
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 280,
+                    "startColumn": 4,
+                    "startOffset": 22733,
+                    "endColumn": 97,
+                    "endOffset": 22826
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 281,
+                    "startColumn": 4,
+                    "startOffset": 22831,
+                    "endColumn": 65,
+                    "endOffset": 22892
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 282,
+                    "startColumn": 4,
+                    "startOffset": 22897,
+                    "endColumn": 42,
+                    "endOffset": 22935
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 283,
+                    "startColumn": 4,
+                    "startOffset": 22940,
+                    "endColumn": 123,
+                    "endOffset": 23059
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 284,
+                    "startColumn": 4,
+                    "startOffset": 23064,
+                    "endColumn": 62,
+                    "endOffset": 23122
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 285,
+                    "startColumn": 4,
+                    "startOffset": 23127,
+                    "endColumn": 51,
+                    "endOffset": 23174
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 286,
+                    "startColumn": 4,
+                    "startOffset": 23179,
+                    "endColumn": 55,
+                    "endOffset": 23230
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 287,
+                    "startColumn": 4,
+                    "startOffset": 23235,
+                    "endColumn": 66,
+                    "endOffset": 23297
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 288,
+                    "startColumn": 4,
+                    "startOffset": 23302,
+                    "endColumn": 116,
+                    "endOffset": 23414
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 289,
+                    "startColumn": 4,
+                    "startOffset": 23419,
+                    "endColumn": 41,
+                    "endOffset": 23456
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 290,
+                    "startColumn": 4,
+                    "startOffset": 23461,
+                    "endColumn": 49,
+                    "endOffset": 23506
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 291,
+                    "startColumn": 4,
+                    "startOffset": 23511,
+                    "endColumn": 44,
+                    "endOffset": 23551
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 292,
+                    "startColumn": 4,
+                    "startOffset": 23556,
+                    "endColumn": 71,
+                    "endOffset": 23623
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 293,
+                    "startColumn": 4,
+                    "startOffset": 23628,
+                    "endColumn": 148,
+                    "endOffset": 23772
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 294,
+                    "startColumn": 4,
+                    "startOffset": 23777,
+                    "endColumn": 75,
+                    "endOffset": 23848
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 295,
+                    "startColumn": 4,
+                    "startOffset": 23853,
+                    "endColumn": 56,
+                    "endOffset": 23905
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 296,
+                    "startColumn": 4,
+                    "startOffset": 23910,
+                    "endColumn": 95,
+                    "endOffset": 24001
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 297,
+                    "startColumn": 4,
+                    "startOffset": 24006,
+                    "endColumn": 65,
+                    "endOffset": 24067
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 298,
+                    "startColumn": 4,
+                    "startOffset": 24072,
+                    "endColumn": 64,
+                    "endOffset": 24132
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 299,
+                    "startColumn": 4,
+                    "startOffset": 24137,
+                    "endColumn": 69,
+                    "endOffset": 24202
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 300,
+                    "startColumn": 4,
+                    "startOffset": 24207,
+                    "endColumn": 57,
+                    "endOffset": 24260
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 301,
+                    "startColumn": 4,
+                    "startOffset": 24265,
+                    "endColumn": 61,
+                    "endOffset": 24322
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 302,
+                    "startColumn": 4,
+                    "startOffset": 24327,
+                    "endColumn": 52,
+                    "endOffset": 24375
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 303,
+                    "startColumn": 4,
+                    "startOffset": 24380,
+                    "endColumn": 41,
+                    "endOffset": 24417
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 304,
+                    "startColumn": 4,
+                    "startOffset": 24422,
+                    "endColumn": 54,
+                    "endOffset": 24472
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 305,
+                    "startColumn": 4,
+                    "startOffset": 24477,
+                    "endColumn": 106,
+                    "endOffset": 24579
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 306,
+                    "startColumn": 4,
+                    "startOffset": 24584,
+                    "endColumn": 75,
+                    "endOffset": 24655
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 307,
+                    "startColumn": 4,
+                    "startOffset": 24660,
+                    "endColumn": 88,
+                    "endOffset": 24744
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 308,
+                    "startColumn": 4,
+                    "startOffset": 24749,
+                    "endColumn": 75,
+                    "endOffset": 24820
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 309,
+                    "startColumn": 4,
+                    "startOffset": 24825,
+                    "endColumn": 98,
+                    "endOffset": 24919
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 310,
+                    "startColumn": 4,
+                    "startOffset": 24924,
+                    "endColumn": 60,
+                    "endOffset": 24980
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 311,
+                    "startColumn": 4,
+                    "startOffset": 24985,
+                    "endColumn": 139,
+                    "endOffset": 25120
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 312,
+                    "startColumn": 4,
+                    "startOffset": 25125,
+                    "endColumn": 70,
+                    "endOffset": 25191
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 313,
+                    "startColumn": 4,
+                    "startOffset": 25196,
+                    "endColumn": 75,
+                    "endOffset": 25267
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 314,
+                    "startColumn": 4,
+                    "startOffset": 25272,
+                    "endColumn": 76,
+                    "endOffset": 25344
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 315,
+                    "startColumn": 4,
+                    "startOffset": 25349,
+                    "endColumn": 74,
+                    "endOffset": 25419
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 316,
+                    "startColumn": 4,
+                    "startOffset": 25424,
+                    "endColumn": 66,
+                    "endOffset": 25486
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 317,
+                    "startColumn": 4,
+                    "startOffset": 25491,
+                    "endColumn": 65,
+                    "endOffset": 25552
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 318,
+                    "startColumn": 4,
+                    "startOffset": 25557,
+                    "endColumn": 54,
+                    "endOffset": 25607
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 319,
+                    "startColumn": 4,
+                    "startOffset": 25612,
+                    "endColumn": 79,
+                    "endOffset": 25687
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 320,
+                    "startColumn": 4,
+                    "startOffset": 25692,
+                    "endColumn": 61,
+                    "endOffset": 25749
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 321,
+                    "startColumn": 4,
+                    "startOffset": 25754,
+                    "endColumn": 40,
+                    "endOffset": 25790
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 322,
+                    "startColumn": 4,
+                    "startOffset": 25795,
+                    "endColumn": 99,
+                    "endOffset": 25890
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 323,
+                    "startColumn": 4,
+                    "startOffset": 25895,
+                    "endColumn": 70,
+                    "endOffset": 25961
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 324,
+                    "startColumn": 4,
+                    "startOffset": 25966,
+                    "endColumn": 49,
+                    "endOffset": 26011
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 325,
+                    "startColumn": 4,
+                    "startOffset": 26016,
+                    "endColumn": 108,
+                    "endOffset": 26120
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 326,
+                    "startColumn": 4,
+                    "startOffset": 26125,
+                    "endColumn": 60,
+                    "endOffset": 26181
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 327,
+                    "startColumn": 4,
+                    "startOffset": 26186,
+                    "endColumn": 106,
+                    "endOffset": 26288
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 328,
+                    "startColumn": 4,
+                    "startOffset": 26293,
+                    "endColumn": 77,
+                    "endOffset": 26366
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 329,
+                    "startColumn": 4,
+                    "startOffset": 26371,
+                    "endColumn": 88,
+                    "endOffset": 26455
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 330,
+                    "startColumn": 4,
+                    "startOffset": 26460,
+                    "endColumn": 58,
+                    "endOffset": 26514
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 331,
+                    "startColumn": 4,
+                    "startOffset": 26519,
+                    "endColumn": 60,
+                    "endOffset": 26575
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 332,
+                    "startColumn": 4,
+                    "startOffset": 26580,
+                    "endColumn": 47,
+                    "endOffset": 26623
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 333,
+                    "startColumn": 4,
+                    "startOffset": 26628,
+                    "endColumn": 46,
+                    "endOffset": 26670
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 334,
+                    "startColumn": 4,
+                    "startOffset": 26675,
+                    "endColumn": 89,
+                    "endOffset": 26760
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 335,
+                    "startColumn": 4,
+                    "startOffset": 26765,
+                    "endColumn": 78,
+                    "endOffset": 26839
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 336,
+                    "startColumn": 4,
+                    "startOffset": 26844,
+                    "endColumn": 60,
+                    "endOffset": 26900
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 337,
+                    "startColumn": 4,
+                    "startOffset": 26905,
+                    "endColumn": 40,
+                    "endOffset": 26941
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 338,
+                    "startColumn": 4,
+                    "startOffset": 26946,
+                    "endColumn": 68,
+                    "endOffset": 27010
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 339,
+                    "startColumn": 4,
+                    "startOffset": 27015,
+                    "endColumn": 94,
+                    "endOffset": 27105
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 340,
+                    "startColumn": 4,
+                    "startOffset": 27110,
+                    "endColumn": 64,
+                    "endOffset": 27170
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 341,
+                    "startColumn": 4,
+                    "startOffset": 27175,
+                    "endColumn": 88,
+                    "endOffset": 27259
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 342,
+                    "startColumn": 4,
+                    "startOffset": 27264,
+                    "endColumn": 96,
+                    "endOffset": 27356
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 343,
+                    "startColumn": 4,
+                    "startOffset": 27361,
+                    "endColumn": 65,
+                    "endOffset": 27422
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 344,
+                    "startColumn": 4,
+                    "startOffset": 27427,
+                    "endColumn": 83,
+                    "endOffset": 27506
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 345,
+                    "startColumn": 4,
+                    "startOffset": 27511,
+                    "endColumn": 86,
+                    "endOffset": 27593
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 346,
+                    "startColumn": 4,
+                    "startOffset": 27598,
+                    "endColumn": 60,
+                    "endOffset": 27654
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 347,
+                    "startColumn": 4,
+                    "startOffset": 27659,
+                    "endColumn": 79,
+                    "endOffset": 27734
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 348,
+                    "startColumn": 4,
+                    "startOffset": 27739,
+                    "endColumn": 44,
+                    "endOffset": 27779
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 349,
+                    "startColumn": 4,
+                    "startOffset": 27784,
+                    "endColumn": 76,
+                    "endOffset": 27856
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 350,
+                    "startColumn": 4,
+                    "startOffset": 27861,
+                    "endColumn": 61,
+                    "endOffset": 27918
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 351,
+                    "startColumn": 4,
+                    "startOffset": 27923,
+                    "endColumn": 77,
+                    "endOffset": 27996
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 352,
+                    "startColumn": 4,
+                    "startOffset": 28001,
+                    "endColumn": 68,
+                    "endOffset": 28065
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 353,
+                    "startColumn": 4,
+                    "startOffset": 28070,
+                    "endColumn": 47,
+                    "endOffset": 28113
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 354,
+                    "startColumn": 4,
+                    "startOffset": 28118,
+                    "endColumn": 79,
+                    "endOffset": 28193
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 355,
+                    "startColumn": 4,
+                    "startOffset": 28198,
+                    "endColumn": 54,
+                    "endOffset": 28248
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 356,
+                    "startColumn": 4,
+                    "startOffset": 28253,
+                    "endColumn": 63,
+                    "endOffset": 28312
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 357,
+                    "startColumn": 4,
+                    "startOffset": 28317,
+                    "endColumn": 63,
+                    "endOffset": 28376
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 358,
+                    "startColumn": 4,
+                    "startOffset": 28381,
+                    "endColumn": 103,
+                    "endOffset": 28480
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 359,
+                    "startColumn": 4,
+                    "startOffset": 28485,
+                    "endColumn": 53,
+                    "endOffset": 28534
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 360,
+                    "startColumn": 4,
+                    "startOffset": 28539,
+                    "endColumn": 54,
+                    "endOffset": 28589
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 361,
+                    "startColumn": 4,
+                    "startOffset": 28594,
+                    "endColumn": 156,
+                    "endOffset": 28746
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 362,
+                    "startColumn": 4,
+                    "startOffset": 28751,
+                    "endColumn": 73,
+                    "endOffset": 28820
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 363,
+                    "startColumn": 4,
+                    "startOffset": 28825,
+                    "endColumn": 149,
+                    "endOffset": 28970
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 364,
+                    "startColumn": 4,
+                    "startOffset": 28975,
+                    "endColumn": 86,
+                    "endOffset": 29057
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 365,
+                    "startColumn": 4,
+                    "startOffset": 29062,
+                    "endColumn": 163,
+                    "endOffset": 29221
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 366,
+                    "startColumn": 4,
+                    "startOffset": 29226,
+                    "endColumn": 80,
+                    "endOffset": 29302
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 367,
+                    "startColumn": 4,
+                    "startOffset": 29307,
+                    "endColumn": 85,
+                    "endOffset": 29388
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 368,
+                    "startColumn": 4,
+                    "startOffset": 29393,
+                    "endColumn": 136,
+                    "endOffset": 29525
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 369,
+                    "startColumn": 4,
+                    "startOffset": 29530,
+                    "endColumn": 84,
+                    "endOffset": 29610
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 370,
+                    "startColumn": 4,
+                    "startOffset": 29615,
+                    "endColumn": 129,
+                    "endOffset": 29740
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 371,
+                    "startColumn": 4,
+                    "startOffset": 29745,
+                    "endColumn": 159,
+                    "endOffset": 29900
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 372,
+                    "startColumn": 4,
+                    "startOffset": 29905,
+                    "endColumn": 76,
+                    "endOffset": 29977
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 373,
+                    "startColumn": 4,
+                    "startOffset": 29982,
+                    "endColumn": 144,
+                    "endOffset": 30122
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 374,
+                    "startColumn": 4,
+                    "startOffset": 30127,
+                    "endColumn": 76,
+                    "endOffset": 30199
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 375,
+                    "startColumn": 4,
+                    "startOffset": 30204,
+                    "endColumn": 150,
+                    "endOffset": 30350
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 376,
+                    "startColumn": 4,
+                    "startOffset": 30355,
+                    "endColumn": 58,
+                    "endOffset": 30409
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 377,
+                    "startColumn": 4,
+                    "startOffset": 30414,
+                    "endColumn": 201,
+                    "endOffset": 30611
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 378,
+                    "startColumn": 4,
+                    "startOffset": 30616,
+                    "endColumn": 77,
+                    "endOffset": 30689
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 379,
+                    "startColumn": 4,
+                    "startOffset": 30694,
+                    "endColumn": 152,
+                    "endOffset": 30842
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 380,
+                    "startColumn": 4,
+                    "startOffset": 30847,
+                    "endColumn": 56,
+                    "endOffset": 30899
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 381,
+                    "startColumn": 4,
+                    "startOffset": 30904,
+                    "endColumn": 163,
+                    "endOffset": 31063
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 382,
+                    "startColumn": 4,
+                    "startOffset": 31068,
+                    "endColumn": 57,
+                    "endOffset": 31121
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 383,
+                    "startColumn": 4,
+                    "startOffset": 31126,
+                    "endColumn": 151,
+                    "endOffset": 31273
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 384,
+                    "startColumn": 4,
+                    "startOffset": 31278,
+                    "endColumn": 167,
+                    "endOffset": 31441
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 385,
+                    "startColumn": 4,
+                    "startOffset": 31446,
+                    "endColumn": 76,
+                    "endOffset": 31518
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 386,
+                    "startColumn": 4,
+                    "startOffset": 31523,
+                    "endColumn": 249,
+                    "endOffset": 31768
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 387,
+                    "startColumn": 4,
+                    "startOffset": 31773,
+                    "endColumn": 62,
+                    "endOffset": 31831
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 388,
+                    "startColumn": 4,
+                    "startOffset": 31836,
+                    "endColumn": 38,
+                    "endOffset": 31870
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 389,
+                    "startColumn": 4,
+                    "startOffset": 31875,
+                    "endColumn": 63,
+                    "endOffset": 31934
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 390,
+                    "startColumn": 4,
+                    "startOffset": 31939,
+                    "endColumn": 63,
+                    "endOffset": 31998
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 391,
+                    "startColumn": 4,
+                    "startOffset": 32003,
+                    "endColumn": 53,
+                    "endOffset": 32052
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 392,
+                    "startColumn": 4,
+                    "startOffset": 32057,
+                    "endColumn": 49,
+                    "endOffset": 32102
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 393,
+                    "startColumn": 4,
+                    "startOffset": 32107,
+                    "endColumn": 59,
+                    "endOffset": 32162
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 394,
+                    "startColumn": 4,
+                    "startOffset": 32167,
+                    "endColumn": 51,
+                    "endOffset": 32214
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 395,
+                    "startColumn": 4,
+                    "startOffset": 32219,
+                    "endColumn": 53,
+                    "endOffset": 32268
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 396,
+                    "startColumn": 4,
+                    "startOffset": 32273,
+                    "endColumn": 45,
+                    "endOffset": 32314
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 397,
+                    "startColumn": 4,
+                    "startOffset": 32319,
+                    "endColumn": 56,
+                    "endOffset": 32371
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 398,
+                    "startColumn": 4,
+                    "startOffset": 32376,
+                    "endColumn": 53,
+                    "endOffset": 32425
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 399,
+                    "startColumn": 4,
+                    "startOffset": 32430,
+                    "endColumn": 51,
+                    "endOffset": 32477
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 400,
+                    "startColumn": 4,
+                    "startOffset": 32482,
+                    "endColumn": 53,
+                    "endOffset": 32531
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 401,
+                    "startColumn": 4,
+                    "startOffset": 32536,
+                    "endColumn": 54,
+                    "endOffset": 32586
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 402,
+                    "startColumn": 4,
+                    "startOffset": 32591,
+                    "endColumn": 79,
+                    "endOffset": 32666
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 403,
+                    "startColumn": 4,
+                    "startOffset": 32671,
+                    "endColumn": 78,
+                    "endOffset": 32745
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 404,
+                    "startColumn": 4,
+                    "startOffset": 32750,
+                    "endColumn": 45,
+                    "endOffset": 32791
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 405,
+                    "startColumn": 4,
+                    "startOffset": 32796,
+                    "endColumn": 76,
+                    "endOffset": 32868
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 406,
+                    "startColumn": 4,
+                    "startOffset": 32873,
+                    "endColumn": 55,
+                    "endOffset": 32924
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 407,
+                    "startColumn": 4,
+                    "startOffset": 32929,
+                    "endColumn": 52,
+                    "endOffset": 32977
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 408,
+                    "startColumn": 4,
+                    "startOffset": 32982,
+                    "endColumn": 56,
+                    "endOffset": 33034
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 409,
+                    "startColumn": 4,
+                    "startOffset": 33039,
+                    "endColumn": 51,
+                    "endOffset": 33086
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 410,
+                    "startColumn": 4,
+                    "startOffset": 33091,
+                    "endColumn": 155,
+                    "endOffset": 33242
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 411,
+                    "startColumn": 4,
+                    "startOffset": 33247,
+                    "endColumn": 77,
+                    "endOffset": 33320
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 412,
+                    "startColumn": 4,
+                    "startOffset": 33325,
+                    "endColumn": 85,
+                    "endOffset": 33406
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 413,
+                    "startColumn": 4,
+                    "startOffset": 33411,
+                    "endColumn": 86,
+                    "endOffset": 33493
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 414,
+                    "startColumn": 4,
+                    "startOffset": 33498,
+                    "endColumn": 66,
+                    "endOffset": 33560
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 415,
+                    "startColumn": 4,
+                    "startOffset": 33565,
+                    "endColumn": 75,
+                    "endOffset": 33636
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 416,
+                    "startColumn": 4,
+                    "startOffset": 33641,
+                    "endColumn": 43,
+                    "endOffset": 33680
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 417,
+                    "startColumn": 4,
+                    "startOffset": 33685,
+                    "endColumn": 42,
+                    "endOffset": 33723
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 418,
+                    "startColumn": 4,
+                    "startOffset": 33728,
+                    "endColumn": 77,
+                    "endOffset": 33801
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 419,
+                    "startColumn": 4,
+                    "startOffset": 33806,
+                    "endColumn": 81,
+                    "endOffset": 33883
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 420,
+                    "startColumn": 4,
+                    "startOffset": 33888,
+                    "endColumn": 85,
+                    "endOffset": 33969
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 421,
+                    "startColumn": 4,
+                    "startOffset": 33974,
+                    "endColumn": 62,
+                    "endOffset": 34032
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 422,
+                    "startColumn": 4,
+                    "startOffset": 34037,
+                    "endColumn": 60,
+                    "endOffset": 34093
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 423,
+                    "startColumn": 4,
+                    "startOffset": 34098,
+                    "endColumn": 67,
+                    "endOffset": 34161
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 424,
+                    "startColumn": 4,
+                    "startOffset": 34166,
+                    "endColumn": 78,
+                    "endOffset": 34240
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 425,
+                    "startColumn": 4,
+                    "startOffset": 34245,
+                    "endColumn": 108,
+                    "endOffset": 34349
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 426,
+                    "startColumn": 4,
+                    "startOffset": 34354,
+                    "endColumn": 76,
+                    "endOffset": 34426
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 427,
+                    "startColumn": 4,
+                    "startOffset": 34431,
+                    "endColumn": 72,
+                    "endOffset": 34499
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 428,
+                    "startColumn": 4,
+                    "startOffset": 34504,
+                    "endColumn": 71,
+                    "endOffset": 34571
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 429,
+                    "startColumn": 4,
+                    "startOffset": 34576,
+                    "endColumn": 89,
+                    "endOffset": 34661
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 430,
+                    "startColumn": 4,
+                    "startOffset": 34666,
+                    "endColumn": 76,
+                    "endOffset": 34738
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 431,
+                    "startColumn": 4,
+                    "startOffset": 34743,
+                    "endColumn": 74,
+                    "endOffset": 34813
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 432,
+                    "startColumn": 4,
+                    "startOffset": 34818,
+                    "endColumn": 94,
+                    "endOffset": 34908
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 433,
+                    "startColumn": 4,
+                    "startOffset": 34913,
+                    "endColumn": 61,
+                    "endOffset": 34970
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 434,
+                    "startColumn": 4,
+                    "startOffset": 34975,
+                    "endColumn": 76,
+                    "endOffset": 35047
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 435,
+                    "startColumn": 4,
+                    "startOffset": 35052,
+                    "endColumn": 34,
+                    "endOffset": 35082
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 436,
+                    "startColumn": 4,
+                    "startOffset": 35087,
+                    "endColumn": 82,
+                    "endOffset": 35165
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 437,
+                    "startColumn": 4,
+                    "startOffset": 35170,
+                    "endColumn": 61,
+                    "endOffset": 35227
+                },
+                "from": {
+                    "file": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/values-de/strings.xml"
+                }
+            }
+        ]
+    }
+]
