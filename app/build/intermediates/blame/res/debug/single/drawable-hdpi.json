@@ -4,8 +4,16 @@
         "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-hdpi/btn_omnibox_bookmark_normal.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_menu_hardkey_panel_mtrl_mult.9.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_textfield_search_activated_mtrl_alpha.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/triangle_up.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/triangle_up.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_insert_drive_file.png",
@@ -14,6 +22,10 @@
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_collections_view_as_list.png",
         "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-hdpi/ic_collections_view_as_list.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_btn_rating_star_on_mtrl_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_btn_rating_star_on_mtrl_alpha.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_tab_indicator_mtrl_alpha.9.png",
@@ -36,8 +48,24 @@
         "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-hdpi/forward.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/btn_omnibox_bookmark_selected_normal.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/btn_omnibox_bookmark_selected_normal.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_btn_radio_to_on_mtrl_015.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_new_window_holo_dark.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/ic_new_window_holo_dark.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/triangle_up.png",
         "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-hdpi/triangle_up.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/btn_toolbar_stop_loading_normal.png",
@@ -68,16 +96,28 @@
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_menu_moreoverflow_mtrl_alpha.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_longpressed_holo.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_longpressed_holo.9.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_divider_mtrl_alpha.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_divider_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_btn_radio_to_on_mtrl_000.png",
-        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_btn_radio_to_on_mtrl_000.png"
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_copy.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/ic_action_copy.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_content_add_circle_outline.png",
         "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-hdpi/ic_content_add_circle_outline.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_btn_radio_to_on_mtrl_000.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_ab_back_mtrl_am_alpha.png",
@@ -88,40 +128,72 @@
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_pressed_holo_dark.9.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/back.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/back.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_textfield_search_default_mtrl_alpha.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_textfield_search_default_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
-        "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_focused_holo.9.png",
-        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_focused_holo.9.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_switch_track_mtrl_alpha.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_switch_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_focused_holo.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_spinner_mtrl_am_alpha.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_btn_check_to_on_mtrl_015.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_selector_disabled_holo_dark.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/back.png",
         "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-hdpi/back.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_content_content_copy.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/ic_content_content_copy.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_longpressed_holo.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_content_add_circle_outline.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/ic_content_add_circle_outline.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/forward.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/forward.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_content_save.png",
@@ -152,6 +224,10 @@
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_btn_check_to_on_mtrl_015.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_btn_check_to_on_mtrl_015.png"
     },
@@ -164,8 +240,24 @@
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_selector_disabled_holo_light.9.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_content_save.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/ic_content_save.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_selectall_mtrl_alpha.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_search_api_mtrl_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_btn_check_to_on_mtrl_000.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_textfield_search_activated_mtrl_alpha.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_popup_background_mtrl_mult.9.png",
@@ -184,12 +276,24 @@
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_clear_mtrl_alpha.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_moreoverflow_mtrl_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_menu_moreoverflow_mtrl_alpha.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_menu_hardkey_panel_mtrl_mult.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_pressed_holo_light.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_pressed_holo_light.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_commit_search_api_mtrl_alpha.png",
@@ -206,6 +310,14 @@
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_new_window_holo_light.png",
         "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-hdpi/ic_new_window_holo_light.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_new_window_holo_light.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/ic_new_window_holo_light.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_selector_disabled_holo_dark.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_btn_check_to_on_mtrl_000.png",
@@ -256,16 +368,36 @@
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_btn_check_to_on_mtrl_015.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_selector_disabled_holo_light.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_text_cursor_mtrl_alpha.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_text_cursor_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_btn_rating_star_off_mtrl_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_btn_rating_star_off_mtrl_alpha.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_search_api_mtrl_alpha.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_search_api_mtrl_alpha.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_divider_mtrl_alpha.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_textfield_search_default_mtrl_alpha.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_share_mtrl_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_longpressed_holo.9.png",
@@ -276,12 +408,24 @@
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_textfield_default_mtrl_alpha.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_voice_search_api_mtrl_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_voice_search_api_mtrl_alpha.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_pressed_holo_light.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_pressed_holo_light.9.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_share_mtrl_alpha.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_go_search_api_mtrl_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_go_search_api_mtrl_alpha.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_btn_switch_to_on_mtrl_00001.9.png",
@@ -296,8 +440,16 @@
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_collections_view_as_list.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/ic_collections_view_as_list.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_text_cursor_mtrl_alpha.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_text_cursor_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_search_api_mtrl_alpha.png",
@@ -312,6 +464,14 @@
         "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-hdpi/ic_action_copy.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_pressed_holo_dark.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_popup_background_mtrl_mult.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_popup_background_mtrl_mult.9.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/triangle_up.png",
         "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-hdpi/triangle_up.png"
     },
@@ -322,6 +482,18 @@
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_focused_holo.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_collection.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/ic_action_collection.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_insert_drive_file.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/ic_insert_drive_file.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_stat_location_web_site.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/ic_stat_location_web_site.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_textfield_default_mtrl_alpha.9.png",
@@ -364,8 +536,20 @@
         "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-hdpi/btn_toolbar_reload_normal.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_text_cursor_mtrl_alpha.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_text_cursor_mtrl_alpha.9.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_content_add_circle_outline.png",
         "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-hdpi/ic_content_add_circle_outline.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_ab_back_mtrl_am_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_ab_back_mtrl_am_alpha.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_selectall_mtrl_alpha.png",
@@ -376,16 +560,44 @@
         "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-hdpi/ic_content_save.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_clear_mtrl_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_clear_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_switch_track_mtrl_alpha.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_btn_radio_to_on_mtrl_000.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/btn_toolbar_reload_normal.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/btn_toolbar_reload_normal.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_list_focused_holo.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/btn_toolbar_reload_normal.png",
         "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-hdpi/btn_toolbar_reload_normal.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ab_share_pack_mtrl_alpha.9.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_paste_mtrl_am_alpha.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/btn_toolbar_stop_loading_normal.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/btn_toolbar_stop_loading_normal.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/btn_toolbar_stop_loading_normal.png",
@@ -400,6 +612,10 @@
         "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-hdpi/ic_stat_location_web_site.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/btn_omnibox_bookmark_normal.png",
+        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/drawable-hdpi/btn_omnibox_bookmark_normal.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/back.png",
         "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-hdpi/back.png"
     },
@@ -412,12 +628,20 @@
         "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/drawable-hdpi/ic_content_content_copy.png"
     },
     {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_btn_radio_to_on_mtrl_000.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_new_window_holo_dark.png",
         "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/drawable-hdpi/ic_new_window_holo_dark.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_textfield_activated_mtrl_alpha.9.png",
         "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_paste_mtrl_am_alpha.png",
+        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/drawable-hdpi/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/drawable-hdpi/abc_ic_menu_copy_mtrl_am_alpha.png",

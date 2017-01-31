@@ -1,5 +1,6 @@
 package com.powerpoint45.lucidbrowser;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,6 +17,7 @@ import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.util.Log;
+import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -53,8 +55,10 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 			}
 		}
 
-		static void clearBrowsingTrace(String trace, ApplicationInfo appInfo) {
+		static void clearBrowsingTrace(String trace, Activity activity) {
+			ApplicationInfo appInfo = activity.getApplicationInfo();
 			if (trace == "cache") {
+				new WebView(activity).clearCache(true);
 				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/Cache/"));
 				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/GPUCache/"));
 				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/Service Worker/CacheStorage"));
@@ -69,7 +73,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/Cookies-journal"));
 
 			} else if (trace == "history") {
-				DeleteRecursive(new File(appInfo.dataDir+"/databases/webview.db"));
+				//DeleteRecursive(new File(appInfo.dataDir+"/databases/webview.db"));
 				DeleteRecursive(new File(appInfo.dataDir+"/databases/webview.db-shm"));
 				DeleteRecursive(new File(appInfo.dataDir+"/databases/webview.db-wal"));
 				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/databases"));
@@ -80,10 +84,9 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/QuotaManager"));
 				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/QuotaManager-journal"));
 			} else if (trace == "all") {
-
-				clearBrowsingTrace("cache", appInfo);
-				clearBrowsingTrace("cookies", appInfo);
-				clearBrowsingTrace("history", appInfo);
+				clearBrowsingTrace("cache", activity);
+				clearBrowsingTrace("cookies", activity);
+				clearBrowsingTrace("history", activity);
 
 			} else {
 				System.err
@@ -190,7 +193,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 				.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 					public boolean onPreferenceClick(Preference preference) {
 						ApplicationInfo appInfo = getApplicationInfo();
-						HelperMethods.clearBrowsingTrace("cache", appInfo);
+						HelperMethods.clearBrowsingTrace("cache", SettingsV2.this);
 						Toast.makeText(getApplicationContext(),
 								(getResources().getText(R.string.complete)),
 								Toast.LENGTH_LONG).show();
@@ -202,7 +205,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 				.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 					public boolean onPreferenceClick(Preference preference) {
 						ApplicationInfo appInfo = getApplicationInfo();
-						HelperMethods.clearBrowsingTrace("history", appInfo);
+						HelperMethods.clearBrowsingTrace("history", SettingsV2.this);
 						Toast.makeText(getApplicationContext(),
 								(getResources().getText(R.string.complete)),
 								Toast.LENGTH_LONG).show();
@@ -214,7 +217,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 				.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 					public boolean onPreferenceClick(Preference preference) {
 						ApplicationInfo appInfo = getApplicationInfo();
-						HelperMethods.clearBrowsingTrace("cookies", appInfo);
+						HelperMethods.clearBrowsingTrace("cookies", SettingsV2.this);
 						Toast.makeText(getApplicationContext(),
 								(getResources().getText(R.string.complete)),
 								Toast.LENGTH_LONG).show();

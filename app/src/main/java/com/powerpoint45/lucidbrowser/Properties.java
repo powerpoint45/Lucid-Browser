@@ -58,6 +58,7 @@ public class Properties extends MainActivity {
 		webpageProp.engine          = MainActivity.mGlobalPrefs.getString("setsearchengine", "ec");
 
 		if (webpageProp.engine.equals("ec")) {
+
             webpageProp.assetHomePage = "file:///android_asset/ehome.html";
 			webpageProp.engine = "https://www.ecosia.org/search?q=";
 		}else if (webpageProp.engine.equals("g")) {

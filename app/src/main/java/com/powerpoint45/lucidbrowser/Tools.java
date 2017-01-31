@@ -34,11 +34,11 @@ public abstract class Tools {
 			if (q.startsWith("http://")||q.startsWith("https://"))
 				return q;
 			else if (q.startsWith("www."))
-				return "https://"+q;
+				return "http://"+q;
 			else if (q.startsWith("file:"))
 				return q;
 			else
-				return "https://"+q;
+				return "http://"+q;
 		}
 		else if (q.startsWith("about:home"))
 			return Properties.webpageProp.assetHomePage;

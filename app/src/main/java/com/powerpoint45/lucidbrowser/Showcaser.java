@@ -142,7 +142,8 @@ class Showcaser {
 
 	private void uncolorBars(){
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-			activity.tintManager.setStatusBarTintColor(Properties.appProp.actionBarColor);
+			if (activity.tintManager!=null)
+				activity.tintManager.setStatusBarTintColor(Properties.appProp.actionBarColor);
 			activity.getWindow().setNavigationBarColor(Color.BLACK);
             activity.getWindow().setStatusBarColor(Properties.appProp.actionBarColor);
 		}
