@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.provider.BaseColumns;
 import android.provider.Browser;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -32,7 +33,7 @@ import bookmarkModel.BookmarksManager;
 
 public class ImportBookmarksActivity extends AppCompatActivity {
 
-    class BookmarkItem{
+    private class BookmarkItem{
         String title;
         String url;
         Bitmap favicon;
@@ -84,25 +85,25 @@ public class ImportBookmarksActivity extends AppCompatActivity {
         Uri[] uris = new Uri[]
                 {
                         Uri.parse("content://com.android.chrome.browser/bookmarks"),
-                        Browser.BOOKMARKS_URI
+                        BOOKMARKS_URI
                 };
 
         String[] proj = new String[]
                 {
                         android.provider.BaseColumns._ID,
-                        Browser.BookmarkColumns.URL,
-                        Browser.BookmarkColumns.TITLE,
-                        Browser.BookmarkColumns.FAVICON
+                        BookmarkColumns.URL,
+                        BookmarkColumns.TITLE,
+                        BookmarkColumns.FAVICON
                 };
 
         for (int uriIndex = 0; uriIndex<2; uriIndex++) {
             Cursor results;
             results = managedQuery(uris[uriIndex], proj,
-                    Browser.BookmarkColumns.BOOKMARK, null, null);
+                    BookmarkColumns.BOOKMARK, null, null);
             if (results != null) {
-                int urlColumn = results.getColumnIndex(Browser.BookmarkColumns.URL);
-                int titleColumn = results.getColumnIndex(Browser.BookmarkColumns.TITLE);
-                int faviconColumn = results.getColumnIndex(Browser.BookmarkColumns.FAVICON);
+                int urlColumn = results.getColumnIndex(BookmarkColumns.URL);
+                int titleColumn = results.getColumnIndex(BookmarkColumns.TITLE);
+                int faviconColumn = results.getColumnIndex(BookmarkColumns.FAVICON);
 
                 BitmapFactory.Options options = new BitmapFactory.Options();
                 options.inScaled = false;
@@ -212,5 +213,23 @@ public class ImportBookmarksActivity extends AppCompatActivity {
         return false;
     }
 
+    public static final Uri BOOKMARKS_URI =
+            Uri.parse("content://browser/bookmarks");
+
+    private static class BookmarkColumns implements BaseColumns {
+        public static final String URL = "url";
+        public static final String VISITS = "visits";
+        public static final String DATE = "date";
+        public static final String BOOKMARK = "bookmark";
+        public static final String TITLE = "title";
+        public static final String CREATED = "created";
+        public static final String FAVICON = "favicon";
+
+        public static final String THUMBNAIL = "thumbnail";
+
+        public static final String TOUCH_ICON = "touch_icon";
+
+        public static final String USER_ENTERED = "user_entered";
+    }
 
 }

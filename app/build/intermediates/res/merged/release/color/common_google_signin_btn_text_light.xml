@@ -12,4 +12,3 @@
     <item
         android:color="@color/common_google_signin_btn_text_light_default" />
 </selector>
-<!-- From: file:/tmp/tmp-deduplicated2803026416421244449/java/com/google/android/gmscore/integ/client/base/res/color/common_google_signin_btn_text_light.xml -->

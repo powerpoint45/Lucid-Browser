@@ -2,6 +2,7 @@ package com.powerpoint45.lucidbrowser;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 import android.util.TypedValue;
 
 
@@ -58,26 +59,40 @@ public class Properties extends MainActivity {
 		webpageProp.engine          = MainActivity.mGlobalPrefs.getString("setsearchengine", "ec");
 
 		if (webpageProp.engine.equals("ec")) {
-
-            webpageProp.assetHomePage = "file:///android_asset/ehome.html";
-			webpageProp.engine = "https://www.ecosia.org/search?q=";
+			webpageProp.assetHomePage = "file:///android_asset/ehome.html";
+			//I need to check if I can use my custom ecosia URL
+			if (!webpageProp.engine.equals("https://www.ecosia.org/search?tt=lucid&q=")) {
+				if (context.mGlobalPrefs.getBoolean("useCustomEcosia",true))
+					webpageProp.engine = "https://www.ecosia.org/search?tt=lucid&q=";
+				else
+					webpageProp.engine = "https://www.ecosia.org/search?q=";
+				new GEOIPParser(context).new setEcosiaURL().start();
+			}
 		}else if (webpageProp.engine.equals("g")) {
-            webpageProp.assetHomePage = "file:///android_asset/home.html";
-            webpageProp.engine = "https://www.google.com/search?q=";
-        }else if (webpageProp.engine.equals("y"))
-			webpageProp.engine = "https://www.search.yahoo.com/search?q=";
-		else if (webpageProp.engine.equals("b"))
+			webpageProp.assetHomePage = "file:///android_asset/home.html";
+			webpageProp.engine = "https://www.google.com/search?q=";
+		}else if (webpageProp.engine.equals("y")) {
+			webpageProp.engine = "https://search.yahoo.com/search?p=";
+			webpageProp.assetHomePage = "file:///android_asset/yhome.html";
+		}else if (webpageProp.engine.equals("b")) {
 			webpageProp.engine = "https://www.bing.com/search?q=";
-		else if (webpageProp.engine.equals("d"))
+			webpageProp.assetHomePage = "file:///android_asset/bhome.html";
+		}else if (webpageProp.engine.equals("d")) {
 			webpageProp.engine = "https://www.duckduckgo.com/?q=";
-		else if (webpageProp.engine.equals("a"))
-			webpageProp.engine = "https://www.ask.com/web?q=";
-		else if (webpageProp.engine.equals("i"))
+			webpageProp.assetHomePage = "file:///android_asset/dhome.html";
+		}else if (webpageProp.engine.equals("a")) {
+			webpageProp.engine = "http://www.ask.com/web?q=";
+			webpageProp.assetHomePage = "file:///android_asset/ahome.html";
+		}else if (webpageProp.engine.equals("i")) {
 			webpageProp.engine = "https://www.ixquick.com/do/search?q=";
-		else if (webpageProp.engine.equals("bl"))
-			webpageProp.engine = "https://www.blekko.com/#?q=";
-		else if (webpageProp.engine.equals("yd"))
+			webpageProp.assetHomePage = "file:///android_asset/ihome.html";
+		}else if (webpageProp.engine.equals("yd")) {
 			webpageProp.engine = "https://www.yandex.com/search/?text=";
+			webpageProp.assetHomePage = "file:///android_asset/ydhome.html";
+		}else if (webpageProp.engine.equals("bd")) {
+			webpageProp.engine = "https://www.baidu.com/s?wd=";
+			webpageProp.assetHomePage = "file:///android_asset/bdhome.html";
+		}
 		
 		
 		

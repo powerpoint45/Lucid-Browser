@@ -10,7 +10,7 @@
     <string name="engine_duckduckgo" translatable="false">DuckDuckGo</string>
     <string name="engine_ask" translatable="false">Ask</string>
     <string name="engine_ixquick" translatable="false">ixquick</string>
-    <string name="engine_blekko" translatable="false">Blekko</string>
+    <string name="engine_baidu" translatable="false">Baidu</string>
     <string name="engine_yandex" translatable="false">Yandex</string>
 
     <string name="country_codes" translatable="false">US DE AT GB BE ES FR CA MX FI SE NO IT NZ AU FI NO DK IE NL CH</string>

@@ -34,8 +34,8 @@
         <item>@string/engine_duckduckgo</item>
         <item>@string/engine_ask</item>
         <item>@string/engine_ixquick</item>
-        <item>@string/engine_blekko</item>
         <item>@string/engine_yandex</item>
+        <item>@string/engine_baidu</item>
     </string-array>
     
     

@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Navigați la ecranul de pornire"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
     <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Navigați în sus"</string>
     <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Mai multe opțiuni"</string>
     <string msgid="4076576682505996667" name="abc_action_mode_done">"Terminat"</string>
     <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Afișați-le pe toate"</string>
-    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Alegeți o aplicaţie"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Alegeți o aplicație"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"DEZACTIVAȚI"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"ACTIVAȚI"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Căutați…"</string>
     <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Ștergeți interogarea"</string>
     <string msgid="2550479030709304392" name="abc_searchview_description_query">"Interogare de căutare"</string>
     <string msgid="8264924765203268293" name="abc_searchview_description_search">"Căutați"</string>
@@ -13,7 +18,9 @@
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"Căutare vocală"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Trimiteți la"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Trimiteți la %s"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Restrângeți"</string>
     <string name="about">Despre</string>
+    <string msgid="5835639618285370804" name="accept">"Accept"</string>
     <string name="action_lock_screen">Inchide ecranul</string>
     <string name="action_openapp">Launch App</string>
     <string name="action_openapp_animationnormal">Normal app open animation</string>
@@ -75,19 +82,16 @@
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Activați"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> nu va funcționa decât dacă activați serviciile Google Play."</string>
     <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Activați serviciile Google Play"</string>
-    <string msgid="7118643132557593940" name="common_google_play_services_install_button">"Descărcați serviciile Google Play"</string>
-    <string msgid="1666261992894286769" name="common_google_play_services_install_text_phone">"<ns1:g id="APP_NAME">%1$s</ns1:g> nu va rula fără serviciile Google Play, care lipsesc de pe telefon."</string>
-    <string msgid="1701766622451829291" name="common_google_play_services_install_text_tablet">"<ns1:g id="APP_NAME">%1$s</ns1:g> nu va rula fără serviciile Google Play, care lipsesc de pe tabletă."</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Instalați"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> nu va rula fără serviciile Google Play, care lipsesc de pe dispozitivul dvs."</string>
     <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Descărcați serviciile Google Play"</string>
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Eroare a serviciilor Google Play"</string>
-    <string msgid="9089562800660647919" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> întâmpină probleme privind serviciile Google Play. Dacă problema persistă, contactați dezvoltatorul pentru asistență."</string>
-    <string msgid="1064791666906610763" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> se bazează pe serviciile Google Play, care nu sunt acceptate de dispozitiv. Contactați producătorul pentru asistență."</string>
-    <string msgid="539866123733096737" name="common_google_play_services_unsupported_title">"Servicii Google Play"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> întâmpină probleme privind serviciile Google Play. Încercați din nou."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> nu va rula fără serviciile Google Play, care nu sunt acceptate de dispozitivul dvs."</string>
     <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Actualizați"</string>
     <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> nu va rula decât dacă actualizați serviciile Google Play."</string>
     <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Actualizați serviciile Google Play"</string>
     <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> nu va rula fără serviciile Google Play, care momentan se actualizează."</string>
-    <string msgid="2270671469198016014" name="common_google_play_services_updating_title">"Se actualizează serviciile Google Play"</string>
     <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Este necesară o nouă versiune a serviciilor Google Play. Se vor actualiza automat în curând."</string>
     <string msgid="5201977337835724196" name="common_open_on_phone">"Deschideți pe telefon"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Conectați-vă"</string>
@@ -97,6 +101,13 @@
     <string name="confirmunlock">Are you sure you want to unlock the desktop?</string>
     <string name="contact">Contactează-ne</string>
     <string name="copyurl">Copy Link</string>
+    <string msgid="6155048007205742679" name="create_calendar_message">"Permiteți ca anunțul să creeze un eveniment în calendar?"</string>
+    <string msgid="7967007864778154790" name="create_calendar_title">"Crearea unui eveniment în calendar"</string>
+    <string msgid="4722375419392727435" name="debug_menu_ad_information">"Informații privind anunțul"</string>
+    <string msgid="1605938743055376690" name="debug_menu_creative_preview">"Previzualizarea materialelor publicitare"</string>
+    <string msgid="2039274714455389140" name="debug_menu_title">"Selectați modul Remedierea erorilor"</string>
+    <string msgid="1173358804935285568" name="debug_menu_troubleshooting">"Remedierea erorilor"</string>
+    <string msgid="6099173376375995052" name="decline">"Refuzați"</string>
     <string name="def">Default</string>
     <string name="defaulthomepagesummary">Set the default page</string>
     <string name="defaulthomepagetitle">Default Home Page</string>
@@ -265,6 +276,7 @@
     <string name="search_hidden_apps_title">Caută aplicații ascunse</string>
     <string name="search_icon_action_summary">Selectați acțiunea la apăsarea icoanei</string>
     <string name="search_icon_action_title">Search Icon Action</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Căutați"</string>
     <string name="searchcontactssummary">Activează sau dezactivează căutarea în contacte</string>
     <string name="searchcontactstitle">Caută contacte</string>
     <string name="searchpackagessummary">Enable or disable searching package names such as com.google.calendar</string>
@@ -320,6 +332,7 @@
     <string formatted="false" name="sslUntrustedMessage">The webpage at\n\n%s\n\nhas a self-signed SSL certificate.</string>
     <string name="sslUntrustedTitle">SSL Certificate is not trusted</string>
     <string name="sslWebsiteWarning">The webpage is possibly unsafe as the certificate cannot be verified. Please proceed with caution.</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"˃999"</string>
     <string name="step_basic_actions_summary">Tap the search icon to start searching \nTap the three dot icon for more actions</string>
     <string name="step_basic_actions_title">Basic Actions</string>
     <string name="step_browser_sidebar_summary">Accesați navigatorul web Access the browser sidebar by swiping from the edge of the screen</string>
@@ -338,6 +351,8 @@
     <string name="step_welcome_summary">Acesta erste ecranul de start. Aici puteţi plasa aplicaţii, widget-uri etc. You can swipe vertically to switch between home screens and horizontally for other pages</string>
     <string name="step_welcome_title">Bine aţi venit în Lucid Launcher</string>
     <string name="stop">Stop</string>
+    <string msgid="8020323581538738027" name="store_picture_message">"Permiteți ca anunțul să stocheze imaginea în Galeria de fotografii?"</string>
+    <string msgid="4180630057627064606" name="store_picture_title">"Salvarea imaginii"</string>
     <string name="system_settings">Setări sistem</string>
     <string name="toggle_desktop_mode">Comută în modul desktop</string>
     <string name="trans_coverflow">Coverflow</string>

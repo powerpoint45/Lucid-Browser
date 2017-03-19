@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/layout-v21/notification_template_icon_group.xml"
+    }
+]

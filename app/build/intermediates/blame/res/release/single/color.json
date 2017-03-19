@@ -1,54 +1,90 @@
 [
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_search_url_text.xml",
-        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/abc_search_url_text.xml"
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_search_url_text.xml"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/common_google_signin_btn_text_light.xml",
-        "source": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/color/common_google_signin_btn_text_light.xml"
+        "source": "/home/michael/.android/build-cache/bdd1bdbebe9e3fc75f9d4d2a7194c6de46a95df4/output/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_tint_spinner.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_tint_spinner.xml"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_secondary_text_material_dark.xml",
-        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/abc_secondary_text_material_dark.xml"
-    },
-    {
-        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/common_plus_signin_btn_text_dark.xml",
-        "source": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/color/common_plus_signin_btn_text_dark.xml"
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_secondary_text_material_dark.xml"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/switch_thumb_material_dark.xml",
-        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/switch_thumb_material_dark.xml"
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_btn_colored_borderless_text_material.xml"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_secondary_text_material_light.xml",
-        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/abc_secondary_text_material_light.xml"
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_hint_foreground_material_dark.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_hint_foreground_material_dark.xml"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/abc_primary_text_disable_only_material_light.xml"
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_primary_text_disable_only_material_light.xml"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/common_google_signin_btn_text_dark.xml",
-        "source": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/color/common_google_signin_btn_text_dark.xml"
+        "source": "/home/michael/.android/build-cache/bdd1bdbebe9e3fc75f9d4d2a7194c6de46a95df4/output/res/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_tint_edittext.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_tint_edittext.xml"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_primary_text_material_dark.xml",
-        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/abc_primary_text_material_dark.xml"
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_primary_text_material_dark.xml"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/switch_thumb_material_light.xml",
-        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/switch_thumb_material_light.xml"
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/switch_thumb_material_light.xml"
     },
     {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_primary_text_material_light.xml",
-        "source": "/home/michael/.android/build-cache/4a255a8bfb4ed17f77652876056d5f188b728b81/output/res/color/abc_primary_text_material_light.xml"
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_primary_text_material_light.xml"
     },
     {
-        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/common_plus_signin_btn_text_light.xml",
-        "source": "/home/michael/.android/build-cache/d67d2d7f08e9be908da143db9427d78bdbe81a9f/output/res/color/common_plus_signin_btn_text_light.xml"
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_hint_foreground_material_light.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_tint_btn_checkable.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_tint_switch_thumb.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_tint_default.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_tint_default.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_btn_colored_text_material.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_tint_seek_thumb.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/release/color/abc_tint_switch_track.xml",
+        "source": "/home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/res/color/abc_tint_switch_track.xml"
     }
 ]

@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::This is the localization file for Turkish:::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <resources>
 	<string name="trans_zoomout">Uzaklaştırma</string>
 	<string name="trans_pagestack">Yığın</string>
@@ -393,5 +398,30 @@
 	<string name="folder_mode_fullscreen">Tam Ekran Klasör</string>
 	<string name="folder_mode_adaptive">Uyabilen Klasör Boyutu</string>
 	<string name="folder_mode_centered">Ortalanmış Klasör</string>
+	
+	
+	<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+	<!--:::::The strings above are already translated:::::::::::::::::::-->
+	<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+	<!--::::The strings below need to be translated into turkish::::::::-->
+	<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+	
+	<string name="no_bookmarks">No bookmarks found</string>
+    <string name="export_bookmarks">Export Bookmarks</string>
+    <string name="import_bookmarks">Import Bookmarks</string>
+    <string name="import_bookmarks_external">Import Bookmarks from External Browsers</string>
+    <string name="bookmark_settings">Bookmark Settings</string>
+    <string name="delete_bookmarks">Delete All Bookmarks</string>
+    
+    <string name="lock_screen_permission_request">Enable device administrator to allow Lucid Launcher to lock screen. You must disable device administrator in order to uninstall Lucid Launcher</string>
+    
+    <string name="licensing_failed">License check failed. Please ensure app was purchased</string>
+    <string name="export_bookmarks_summary">Export bookmarks to file</string>
+    <string name="import_bookmarks_summary">Import bookmarks from file</string>
+    <string name="privacy_policy">Privacy Policy and More Info</string>
+<string name="drawer_fast_scroller">Enable Fast Scrolling</string>
+<string name="drawer_fast_scroller_orientation">Fast Scrolling Orientation</string>
+<string name="horizontal">Horizontal</string>
+<string name="vertical">Vertical</string>
     
 </resources>

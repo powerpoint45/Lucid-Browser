@@ -14,4 +14,3 @@
     <item
         android:drawable="@drawable/common_google_signin_btn_text_dark_normal" />
 </selector>
-<!-- From: file:/tmp/tmp-deduplicated2803026416421244449/java/com/google/android/gmscore/integ/client/base/res/drawable/common_google_signin_btn_text_dark.xml -->

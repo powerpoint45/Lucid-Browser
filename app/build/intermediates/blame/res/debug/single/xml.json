@@ -1,14 +1,6 @@
 [
     {
-        "merged": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/build/intermediates/res/merged/debug/xml/settings_v2.xml",
-        "source": "/home/michael/StudioProjects/Github/LucidBrowserForGit/app/src/main/res/xml/settings_v2.xml"
-    },
-    {
         "merged": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/res/merged/debug/xml/settings_v2.xml",
         "source": "/home/michael/StudioProjects/LucidBrowser/app/src/main/res/xml/settings_v2.xml"
-    },
-    {
-        "merged": "/home/michael/StudioProjects/LucidBrowserForGit/app/build/intermediates/res/merged/debug/xml/settings_v2.xml",
-        "source": "/home/michael/StudioProjects/LucidBrowserForGit/app/src/main/res/xml/settings_v2.xml"
     }
 ]

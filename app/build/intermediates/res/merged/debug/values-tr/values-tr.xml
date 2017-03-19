@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Ana ekrana git"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
     <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Yukarı git"</string>
     <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Diğer seçenekler"</string>
-    <string msgid="4076576682505996667" name="abc_action_mode_done">"Tamamlandı"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Bitti"</string>
     <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Tümünü göster"</string>
     <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Bir uygulama seçin"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"KAPAT"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"AÇ"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Ara…"</string>
     <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Sorguyu temizle"</string>
     <string msgid="2550479030709304392" name="abc_searchview_description_query">"Arama sorgusu"</string>
     <string msgid="8264924765203268293" name="abc_searchview_description_search">"Ara"</string>
@@ -13,7 +18,9 @@
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"Sesli arama"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Şununla paylaş"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"%s ile paylaş"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Daralt"</string>
     <string name="about">Hakkında</string>
+    <string msgid="5835639618285370804" name="accept">"Kabul et"</string>
     <string name="action_lock_screen">Ekranı Kapat</string>
     <string name="action_openapp">Uygulamayı Başlat</string>
     <string name="action_openapp_animationnormal">Normal uygulama açma animasyonu</string>
@@ -50,6 +57,7 @@
     <string name="backupsummary">Tüm ayarları ve kurulumu yedekle</string>
     <string name="backuptitle">Yedekle</string>
     <string name="bookmark_move">Taşı</string>
+    <string name="bookmark_settings">Bookmark Settings</string>
     <string name="bookmarks">Favoriler</string>
     <string name="bottompaddinglandsummary">Gerekirse, gezinme çubuğunun yakınındaki dolguyu kaldıracaktır</string>
     <string name="bottompaddinglandtitle">Alt Dolguyu (Yatay) Kaldır</string>
@@ -83,19 +91,16 @@
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Etkinleştir"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Google Play hizmetlerini etkinleştirmezseniz <ns1:g id="APP_NAME">%1$s</ns1:g> çalışmaz."</string>
     <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play hizmetlerini etkinleştirin"</string>
-    <string msgid="7118643132557593940" name="common_google_play_services_install_button">"Google Play hizmetlerini yükle"</string>
-    <string msgid="1666261992894286769" name="common_google_play_services_install_text_phone">"<ns1:g id="APP_NAME">%1$s</ns1:g>, şu anda telefonunuzda bulunmayan Google Play hizmetleri olmadan çalışmaz."</string>
-    <string msgid="1701766622451829291" name="common_google_play_services_install_text_tablet">"<ns1:g id="APP_NAME">%1$s</ns1:g>, şu anda tabletinizde bulunmayan Google Play hizmetleri olmadan çalışmaz."</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Yükle"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g>, şu anda cihazınızda bulunmayan Google Play hizmetleri olmadan çalışmaz."</string>
     <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play hizmetlerini edinin"</string>
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Google Play Hizmetleri hatası"</string>
-    <string msgid="9089562800660647919" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g>, Google Play hizmetleriyle ilgili sorun yaşıyor. Sorun devam ederse lütfen yardım için geliştiriciyle iletişim kurun."</string>
-    <string msgid="1064791666906610763" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g>, cihazınız tarafından desteklenmeyen Google Play hizmetlerine ihtiyaç duyuyor. Yardım için üreticiyle iletişim kurun."</string>
-    <string msgid="539866123733096737" name="common_google_play_services_unsupported_title">"Google Play hizmetleri"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g>, Google Play hizmetleriyle ilgili sorun yaşıyor. Lütfen tekrar deneyin."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g>, Google Play hizmetleri olmadan çalışmaz ve bu hizmetler cihazınız tarafından desteklenmiyor."</string>
     <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Güncelle"</string>
     <string msgid="7773943415006962566" name="common_google_play_services_update_text">"Google Play hizmetlerini güncellemezseniz <ns1:g id="APP_NAME">%1$s</ns1:g> çalışmayacak."</string>
     <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Google Play hizmetlerini güncelleyin"</string>
     <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g>, şu anda güncellenmekte olan Google Play hizmetleri olmadan çalışmaz."</string>
-    <string msgid="2270671469198016014" name="common_google_play_services_updating_title">"Google Play hizmetleri güncelleniyor"</string>
     <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Google Play hizmetlerinin yeni sürümü gerekiyor. Kendisini kısa süre içinde güncelleyecektir."</string>
     <string msgid="5201977337835724196" name="common_open_on_phone">"Telefonda aç"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Oturum aç"</string>
@@ -106,9 +111,17 @@
     <string name="confirmunlock">Masaüstü kilidini açmak istediğinizden emin misiniz?</string>
     <string name="contact">Bize Ulaş</string>
     <string name="copyurl">Bağlantıyı Kopyala</string>
+    <string msgid="6155048007205742679" name="create_calendar_message">"Reklamın, takvim etkinliği oluşturmasına izin verilsin mi?"</string>
+    <string msgid="7967007864778154790" name="create_calendar_title">"Takvim etkinliği oluştur"</string>
+    <string msgid="4722375419392727435" name="debug_menu_ad_information">"Reklam Bilgileri"</string>
+    <string msgid="1605938743055376690" name="debug_menu_creative_preview">"Creative Preview"</string>
+    <string msgid="2039274714455389140" name="debug_menu_title">"Hata Ayıklama Modu Seç"</string>
+    <string msgid="1173358804935285568" name="debug_menu_troubleshooting">"Sorun Giderme"</string>
+    <string msgid="6099173376375995052" name="decline">"Reddet"</string>
     <string name="def">Varsayılan</string>
     <string name="defaulthomepagesummary">Varsayılan sayfayı ayarlayın</string>
     <string name="defaulthomepagetitle">Varsayılan Ana Ekran</string>
+    <string name="delete_bookmarks">Delete All Bookmarks</string>
     <string name="desktopviewsummary">İnternet sayfalarını masaüstü tarayıcısı gibi göster</string>
     <string name="desktopviewtitle">Masaüstü Görünümünü Etkinleştir</string>
     <string name="dimwebpagesummary">Tarayıcı sayfasındaki arkaplanı karart</string>
@@ -122,6 +135,8 @@
     <string name="disabledrawersummary">Uygulama menüsünü devre dışı bırakmak için seçin</string>
     <string name="disablesidebarsummary">Favoriler kenar çubuğunu devre dışı bırakmak için seçin</string>
     <string name="download_started">İndirme başlatıldı</string>
+    <string name="drawer_fast_scroller">Enable Fast Scrolling</string>
+    <string name="drawer_fast_scroller_orientation">Fast Scrolling Orientation</string>
     <string name="drawer_style_summary">Bir uygulama menüsü stili seçin</string>
     <string name="drawer_style_title">Uygulama Menüsü Stili</string>
     <string name="drawerlabelcolorsummary">Simge etiketleri metin rengini ayarlayın</string>
@@ -138,6 +153,8 @@
     <string name="exit">Çıkış</string>
     <string name="exit_confirmation_summary">Çıkış onayını etkinleştirmek için seçin</string>
     <string name="exit_confirmation_title">Çıkış Onayı</string>
+    <string name="export_bookmarks">Export Bookmarks</string>
+    <string name="export_bookmarks_summary">Export bookmarks to file</string>
     <string name="failed">işlem başarısız</string>
     <string name="fav_gesture_down_summary">Kenar çubuğunun üstünden aşağı kaydırma için bir eylem seçin</string>
     <string name="fav_gesture_up_summary">Kenar çubuğunun altından yukarı kaydırma için bir eylem seçin</string>
@@ -222,6 +239,7 @@
     <string name="homeportrowssummary">Dikey moddaki satır sayısını ayarlayın</string>
     <string name="homeportrowstitle">Dikey Satır Sayısı</string>
     <string name="homesettingstitle">Ana Ekran Ayarları</string>
+    <string name="horizontal">Horizontal</string>
     <string name="horizontalscrollsummary">Yatay duvar kağıdı kaydırma animasyonunu etkinleştirin veya devre dışı bırakın</string>
     <string name="horizontalscrolltitle">Yatay Duvar Kağıdı Kaydırma</string>
     <string name="icon_theme">Simge Teması</string>
@@ -231,13 +249,18 @@
     <string name="iconsizemessage">Simge Boyutu seçin:</string>
     <string name="iconsizesummary">Uygulama menüsünün simge boyutunu ayarlayın</string>
     <string name="iconsizetitle">Simge Boyutu</string>
+    <string name="import_bookmarks">Import Bookmarks</string>
+    <string name="import_bookmarks_external">Import Bookmarks from External Browsers</string>
+    <string name="import_bookmarks_summary">Import bookmarks from file</string>
     <string name="launcher_settings">Başlatıcı Ayarları</string>
     <string name="libraries">Kütüphaneler</string>
     <string name="licence_apache20_github">Apache 2.0.\nProjeyi GitHub\'da görüntülemek için dokunun</string>
     <string name="licence_beer_github">\"BEER-WARE LİSANSI\" (Rev42).\nProjeyi GitHub\'da görüntülemek için dokunun</string>
+    <string name="licensing_failed">License check failed. Please ensure app was purchased</string>
     <string name="list">Liste</string>
     <string name="lock_desktop">Masaüstünü Kilitle</string>
     <string name="lock_page">Sayfayı Kilitle</string>
+    <string name="lock_screen_permission_request">Enable device administrator to allow Lucid Launcher to lock screen. You must disable device administrator in order to uninstall Lucid Launcher</string>
     <string name="lucidactionbrowser">Tarayıcı</string>
     <string name="lucidactiondrawer">Uygulama Menüsü</string>
     <string name="lucidactionfavorites">Favoriler Kenar Çubuğu</string>
@@ -252,6 +275,7 @@
     <string name="move_here">BURAYA TAŞI</string>
     <string name="move_to_home">Ana Ekrana Taşı</string>
     <string name="no">Hayır</string>
+    <string name="no_bookmarks">No bookmarks found</string>
     <string name="no_icons">Tema hiçbir simge içermiyor</string>
     <string name="nobackup">yedek bulunamadı</string>
     <string name="nobookmarks">Hiçbir Favori Ayarlanmadı</string>
@@ -274,6 +298,7 @@
     <string name="persistenttitle">Bellekte Tut</string>
     <string name="pick_icon">Simge Seç</string>
     <string name="please_wait">Lütfen Bekleyin\.\.\.</string>
+    <string name="privacy_policy">Privacy Policy and More Info</string>
     <string name="processing">Simge teması işleniyor</string>
     <string name="prodescription">Lucid Launcher Pro\'yu satın alarak projeye destek olun</string>
     <string name="rate">Oyla</string>
@@ -296,6 +321,7 @@
     <string name="search_hidden_apps_title">Gizli Uygulamaları Ara</string>
     <string name="search_icon_action_summary">Arama simgesine basıldığındaki eylemi seçin</string>
     <string name="search_icon_action_title">Arama Simgesi Eylemi</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Ara"</string>
     <string name="searchcontactssummary">Kişileri aramayı etkinleştirin veya devre dışı bırakın</string>
     <string name="searchcontactstitle">Kişileri Ara</string>
     <string name="searchpackagessummary">com.google.calendar gibi paket adlarını aramayı etkinleştirin veya devre dışı bırakın</string>
@@ -358,6 +384,7 @@
     <string formatted="false" name="sslUntrustedMessage">\n\n%s\n\nweb sayfasının kendinden imzalı bir SSL sertifikası vardır.</string>
     <string name="sslUntrustedTitle">SSL Sertifikası güvenilir değil</string>
     <string name="sslWebsiteWarning">Sertifika doğrulanamıyor gibi web sayfası büyük olasılıkla güvenli değil. Lütfen dikkatle ilerleyin.</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
     <string name="step_basic_actions_summary">Aramaya başlamak için arama simgesine dokunun \nDiğer eylemler için üç noktalı simgeye dokunun</string>
     <string name="step_basic_actions_title">Temel Eylemler</string>
     <string name="step_browser_sidebar_summary">Ekranın kenarından kaydırarak tarayıcı kenar çubuğuna erişin</string>
@@ -376,6 +403,8 @@
     <string name="step_welcome_summary">Bu sizin ana ekranınızdır. Buraya uygulamalar, widget\'lar ve daha fazlasını koyabilirsiniz. Ana ekranlar arasında geçiş yapmak için yatay, diğer sayfalar için dikey kaydırabilirsiniz</string>
     <string name="step_welcome_title">Lucid Launcher\'a hoş geldiniz</string>
     <string name="stop">Durdur</string>
+    <string msgid="8020323581538738027" name="store_picture_message">"Reklamın, Resim galerisine resim kaydetmesine izin verilsin mi?"</string>
+    <string msgid="4180630057627064606" name="store_picture_title">"Resmi kaydet"</string>
     <string name="system_settings">Sistem Ayarları</string>
     <string name="toggle_desktop_mode">Masaüstü Moduna Geç</string>
     <string name="trans_coverflow">Akış</string>
@@ -404,6 +433,7 @@
     <string name="urlbarcolortitle">Adres çubuğu rengi</string>
     <string name="urlbardefault">Arayın veya Adres girin</string>
     <string name="version">Sürüm</string>
+    <string name="vertical">Vertical</string>
     <string name="verticalscrollsummary">Dikey duvar kağıdı kaydırma animasyonunu etkinleştirin veya devre dışı bırakın</string>
     <string name="verticalscrolltitle">Dikey Duvar Kağıdı Kaydırma</string>
     <string name="verticalspacingmessage">Dikey Aralığı seçin:</string>

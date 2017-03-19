@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/michael/.android/build-cache/4cba167066041a4f92293e4383070cdd0cce24e4/output/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_8b462eeeb3a3a31d2c1b32480055b61055185397.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/michael/sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_9794eb9a105c5e4b8f12a5eb173089792dc03ccf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/michael/.android/build-cache/4cba167066041a4f92293e4383070cdd0cce24e4/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/pre-dexed/debug/classes_c10485d972b618e11cb52e8e1d6688c87f84dbc0.jar" />
+    </item>
+
+</items>

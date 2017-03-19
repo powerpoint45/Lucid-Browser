@@ -246,8 +246,7 @@ public class SetupLayouts extends MainActivity {
 		
 		// Suggestions
 		if (!Properties.webpageProp.disablesuggestions){
-			responses    = new Vector<String>(0);
-			suggestionsAdapter        = new BrowserBarAdapter(activity, 0, responses);
+			suggestionsAdapter        = new BrowserBarAdapter(activity, 0);
 
 			ET.setAdapter(suggestionsAdapter);
 			ET.setScrollContainer(true);

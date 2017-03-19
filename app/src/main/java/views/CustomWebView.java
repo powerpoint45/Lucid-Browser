@@ -293,6 +293,10 @@ public class CustomWebView extends WebView{
                     //Replace the Search text on the document with properly localized string
                     String js = "javascript:(function() { ";
                     js += "document.getElementById('search').placeholder = '"+getResources().getString(R.string.search)+"';";
+                    if (Properties.webpageProp.engine.contains("ecosia.org/search?tt=lucid&q=")) {
+                        js += "document.getElementById('add').name = 'tt';";
+                        js += "document.getElementById('add').value = 'lucid';";
+                    }
                     js+="})()";
 
                     view.loadUrl(js);

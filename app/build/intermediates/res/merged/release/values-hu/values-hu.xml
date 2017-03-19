@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Ugrás a főoldalra"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
     <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Felfelé mozgatás"</string>
     <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"További lehetőségek"</string>
     <string msgid="4076576682505996667" name="abc_action_mode_done">"Kész"</string>
     <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Összes megtekintése"</string>
     <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Válasszon ki egy alkalmazást"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"KI"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"BE"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Keresés…"</string>
     <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Lekérdezés törlése"</string>
     <string msgid="2550479030709304392" name="abc_searchview_description_query">"Keresési lekérdezés"</string>
     <string msgid="8264924765203268293" name="abc_searchview_description_search">"Keresés"</string>
@@ -13,147 +18,422 @@
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"Hangalapú keresés"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Megosztás a következővel:"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Megosztás a következővel: %s"</string>
-    <string name="actionbarcolorsummary">"Állítsa be a szín a ActionBar"</string>
-    <string name="actionbarcolortitle">"ActionBar szín"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Összecsukás"</string>
+    <string name="about">"Rólunk"</string>
+    <string msgid="5835639618285370804" name="accept">"Elfogadás"</string>
+    <string name="action_lock_screen">"Képernyő kikapcsolása"</string>
+    <string name="action_openapp">"Alkalmazás indítása"</string>
+    <string name="action_openapp_animationnormal">"Alkalmazás indítási animáció"</string>
+    <string name="action_openapp_animationslide">"Alkalmazás indítási animáció balra húzáskor"</string>
+    <string name="action_opennotificationpanel">"Értesítési panel megjelenítése"</string>
+    <string name="action_openrecents">"Legutóbbiak megnyitása"</string>
+    <string name="action_shortcut">"Parancsikon indítása"</string>
+    <string name="action_start_search">"Keresés indítása"</string>
+    <string name="action_togglestatusbar">"Értesítési sáv kapcsoló"</string>
+    <string name="actionbar_item_color_summary">"Állítsa be a műveletsáv elemeinek színét"</string>
+    <string name="actionbar_item_color_title">"A műveletsáv elemeinek a színe"</string>
+    <string name="actionbarcolorsummary">"Állítsa be a műveletsáv színét"</string>
+    <string name="actionbarcolortitle">"Műveletsáv színe"</string>
+    <string name="actionbartextstylesummary">"Állítsa be a műveletsáv elemeinek stílusát"</string>
+    <string name="actionbartextstyletitle">"Műveletsáv elemek stílusa"</string>
     <string name="addToFavorites">"Hozzáadás a kedvencekhez"</string>
-    <string name="addToHome">"Add a főoldalra"</string>
+    <string name="addToHome">"Hozzáadás a főoldalhoz"</string>
+    <string name="add_apps">"Alkalmazás hozzáadása"</string>
+    <string name="add_bookmark_folder">"Új mappa hozzáadása"</string>
+    <string name="add_bookmark_folder_hint">"Adja meg az új mappa nevét..."</string>
+    <string name="addshortcut">"Parancsikon hozzáadása"</string>
+    <string name="adjustwallpapersummary">"Háttérkép igazítása a képernyőhöz"</string>
+    <string name="adjustwallpapertitle">"Háttérkép igazítása"</string>
     <string name="advancedsettingstitle">"További beállítások"</string>
-    <string name="appInfo">"App információkat"</string>
-    <string name="backupsummary">"Biztonsági mentés az összes beállítás és telepítés"</string>
+    <string name="alert_leftswipegesture">"Gesztus beállítva. Tiltsa le a böngészőt a használatához"</string>
+    <string name="appInfo">"Alkalmazásinformáció"</string>
+    <string name="app_drawer">"Alkalmazásfiók"</string>
+    <string name="apply">"Elfogad"</string>
+    <string name="autohide_apps_summary">"Rejtse el az alkalmazást ha hozzáadja egy alkalmazásfiók mappában"</string>
+    <string name="autohide_apps_title">"Alkalmazások automatikus eltüntetése"</string>
+    <string name="backup_delete">"Mentés törlése"</string>
+    <string name="backup_select">"Mentés kiválasztása"</string>
+    <string name="backup_title">"Írja be a mentés címét"</string>
+    <string name="backupsummary">"Az összes beállítás mentése"</string>
     <string name="backuptitle">"Biztonsági mentés"</string>
+    <string name="bookmark_move">"Mozgatás"</string>
+    <string name="bookmark_settings">"Könyvjelző beállítások"</string>
     <string name="bookmarks">"Könyvjelzők"</string>
+    <string name="bottompaddinglandsummary">"Ha szükséges eltávolít minden helyközt a navigációs sáv körül"</string>
+    <string name="bottompaddinglandtitle">"Alsó helyköz eltávolítása (Fektetett)"</string>
+    <string name="bottompaddingportsummary">"Ha szükséges eltávolít minden helyközt a navigációs sáv körül"</string>
+    <string name="bottompaddingporttitle">"Alsó helyköz eltávolítása (Álló)"</string>
+    <string name="browser">"Böngésző"</string>
+    <string name="browser_removed_dialog">"Ez az alkalmazás el lesz távolítva az áruházból írányelvek megsértése miatt. Kérjük kattintson az alábbi linkre, hogy a Lucid Böngésző legújabb verziójának letöltéséhez:"</string>
+    <string name="browsercompactmodesummary">"Lehetővé teszi kisebb készülékeken a böngésző jobb megjelenítését"</string>
+    <string name="browsercompactmodetitle">"Kompakt mód engedélyezése"</string>
+    <string name="browserfullscreensummary">Alsó helyköz eltávolítása a böngésző aljáról</string>
+    <string name="browserfullscreentitle">"Teljes képernyős böngésző"</string>
+    <string name="cat_title_actionbar">"Műveletsáv"</string>
+    <string name="cat_title_appearance">"Kinézet"</string>
+    <string name="cat_title_content">"Tartalom"</string>
+    <string name="cat_title_gestures">"Gesztusok"</string>
+    <string name="cat_title_icons">"Ikonok"</string>
+    <string name="cat_title_layout">"Elrendezés"</string>
+    <string name="cat_title_other">"Egyéb"</string>
+    <string name="cat_title_setup">"Beállítás"</string>
+    <string name="cat_title_tools">"Eszközök"</string>
+    <string name="choose_upload">"Válasszon ki egy fájlt a feltöltéshez"</string>
+    <string name="chooseshortcut">"Válasszon parancsikont"</string>
+    <string name="clearcachetitle">"Cache törlése"</string>
+    <string name="clearcookiestitle">"Cookie-k törlése"</string>
+    <string name="clearhistorytitle">"Előzmények törlése"</string>
+    <string name="clearonexitsummary">"Kilépéskor a böngésző törli az előzményeket, cache-t és a cookie-kat"</string>
+    <string name="clearonexittitle">"Kilépéskor törölje az előzményeket"</string>
     <string name="close">"Bezár"</string>
+    <string name="close_tabs_on_exit_summary">"Az összes fül bezárása a böngészőböl való kilépéskor"</string>
+    <string name="close_tabs_on_exit_title">"Fülek bezárása kilépéskor"</string>
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Engedélyezés"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"A(z) <ns1:g id="APP_NAME">%1$s</ns1:g> alkalmazás csak akkor működik, ha  engedélyezi a Google Play-szolgáltatásokat."</string>
     <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play-szolgáltatások engedélyezése"</string>
-    <string msgid="7118643132557593940" name="common_google_play_services_install_button">"A Google Play-szolgáltatások beszerzése"</string>
-    <string msgid="1666261992894286769" name="common_google_play_services_install_text_phone">"A(z) <ns1:g id="APP_NAME">%1$s</ns1:g> alkalmazás nem fut a Google Play-szolgáltatások nélkül, amelyek hiányoznak a telefonról."</string>
-    <string msgid="1701766622451829291" name="common_google_play_services_install_text_tablet">"A(z) <ns1:g id="APP_NAME">%1$s</ns1:g> alkalmazás nem fut a Google Play-szolgáltatások nélkül, amelyek hiányoznak a táblagépről."</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Telepítés"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"A(z) <ns1:g id="APP_NAME">%1$s</ns1:g> alkalmazás nem fut a Google Play-szolgáltatások nélkül, amelyek hiányoznak az eszközről."</string>
     <string msgid="7442193194585196676" name="common_google_play_services_install_title">"A Google Play-szolgáltatások beszerzése"</string>
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Google Play-szolgáltatások – hiba"</string>
-    <string msgid="9089562800660647919" name="common_google_play_services_unknown_issue">"A(z) <ns1:g id="APP_NAME">%1$s</ns1:g> alkalmazás problémába ütközött a Google Play szolgáltatásainak használata során. Ha a probléma továbbra is fennáll, vegye fel a kapcsolatot a fejlesztővel."</string>
-    <string msgid="1064791666906610763" name="common_google_play_services_unsupported_text">"A(z) <ns1:g id="APP_NAME">%1$s</ns1:g> használatához olyan Google Play-szolgáltatásokra van szükség, amelyeket eszköze nem támogat. Ha segítségre van szüksége, lépjen kapcsolatba a gyártóval."</string>
-    <string msgid="539866123733096737" name="common_google_play_services_unsupported_title">"Google Play-szolgáltatások"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"A(z) <ns1:g id="APP_NAME">%1$s</ns1:g> alkalmazás problémába ütközött a Google Play-szolgáltatások használata során. Próbálkozzon újra."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"A(z) <ns1:g id="APP_NAME">%1$s</ns1:g> alkalmazás nem fut a Google Play-szolgáltatások nélkül, amelyeket eszköze nem támogat."</string>
     <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Frissítés"</string>
     <string msgid="7773943415006962566" name="common_google_play_services_update_text">"A(z) <ns1:g id="APP_NAME">%1$s</ns1:g> alkalmazás csak akkor fog működni, ha frissíti a Google Play-szolgáltatásokat."</string>
     <string msgid="8706675115216073244" name="common_google_play_services_update_title">"A Google Play-szolgáltatások frissítése"</string>
     <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"A(z) <ns1:g id="APP_NAME">%1$s</ns1:g> alkalmazás nem fut a Google Play-szolgáltatások nélkül, amelyek frissítése folyamatban van."</string>
-    <string msgid="2270671469198016014" name="common_google_play_services_updating_title">"A Google Play-szolgáltatások frissülnek"</string>
     <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"A Google Play-szolgáltatások új verziójára van szükség. A szolgáltatás hamarosan frissíti önmagát."</string>
     <string msgid="5201977337835724196" name="common_open_on_phone">"Megnyitás a telefonon"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Bejelentkezés"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Bejelentkezés Google-fiókkal"</string>
-    <string name="dimwebpagesummary">"Tompítja a háttérben a böngésző oldalon"</string>
-    <string name="dimwebpagetitle">"Dim Böngésző oldal"</string>
-    <string name="drawerlabelcolorsummary">"Állítsa be a szöveg színét icon címkék"</string>
+    <string name="community">"Látogassa meg aközösséget a Google+-on"</string>
+    <string name="complete">"Kész"</string>
+    <string name="confirm_exit_text">"Biztosan ki akar lépni?"</string>
+    <string name="confirmunlock">"Biztosan fel akarja oldani az asztalt?"</string>
+    <string name="contact">"Lépjen velünk kapcsolatb"</string>
+    <string name="copyurl">"Link másolása"</string>
+    <string msgid="6155048007205742679" name="create_calendar_message">"Engedélyezi a hirdetés számára naptáresemény létrehozását?"</string>
+    <string msgid="7967007864778154790" name="create_calendar_title">"Naptáresemény létrehozása"</string>
+    <string msgid="4722375419392727435" name="debug_menu_ad_information">"Hirdetési információ"</string>
+    <string msgid="1605938743055376690" name="debug_menu_creative_preview">"Kreatív előnézete"</string>
+    <string msgid="2039274714455389140" name="debug_menu_title">"Hibaelhárítási mód kiválasztása"</string>
+    <string msgid="1173358804935285568" name="debug_menu_troubleshooting">"Problémamegoldás"</string>
+    <string msgid="6099173376375995052" name="decline">"Elutasítás"</string>
+    <string name="def">"Alapértelmezett"</string>
+    <string name="defaulthomepagesummary">"Állítsa be az alapértelmezett kezdőoldalt"</string>
+    <string name="defaulthomepagetitle">"Alapértelmezett kezdőoldal"</string>
+    <string name="delete_bookmarks">"Az összes könyvjelző törlése"</string>
+    <string name="desktopviewsummary">"Weboladalak asztali módban való megjelenítése"</string>
+    <string name="desktopviewtitle">"Asztali nézet bekapcsolása"</string>
+    <string name="dimwebpagesummary">"Homályosítja hátteret a böngésző oldalon"</string>
+    <string name="dimwebpagetitle">"Böngésző oldal homályosítása"</string>
+    <string name="disable_ads">"Reklámok kikapcsolása"</string>
+    <string name="disable_new_app_glow_summary">"Kapcsolja ki az új alkalmazások kiemelését az alkalmazásfiókban"</string>
+    <string name="disable_new_app_glow_title">"Kapcsolja ki az új alkalmazások kiemelését"</string>
+    <string name="disable_suggestions_title">"Keresési javaslatok kikapcsolása"</string>
+    <string name="disablebrowsersummary">"Válassza ezt a böngésző letiltásához"</string>
+    <string name="disablebrowsertitle">"Letiltás"</string>
+    <string name="disabledrawersummary">"Válassza ki ha ki szeretné kapcsolni az alkalmazásfiókot"</string>
+    <string name="disablesidebarsummary">"Válasza ki ha ki szeretné kapcsolni a kedvencek oldalsávot"</string>
+    <string name="download_started">"Letöltés megkezdése"</string>
+    <string name="drawer_style_summary">"Válassza ki az alkalmazásfiók stílusát"</string>
+    <string name="drawer_style_title">"Alkalmazásfiók stílusa"</string>
+    <string name="drawerlabelcolorsummary">"Állítsa be a alkalmazásikonok címkéjének a színét"</string>
     <string name="drawerlabelcolortitle">"Címke színe"</string>
     <string name="drawersettingstitle">"App fiók beállítások"</string>
-    <string name="fullscreensummary">"Megjelenítése vagy elrejtése a Status Bar"</string>
+    <string name="edit">"Szerkesztés"</string>
+    <string name="edit_bookmark">"Könyvjelzők szerkesztése"</string>
+    <string name="edit_bookmark_folder">"Könyvjelző mappa szerkesztése"</string>
+    <string name="enablecookies">"Cookie-k engedélyezése"</string>
+    <string name="enablefloatoptionsummary">"Csak a lebegő alkalmazásokat támogató romokon (Hosszú érintés az alkalmazáson a beállításokért)"</string>
+    <string name="enablefloatoptiontitle">"Lebegő alkalmazások engedélyezése"</string>
+    <string name="enableimages">"Képek betöltése"</string>
+    <string name="enablejavascript">"Javascript engedélyezése"</string>
+    <string name="exit">"Kilépés"</string>
+    <string name="exit_confirmation_summary">"Jelölje ki a kilépés megerősítéséhez"</string>
+    <string name="exit_confirmation_title">"Kilépés megerősítése"</string>
+    <string name="export_bookmarks">"Könyvjelzők exportálása"</string>
+    <string name="export_bookmarks_summary">"Könyvjelzők exportálása fájlba"</string>
+    <string name="failed">"Sikertelen"</string>
+    <string name="fav_gesture_down_summary">"Válasszon egy műveletet, hogy mi történjen az oldalsáv lefelé húzásakor"</string>
+    <string name="fav_gesture_up_summary">"Válasszon egy műveletet, hogy mi történjen az oldalsáv felfelé húzásakor"</string>
+    <string name="find_in_page">"Keresés az oldalon"</string>
+    <string name="first_letter_search_summary">"Keresés címek alapján"</string>
+    <string name="first_letter_search_title">"Első szó keresése"</string>
+    <string name="floatapp">"Lebegő alkalmazás"</string>
+    <string name="folder_apps_size_summary">"Állítsa be a mappában lévő alkalmazások méretét"</string>
+    <string name="folder_apps_size_title">"A mappa alkalmazásainak mérete"</string>
+    <string name="folder_color_summary">"Állítsa be a mappa belső színét"</string>
+    <string name="folder_color_title">"Mappa színe"</string>
+    <string name="folder_columns_summary">"Állítsa be a mappa oszlopainak számát"</string>
+    <string name="folder_label_blank">"Névtelen mappa"</string>
+    <string name="folder_mode_adaptive">"Alkalmazkodó mappa mérete"</string>
+    <string name="folder_mode_centered">"Középre igazított mappa"</string>
+    <string name="folder_mode_fullscreen">"Teljesképernyős mapp"</string>
+    <string name="folder_mode_summary">"Válassza ki, hogy a mappák hogyan jelenjenek meg"</string>
+    <string name="folder_mode_title">"Mappa megjelenítési mód"</string>
+    <string name="folder_settings">"Mappa beállítások"</string>
+    <string name="folder_style_summary">"Válassza ki a mappa ikon stílusát"</string>
+    <string name="folder_style_title">"Mappa stílus"</string>
+    <string name="folderhidelabelsummary">"Mappa címke megjelenítése vagy elrejtése"</string>
+    <string name="folderhidelabeltitle">2Mappa címke"</string>
+    <string name="folderlabelcolorsummary">"Állítsa be a mappán belüli címke színét"</string>
+    <string name="folderlabelcolortitle">"Mappa címke színe"</string>
+    <string name="font_size_summary">"Állítsa be a betűtípus méretét"</string>
+    <string name="font_size_title">"Betűtípus mérete"</string>
+    <string name="fullscreensummary">"Értesítés sáv megjelenítése vagy elrejtése"</string>
     <string name="fullscreentitle">"Teljes képernyő"</string>
-    <string name="gridsnapsummary">"Engedélyezése vagy tiltása raszter"</string>
-    <string name="gridsnaptitle">"App Rács Snap"</string>
+    <string name="gallery">"Galéria"</string>
+    <string name="gesture_alert">"Gesztus be volt állítva, de a képernyők átrendeződtek"</string>
+    <string name="gesturedoubletapsummary">"Válassza ki, hogy mi történjen ha duplán megérinti a kijelzőt"</string>
+    <string name="gesturedoubletaptitle">"Dupla érintés"</string>
+    <string name="gesturedownsummary">"Válassza ki, hogy mi történjen ha lefelé húzza az ujját a kezdőoldal tetejéről"</string>
+    <string name="gesturedowntitle">"Húzás le"</string>
+    <string name="gestureleftsummary">"Válassza ki, hogy mi történjen ha balra húzza az ujját"</string>
+    <string name="gesturelefttitle">"Húzás balra"</string>
+    <string name="gesturerightsummary">"Válassza ki, hogy mi történjen ha jobbra húzza az ujját"</string>
+    <string name="gesturerighttitle">"Húzás jobbra"</string>
+    <string name="gestureupsummary">"Válassza ki, hogy mi történjen ha felfelé húzza az ujját a kezdőoldal aljáról"</string>
+    <string name="gestureuptitle">"Húzás fel"</string>
+    <string name="grid">"Rács"</string>
+    <string name="gridsnapsummary">"Alkalmazás rács engedélyezése vagy tiltása"</string>
+    <string name="gridsnaptitle">"Alkalmazás rács"</string>
+    <string name="hide_actionbar_summary">"Rejtse el a műveletsávot lefelé görgetéskor"</string>
+    <string name="hide_actionbar_title">"Műveletsáv elrejtése"</string>
+    <string name="hide_app">"Alkalmazás elrejtése"</string>
+    <string name="hide_from_drawer">"Elrejtés az alkalmazásfiókban"</string>
+    <string name="hidesearchbarsummary">"Keresősáv elrejtése a kezdőlapon"</string>
+    <string name="hidesearchbartitle">"Keresősáv elrejtése"</string>
+    <string name="history">"Előzmények"</string>
+    <string name="holoDarkSummary">"Jelölje ki a sötét téma használatához a beállításokban és a könyvjelzőkben.(Újraindítás szükséges a téma aktiválásához)"</string>
+    <string name="holoDarkTitle">"Sötét téma használata"</string>
     <string name="home">"Kezdőlap"</string>
-    <string name="home_settings">"Lucid Launcher beállítások"</string>
+    <string name="home_folder">"Mappa hozzáadása"</string>
+    <string name="home_screen">"Kezdőlap"</string>
+    <string name="home_settings">"Kezdőlap beállítások"</string>
     <string name="home_wallpaper">"Háttérkép megváltoztatása"</string>
-    <string name="home_widgets">"Add Widget"</string>
-    <string name="homeiconsizemessage">"Válassza ki az Ikon méret:"</string>
-    <string name="homeiconsizesummary">"Állítsa be a méret a ikonok a honlapon"</string>
+    <string name="home_widgets">"Kezdőlap widgetek"</string>
+    <string name="homeiconsizemessage">"Válassza ki az ikonok méretét:"</string>
+    <string name="homeiconsizesummary">"Állítsa be a kezdőlap ikonjainak méretét"</string>
     <string name="homeiconsizetitle">"Ikon méret"</string>
-    <string name="homeindicatorsummary">"Engedélyezése vagy letiltása oldal indikátorok"</string>
-    <string name="homeindicatortitle">"Oldal indikátorok"</string>
-    <string name="homelandcolsmessage">"Válassza ki az oszlopok számát a tájkép módban:"</string>
-    <string name="homelandcolssummary">"Állítsa be az oszlopok száma a tájkép módban"</string>
-    <string name="homelandcolstitle">"Oszlopok száma (Landscape)"</string>
-    <string name="homelandrowsmessage">"Válassza ki a sorok számát a tájkép módban:"</string>
-    <string name="homelandrowssummary">"Állítsa be a sorok számát a tájkép módban"</string>
-    <string name="homelandrowstitle">"Sorok száma (Landscape)"</string>
-    <string name="homenumpagesmessage">"Válassza ki a Számos hazai oldalak:"</string>
-    <string name="homenumpagessummary">"Állítsa be a honlapok"</string>
-    <string name="homenumpagestitle">"Száma honlapjai"</string>
-    <string name="homeportcolsmessage">"Válassza ki az oszlopok számát portré módban:"</string>
-    <string name="homeportcolssummary">"Állítsa be az oszlopok száma portré módban"</string>
+    <string name="homeindicatorsummary">"Oldaljelzők engedélyezése vagy letiltása"</string>
+    <string name="homeindicatortitle">"Oldaljelzők"</string>
+    <string name="homelandcolsmessage">"Válassza ki az oszlopok számát a fektetett módban:"</string>
+    <string name="homelandcolssummary">"Állítsa be az oszlopok számát fektetett módban"</string>
+    <string name="homelandcolstitle">"Oszlopok száma (Fektetett)"</string>
+    <string name="homelandrowsmessage">"Válassza ki a sorok számát a fektetett módban:"</string>
+    <string name="homelandrowssummary">"Állítsa be a sorok számát a fektetett módban"</string>
+    <string name="homelandrowstitle">"Sorok száma (Fektetett)"</string>
+    <string name="homenumpagesmessage">"Válassza ki az oldalak számát:"</string>
+    <string name="homenumpagessummary">"Állítsa be az oldalak számát"</string>
+    <string name="homenumpagestitle">"Kezdőlap oldalainak száma"</string>
+    <string name="homeportcolsmessage">"Válassza ki az oszlopok számát álló módban:"</string>
+    <string name="homeportcolssummary">"Állítsa be az oszlopok száma álló módban"</string>
     <string name="homeportcolstitle">"Oszlopok száma (Álló)"</string>
-    <string name="homeportrowsmessage">"Válassza ki a sorok száma portré módban:"</string>
-    <string name="homeportrowssummary">"Állítsa be a sorok számát portré módban"</string>
+    <string name="homeportrowsmessage">"Válassza ki a sorok száma álló módban:"</string>
+    <string name="homeportrowssummary">"Állítsa be a sorok számát álló módban"</string>
     <string name="homeportrowstitle">"Sorok száma (Álló)"</string>
-    <string name="homesettingstitle">"Honlap beállítások"</string>
-    <string name="iconpaddingmessage">"Válassza ki az ikont Kárpitozás:"</string>
-    <string name="iconpaddingsummary">"Állítsa be a padding körül minden ikon"</string>
-    <string name="iconpaddingtitle">"Ikon Kárpitozás"</string>
-    <string name="iconsizemessage">"Válassza ki az Ikon méret:"</string>
-    <string name="iconsizesummary">"Állítsa be az ikon méretét a app fiók"</string>
+    <string name="homesettingstitle">"Kezdőlap beállítások"</string>
+    <string name="horizontalscrollsummary">"Háttérkép vízszintes görgetésének be- vagy kikapcsolása"</string>
+    <string name="horizontalscrolltitle">"Háttérkép vízszintes görgetése"</string>
+    <string name="iconpaddingmessage">"Válassza ki az ikonok közötti távolságot:"</string>
+    <string name="iconpaddingsummary">"Állítsa be az ikonok közötti távolságot"</string>
+    <string name="iconpaddingtitle">"Ikonok közötti távolság"</string>
+    <string name="iconsizemessage">"Válassza ki az Ikon méretét:"</string>
+    <string name="iconsizesummary">"Állítsa be az ikon méretét az alkalmazásfiókban"</string>
     <string name="iconsizetitle">"Ikon méret"</string>
-    <string name="launcher_settings">"Launcher beállítások"</string>
+    <string name="import_bookmarks">"Könyvjelzők importálása"</string>
+    <string name="import_bookmarks_external">"Könyvjelzők importálása a külső böngészőkből"</string>
+    <string name="import_bookmarks_summary">"Könyvjelzők importálása fájlba"</string>
+    <string name="launcher_settings">"Indító beállítások"</string>
+    <string name="lb_pro_description">"Frissíts a Lucid Browser támogatói verzióra, hogy támogasd a projektet"</string>
+    <string name="libraries">"Könyvtárak"</string>
+    <string name="licence_apache20_github">"Apache 2.0.\Érintsd meg a projekt GitHub-on történő megtekintéséhez"</string>
+    <string name="licence_beer_github">"THE BEER-WARE LICENSE" (Rev42).\Érintsd meg a projekt GitHub-on történő megtekintéséhez"</string>
+    <string name="licensing_failed">"Licensz ellenőrzés sikertelen.Kérjük győződjön meg róla, hogy megvásárolta-e az alkalmazást."</string>
+    <string name="list">"Lista"</string>
     <string name="lock_desktop">"Asztal zárolása"</string>
-    <string name="lock_page">"Zár oldal hely"</string>
+    <string name="lock_page">"Oldal zárolása"</string>
+    <string name="lock_screen_permission_request">"Eszközadminisztrátor engedélyezése, hogy a Lucid Launcher hozzáférjen a zárképernyőhöz.A Lucid Launcher eltávolításához ki kell kapcsolnia az eszközadminisztrátori engedélyt."</string>
+    <string name="lucidactionbrowser">"Böngésző"</string>
+    <string name="lucidactiondrawer">"Alkalmazásfiók"</string>
+    <string name="lucidactionfavorites">"Kedvencek oldalsáv"</string>
+    <string name="lucidactionlockunlock">"Asztal leázárása/Feloldása"</string>
+    <string name="lucidactionrecents">"Legutóbbi alkalmazások"</string>
+    <string name="lucidactionstitle">"Lucid Launcher műveletek"</string>
     <string name="mainsettingstitle">"Fő beállítások"</string>
+    <string name="manage_screens">"Képernyők kezelése"</string>
     <string name="menu_settings">"Beállítások"</string>
+    <string name="more">"Egyéb"</string>
+    <string name="more_apps">"További alkalmazások"</string>
+    <string name="move_here">"Mozgatás ide"</string>
+    <string name="move_to_home">"Mozgatás az asztalra"</string>
+    <string name="no">"Nem"</string>
+    <string name="no_bookmarks">"Könyvjelző nem található"</string>
+    <string name="no_icons">"A téma nem tartalmaz ikonokat"</string>
+    <string name="nobackup">"Nem található mentés"</string>
+    <string name="nobookmarks">Nincs könyvjelző beállítva</string>
     <string name="numcolumnsmessage">"Válassza ki az oszlopok számát:"</string>
-    <string name="numcolumnssummary">"Állítsa be az oszlopok számát az app fiók"</string>
+    <string name="numcolumnssummary">"Állítsa be az alkalmazásfiók oszlopainak számát"</string>
     <string name="numcolumnstitle">"Oszlopok száma"</string>
     <string name="openinnewtab">"Megnyitás új lapon"</string>
-    <string name="orientation_auto">Automatikus forgatás</string>
-    <string name="orientation_landscape">Fektetett</string>
-    <string name="orientation_portrait">Portré</string>
-    <string name="orientationsummary">"Állítsa be a tájékozódás a Launcher"</string>
-    <string name="orientationtitle">"Launcher Tájolás"</string>
-    <string name="pagetransformationsummary">"Állítsa be az oldal scroll animáció"</string>
-    <string name="pagetransformationtitle">"Scroll Animáció"</string>
-    <string name="pagetransparencysummary">"Állítsa be az átláthatóságot a App és a böngésző oldalon"</string>
+    <string name="orientation_auto">"Automatikus forgatás"</string>
+    <string name="orientation_landscape">"Fektetett"</string>
+    <string name="orientation_portrait">"Álló"</string>
+    <string name="orientationsummary">"Állítsa be az indító tájolását"</string>
+    <string name="orientationtitle">"Tájolás"</string>
+    <string name="package_info">"Csomaginformáció"</string>
+    <string name="pagetransformationsummary">"Állítsa be az oldal görgetési animációját"</string>
+    <string name="pagetransformationtitle">"Görgetés animáció"</string>
+    <string name="pagetransparencysummary">"Állítsa be az átláthatóságot az alkalmazás és a böngésző oldalon"</string>
     <string name="pagetransparencytitle">"Oldal Átláthatóság"</string>
-    <string name="paste">Beillesztés</string>
+    <string name="paste">"Beillesztés"</string>
+    <string name="persistentsummary">"Memóriában tartás. Egy értesítést jelenít meg az értesítési sávon"</string>
+    <string name="persistenttitle">"Rendszer alapértelmezett"</string>
+    <string name="pick_icon">"Ikon választása"</string>
+    <string name="please_wait">"Kérjük várjon\.\.\."</string>
+    <string name="processing">"Ikon téma feldolgozása"</string>
+    <string name="prodescription">"Támogassa a projektet azzal, hogy megvásárolja a Lucid Launcher Pro-t"</string>
+    <string name="rate">"Értékelés"</string>
     <string name="refresh">"Frissítés"</string>
-    <string name="removeFromFavorites">"Eltávolítás a Kedvencek"</string>
-    <string name="resetsummary">"Állítsa vissza az összes beállítás az alapértelmezett érték"</string>
-    <string name="resettitle">"Beállítások visszaállítása az alapértelmezett"</string>
-    <string name="restoresummary">"Állítsa vissza a biztonsági mentés"</string>
-    <string name="restoretitle">"Visszaállításd"</string>
+    <string name="remove">"Eltávolítás"</string>
+    <string name="removeFromFavorites">"Eltávolítás a Kedvencek közül"</string>
+    <string name="remove_bookmark_folder_confirm">"Biztosan elszeretné távolítani a mappát? A tartalma törölve lesz." </string>
+    <string name="remove_browsing_traces">"Böngészési előzmények eltávolítása"</string>
+    <string name="remove_from_folder">"Mappa eltávolítása"</string>
+    <string name="resetsummary">"Állítsa vissza az összes beállítást az alapértelmezett értékre"</string>
+    <string name="resettitle">"Beállítások visszaállítása az alapértelmezettre"</string>
+    <string name="restart_launcher">"Indító újraindítása"</string>
+    <string name="restoresummary">"Biztonsági mentés visszaállítása"</string>
+    <string name="restoretitle">"Visszaállítás"</string>
+    <string name="savedimage">"Mentett képek"</string>
     <string name="saveimage">"Kép mentése"</string>
     <string name="search">"Keresés"</string>
-    <string name="searchtextmessage">"Írja be a Custom Search Szöveg:"</string>
-    <string name="searchtextsummary">"Állítsa be a keresendő szöveget a ActionBar"</string>
-    <string name="searchtexttitle">"Egyedi a keresett szöveget"</string>
-    <string name="set_home">"Beállítás Honlap"</string>
-    <string name="showlabelssummary">"Megjelenítése vagy elrejtése a címkéket az egyes icon"</string>
-    <string name="showlabelstitle">"App Ikon címkék"</string>
-    <string name="sidebar_dark">Sötét</string>
-    <string name="sidebar_light">Könnyű</string>
-    <string name="sidebariconpaddingmessage">"Válassza ki a Sidebar Ikon Kárpitozás:"</string>
-    <string name="sidebariconpaddingsummary">"Állítsa be a padding körül Sidebar Icons"</string>
-    <string name="sidebariconpaddingtitle">"Sidebar Ikon Kárpitozás"</string>
-    <string name="sidebariconsizemessage">"Válassza ki az Ikon méret:"</string>
-    <string name="sidebariconsizesummary">"Állítsa be az ikon méretét a Sidebar"</string>
+    <string name="search_engine">"Keresőmotor"</string>
+    <string name="search_hidden_apps_summary">"Rejtett alkalmazások megjelenítése kereséskor"</string>
+    <string name="search_hidden_apps_title">"Rejtett alkalmazás keresése"</string>
+    <string name="search_icon_action_summary">"Válassza ki, hogy mi történjen a keresés ikon megnyomásakor"</string>
+    <string name="search_icon_action_title">"Ikon művelet keresése"</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Keresés"</string>
+    <string name="searchcontactssummary">"Névjegyek keresésének engedélyezése vagy tiltása"</string>
+    <string name="searchcontactstitle">"Névjegyek keresése"</string>
+    <string name="searchpackagessummary">"Csomagok keresésének be- vagy kikapcsolása pl. com.google.calendar"</string>
+    <string name="searchpackagestitle">"Csomagok keresése"</string>
+    <string name="searchtextmessage">"Írja be a szöveget az egyéni keresőbe:"</string>
+    <string name="searchtextsummary">"Írja be a keresendő szöveget az műveltsávba"</string>
+    <string name="searchtexttitle">"Egyedi szöveg keresése"</string>
+    <string name="select_apps">"Válassza ki mely alkalmazásokat szeretné hozzáadni"</string>
+    <string name="select_screen">"Válasszon új képernyőt"</string>
+    <string name="send_mail">"Email küldése a következővel:"</string>
+    <string name="send_mail_error">"Nincs email kliens telepítve"</string>
+    <string name="set_home">"Kezdőlap beállítása"</string>
+    <string name="shortcutlabelssummary">"Parancsikonok címkéinek megjelenítése vagy elrejtése"</string>
+    <string name="shortcutlabelstitle">"Parancsikon címkék"</string>
+    <string name="show_app">"Alkalmazás mutatása"</string>
+    <string name="show_search_icon_summary">"Mutassa a keresősávban az ikonokat is"</string>
+    <string name="show_search_icon_title">"Ikon keresése"</string>
+    <string name="showbackgroundonurlbarsummary">"Háttér hozzáadása az URL sávhoz"</string>
+    <string name="showbackgroundonurlbartitle">"URL sáv háttér mutatása"</string>
+    <string name="showlabelssummary">"Alkalmazások címkéinek megjelenítése"</string>
+    <string name="showlabelstitle">"Alkalmazásikon címkék"</string>
+    <string name="sidebar_custom">"Modosított"</string>
+    <string name="sidebar_dark">"Sötét"</string>
+    <string name="sidebar_light">"Világos"</string>
+    <string name="sidebar_switched_summary">"Válassza ki melyik oldalon legyen az oldalsáv"</string>
+    <string name="sidebar_switched_title">"Oldalsáv helyzetének váltása"</string>
+    <string name="sidebarcolorsummary">"Állítsa be az oldalsáv színét"</string>
+    <string name="sidebarcolortitle">"Oldalsáv színe"</string>
+    <string name="sidebariconpaddingmessage">"Válassza ki az oldalsáv ikonok közti távolságát:"</string>
+    <string name="sidebariconpaddingsummary">"Állítsa be az Oldalsáv ikonjai közti távolságot"</string>
+    <string name="sidebariconpaddingtitle">"Oldalsáv ikonok közti távolsága"</string>
+    <string name="sidebariconsizemessage">"Válassza ki az ikon méretét:"</string>
+    <string name="sidebariconsizesummary">"Állítsa be az oldalsáv ikonméretét"</string>
     <string name="sidebariconsizetitle">"Sidebar Ikonméret"</string>
     <string name="sidebarsettingstitle">"Sidebar beállítások"</string>
+    <string name="sidebartextcolorsummary">"Állítsa be az oldalsáv szövegének a színét"</string>
+    <string name="sidebartextcolortitle">"Oldalsáv szövegszín"</string>
     <string name="sidebarthememessage">"Válasszon ki egy témát:"</string>
-    <string name="sidebarthemesummary">"Állítsa be a Sidebar téma"</string>
-    <string name="sidebarthemetitle">"Sidebar téma"</string>
-    <string name="stop">"Időzítő megállítása"</string>
+    <string name="sidebarthemesummary">"Állítsa be a oldalsáv témáját"</string>
+    <string name="sidebarthemetitle">"Oldalsáv téma"</string>
+    <string name="sort_az">"Betűrend szerint (A-Z)"</string>
+    <string name="sort_new">"Telepítés ideje szerint (Újak elől)"</string>
+    <string name="sort_old">"Telepítés ideje szerint (Régiek elől)"</string>
+    <string name="sort_summary">"Válassza ki miként szeretné rendezni az alkalmazásokat"</string>
+    <string name="sort_title">"Rendezés módja"</string>
+    <string name="sort_za">"Betűrend szerint (Z-A)"</string>
+    <string name="sslExpiredTitle">"SSL tanúsítvány lejárt"</string>
+    <string name="sslIdMismatchTitle">"SSL tanúsítvány nem érvényes ezen a webhelyen"</string>
+    <string name="sslNotYetValidTitle">"SSL tanúsítvány nem érvényes"</string>
+    <string name="sslProceedQuestion">"Biztosan elszeretné fogadni ezt a tanúsítványt?"</string>
+    <string name="sslUntrustedTitle">"SSL tanúsítvány nem megbízható"</string>
+    <string name="sslWebsiteWarning">"Ez a weboldal lehet, hogy nem biztonságos mert a tanúsítvány nem ellenőrizhető.Kérjük körültekintően járjon el."</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="step_basic_actions_summary">"Érintse meg a keresés ikont a keresés megkezdéséhez\Érintse meg a a 3 pontos ikont további műveletekért."</string>
+    <string name="step_basic_actions_title">"Alapműveletek"</string>
+    <string name="step_browser_sidebar_summary">"Hozzáférés a böngésző oldalsávhoz. Húzza a el a képernyő széléről az oldalsáv eléréséhez."</string>
+    <string name="step_browser_sidebar_title">"Böngésző oldalsáv"</string>
+    <string name="step_browser_summary">"Ez itt a böngésző. Kikapcsolhatja vagy átrendezheti itt: Képernyők kezelése"</string>
+    <string name="step_browser_title">"Web böngésző"</string>
+    <string name="step_drawer_app_long_press_summary">"Érintse meg hosszan a további beállításokhoz például: hozzáadás a kezdőlaphoz vagy a kedvencekhez."</string>
+    <string name="step_drawer_app_long_press_title">"További beállítások"</string>
+    <string name="step_drawer_summary">"Ez az alkalmazásfiók. Kikapcsolhatja vagy átrendezheti itt: Képernyők kezelése"</string>
+    <string name="step_drawer_title">"Alkalmazásfiók"</string>
+    <string name="step_favorite_action_summary">"Érintse meg a 3 soros ikont vagy húzza el a képernyő széléről, hogy hozzáférjen a kedvenc alkalmazásokhoz."</string>
+    <string name="step_favorite_title">"Kedvenc alkalmazások"</string>
+    <string name="step_favorites_summary">"Az összes kedvenc alkalmazása itt található."All your favorited apps will show here. Hozzáadhat kedvenceket az alkalmazásfiókból."</string>
+    <string name="step_orientation_summary">"A kezdőlap elrendezése különbözik a különböző tájolásokon.Az alkalmazásokat különbözően elhelyezheti a különböző tájolásokon."</string>
+    <string name="step_orientation_title">"Indító tájolás"</string>
+    <string name="step_welcome_summary">"Ez az ön kezdőlapja. Itt helyezhet el alkalmazásokat, widgeteket és egyebeket.Húzza függőlegesen a képernyők váltásához és vízszintesen az oldalak váltásához."</string>
+    <string name="step_welcome_title">Kezdőlap</string>
+    <string name="stop">"Megállítás"</string>
+    <string msgid="8020323581538738027" name="store_picture_message">"Engedélyezi a hirdetés számára a kép tárolását a Képgalériában?"</string>
+    <string msgid="4180630057627064606" name="store_picture_title">"Kép mentése"</string>
     <string name="system_settings">"Rendszerbeállítások"</string>
-    <string name="trans_coverflow">Coverflow</string>
-    <string name="trans_cubezoom">Cube Zoom</string>
-    <string name="trans_doorclose">Ajtó bezárása</string>
-    <string name="trans_flipin">Flip</string>
-    <string name="trans_flyin">Berepülés</string>
-    <string name="trans_none">Nincs</string>
-    <string name="trans_pagestack">Oldal Stack</string>
-    <string name="trans_spinin">Spin</string>
-    <string name="trans_stackin">Stack</string>
-    <string name="trans_tiltin">Döntés a</string>
-    <string name="trans_zoomout">Zoom-Out</string>
-    <string name="transparentnavsummary">"Engedélyezése vagy letiltása átlátszó navigációs sáv"</string>
+    <string name="toggle_desktop_mode">"Váltás asztali nézetre"</string>
+    <string name="trans_coverflow">"Coverflow"</string>
+    <string name="trans_cubezoom">"Kocka"</string>
+    <string name="trans_doorclose">"Ajtózárás"</string>
+    <string name="trans_flipin">"Feldob"</string>
+    <string name="trans_flyin">"Berepülés"</string>
+    <string name="trans_none">"Nincs"</string>
+    <string name="trans_pagestack">"Oldalhalmaz"</string>
+    <string name="trans_spinin">"Forgás"</string>
+    <string name="trans_stackin">"Halmaz"</string>
+    <string name="trans_tiltin">"Döntés"</string>
+    <string name="trans_zoomout">"Kicsinyítés"</string>
+    <string name="transparentnavsummary">"Átlátszó navigációs sáv engedélyezése vagy letiltása"</string>
     <string name="transparentnavtitle">"Átlátszó navigációs sáv"</string>
-    <string name="transparentstatussummary">"Engedélyezése vagy letiltása átlátszó Status Bar"</string>
-    <string name="transparentstatustitle">"Átlátszó Status Bar"</string>
+    <string name="transparentstatussummary">"Átlátszó értesítés sáv engedélyezése vagy letiltása"</string>
+    <string name="transparentstatustitle">"Átlátszó értesítés sáv"</string>
+    <string name="tutorial">"Tutorial indítása"</string>
     <string name="uninstall">"Eltávolítás"</string>
     <string name="unlock_desktop">"Asztal feloldása"</string>
-    <string name="unlock_page">"Feloldása Oldal"</string>
+    <string name="unlock_page">"Oldal feloldása"</string>
+    <string name="unread_count_summary">"Megjeleníti az olvasatlan üzenetek számát az alkalmazásokon.Kevés alkalmazással működik jelen pillanatban." </string>
+    <string name="unread_count_title">"Olvasatlan üzenetek száma (Béta)"</string>
+    <string name="upgrade">"Frissíts a Lucid Launcher Pro-ra további beállításokért"</string>
+    <string name="urlbarcolorsummary">"Állítsa be az URL sáv színét"</string>
+    <string name="urlbarcolortitle">"URL sáv színe"</string>
+    <string name="urlbardefault">"Keresés"</string>
+    <string name="version">"Verzió"</string>
+    <string name="verticalscrollsummary">"Háttérkép függőleges görgetésének be- vagy kikapcsolása"</string>
+    <string name="verticalscrolltitle">"Háttérkép függőleges görgetése"</string>
     <string name="verticalspacingmessage">"Válassza ki a függőleges távolság:"</string>
-    <string name="verticalspacingsummary">"Állítsa függőleges távolság az app fiókban"</string>
-    <string name="verticalspacingtitle">"Függőleges távolság"</string>
-    <string name="wallpaper">"Háttérkép megváltoztatása"</string>
-    <string name="wallpaper_instructions">"Válassza ki a cselekvés"</string>
+    <string name="verticalspacingsummary">"Állítsa be a függőleges távolságot az alkalmazásfiókban</string>
+    <string name="verticalspacingtitle">"Függőleges távolság az ikonok között"</string>
+    <string name="wallpaper">"Háttérkép"</string>
+    <string name="wallpaper_instructions">"Háttérkép instrukciók"</string>
+    <string name="wallpaper_offset">"Háttérkép helyének beállítása"</string>
+    <string name="wallpaper_offset_summary">"Mozgassa úgy a háttérképet ahogy önnek tetszik"</string>
+    <string name="wallpaper_offset_title">"Háttérkép beállítása"</string>
+    <string name="wallpaper_settings">"Háttérkép beállítások"</string>
     <string name="websettingstitle">"Böngésző beállítások"</string>
-    <string name="widgetgridsnapsummary">"Engedélyezése vagy tiltása raszter"</string>
-    <string name="widgetgridsnaptitle">"Widget Rács Snap"</string>
+    <string name="widgetgridsnapsummary">"Widget rács engedélyezése vagy tiltása"</string>
+    <string name="widgetgridsnaptitle">"Widget rács"</string>
+    <string name="widgetpaddingmessage">"Válassza ki a helyköz méretét:"</string>
+    <string name="widgetpaddingsummary">"Állítsa be a helyközt a widgetek körül"</string>
+    <string name="widgetpaddingtitle">"Widget helyköz"</string>
+    <string name="widgetsetupfail">"Widget beállítások megnyitása sikertelen"</string>
+    <string name="yes">"Igen"</string>
+    <string name="zoompercentsummary">"Állítsa be a háttérkép kicsinyítésének százalékát"</string>
+    <string name="zoompercenttitle">"Kicsinítés százaléka"</string>
 </resources>

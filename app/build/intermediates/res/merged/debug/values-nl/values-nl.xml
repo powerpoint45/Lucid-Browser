@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Navigeren naar startpositie"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
     <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Omhoog navigeren"</string>
     <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Meer opties"</string>
     <string msgid="4076576682505996667" name="abc_action_mode_done">"Gereed"</string>
     <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Alles weergeven"</string>
     <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Een app selecteren"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"UIT"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"AAN"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Zoeken…"</string>
     <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Zoekopdracht wissen"</string>
     <string msgid="2550479030709304392" name="abc_searchview_description_query">"Zoekopdracht"</string>
     <string msgid="8264924765203268293" name="abc_searchview_description_search">"Zoeken"</string>
@@ -13,7 +18,9 @@
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"Gesproken zoekopdracht"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Delen met"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Delen met %s"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Samenvouwen"</string>
     <string name="about">Over</string>
+    <string msgid="5835639618285370804" name="accept">"Accepteren"</string>
     <string name="action_lock_screen">Zet scherm uit</string>
     <string name="action_openapp">Open app</string>
     <string name="action_openapp_animationnormal">Normale app open animatie</string>
@@ -83,19 +90,16 @@
     <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Inschakelen"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> werkt niet, tenzij je Google Play-services inschakelt."</string>
     <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play-services inschakelen"</string>
-    <string msgid="7118643132557593940" name="common_google_play_services_install_button">"Google Play-services ophalen"</string>
-    <string msgid="1666261992894286769" name="common_google_play_services_install_text_phone">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan niet worden uitgevoerd zonder Google Play-services, die ontbreken op je telefoon."</string>
-    <string msgid="1701766622451829291" name="common_google_play_services_install_text_tablet">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan niet worden uitgevoerd zonder Google Play-services, die ontbreken op je tablet."</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Installeren"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan niet worden uitgevoerd zonder Google Play-services, die je nog niet op je apparaat hebt."</string>
     <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play-services ophalen"</string>
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Fout met Google Play-services"</string>
-    <string msgid="9089562800660647919" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> ondervindt problemen met Google Play-services. Als het probleem aanhoudt, neem je contact op met de ontwikkelaar voor ondersteuning."</string>
-    <string msgid="1064791666906610763" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> werkt met Google Play-services. Dit wordt niet ondersteund door je apparaat. Neem contact op met de fabrikant voor ondersteuning."</string>
-    <string msgid="539866123733096737" name="common_google_play_services_unsupported_title">"Google Play-services"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> ondervindt problemen met Google Play-services. Probeer het opnieuw."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan niet worden uitgevoerd zonder Google Play-services, die niet worden ondersteund op je apparaat."</string>
     <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Updaten"</string>
     <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan niet worden uitgevoerd, tenzij je Google Play-services updatet."</string>
     <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Google Play-services updaten"</string>
     <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan niet worden uitgevoerd zonder Google Play-services, die momenteel worden geüpdatet."</string>
-    <string msgid="2270671469198016014" name="common_google_play_services_updating_title">"Google Play-services worden geüpdatet"</string>
     <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Er is een nieuwe versie van Google Play-services vereist. De update wordt binnenkort automatisch uitgevoerd."</string>
     <string msgid="5201977337835724196" name="common_open_on_phone">"Openen op telefoon"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Inloggen"</string>
@@ -106,6 +110,13 @@
     <string name="confirmunlock">Weet je zeker dat je het bureaublad wilt ontgrendelen?</string>
     <string name="contact">Contact</string>
     <string name="copyurl">Link kopiëren</string>
+    <string msgid="6155048007205742679" name="create_calendar_message">"Advertentie toestaan om een agenda-afspraak te maken?"</string>
+    <string msgid="7967007864778154790" name="create_calendar_title">"Agenda-afspraak maken"</string>
+    <string msgid="4722375419392727435" name="debug_menu_ad_information">"Advertentiegegevens"</string>
+    <string msgid="1605938743055376690" name="debug_menu_creative_preview">"Voorbeeld van advertentiemateriaal"</string>
+    <string msgid="2039274714455389140" name="debug_menu_title">"Een foutopsporingsmodus selecteren"</string>
+    <string msgid="1173358804935285568" name="debug_menu_troubleshooting">"Problemen oplossen"</string>
+    <string msgid="6099173376375995052" name="decline">"Weigeren"</string>
     <string name="def">Standaard</string>
     <string name="defaulthomepagesummary">Stel de standaard homepagina in</string>
     <string name="defaulthomepagetitle">Standaard homepagina</string>
@@ -292,6 +303,7 @@
     <string name="search_hidden_apps_title">Doorzoek verborgen apps</string>
     <string name="search_icon_action_summary">Selecteer de actie wanneer op het zoek pictogram gedrukt wordt</string>
     <string name="search_icon_action_title">Zoek pictogram acties</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Zoeken"</string>
     <string name="searchcontactssummary">Activeer of deactiveer het doorzoeken van contacten</string>
     <string name="searchcontactstitle">Doorzoek contacten</string>
     <string name="searchpackagessummary">Activeer of deactiveer het doorzoeken van package namen zoals com.google.calendar</string>
@@ -354,6 +366,7 @@
     <string formatted="false" name="sslUntrustedMessage">De webpagina op\n\n%s\n\nheeft een zelfgesigneerd SSL certificaat.</string>
     <string name="sslUntrustedTitle">SSL Certificaat wordt niet vertrouwd</string>
     <string name="sslWebsiteWarning">De webpagina is waarschijnlijk onveilig en het certificaat kan niet worden geverifieerd. Pas alstublieft op.</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
     <string name="step_basic_actions_summary">Tik op het zoek pictogram om te starten met zoeken.\nTik op het pictogram met drie puntjes voor meer acties.</string>
     <string name="step_basic_actions_title">Basis acties</string>
     <string name="step_browser_sidebar_summary">Je kunt het browser menu openen door vanaf de rand van het scherm te vegen</string>
@@ -372,6 +385,8 @@
     <string name="step_welcome_summary">Dit is je homescherm. Hier kun je apps, widgets en meer plaatsen. Je kunt verticaal vegen om tussen homeschermen te wisselen en horizontaal voor andere pagina\'s.</string>
     <string name="step_welcome_title">Welkom bij Lucid Launcher</string>
     <string name="stop">Stop</string>
+    <string msgid="8020323581538738027" name="store_picture_message">"Advertentie toestaan om afbeelding op te slaan in fotogalerij?"</string>
+    <string msgid="4180630057627064606" name="store_picture_title">"Afbeelding opslaan"</string>
     <string name="system_settings">Systeem instellingen</string>
     <string name="toggle_desktop_mode">Toggle desktop modus</string>
     <string name="trans_coverflow">Kubus binnenkant</string>

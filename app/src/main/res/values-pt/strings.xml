@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--:::::::values-pt::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--:::::::This is the localization file for plain Portuguese:::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <resources>
 	<string name="trans_zoomout">Diminuir Zoom</string>
 	<string name="trans_pagestack">Pilha de Páginas</string>

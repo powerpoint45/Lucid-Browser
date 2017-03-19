@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
+</head>
+<style type="text/css">
+
+* {
+    margin:0;
+    padding:0;
+}
+
+.container-4{
+  white-space: nowrap;
+  display:flex;
+  position:realtive;
+  margin:5em auto;
+  width:70%;
+}
+
+.logo{
+  white-space: nowrap;
+  position:realtive;
+
+  width : 50%;
+  height: auto;/*to preserve the aspect ratio of the image*/
+}
+
+.container-4 input#search{
+  width: 100%;
+  height: 40px;
+  background: #f3f3f3;
+  border: none;
+  font-size: 12pt;
+  float: left;
+  color: gray;
+  padding-left: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding-right: 40px;
+}
+
+.container-4 input#search::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+
+    height: 20px;
+    width: 20px;
+    background-image: url("ic_cancel.png");
+	padding-right: 2px;
+    background-size: 18px;
+    background-repeat: no-repeat;Z
+}
+
+
+
+
+.container-4 button.icon{
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  border: none;
+  background: #AB47BC;
+  height: 40px;
+  width: 40px;
+  color: #4f5b66;
+  font-size: 10pt;
+
+  -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -ms-transition: all .55s ease;
+  -o-transition: all .55s ease;
+  transition: all .55s ease;
+}
+
+.container-4 button.icon, button.icon{
+  outline: none;
+  margin-left: -39px;
+}
+
+.container-4:hover button.icon:hover{
+  background: #E1BEE7;
+}
+
+</style>
+
+<center>
+	<img alt="Yahoo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yahoo_Logo.svg/800px-Yahoo_Logo.svg.png" style="padding-top:4em" class="logo">
+</center>
+
+<div class="box">
+	<FORM method=GET action="https://search.yahoo.com/search" class="container-4" onsubmit="this.submit(); setTimeout(this.reset();,1000) return false;" id="searchform">
+		<input type="search" id="search" name=p placeholder="Search" autocomplete="off"/>
+		<input type="hidden" id="add" name="" value=""/>
+		<button class="icon"><i class="fa fa-search"></i><img width=20px height=20px src="toolbar_find.png"/></button>
+	</FORM>
+</div>
+
+</html>
+
