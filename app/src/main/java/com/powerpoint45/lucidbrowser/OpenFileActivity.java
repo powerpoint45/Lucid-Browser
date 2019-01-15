@@ -43,8 +43,10 @@ public class OpenFileActivity extends AppCompatActivity {
 
         useDark = globalPref.getBoolean("holodark", false);
 
-        if (!useDark){
-            setTheme(R.style.NewAppThemeLight);
+        if (useDark){
+            setTheme(R.style.SettingsDark);
+        }else {
+            setTheme(R.style.SettingsLight);
         }
 
         super.onCreate(savedInstanceState);

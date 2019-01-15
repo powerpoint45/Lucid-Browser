@@ -55,9 +55,9 @@ public class BrowserImageAdapter extends BaseAdapter{
         	convertView = MainActivity.inflater.inflate(R.layout.browser_item, null);
         	
         	viewHolder = new ViewHolder();
-            viewHolder.tabStatus = (TextView)convertView.findViewById(R.id.tab_text);
-            viewHolder.tabIcon = (ImageView)convertView.findViewById(R.id.tab_icon);
-            viewHolder.closeButton = (ImageView)convertView.findViewById(R.id.close_tab_button);
+            viewHolder.tabStatus = convertView.findViewById(R.id.tab_text);
+            viewHolder.tabIcon = convertView.findViewById(R.id.tab_icon);
+            viewHolder.closeButton = convertView.findViewById(R.id.close_tab_button);
             convertView.setTag(viewHolder);
         }
 		else

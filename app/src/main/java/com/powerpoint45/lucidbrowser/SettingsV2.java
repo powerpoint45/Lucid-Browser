@@ -1,5 +1,6 @@
 package com.powerpoint45.lucidbrowser;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -7,9 +8,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
@@ -17,11 +20,16 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.MenuItem;
 import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.powerpoint45.lucidbrowser.R;
 
 import org.json.JSONObject;
 
@@ -310,70 +318,30 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
 
-				final EditText inputText = new EditText(SettingsV2.this);
-				@SuppressLint("SimpleDateFormat") DateFormat df = new SimpleDateFormat("ddMMyyyyhhmm");
-				inputText.setHint(getResources().getString(R.string.bookmarks)+ df.format(new Date()) +".txt");
-
-				new AlertDialog.Builder(SettingsV2.this)
-						.setTitle(R.string.backup_title)
-						.setView(inputText)
-						.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog, int whichButton) {
-								manager = BookmarksManager.loadBookmarksManager(SettingsV2.this);
-
-								if (manager!=null) {
-									try {
-										File folderLoc = new File(Environment.getExternalStorageDirectory().getPath()+"/LucidBrowser/");
-										folderLoc.mkdirs();
-										String fileNameToWrite = inputText.getHint().toString();
-										if (!inputText.getText().toString().equals(""))
-											fileNameToWrite = inputText.getText().toString();
-
-										PrintWriter printWriter = new PrintWriter(folderLoc.getPath()+"/"+fileNameToWrite);
-
-										//add bookmarks_activity from root first
-										for (int i =0; i<manager.root.getContainedBookmarks().size(); i++){
-											JSONObject obj = new JSONObject();
-											//export root first
-											obj.put("order",i);
-											obj.put("folder","");
-											obj.put("title", manager.root.getContainedBookmarks().get(i).getDisplayName());
-											obj.put("url", manager.root.getContainedBookmarks().get(i).getURL());
-											printWriter.write(obj.toString()+"\n");
-										}
-
-										for (int i=0; i<manager.root.getContainedFolders().size(); i++){
-											for (int j = 0; j<manager.root.getContainedFolders().get(i).getContainedBookmarks().size(); j++){
-												JSONObject obj = new JSONObject();
-												//export root first
-												obj.put("order",j);
-												obj.put("folder",manager.root.getContainedFolders().get(i).getDisplayName());
-												obj.put("title", manager.root.getContainedFolders().get(i).getContainedBookmarks().get(j).getDisplayName());
-												obj.put("url", manager.root.getContainedFolders().get(i).getContainedBookmarks().get(j).getURL());
-												printWriter.write(obj.toString()+"\n");
-											}
-										}
-
-										printWriter.close();
-										Tools.toastString(R.string.complete, SettingsV2.this);
-										Tools.toastString(folderLoc.getPath()+"/"+fileNameToWrite,SettingsV2.this);
-									} catch (Exception e) {
-										e.printStackTrace();
-										Tools.toastString(R.string.failed, SettingsV2.this);
-									}
-								}
-							}
-						})
-						.setNegativeButton(android.R.string.cancel, null)
-						.show();
+				if (ContextCompat.checkSelfPermission(SettingsV2.this,
+						Manifest.permission.WRITE_EXTERNAL_STORAGE)
+						!= PackageManager.PERMISSION_GRANTED) {
+					ActivityCompat.requestPermissions(SettingsV2.this,
+							new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+							ActivityIds.PERMISSIONS_REQUEST_ACCESS_FILES_FOR_BOOKMARK_EXPORT);
+				}else
+					bookmarkExport();
 				return false;
 			}
 		});
 
+
 		findPreference("bookmark_import").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
-				startActivityForResult(new Intent(SettingsV2.this, OpenFileActivity.class), ActivityIds.REQUEST_PICK_FILE);
+				if (ContextCompat.checkSelfPermission(SettingsV2.this,
+						Manifest.permission.WRITE_EXTERNAL_STORAGE)
+						!= PackageManager.PERMISSION_GRANTED) {
+					ActivityCompat.requestPermissions(SettingsV2.this,
+							new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+							ActivityIds.PERMISSIONS_REQUEST_ACCESS_FILES_FOR_BOOKMARK_IMPORT);
+				}else
+					bookmarkImport();
 				return true;
 			}
 		});
@@ -542,6 +510,92 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 					break;
 			}
 		}
+	}
+
+
+	@Override
+	public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
+		switch (requestCode) {
+
+			case ActivityIds.PERMISSIONS_REQUEST_ACCESS_FILES_FOR_BOOKMARK_EXPORT:
+				//Permission granted
+				if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+					bookmarkExport();
+				}
+				break;
+
+			case ActivityIds.PERMISSIONS_REQUEST_ACCESS_FILES_FOR_BOOKMARK_IMPORT:
+				//Permission granted
+				if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+					bookmarkImport();
+				}
+				break;
+		}
+	}
+
+
+
+	public void bookmarkExport(){
+		final EditText inputText = new EditText(SettingsV2.this);
+		@SuppressLint("SimpleDateFormat") DateFormat df = new SimpleDateFormat("ddMMyyyyhhmm");
+		inputText.setHint(getResources().getString(R.string.bookmarks)+ df.format(new Date()) +".txt");
+
+		new AlertDialog.Builder(SettingsV2.this)
+				.setTitle(R.string.backup_title)
+				.setView(inputText)
+				.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int whichButton) {
+						manager = BookmarksManager.loadBookmarksManager(SettingsV2.this);
+
+						if (manager!=null) {
+							try {
+								File folderLoc = new File(Environment.getExternalStorageDirectory().getPath()+"/LucidBrowser/");
+								folderLoc.mkdirs();
+								String fileNameToWrite = inputText.getHint().toString();
+								if (!inputText.getText().toString().equals(""))
+									fileNameToWrite = inputText.getText().toString();
+
+								PrintWriter printWriter = new PrintWriter(folderLoc.getPath()+"/"+fileNameToWrite);
+
+								//add bookmarks from root first
+								for (int i =0; i<manager.root.getContainedBookmarks().size(); i++){
+									JSONObject obj = new JSONObject();
+									//export root first
+									obj.put("order",i);
+									obj.put("folder","");
+									obj.put("title", manager.root.getContainedBookmarks().get(i).getDisplayName());
+									obj.put("url", manager.root.getContainedBookmarks().get(i).getURL());
+									printWriter.write(obj.toString()+"\n");
+								}
+
+								for (int i=0; i<manager.root.getContainedFolders().size(); i++){
+									for (int j = 0; j<manager.root.getContainedFolders().get(i).getContainedBookmarks().size(); j++){
+										JSONObject obj = new JSONObject();
+										//export root first
+										obj.put("order",j);
+										obj.put("folder",manager.root.getContainedFolders().get(i).getDisplayName());
+										obj.put("title", manager.root.getContainedFolders().get(i).getContainedBookmarks().get(j).getDisplayName());
+										obj.put("url", manager.root.getContainedFolders().get(i).getContainedBookmarks().get(j).getURL());
+										printWriter.write(obj.toString()+"\n");
+									}
+								}
+
+								printWriter.close();
+								Tools.toastString(R.string.complete, SettingsV2.this);
+								Tools.toastString(folderLoc.getPath()+"/"+fileNameToWrite,SettingsV2.this);
+							} catch (Exception e) {
+								e.printStackTrace();
+								Tools.toastString(R.string.failed, SettingsV2.this);
+							}
+						}
+					}
+				})
+				.setNegativeButton(android.R.string.cancel, null)
+				.show();
+	}
+
+	public void bookmarkImport(){
+		startActivityForResult(new Intent(SettingsV2.this, OpenFileActivity.class), ActivityIds.REQUEST_PICK_FILE);
 	}
 
 

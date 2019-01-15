@@ -53,8 +53,10 @@ public class ImportBookmarksActivity extends AppCompatActivity {
 
         useDark = globalPref.getBoolean("holodark", false);
 
-        if (!useDark){
-            setTheme(R.style.NewAppThemeLight);
+        if (useDark){
+            setTheme(R.style.BookmarksThemeDark);
+        }else {
+            setTheme(R.style.BookmarksThemeLight);
         }
 
         super.onCreate(savedInstanceState);
