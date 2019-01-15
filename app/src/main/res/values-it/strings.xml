@@ -38,7 +38,7 @@
 	<string name="home">Homepage</string>
 	<string name="set_home">Imposta come pagina principale</string>
 	<string name="share">Condividi</string>
-	<string name="appInfo">"Info sull'app"</string>
+	<string name="appInfo">"Info sull\'app"</string>
 	<string name="uninstall">"Disinstalla"</string>
 	<string name="addToHome">Aggiungi alla Home</string>
 	<string name="addToFavorites">"Aggiungi ai preferiti"</string>
@@ -57,7 +57,7 @@
 	<string name="advancedsettingstitle">"Impostazioni Avanzate"</string>
 	<string name="websettingstitle">Impostazioni Browser</string>
 	<string name="pagetransformationtitle">"Effetti di transizione"</string>
-	<string name="pagetransformationsummary">"scegli l'effetto di transizione delle pagine"</string>
+	<string name="pagetransformationsummary">"scegli l\'effetto di transizione delle pagine"</string>
 	<string name="actionbarcolortitle">"Colore ActionBar"</string>
 	<string name="actionbarcolorsummary">"colore per la barra nella parte superiore dello schermo"</string>
 	<string name="pagetransparencytitle">"Trasparenza Pagine"</string>
@@ -89,20 +89,20 @@
 	<string name="sidebartransparencytitle">Trasparenza Sidebar</string>
 	<string name="sidebartransparencysummary">imposta la trasparenza della Sidebar</string>
 	<string name="numcolumnstitle">"Numero di colonne"</string>
-	<string name="numcolumnssummary">"numero di colonne nella griglia dell'App Drawer"</string>
+	<string name="numcolumnssummary">"numero di colonne nella griglia dell\'App Drawer"</string>
 	<string name="numcolumnsmessage">"Seleziona il numero di colonne:"</string>
 	<string name="showlabelstitle">"Mostra/nascondi etichette"</string>
 	<string name="showlabelssummary">"mostra/nascondi le etichette sotto ogni icona"</string>
 	<string name="drawerlabelcolortitle">"Colore etichetta"</string>
 	<string name="drawerlabelcolorsummary">"colore del testo delle etichette"</string>
 	<string name="iconsizetitle">"Dimensione icone"</string>
-	<string name="iconsizesummary">"dimensione delle icone delle applicazioni nell'App Drawer"</string>
+	<string name="iconsizesummary">"dimensione delle icone delle applicazioni nell\'App Drawer"</string>
 	<string name="iconsizemessage">"Seleziona la dimensione delle icone:"</string>
 	<string name="iconpaddingtitle">"Padding icone"</string>
 	<string name="iconpaddingsummary">"imbottitura delle icone"</string>
 	<string name="iconpaddingmessage">"Seleziona il padding delle icone:"</string>
 	<string name="verticalspacingtitle">"Spaziatura verticale"</string>
-	<string name="verticalspacingsummary">"spaziatura verticale tra le icone dell'app drawer"</string>
+	<string name="verticalspacingsummary">"spaziatura verticale tra le icone dell\'app drawer"</string>
 	<string name="verticalspacingmessage">"Seleziona la spaziatura verticale:"</string>
 	<string name="homenumpagestitle">Numero di Homepage</string>
 	<string name="homenumpagessummary">imposta il numero di Homepage</string>
@@ -381,8 +381,8 @@
 	<string name="disable_new_app_glow_summary">Disabilita la nuova app glow nel drawer</string>
 	<string name="download_started">Download avviato</string>
 	<string name="choose_upload">Seleziona file da caricare</string>
-	<string name="unread_count_title">Unread Count (Beta)</string>
-	<string name="unread_count_summary">Mostra il numero di notifiche non lette sulle app. Attualmente funziona con poche app</string>
+	<string name="unread_count_title">Unread Count</string>
+	<string name="unread_count_summary">Mostra il numero di notifiche non lette sulle app</string>
 	<string name="backup_title">Inserisci nome backup</string>
 	<string name="backup_select">Seleziona backup</string>
 	<string name="backup_delete">Elimina backup</string>
@@ -410,5 +410,63 @@
     <string name="delete_bookmarks">Cancella tutti i preferiti</string>
     
     <string name="lock_screen_permission_request">Abilita Amministratore Dispositivo a far bloccare lo schermo a Lucid Launcher.Devi disabilitare Amministratore Dispositivo per poter disinstallare Lucid Launcher</string>
-	
+    
+    <!--Added 1-21-17-->
+    <string name="licensing_failed">Controllo licenza fallito. Per favore, controlla che la licenza della tua App sia stata acquistata</string>
+    <string name="export_bookmarks_summary">Esporta i segnalibri su file</string>
+    <string name="import_bookmarks_summary">Importa i segnalibri da file</string>
+
+
+    <!--Added 2-10-17-->
+    <string name="privacy_policy">Politica Privacy e maggiori info</string>
+    <string name="drawer_fast_scroller">Abilita scorrimento veloce</string>
+    <string name="drawer_fast_scroller_orientation">Orientamento scorrimento veloce</string>
+    <string name="horizontal">Orizontale</string>
+    <string name="vertical">Verticale</string>
+    
+    
+    <!--Added 8-9-17-->
+    <string name="match_layout_title">Aspetto della ricerca</string>
+    <string name="match_layout_summary">Le impostazioni della modalità verticale e orizzontale saranno configurate identiche</string>
+    <string name="numrowwstitle">Numero di righe</string>
+    
+    
+    <!--Added 9-8-17-->
+    <string name="fade">Dissolvenza</string>
+    <string name="unread_count_popup">Per abilitare completamente la funzionalità di contatore delle notifiche non lette, devi abilitare l\'accesso alle notifiche per questa App</string>
+    <string name="unread_count_disable_popup">You can now disable Notification Access for this app</string>
+    
+    
+    <!--Added 9-23-17-->
+    <string name="gesturepinchtitle">Riduzione</string>
+    <string name="gesturepinchsummary">Select an action for pinching the home screen</string>
+    <string name="gesturepinchouttitle">Pinch Out</string>
+    <string name="gesturepinchoutsummary">Select an action for unpinching the home screen</string>
+    <string name="unread_count_color_title">Colore del contatore delle notifiche non lette</string>
+    <string name="unread_count_color_summary">Imposta il colore del contatore delle notifiche non lette per questa app</string>
+    
+    
+    <!--Added 10-5-17-->
+    <string name="label_size_title">Dimensione dell\'etichetta dell\'App</string>
+    <string name="label_size_summary">Imposta la dimensione dell\'etichetta posta sotto le icone</string>
+    <string name="small">Piccola</string>
+    <string name="medium">Media</string>
+    <string name="large">Grande</string>
+    
+    
+    <!--Added 8-13-18-->
+    <string name="hide_searchbar_drawer">Nascondi la barra delle ricerche nell\'App Drawer</string>
+    <string name="hide_searchbar_home">Nascondi la barra delle ricerche nella Home Page</string>
+    <string name="hide_searchbar_browser">Nascondi la barra delle ricerche nel Browser</string>
+    <string name="searchbar_settings">Impostazioni della barra di ricerca</string>
+    <string name="opacity">Opacità</string>
+    <string name="auto_color">Colore automatico</string>
+    <string name="folder_auto_color_summary">Imposta automaticamente la cartella dei colori</string>
+    <string name="toast_snap_disabled">Devi prima disabilitare Match Layout</string>
+    
+    
+    <!--Added 11-27-18-->
+    <string name="download_file">Scarica file:</string>
+    <string name="downloads">Scarica</string>
+    <string name="join_discord">Collegati al nostro Server Discord</string>
 </resources>

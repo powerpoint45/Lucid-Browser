@@ -55,8 +55,6 @@
 	<string name="websettingstitle">"Configurações do navegador"</string>
 	<string name="pagetransformationtitle">"Animação de rolagem"</string>
 	<string name="pagetransformationsummary">"Definir a animação de rolagem"</string>
-	<string name="actionbarcolortitle">"Cor da barra de ação"</string>
-	<string name="actionbarcolorsummary">"Defina a cor da barra de ação"</string>
 	<string name="pagetransparencytitle">"Transparência página"</string>
 	<string name="pagetransparencysummary">"Definir a transparência da barra e navegador"</string>
 	<string name="orientationtitle">"Orientação do launcher"</string>
@@ -68,7 +66,6 @@
 	<string name="transparentstatustitle">"Barra de status transparente"</string>
 	<string name="transparentstatussummary">"Ativar ou desativar barra de status transparente"</string>
 	<string name="searchtexttitle">"Texto da barra de ação personalizado"</string>
-	<string name="searchtextsummary">"Definir texto da barra ação"</string>
 	<string name="searchtextmessage">"Digitar texto da barra de ação:"</string>
 	<string name="sidebarthemetitle">"Tema da barra lateral"</string>
 	<string name="sidebarthemesummary">"Definir tema da barra lateral"</string>
@@ -135,7 +132,7 @@
 	<string name="restoresummary">"Restaurar um backup"</string>
 	<string name="floatapp">Aplicativo flutuante</string>
 	<string name="enablefloatoptiontitle">Habilitar aplicativo flutuante</string>
-	<string name="enablefloatoptionsummary">Em ROMs suportadas você pode flutuar aplicativos (toque longo no aplicativo para opções)</string>
+	<string name="enablefloatoptionsummary">Em ROMs com suporte, você pode flutuar aplicativos (toque longo no aplicativo para opções)</string>
 	<string name="showbackgroundonurlbartitle">Mostrar plano de fundo na barra de endereços</string>
 	<string name="showbackgroundonurlbarsummary">Adiciona plano de fundo à Barra de endereços</string>
 	<string name="browsercompactmodetitle">Habilitar modo compacto</string>
@@ -182,9 +179,9 @@
 	<string name="disablesidebarsummary">Selecione para desabilitar barra lateral de favoritos</string>
 	<string name="cat_title_gestures">Gestos</string>
 	<string name="gesturedowntitle">Deslizar para baixo</string>
-	<string name="gesturedownsummary">Selecionar uma ação para deslizar para baixo no topo da página inicial</string>
+	<string name="gesturedownsummary">Selecionar uma ação ao deslizar para baixo no topo da página inicial</string>
 	<string name="gestureuptitle">Deslizar para cima</string>
-	<string name="gestureupsummary">Selecionar uma ação para deslizar para cima na parte inferior da página inicial</string>
+	<string name="gestureupsummary">Selecionar uma ação ao deslizar para cima na parte inferior da página inicial</string>
 	<string name="gesturelefttitle">Deslizar para esquerda</string>
 	<string name="gestureleftsummary">Selecione uma ação ao deslizar para esquerda</string>
 	<string name="action_togglestatusbar">Alternar barra de notificação</string>
@@ -197,7 +194,7 @@
 	<string name="urlbarcolortitle">Cor da barra de endereços</string>
 	<string name="urlbarcolorsummary">Defina a cor de fundo da barra de endereços</string>
 	<string name="clearonexittitle">Limpar rastreamento do navegador na saída</string>
-	<string name="clearonexitsummary">Sair do navegador e limpar histórico, cache e Cookies</string>
+	<string name="clearonexitsummary">Sair do navegador e limpar histórico, cache e cookies</string>
 	<string name="nobookmarks">Nenhum favorito definido</string>
 	<string name="sidebar_custom">Personalizado</string>
 	<string name="sidebarcolortitle">Cor da barra lateral</string>
@@ -233,13 +230,13 @@
 	<string name="remove">Remover</string>
 	<string name="browser_removed_dialog">Este aplicativo será removido da loja devido à complicações com a política de uso. Por favor clique no próximo link para ser redirecionado para o novo Lucid Browser:</string>
 	<string name="sslUntrustedTitle">Certificado SSL não confiável</string>
-	<string name="sslUntrustedMessage" formatted="false">A página at\n\n%s\n\nhas um certificado SSL auto-assinado.</string>
+	<string name="sslUntrustedMessage" formatted="false">A página em \n\n%s\n\n apresenta um certificado SSL auto-assinado.</string>
 	<string name="sslIdMismatchTitle">Certificado SSL não é válido para esta página</string>
-	<string name="sslIdMismatchMessage" formatted="false">A página at\n\n%1s\n\nhas apresenta um certificado SSL válido somente por %2s.</string>
+	<string name="sslIdMismatchMessage" formatted="false">A página em \n\n%1s\n\n apresenta um certificado SSL válido somente até %2s.</string>
 	<string name="sslExpiredTitle">Certificado SSL expirado</string>
-	<string name="sslExpiredMessage" formatted="false">A página at\n\n%1s\n\nhas apresenta um certificado SSL expirado. Ele expirou depois de %2s.</string>
+	<string name="sslExpiredMessage" formatted="false">A página em \n\n%1s\n\n apresenta um certificado SSL expirado. Ele expirou depois de %2s.</string>
 	<string name="sslNotYetValidTitle">Certificado SSL não é válido</string>
-	<string name="sslNotYetValidMessage" formatted="false">A página at\n\n%1s\n\nhas apresenta um certificado SSL que ainda não é válido. Ele será válido a partir de %2s.</string>
+	<string name="sslNotYetValidMessage" formatted="false">A página em \n\n%1s\n\n apresenta um certificado SSL que ainda não é válido. Ele será válido a partir de %2s.</string>
 	<string name="sslWebsiteWarning">Como o certificado não pôde ser verificado, a página é provavelmente insegura. Por favor prossiga com cuidado.</string>
 	<string name="sslProceedQuestion">Você deseja aceitar este certificado?</string>
 	<string name="browser">Navegador</string>
@@ -247,17 +244,17 @@
 	<string name="home_screen">Tela inicial</string>
 	<string name="gesturerighttitle">Deslizar para direita</string>
 	<string name="gesturerightsummary">Selecione uma ação ao deslizar para direita</string>
-	<string name="gesture_alert">O Gesto foi definido mas as telas devem ser reorganizadas</string>
+	<string name="gesture_alert">O gesto foi definido mas as telas devem ser reorganizadas</string>
 	<string name="select_screen">Selecione uma nova tela</string>
 	<string name="paste">Colar</string>
 	<string name="close_tabs_on_exit_title">Fechar abas quando sair</string>
 	<string name="close_tabs_on_exit_summary">Sair do navegador fecha todas as abas</string>
 	<string name="edit">Editar</string>
-	<string name="edit_bookmark">Editar Ffvoritos</string>
+	<string name="edit_bookmark">Editar Favoritos</string>
 	<string name="toggle_desktop_mode">Alternar para modo desktop</string>
 	<string name="find_in_page">Encontar</string>
 	<string name="confirm_exit_text">Você tem certeza que deseja sair?</string>
-	<string name="please_wait">Por favor, espere...</string>
+	<string name="please_wait">Por favor, aguarde...</string>
 	<string name="exit_confirmation_title">Confirmação de saída</string>
 	<string name="exit_confirmation_summary">Marque para habilitar a confirmação de saída</string>
 	<string name="widgetpaddingtitle">Preenchimento do widget</string>
@@ -288,7 +285,7 @@
 	<string name="search_hidden_apps_summary">Mostrar aplicativos escondidos na barra de pesquisa</string>
 	<string name="action_openrecents">Abrir recentes</string>
 	<string name="action_opennotificationpanel">Abrir painel de notificação</string>
-	<string name="move_here">Mover aqui</string>
+	<string name="move_here">Mover para cá</string>
 	<string name="add_bookmark_folder">Criar nova pasta</string>
 	<string name="add_bookmark_folder_hint">Digite nome para a nova pasta</string>
 	<string name="edit_bookmark_folder">Editar marcador de pasta</string>
@@ -308,7 +305,7 @@
 	<string name="search_icon_action_summary">Selecione a ação quando o ícone de pesquisa é pressionado</string>
 	<string name="action_start_search">Pesquisar</string>
 	<string name="about">Sobre</string>
-	<string name="contact">Nos contate</string>
+	<string name="contact">Contate-nos</string>
 	<string name="tutorial">Iniciar tutorial</string>
 	<string name="rate">Avalie</string>
 	<string name="more_apps">Mais aplicativos</string>
@@ -317,25 +314,23 @@
 	<string name="package_info">Informação do pacote</string>
 	<string name="send_mail">Enviar email com</string>
 	<string name="send_mail_error">Não há clientes de email instalados</string>
-	<string name="step_welcome_title">Tela inicial</string>
+	<string name="step_welcome_title">Tela Inicial</string>
 	<string name="step_welcome_summary">Esta é a sua tela inicial. Aqui você pode colocar seus aplicativos, widgets e mais. Você pode deslizar verticalmente entre telas de início e horizontalmente para outras páginas</string>
-	<string name="step_basic_actions_title">Ações básicas</string>
+	<string name="step_basic_actions_title">Ações Básicas</string>
 	<string name="step_basic_actions_summary">Toque no ícone de pesquisa para iniciar a pesquisa \nToque nas reticências para mais ações</string>
-	<string name="step_favorite_title">Aplicativos favoritos</string>
+	<string name="step_favorite_title">Aplicativos Favoritos</string>
 	<string name="step_favorite_action_summary">Toque no botão de reticências ou deslize o dedo pela borda da tela para acessar seus aplicativos favoritos</string>
 	<string name="step_favorites_summary">Todos seus aplicativos favoritos serão mostrados aqui. Um aplicativo pode ser adicionado aos favoritos através da gaveta de aplicativos</string>
-	<string name="step_drawer_title">Gaveta de aplicativos</string>
+	<string name="step_drawer_title">Gaveta de Aplicativos</string>
 	<string name="step_drawer_summary">Esta é a gaveta de aplicativos. Você pode desativar ou reorganizar esta página a partir de \"Gerenciar Telas\"</string>
-	<string name="step_drawer_app_long_press_title">Mais opções</string>
+	<string name="step_drawer_app_long_press_title">Mais Opções</string>
 	<string name="step_drawer_app_long_press_summary">Você pode manter pressionado um ítem longamente para ter mais opções como adicioná-lo à tela inicial ou aos favoritos</string>
 	<string name="step_browser_title">Navegador</string>
 	<string name="step_browser_summary">Este é o navegador. Você pode desativá-lo ou reorganizar esta página a partir de \"Gerenciar Telas\"</string>
-	<string name="step_browser_sidebar_title">Barra lateral do navegador</string>
-	<string name="step_browser_sidebar_summary">Acesse a barra lateral do Navegador deslizando o dedo da borda da tela</string>
-	<string name="step_orientation_title">Orientação do launcher</string>
+	<string name="step_browser_sidebar_title">Barra Lateral do Navegador</string>
+	<string name="step_browser_sidebar_summary">Acesse a barra lateral do navegador deslizando o dedo da borda da tela</string>
+	<string name="step_orientation_title">Orientação do Launcher</string>
 	<string name="step_orientation_summary">O layout da tela inicial varia de acordo com a orientação. Você pode colocar aplicativos diferentes baseado na orientação</string>
-	<string name="actionbartextstyletitle">Estilo de ícone da barra de ação</string>
-	<string name="actionbartextstylesummary">Selecionar estilo de ítem da barra de ação</string>
 	<string name="searchcontactstitle">Procurar contatos</string>
 	<string name="searchcontactssummary">Ativar ou desativar pesquisa de contatos</string>
 	<string name="version">Versão</string>
@@ -344,7 +339,7 @@
 	<string name="licence_apache20_github">Apache 2.0.\nToque para ver o projeto no GitHub</string>
 	<string name="search_engine">Mecanismo de busca</string>
 	<string name="first_letter_search_title">Pesquisar por primeira letra</string>
-	<string name="first_letter_search_summary">pesquisa baseada no início dos rótulos</string>
+	<string name="first_letter_search_summary">Pesquisa baseada no início dos rótulos</string>
 	<string name="wallpaper_offset">Mover o wallpaper</string>
 	<string name="wallpaper_offset_title">Definir compensações de wallpaper</string>
 	<string name="wallpaper_offset_summary">Mova o wallpaper da maneira que preferir</string>
@@ -359,18 +354,16 @@
 	<string name="folder_apps_size_title">Tamanho de aplicativos nas pastas</string>
 	<string name="folder_apps_size_summary">Selecione o tamanho dos aplicativos dentro das pastas</string>
 	<string name="folder_columns_summary">Selecione o número de colunas nas pastas</string>
-	<string name="actionbar_item_color_title">Cor de ítens na barra de ação</string>
-	<string name="actionbar_item_color_summary">Selecionar as cores dos ícones na barra de ação</string>
-	<string name="disable_new_app_glow_title">Desativar destaque á novos aplicativos</string>
+	<string name="disable_new_app_glow_title">Desativar destaque à novos aplicativos</string>
 	<string name="disable_new_app_glow_summary">Desative o destaque de novos aplicativos na gaveta</string>
 	<string name="download_started">Download iniciado</string>
 	<string name="choose_upload">Escolha o arquivo para upload</string>
-	<string name="unread_count_title">Contagem de não lidas (Beta)</string>
-	<string name="unread_count_summary">Exibir a contagem de não lidas em aplicativos. Poucos aplicativos funcionam no momento</string>
+	<string name="unread_count_title">Contagem de não lidas</string>
+	<string name="unread_count_summary">Exibir a contagem de não lidas em aplicativos</string>
 	<string name="backup_title">Digite o título do backup</string>
-	<string name="backup_select">Selecione backup</string>
-	<string name="backup_delete">Delete backup</string>
-	<string name="disable_ads">Desative propagandas</string>
+	<string name="backup_select">Selecionar backup</string>
+	<string name="backup_delete">Deletar backup</string>
+	<string name="disable_ads">Desativar propagandas</string>
 	<string name="history">Historico</string>
 	<string name="sort_title">Método de classificação</string>
 	<string name="sort_summary">Escolha como os aplicativos são classificados</string>
@@ -379,7 +372,7 @@
 	<string name="sort_new">Data de instalação (Mais novos primeiro)</string>
 	<string name="sort_old">Data de instalação (Mais antigos primeiro)</string>
 
-	<string name="lb_pro_description">Atualize para versão de doação do Lucid Browser afim de dar suporte a este projeto</string>
+	<string name="lb_pro_description">Atualize para versão de doação do Lucid Browser para dar suporte a este projeto</string>
 	<string name="folder_mode_title">Modo de exibição de pasta</string>
 	
 	<string name="folder_mode_summary">Escolha a forma como as pastas são mostradas</string>
@@ -387,29 +380,92 @@
 	<string name="folder_mode_adaptive">Tamanho de pasta adaptativo</string>
 	<string name="folder_mode_centered">Pasta centralizada</string>
 
+    <!--Added 11-22-16-->
 	<string name="no_bookmarks">Nenhum favorito encontrado</string>
     <string name="export_bookmarks">Exportar favoritos</string>
     <string name="import_bookmarks">Importar favoritos</string>
     <string name="import_bookmarks_external">Importar favoritos de navegadores externos</string>
     <string name="bookmark_settings">Configuração de favoritos</string>
-    <string name="delete_bookmarks">Delete todos os favoritos</string>
+    <string name="delete_bookmarks">Deletar todos os favoritos</string>
     
+    <!--Added 12-12-16-->
     <string name="lock_screen_permission_request">Ative o modo administrador do dispositivo para permitir que o Lucid Launcher bloqueie a tela. Você deve desativar o administrador do dispositivo para desinstalar o Lucid Launcher</string>
     
+    <!--Added 1-21-17-->
     <string name="licensing_failed">Falha ao checar licença. Por favor, assegure-se que o aplicativo foi comprado</string>
     <string name="export_bookmarks_summary">Exportar favoritos para arquivo</string>
     <string name="import_bookmarks_summary">Importar favoritos de arquivo</string>
     
+    <!--Added 2-10-17-->
     <string name="privacy_policy">Política de privacidade e mais informações</string>
     <string name="drawer_fast_scroller">Habilitar rolagem rápida</string>
     <string name="drawer_fast_scroller_orientation">Orientação da rolagem rápida</string>
     <string name="horizontal">Horizontal</string>
     <string name="vertical">Vertical</string>
     
+    <!--Those strings were missing-->
     <string name="icon_theme">Tema dos ícones</string>
     <string name="sidebarhidelabeltitle">Rótulo dos aplicativos</string>
 	<string name="sidebarhidelabelsummary">Mostrar ou esconder o rótulo de cada ícone</string>
 	<string name="sidebartransparencytitle">Transparência da barra lateral</string>
 	<string name="sidebartransparencysummary">Ajuste a transparência da barra lateral</string>
 	<string name="cat_title_setup">Configurações</string>
+	<string name="hide_apps">Aplicativos Escondidos</string>
+    <string name="hide_appssummary">Esconder aplicativos da gaveta</string>
+    <string name="action_lock_screen">Desligar Tela</string>
+    <string name="lucidactionstitle">Ações do Lucid Launcher</string>
+    <string name="sidebar_transparent">Transparente</string>
+    
+    <!--Added 8-9-17-->
+    <string name="match_layout_title">Combinar Layout</string>
+    <string name="match_layout_summary">Configurações do modo paisagem e retrato serão idênticas</string>
+    <string name="numrowwstitle">Número de linhas</string>
+    
+    <!--Added 9-8-17-->
+    <!--These strings are top priority right now. Please ensure you have all these translated-->
+    <string name="fade">Sumir</string>
+    <string name="unread_count_popup">Para que o contador de notificações não lidas funcione corretamente, você deve habilitar o \'Acesso à Notificações\' para esse aplicativo</string>
+    <string name="unread_count_disable_popup">Você pode desabilitar o \'Acesso à Notificações\' desse aplicativo</string>
+
+    <!--Added 9-23-17-->
+    <string name="gesturepinchtitle">Beliscão</string>
+    <string name="gesturepinchsummary">Selecione uma ação ao "beliscar" a home screen</string>
+    <string name="unread_count_color_title">Cor do Contador de Não Lidas</string>
+    <string name="unread_count_color_summary">Definir a cor do contador de notificações não lidas dos apps</string>
+    <string name="gesturepinchouttitle">Beliscão</string>
+    <string name="gesturepinchoutsummary">Selecione uma ação ao "beliscar" a home screen</string>
+    
+    <!--Added 10-5-17-->
+    <string name="label_size_title">Tamanho do Rótulo dos Aplicativos</string>
+    <string name="label_size_summary">Defina o tamanho dos rótulos sob os ícones</string>
+    <string name="small">Pequeno</string>
+    <string name="medium">Médio</string>
+    <string name="large">Grande</string>
+    
+    <!-- 8-13-18 Any mention of ActionBar has been changed to Search Bar -->
+	<string name="actionbarcolortitle">Cor da Barra de Pesquisa</string>
+	<string name="actionbarcolorsummary">Define a cor da barra de pesquisa</string>
+	<string name="actionbar_item_color_title">Cor dos Itens da Barra de Pesquisa</string>
+	<string name="actionbar_item_color_summary">Define a cor dos itens da barra de pesquisa</string>
+	<string name="actionbartextstyletitle">Estilo dos Itens da Barra de Pesquisa</string>
+	<string name="actionbartextstylesummary">Define o estilo dos itens da barra de pesquisa</string>
+	<string name="searchtextsummary">Define o texto de pesquisa padrão da barra de pesquisa</string>
+	<!-- No longer used -->
+	<!--<string name="hide_actionbar_title">Esconder barra de pesquisa</string>-->
+	<!--<string name="hide_actionbar_summary">Esconde a barra de pesquisa quando rolar a página para baixo</string>-->
+
+	<!--Added 8-13-18-->
+	<string name="hide_searchbar_drawer">Esconder Barra de Pesquisa na Gaveta de Aplicativos</string>
+	<string name="hide_searchbar_home">Esconder Barra de Pesquisa na Página Inicial</string>
+	<string name="hide_searchbar_browser">Esconder Barra de Pesquisa no Browser</string>
+	<string name="searchbar_settings">Configurações da Barra de Pesquisa</string>
+	<string name="opacity">Opacidade</string>
+	<string name="auto_color">Cor Automática</string>
+	<string name="folder_auto_color_summary">Definir cor das pastas automaticamente</string>
+	<string name="toast_snap_disabled">Você deve desabilitar \'Combinação de Layout\' primeiro</string>
+    
+    <!--Added 11-27-18-->
+    <string name="download_file">Baixar Arquivo:</string>
+    <string name="downloads">Downloads</string>
+    <string name="join_discord">Participe do nosso servidor do Discord</string>
 </resources>

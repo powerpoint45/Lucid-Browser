@@ -9,7 +9,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.BaseColumns;
-import android.provider.Browser;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -33,7 +32,7 @@ import bookmarkModel.BookmarksManager;
 
 public class ImportBookmarksActivity extends AppCompatActivity {
 
-    private class BookmarkItem{
+    class BookmarkItem{
         String title;
         String url;
         Bitmap favicon;
@@ -84,13 +83,13 @@ public class ImportBookmarksActivity extends AppCompatActivity {
 
         Uri[] uris = new Uri[]
                 {
-                        Uri.parse("content://com.android.chrome.browser/bookmarks"),
+                        Uri.parse("content://com.android.chrome.browser/bookmarks_activity"),
                         BOOKMARKS_URI
                 };
 
         String[] proj = new String[]
                 {
-                        android.provider.BaseColumns._ID,
+                        BaseColumns._ID,
                         BookmarkColumns.URL,
                         BookmarkColumns.TITLE,
                         BookmarkColumns.FAVICON
@@ -131,8 +130,8 @@ public class ImportBookmarksActivity extends AppCompatActivity {
         if (bookmarkItems.size()==0){
             TextView noBooksTV = new TextView(this);
             noBooksTV.setText(R.string.no_bookmarks);
-            noBooksTV.setPadding(Properties.numtodp(10, this), Properties.numtodp(10, this)
-                    , Properties.numtodp(10, this), Properties.numtodp(10, this));
+            noBooksTV.setPadding(Properties.numtodp(10, this),Properties.numtodp(10, this)
+                    ,Properties.numtodp(10, this),Properties.numtodp(10, this));
             setContentView(noBooksTV);
         }
 
@@ -214,9 +213,9 @@ public class ImportBookmarksActivity extends AppCompatActivity {
     }
 
     public static final Uri BOOKMARKS_URI =
-            Uri.parse("content://browser/bookmarks");
+            Uri.parse("content://browser/bookmarks_activity");
 
-    private static class BookmarkColumns implements BaseColumns {
+    public static class BookmarkColumns implements BaseColumns {
         public static final String URL = "url";
         public static final String VISITS = "visits";
         public static final String DATE = "date";
@@ -231,5 +230,6 @@ public class ImportBookmarksActivity extends AppCompatActivity {
 
         public static final String USER_ENTERED = "user_entered";
     }
+
 
 }

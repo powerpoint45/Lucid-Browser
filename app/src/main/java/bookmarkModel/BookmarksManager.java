@@ -2,6 +2,9 @@ package bookmarkModel;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
+
+import com.powerpoint45.lucidbrowser.BookmarksActivity;
 
 import java.io.EOFException;
 import java.io.FileNotFoundException;
@@ -26,7 +29,22 @@ public class BookmarksManager implements Serializable {
 		this.displayedFolder = this.root;
 	}
 
-	public void saveBookmarksManager(Activity a) {
+	public static void initBookmarksActivity(Activity activity){
+		if (BookmarksActivity.bookmarksMgr ==  null){
+			BookmarksManager loadedBookmarksMgr = BookmarksManager.loadBookmarksManager(activity);
+			if (loadedBookmarksMgr == null){
+				Log.d("LB","BookmarksActivity.bookmarksMgr is null. Making new one");
+				BookmarksActivity.bookmarksMgr = new BookmarksManager();
+			}else {
+				Log.d("LB","BookmarksActivity.bookmarksMgr loaded");
+				BookmarksActivity.bookmarksMgr = loadedBookmarksMgr;
+			}
+		} else {
+			Log.d("LB","BookmarksActivity.bookmarksMgr is not null");
+		}
+	}
+
+	public void saveBookmarksManager(Context a) {
 		FileOutputStream fos;
 		try {
 			fos = a.openFileOutput("bookmarkData",
@@ -43,7 +61,7 @@ public class BookmarksManager implements Serializable {
 		}
 	}
 
-	public static BookmarksManager loadBookmarksManager(Activity a) {
+	public static BookmarksManager loadBookmarksManager(Context a) {
 		ObjectInputStream inputStream = null;
 
 		try {

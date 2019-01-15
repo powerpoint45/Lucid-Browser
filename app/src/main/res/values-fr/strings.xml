@@ -58,8 +58,6 @@
 	<string name="websettingstitle">Paramètres du navigateur</string>
 	<string name="pagetransformationtitle">"Transition des pages"</string>
 	<string name="pagetransformationsummary">"Régler l\'animation de transition des pages"</string>
-	<string name="actionbarcolortitle">"ActionBar Couleur"</string>
-	<string name="actionbarcolorsummary">"Définir la couleur pour la barre en haut de l\'écran"</string>
 	<string name="pagetransparencytitle">"Transparence de la page"</string>
 	<string name="pagetransparencysummary">"Définit la transparence de toutes les pages"</string>
 	<string name="orientationtitle">Sens du Lanceur d\'application</string>
@@ -71,7 +69,6 @@
 	<string name="transparentstatustitle">"Activer / Désactiver Transparence Barre d\'état"</string>
 	<string name="transparentstatussummary">"Cela met la barre d\'état transparent"</string>
 	<string name="searchtexttitle">Personnaliser le texte de recherche</string>
-	<string name="searchtextsummary">Définir le message dans la barre de recherche</string>
 	<string name="searchtextmessage">Message personnalisé:</string>
 	<string name="sidebarthemetitle">Thème de la barre latérale</string>
 	<string name="sidebarthemesummary">Définir le thème de la barre latérale</string>
@@ -276,8 +273,8 @@
 	<string name="widgetpaddingmessage">Sélectionner l\'espacement du Widget:</string>
 	<string name="holoDarkTitle">Utiliser Thème Noir</string>
 	<string name="holoDarkSummary">Thème Noir dans les Favoris et paramètres</string>
-	<string name="hide_actionbar_title">Cacher Barre d\'action</string>
-	<string name="hide_actionbar_summary">Cacher barre d\'action pendant défilement bas</string>
+	<!--<string name="hide_actionbar_title">Cacher Barre d\'action</string>-->
+	<!--<string name="hide_actionbar_summary">Cacher barre d\'action pendant défilement bas</string>-->
 	<string name="folder_color_title">Couleur du Dossier</string>
 	<string name="folder_color_summary">Choisir la couleur de l\'intérieur du dossier</string>
 	<string name="folder_style_title">Style du Dossier</string>
@@ -350,8 +347,6 @@
 	<string name="search_engine">Moteur de recherche</string>
 	<string name="searchcontactstitle">Rechercher dans les contacts</string>
 	<string name="searchcontactssummary">Activer ou désactiver la recherche des contacts</string>
-	<string name="actionbartextstyletitle">Look des items de la barre d\'action</string>
-	<string name="actionbartextstylesummary">Choisir le look des items de la barre d\'action</string>
 	<string name="action_lock_screen">Eteindre l\'écran</string>
 	<string name="history">Historique</string>
 	<string name="lucidactionstitle">Actions Lucid Launcher</string>
@@ -375,14 +370,12 @@
 	<string name="folder_apps_size_title">Taille applis dans dossier</string>
 	<string name="folder_apps_size_summary">taille des applis dans un dossier</string>
 	<string name="folder_columns_summary">Nombre de colonnes dans un dossier</string>
-	<string name="actionbar_item_color_title">Couleur des articles dans la barre d\'action </string>
-	<string name="actionbar_item_color_summary">Choisir la couleur</string>
 	<string name="disable_new_app_glow_title">Désactiver new App Glow</string>
 	<string name="disable_new_app_glow_summary">Désactiver app glow dans le tirroir d\'applications</string>
 	<string name="download_started">Téléchargement démarré</string>
 	<string name="choose_upload">Choisissez un fichier</string>
-	<string name="unread_count_title">Total de non lus (Beta)</string>
-	<string name="unread_count_summary">Afficher le total non lus sur les apps. Seulement possibles avec quelques apps</string>
+	<string name="unread_count_title">Total de non lus</string>
+	<string name="unread_count_summary">Afficher le total non lus sur les apps</string>
 	<string name="backup_title">Nom de la sauvegarde</string>
 	<string name="backup_select">Choisissez la sauvegarde</string>
 	<string name="backup_delete">Supprimer la sauvegarde</string>
@@ -400,20 +393,75 @@
 	<string name="folder_mode_adaptive">Mode Adaptatif</string>
 	<string name="folder_mode_centered">Mode centré</string>
 	<!--Added 12-12-16-->
-<string name="lock_screen_permission_request">Activez l\'administrateur de l\'appareil pour permettre à Lucid Launcher de verrouiller l\'écran. Vous devez désactiver l\'administrateur de l\'appareil afin de désinstaller Lucid Launche</string>
+    <string name="lock_screen_permission_request">Activez l\'administrateur de l\'appareil pour permettre à Lucid Launcher de verrouiller l\'écran. Vous devez désactiver l\'administrateur de l\'appareil afin de désinstaller Lucid Launche</string>
 
 
-<!--Added 11-22-16-->
-<string name="no_bookmarks">Aucun favori trouvé</string>
-<string name="export_bookmarks">Exporter Favoris</string>
-<string name="import_bookmarks">Importer Favoris</string>
-<string name="import_bookmarks_external">Importer favoris à partir d\'autres browsers</string>
-<string name="bookmark_settings">Paramétrage des Favoris</string>
-<string name="delete_bookmarks">Supprimer tous les Favoris</string>
+    <!--Added 11-22-16-->
+    <string name="no_bookmarks">Aucun favori trouvé</string>
+    <string name="export_bookmarks">Exporter Favoris</string>
+    <string name="import_bookmarks">Importer Favoris</string>
+    <string name="import_bookmarks_external">Importer favoris à partir d\'autres browsers</string>
+    <string name="bookmark_settings">Paramétrage des Favoris</string>
+    <string name="delete_bookmarks">Supprimer tous les Favoris</string>
+    
+    <!--Added 1-21-17-->
+    <string name="licensing_failed">Contrôle de licence échoué. Vérifiez que vous avez bien acheté l\'application</string>
+    <string name="export_bookmarks_summary">Exporter les Favoris vers un fichier</string>
+    <string name="import_bookmarks_summary">Importer les Favoris depuis un fichier</string>
+    
+    <!--Added 8-9-17-->
+    <string name="match_layout_title">Orientation</string>
+    <string name="match_layout_summary">Paysage et portrait : configurés identiquement</string>
+    <string name="numrowwstitle">Nombre de lignes</string>
+    
+    
+    <!--Added 2-10-17-->
+    <string name="privacy_policy">Privacy Policy et Plus d\'Infos</string>
+    <string name="drawer_fast_scroller">Défilement Rapide</string>
+    <string name="drawer_fast_scroller_orientation">Orientation du défilement rapide</string>
+    
+    <!--Added 9-8-17-->
+    <string name="fade">Fondu</string>
+    <string name="unread_count_popup">Pour activer la fonctionalité des Non Lus , vous devez activer l\'accès aux Notification pour cette app</string>
+    <string name="unread_count_disable_popup">Vous pouvez maintenant désactiver l\'accès aux Notifications pour cette app</string>
 
-<!--Added 1-21-17-->
-<string name="licensing_failed">Contrôle de licence échoué. Vérifiez que vous avez bien acheté l\'application</string>
-<string name="export_bookmarks_summary">Exporter les Favoris vers un fichier</string>
-<string name="import_bookmarks_summary">Importer les Favoris depuis un fichier</string>
+    <!--Added 9-23-17-->
+	<string name="gesturepinchtitle">Pincer</string>
+	<string name="gesturepinchsummary">Sélectionnez une action pour pincer sur l\'écran d\'accueil</string>
+	<string name="gesturepinchouttitle">Dépincer</string>
+	<string name="gesturepinchoutsummary">Sélectionnez une action pour dépincer sur l\'écran d\'accueil</string>
+	<string name="unread_count_color_title">Couleur des non lus</string>
+	<string name="unread_count_color_summary">Définir la couleur du compteur non lu pour les applications</string>
+
+	<!--Added 10-5-17-->
+	<string name="label_size_title">Taille nom Appli</string>
+	<string name="label_size_summary">Définir la taille des étiquettes sous les icônes</string>
+	<string name="small">Petit</string>
+	<string name="medium">Moyen</string>
+	<string name="large">Grand</string>
+
+
+	<!-- 8-13-18 Any mention of ActionBar has been changed to Search Bar -->
+	<string name="actionbarcolortitle">Couleur de la Barre de Recherche</string>
+	<string name="actionbarcolorsummary">Définir la couleur de la Barre de Recherche</string>
+	<string name="actionbar_item_color_title">Couleur de l\'intérieur de la Barre de Recherche</string>
+	<string name="actionbar_item_color_summary">Définir la couleur de l\intérieur de la Barre de Recherche</string>
+	<string name="actionbartextstyletitle">Style de la Barre de Recherche</string>
+	<string name="actionbartextstylesummary">définir le style de la Barre de Recherche</string>
+	<string name="searchtextsummary">Définir le texte dans la Barre de Recherche</string>
+	<!-- No longer used -->
+	<!--<string name="hide_actionbar_title">Hide Search Bar</string>-->
+	<!--<string name="hide_actionbar_summary">Hide the search bar when scrolling page down</string>-->
+
+	<!--Added 8-13-18-->
+	<string name="hide_searchbar_drawer">Cacher la Barre de Recherche dans le Tirroir d\'applications</string>
+	<string name="hide_searchbar_home">Cacher la Barre de Recherche sur l\'écran d\'accueil</string>
+	<string name="hide_searchbar_browser">Cacher la Barre de Recherche sur l\explorateur internet</string>
+	<string name="searchbar_settings">Paramètres de la Barre de Recherche</string>
+	<string name="opacity">Opacité</string>
+	<string name="auto_color">Couleur Auto</string>
+	<string name="folder_auto_color_summary">Définir la couleur des folders automatiquement</string>
+	<string name="toast_snap_disabled">Vous devez d\'abord désactiver Match Layout</string>
+
 
 </resources>

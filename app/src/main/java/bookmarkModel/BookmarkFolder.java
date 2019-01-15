@@ -106,7 +106,7 @@ public class BookmarkFolder implements Serializable{
 		newBookmark.setInFolder(this);
 		containedBookmarks.add(newBookmark);
 
-		//sort bookmarks
+		//sort bookmarks_activity
 		final Collator collator = Collator.getInstance(Locale
 				.getDefault());
 		collator.setStrength(Collator.SECONDARY);
@@ -184,7 +184,7 @@ public class BookmarkFolder implements Serializable{
 	}
 	
 	/**
-	 * Method search all folders and returns an ArrayList of bookmarks
+	 * Method search all folders and returns an ArrayList of bookmarks_activity
 	 * and searches in this folder's sub-folders if necessary
 	 */
 	public ArrayList<Bookmark> getAllBookMarks() {

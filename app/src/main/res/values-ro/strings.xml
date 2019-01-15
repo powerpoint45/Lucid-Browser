@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::This is the localization file for Romanian::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <resources>
 	<string name="trans_zoomout">Zoom-Out</string>
 	<string name="trans_pagestack">Stiva de pagini</string>
@@ -348,4 +353,6 @@
 	<string name="actionbartextstylesummary">Set ActionBar Item Style</string>
 	<string name="action_lock_screen">Inchide ecranul</string>
 	<string name="lucidactionstitle">Acțiuni Lucid Launcher</string>
+	
+	<string name="fade">Decolorare</string>
 </resources>

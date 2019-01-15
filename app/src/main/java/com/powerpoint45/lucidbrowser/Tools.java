@@ -1,19 +1,18 @@
 package com.powerpoint45.lucidbrowser;
 
 import android.annotation.SuppressLint;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.util.Log;
+import android.view.View;
 import android.view.ViewConfiguration;
 import android.webkit.MimeTypeMap;
 import android.widget.Toast;
@@ -45,7 +44,7 @@ public abstract class Tools {
 		else if (q.startsWith("about:")||q.startsWith("file:"))
 			return q;
 		else
-			return Properties.webpageProp.engine+q.replace(" ", "%20").replace("+", "%2B");
+			return Properties.webpageProp.engine+q.replace(" ", "%20").replace("+", "%2B").replace("&","%26");
 	}
 	
 	public static String getFileNameFromHeader(String header){
@@ -79,7 +78,7 @@ public abstract class Tools {
 	    public DownloadAsyncTask(String url, MainActivity activity) {
 			this.activity = activity;
 	    	urlToDownload = url;
-	    	userAgent = MainActivity.webWindows.get(activity.getTabNumber()).getSettings().getUserAgentString();
+	    	userAgent = activity.webWindows.get(activity.getTabNumber()).getSettings().getUserAgentString();
 	    }
 
 		@Override
@@ -219,11 +218,7 @@ public abstract class Tools {
 	    }
 	}
 	
-	public static void setActionBarColor(int c){
-		ColorDrawable colorDrawable = new ColorDrawable(c);
-  		MainActivity.actionBar.setBackgroundDrawable(colorDrawable);
-	}
-	
+
 	public static String getMimeType(String url) {
 	    String type = null;
 	    String extension = MimeTypeMap.getFileExtensionFromUrl(url);
@@ -273,21 +268,21 @@ public abstract class Tools {
 		        if (Properties.appProp.fullscreen && Properties.appProp.transparentNav){
 		        	//do nothing
 		        }else if (Properties.appProp.fullscreen){
-		        	margine= Properties.ActionbarSize;
+		        	margine=Properties.ActionbarSize;
 		        }else if (Properties.appProp.transparentNav){
 		        	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-		        		margine= Properties.ActionbarSize;
+		        		margine=Properties.ActionbarSize;
 		        	else
-		        		margine= Properties.ActionbarSize+ Tools.getStatusBarHeight(context.getResources());
+		        		margine=Properties.ActionbarSize+Tools.getStatusBarHeight(context.getResources());
 		        }else{
 		        	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-		        		margine= Properties.ActionbarSize;
+		        		margine=Properties.ActionbarSize;
 		        	else
-		        		margine= Properties.ActionbarSize+ Tools.getStatusBarHeight(context.getResources());
+		        		margine=Properties.ActionbarSize+Tools.getStatusBarHeight(context.getResources());
 		        }
 
 		        if (Properties.appProp.fullscreen){
-		        	margine= Properties.ActionbarSize;
+		        	margine=Properties.ActionbarSize;
 		        }
 		    }else
 		    	margine = Properties.ActionbarSize;
@@ -310,12 +305,12 @@ public abstract class Tools {
 		        	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
 		        		margine=0;
 		        	else
-		        		margine= Tools.getStatusBarHeight(context.getResources());
+		        		margine=Tools.getStatusBarHeight(context.getResources());
 		        }else{
 		        	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
 		        		margine=0;
 		        	else
-		        		margine= Tools.getStatusBarHeight(context.getResources());
+		        		margine=Tools.getStatusBarHeight(context.getResources());
 		        }
 		    }
 		return margine;
@@ -332,26 +327,35 @@ public abstract class Tools {
 		return (int) context.getResources().getDimension(R.dimen.actionBarSize);
   }
 
-	public static NotificationManager setUpSystemPersistence(Context c){
-		if (Properties.appProp.systemPersistent){
-			NotificationManager mNotificationManager;
-			Intent notificationIntent = new Intent(c, MainActivity.class);
-			PendingIntent contentIntent = PendingIntent.getActivity(c, 0, notificationIntent,
-					PendingIntent.FLAG_UPDATE_CURRENT);
-			NotificationCompat.Builder mBuilder =
-					new NotificationCompat.Builder(c)
-							.setSmallIcon(R.drawable.ic_stat_location_web_site)
-							.setLargeIcon(BitmapFactory.decodeResource(c.getResources(), R.drawable.ic_launcher))
-							.setOngoing(true)
-							.setContentIntent(contentIntent)
-							.setPriority(2)
-							.setContentTitle(c.getResources().getString(R.string.label));
-			mNotificationManager =
-					(NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE);
-			mNotificationManager.notify(8, mBuilder.build());
-			return mNotificationManager;
+	public static void launchIntentForResult(Intent i, View v, Activity activity, int requestCode){
+		Log.d("LL","launchIntentForResult");
+		ActivityOptionsCompat options = Tools.getActivityAnimation(v, activity);
+
+		try {
+			if (options != null)
+				ActivityCompat.startActivityForResult(activity, i, requestCode, options.toBundle());
+			else
+				activity.startActivityForResult(i,requestCode);
+		}catch (Exception e){
+			e.printStackTrace();
 		}
-		return null;
+	}
+
+
+	public static ActivityOptionsCompat getActivityAnimation(View v, Activity activity){
+		ActivityOptionsCompat options = null;
+
+		if (v==null && (activity instanceof MainActivity) && ((MainActivity)activity).contentFrame!=null)
+			v = ((MainActivity)activity).contentFrame;
+
+		if (v != null) {
+			if (Build.VERSION.SDK_INT >= 23)
+				options = ActivityOptionsCompat.makeClipRevealAnimation(v, 0, 0, v.getWidth(), v.getHeight());
+			else
+				options = ActivityOptionsCompat.makeScaleUpAnimation(v, 0, 0, v.getWidth(), v.getHeight());
+		}
+
+		return options;
 	}
 
   

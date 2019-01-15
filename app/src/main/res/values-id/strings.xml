@@ -90,7 +90,7 @@
 	<string name="download_started">Download dimulai</string>
 	<string name="choose_upload">Pilih file untuk di-upload</string>
 	<string name="unread_count_title">Penghitung notifikasi tak terbaca</string>
-	<string name="unread_count_summary">Tampilkan jumlah notifikasi yang belum terbaca di aplikasi.</string>
+	<string name="unread_count_summary">Tampilkan jumlah notifikasi yang belum terbaca di aplikasi</string>
 	<string name="backup_title">Atur nama backup</string>
 	<string name="backup_select">Pilih backup</string>
 	<string name="lb_pro_description">Bantu pengembangan proyek ini dengan membeli Lucid Browser versi donasi</string>
@@ -402,5 +402,7 @@
     <string name="delete_bookmarks">Hapus Semua Penunjuk Halaman</string>
     
     <string name="lock_screen_permission_request">Aktifkan administrator sehingga Lucid Launcher dapat mengunci layar. Anda harus menonaktifkan administrator untuk dapat uninstall Lucid Launcher</string>
+    
+    <string name="fade">Pudar</string>
     
 </resources>

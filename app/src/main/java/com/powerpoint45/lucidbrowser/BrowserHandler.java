@@ -3,7 +3,6 @@ package com.powerpoint45.lucidbrowser;
 import android.content.ContentValues;
 import android.content.Context;
 import android.os.Environment;
-import android.os.Message;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 
@@ -34,33 +33,29 @@ public static void dlImage(URL url, final MainActivity activity){
 				    if (!finalFileName.contains("."))
 				    	finalFileName = finalFileName+".png";
 				    finalFile = new File(storagePath+"/"+finalFileName);
-				    OutputStream output = new FileOutputStream (finalFile.getAbsolutePath()); 
-				    try {         
-				        byte[] buffer = new byte[1024];         
-				        int bytesRead = 0;         
+				    OutputStream output = new FileOutputStream (finalFile.getAbsolutePath());
+				    try {
+				        byte[] buffer = new byte[1024];
+				        int bytesRead = 0;
 				        while ((bytesRead = input.read(buffer, 0, buffer.length)) >= 0) {
-				                output.write(buffer, 0, bytesRead);         
-				        }     
-				    }   
-				    finally {  
-				        output.close(); 
-				    } 
+				                output.write(buffer, 0, bytesRead);
+				        }
+				    }
+				    finally {
+				        output.close();
+				    }
 				} 
 			
-				finally {     
-					Message msg = new Message();
- 	         	    msg.what = 1;
- 	         	    msg.obj = activity.getResources().getString(R.string.savedimage)+" "+storagePath.toString()+"/"+finalFileName;
-					activity.messageHandler.sendMessage(msg);
- 	                addImageGallery(finalFile, activity.getApplicationContext());
+				finally {
+					Tools.toastString(activity.getResources().getString(R.string.savedimage)+" "+storagePath.toString()+"/"+finalFileName,
+							activity);
+					if (finalFile!=null)
+ 	                	addImageGallery(finalFile, activity.getApplicationContext());
 				    input.close(); 
 				}
-				}catch(Exception e){
-					Message msg = new Message();
- 	         	    msg.what = 1;
- 	         	    msg.obj = activity.getResources().getString(R.string.failed);
-				activity.messageHandler.sendMessage(msg);
-				}
+			}catch(Exception e){
+				Tools.toastString(R.string.failed, activity);
+			}
 		}
 	}).start();
 }

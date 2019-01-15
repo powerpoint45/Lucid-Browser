@@ -2,21 +2,21 @@ package com.powerpoint45.lucidbrowser;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.util.Log;
+import android.os.Build;
 import android.util.TypedValue;
 
 
 public class Properties extends MainActivity {
 	public static int ActionbarSize=0; //used for getting the actual actionbar size + anny padding
 	public static class appProp{
-		static int actionBarColor;
+		public static int actionBarColor;
 		public static int primaryIntColor;
-		static int urlBarColor;
-		static boolean fullscreen;
+		public static int urlBarColor;
+		public static boolean fullscreen;
 		public static boolean transparentNav;
 		static boolean TransparentStatus;
 		static boolean systemPersistent;
-		static boolean holoDark;
+		public static boolean darkTheme;
 	}
 	public static class sidebarProp{
 		static int SidebarIconSize;
@@ -45,24 +45,24 @@ public class Properties extends MainActivity {
 
 	
 	public static void update_preferences(MainActivity context){
-		webpageProp.showBackdrop= MainActivity.mGlobalPrefs.getBoolean("showbrowserbackdrop",true);
-		webpageProp.useDesktopView= MainActivity.mGlobalPrefs.getBoolean("usedesktopview",false);
-		webpageProp.disablesuggestions= MainActivity.mGlobalPrefs.getBoolean("disablesuggestions", false);
-		webpageProp.clearonexit= MainActivity.mGlobalPrefs.getBoolean("clearonexit",false);
-		webpageProp.enableimages= MainActivity.mGlobalPrefs.getBoolean("enableimages", true);
-		//webpageProp.enablejavascript=MainActivity.mGlobalPrefs.getBoolean("enablejavascript", true);
+		webpageProp.showBackdrop=MainActivity.globalPrefs.getBoolean("showbrowserbackdrop",true);
+		webpageProp.useDesktopView=MainActivity.globalPrefs.getBoolean("usedesktopview",false);
+		webpageProp.disablesuggestions=MainActivity.globalPrefs.getBoolean("disablesuggestions", false);
+		webpageProp.clearonexit=MainActivity.globalPrefs.getBoolean("clearonexit",false);
+		webpageProp.enableimages=MainActivity.globalPrefs.getBoolean("enableimages", true);
+		//webpageProp.enablejavascript=MainActivity.globalPrefs.getBoolean("enablejavascript", true);
 		//uncomment if wanted by users
-		webpageProp.enablecookies=    MainActivity.mGlobalPrefs.getBoolean("enablecookies"  ,true);
-		webpageProp.fontSize     =    MainActivity.mGlobalPrefs.getInt    ("webfontsize"    , 2);
-		webpageProp.closetabsonexit = MainActivity.mGlobalPrefs.getBoolean("closetabsonexit", false);
-		webpageProp.exitconfirmation= MainActivity.mGlobalPrefs.getBoolean("exitconfirmation", false);
-		webpageProp.engine          = MainActivity.mGlobalPrefs.getString("setsearchengine", "ec");
+		webpageProp.enablecookies=    MainActivity.globalPrefs.getBoolean("enablecookies"  ,true);
+		webpageProp.fontSize     =    MainActivity.globalPrefs.getInt    ("webfontsize"    , 2);
+		webpageProp.closetabsonexit = MainActivity.globalPrefs.getBoolean("closetabsonexit", false);
+		webpageProp.exitconfirmation= MainActivity.globalPrefs.getBoolean("exitconfirmation", false);
+		webpageProp.engine          = MainActivity.globalPrefs.getString("setsearchengine", "ec");
 
 		if (webpageProp.engine.equals("ec")) {
 			webpageProp.assetHomePage = "file:///android_asset/ehome.html";
 			//I need to check if I can use my custom ecosia URL
 			if (!webpageProp.engine.equals("https://www.ecosia.org/search?tt=lucid&q=")) {
-				if (context.mGlobalPrefs.getBoolean("useCustomEcosia",true))
+				if (context.globalPrefs.getBoolean("useCustomEcosia",true))
 					webpageProp.engine = "https://www.ecosia.org/search?tt=lucid&q=";
 				else
 					webpageProp.engine = "https://www.ecosia.org/search?q=";
@@ -92,32 +92,30 @@ public class Properties extends MainActivity {
 		}else if (webpageProp.engine.equals("bd")) {
 			webpageProp.engine = "https://www.baidu.com/s?wd=";
 			webpageProp.assetHomePage = "file:///android_asset/bdhome.html";
+		}else if (webpageProp.engine.equals("nv")) {
+			webpageProp.engine = "https://search.naver.com/search.naver?query=";
+			webpageProp.assetHomePage = "file:///android_asset/nvhome.html";
 		}
-		
-		
-		
-		
-		
-		//http://www.baidu.com/s?wd=
-		
+
+
 		ActionbarSize= Tools.getActionBarSize(context);
 
-		appProp.fullscreen= MainActivity.mGlobalPrefs.getBoolean       ("fullscreen"           ,false);
-		appProp.transparentNav= MainActivity.mGlobalPrefs.getBoolean   ("transparentnav"       ,false);
-		appProp.TransparentStatus= MainActivity.mGlobalPrefs.getBoolean("transparentstatus"    ,true);
-		appProp.systemPersistent= MainActivity.mGlobalPrefs.getBoolean ("systempersistent"     ,false);
-		appProp.holoDark= MainActivity.mGlobalPrefs.getBoolean         ("holodark"             ,false);
-		appProp.primaryIntColor= MainActivity.mGlobalPrefs.getInt      ("textcolor",Color.BLACK);
-		appProp.actionBarColor= MainActivity.mGlobalPrefs.getInt       ("actionbarcolor", context.getResources().getColor(R.color.urlback));
-		appProp.urlBarColor= MainActivity.mGlobalPrefs.getInt          ("urlbarcolor", context.getResources().getColor(R.color.urlfront));
+		appProp.fullscreen=MainActivity.globalPrefs.getBoolean       ("fullscreen"           ,false);
+		appProp.transparentNav=MainActivity.globalPrefs.getBoolean   ("transparentnav"       ,false);
+		appProp.TransparentStatus=MainActivity.globalPrefs.getBoolean("transparentstatus"    ,true);
+		appProp.systemPersistent=MainActivity.globalPrefs.getBoolean ("systempersistent"     ,false);
+		appProp.darkTheme =MainActivity.globalPrefs.getBoolean         ("holodark"             ,false);
+		appProp.primaryIntColor=MainActivity.globalPrefs.getInt      ("textcolor",Color.BLACK);
+		appProp.actionBarColor=MainActivity.globalPrefs.getInt       ("actionbarcolor", context.getResources().getColor(R.color.urlback));
+		appProp.urlBarColor=MainActivity.globalPrefs.getInt          ("urlbarcolor", context.getResources().getColor(R.color.urlfront));
 		
-		sidebarProp.SidebarIconSize=numtodp(MainActivity.mGlobalPrefs.getInt    ("sidebariconsize"  ,80),context);
-		sidebarProp.SidebarIconPadding=numtodp(MainActivity.mGlobalPrefs.getInt ("sidebariconpadding",10),context);
-		sidebarProp.theme= MainActivity.mGlobalPrefs.getString                   ("sidebartheme", "w");
-		sidebarProp.sideBarColor= MainActivity.mGlobalPrefs.getInt               ("sidebarcolor"    , Color.BLACK);
-        sidebarProp.sideBarTextColor= MainActivity.mGlobalPrefs.getInt           ("sidebartextcolor", Color.WHITE);
-		sidebarProp.showLabel= MainActivity.mGlobalPrefs.getBoolean              ("showfavoriteslabels", true);
-		sidebarProp.swapLayout     = MainActivity.mGlobalPrefs.getBoolean        ("swapLayout"          ,false);
+		sidebarProp.SidebarIconSize=numtodp(MainActivity.globalPrefs.getInt    ("sidebariconsize"  ,80),context);
+		sidebarProp.SidebarIconPadding=numtodp(MainActivity.globalPrefs.getInt ("sidebariconpadding",10),context);
+		sidebarProp.theme=MainActivity.globalPrefs.getString                   ("sidebartheme", "w");
+		sidebarProp.sideBarColor=MainActivity.globalPrefs.getInt               ("sidebarcolor"    , Color.BLACK);
+        sidebarProp.sideBarTextColor=MainActivity.globalPrefs.getInt           ("sidebartextcolor", Color.WHITE);
+		sidebarProp.showLabel=MainActivity.globalPrefs.getBoolean              ("showfavoriteslabels", true);
+		sidebarProp.swapLayout     =MainActivity.globalPrefs.getBoolean        ("swapLayout"          ,false);
 		if (sidebarProp.showLabel)
 			sidebarProp.SidebarSize=numtodp(250,context);
 		else
@@ -128,8 +126,16 @@ public class Properties extends MainActivity {
 		if (alpha>254f){
 			sidebarProp.sideBarColor = SetupLayouts.addTransparencyToColor(254, sidebarProp.sideBarColor);
 		}
-		
-		
+
+
+		int id = context.getResources().getIdentifier("config_enableTranslucentDecor", "bool", "android");
+
+		if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT)
+			if (Properties.appProp.transparentNav || Properties.appProp.TransparentStatus)
+				if (id == 0) {//transparency is not supported
+					Properties.appProp.transparentNav   =false;
+					Properties.appProp.TransparentStatus=false;
+				}
 	}
 	
 	public static int numtodp(int in, Context context){

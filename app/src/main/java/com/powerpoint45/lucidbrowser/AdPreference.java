@@ -14,7 +14,7 @@ public class AdPreference extends Object {
 
 	//your ad id goes here
 	//ca-app-pub-XXXXXXXXXXXXXXXXXX/XXXXXXXXXX
-	final String AD_UNIT_ID = "ca-app-pub-5849487494074701/2903707073";
+	final String AD_UNIT_ID = "ca-app-pub-XXXXXXXXXXXXXXXXXX/XXXXXXXXXX";
 	InterstitialAd interstitial;
 	SharedPreferences globalPref;
 	Context context;
@@ -41,10 +41,9 @@ public class AdPreference extends Object {
 			interstitial.setAdUnitId(AD_UNIT_ID);
 			 
 			AdRequest adRequest = new AdRequest.Builder()
-	        .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-	        .addTestDevice("4C7737FB5E1CF1C791654654891A4803")//MOTEROLA
-	        .addTestDevice("B2E17AC6E84F2EC84F8FF602FAC67470")//SAMSUNG
-	        .build(); 
+	        		.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+					.addTestDevice("0F46937400609363476E493E7CC11512")
+	        		.build();
 			interstitial.loadAd(adRequest);
 			
 			interstitial.setAdListener(new AdListener() {

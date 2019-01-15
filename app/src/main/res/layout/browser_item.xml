@@ -36,7 +36,7 @@
         android:background="?selectableItemBackgroundBorderless"
         android:focusable="false"
         android:gravity="center"
-        android:onClick="closeCurrentTab"
+        android:onClick="closeTab"
         android:src="@drawable/btn_toolbar_stop_loading_normal"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 

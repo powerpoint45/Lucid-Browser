@@ -1,235 +1,329 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:2:1-108:12
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:2:1-110:12
+INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:2:1-110:12
+INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:2:1-110:12
+INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:2:1-110:12
+MERGED from [com.android.support:design:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/da09aae4ec0e3111c33c7ab4c0a847b0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b2e63e8beb01226ac46b06aa33f26c96/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-ads:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-17.1.2.aar/98525aa78da6fd8d32569f81491b6ecd/AndroidManifest.xml:17:1-25:12
+MERGED from [com.github.amlcurran.showcaseview:library:5.4.3] /home/michael/.gradle/caches/transforms-1/files-1.1/library-5.4.3.aar/4cbe87e5c436600f8883e6076434d29b/AndroidManifest.xml:17:1-26:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/b66a5c9c778d8dd4fbb3dfd1ffa760ec/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.android.gms:play-services-gass:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-gass-17.1.2.aar/208fbc595436822bc40d9ba164d09d76/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.0.4] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.0.4.aar/aa48669915752fabbd3afa9587759911/AndroidManifest.xml:17:1-30:12
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.5.aar/66fc9895f6eda39e436afcdc4e19f21e/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/f980e6974d6f1e0a678848bbd06c625a/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/47df083ad5cec41f9da74ae7cfc78516/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/f0bb5f294fad62a572ba82a47545090f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/db600649195cfc99fb156b86093d8419/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/279ac633294b70ba2a5ab72112481492/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/eb60f657e068a84ff490355976eb818b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/febc98cfcc03bbb83ac6f6f586254a34/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/5a48dd20042e70a36de0ec8ac5a16f10/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/7d67fbbb0b41f79a0c04a1e5ada2dfde/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customtabs:26.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/customtabs-26.1.0.aar/41116dd55b1e892f522da7228ae31dae/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/4421b952dbe557efdafa6a9508755f2c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9ab5ce88d82adec759f08907b135cdfc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-ads-base:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-base-17.1.2.aar/83191af14f095405cee2ce673c9204b8/AndroidManifest.xml:2:1-9:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/437b5974de4fc6c8f3ecee144d105c77/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/cc86bca8096b4b533816f70c4fa49a6d/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c761867b6038894967c169a609ea3eb8/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/85772804ec99fd368870758903b8751e/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:2:1-110:12
+INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:2:1-110:12
+INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:2:1-110:12
 	package
 		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:3:5-44
 		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
 		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:5:5-30
-		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
-		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
-	android:versionCode
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:4:5-29
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:5:5-31
 		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
 		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:2:11-69
-uses-sdk
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:25.1.1] /home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] /home/michael/.android/build-cache/860318e564e3e841f0899c56c5567135b0c20d99/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.1.1] /home/michael/.android/build-cache/5707ceb7774a9a82d9f0721534e64a955d04e0d3/output/AndroidManifest.xml:21:5-43
-MERGED from [com.google.android.gms:play-services-ads:10.0.1] /home/michael/.android/build-cache/eab54c05074601719eaf800e2a8bf460151cdce7/output/AndroidManifest.xml:17:5-42
-MERGED from [com.google.android.gms:play-services-ads-lite:10.0.1] /home/michael/.android/build-cache/e52165bec651399db6f0167e63ce20eb7ceca019/output/AndroidManifest.xml:22:5-42
-MERGED from [com.google.android.gms:play-services-clearcut:10.0.1] /home/michael/.android/build-cache/7fc4524b238b0fd88904d08e9c6a268e8e1c81a1/output/AndroidManifest.xml:17:5-42
-MERGED from [com.google.android.gms:play-services-base:10.0.1] /home/michael/.android/build-cache/bdd1bdbebe9e3fc75f9d4d2a7194c6de46a95df4/output/AndroidManifest.xml:17:5-42
-MERGED from [com.google.android.gms:play-services-tasks:10.0.1] /home/michael/.android/build-cache/1fee5e6afb40cba168ec40dd5a389e8df8c203c6/output/AndroidManifest.xml:3:5-42
-MERGED from [com.google.android.gms:play-services-gass:10.0.1] /home/michael/.android/build-cache/b25ea165d865501431adf13581ad64e93efb5b2e/output/AndroidManifest.xml:3:5-42
-MERGED from [com.google.android.gms:play-services-basement:10.0.1] /home/michael/.android/build-cache/18cf55e2286ffec3d9686a7050fd83f415b7691e/output/AndroidManifest.xml:17:5-42
-MERGED from [com.github.amlcurran.showcaseview:library:5.4.3] /home/michael/.android/build-cache/51eeb8ce2f12f89a34e23c6dd186fc76976b4714/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-v4:25.1.1] /home/michael/.android/build-cache/3704cde579b628e84bc111bc21c618c5cf09c77d/output/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.1.1] /home/michael/.android/build-cache/0998b900c42243c92e9ab283faf02000e536684c/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.1.1] /home/michael/.android/build-cache/6bf9f819228186b32e0b09f0199b3d7d5d1fa053/output/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.1.1] /home/michael/.android/build-cache/832903cc7b22824d8e4a3d10c5962dcfb996e38c/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.1.1] /home/michael/.android/build-cache/951382b6a23d06b518dea20f1ba9a338a0b57b7e/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.1.1] /home/michael/.android/build-cache/2899aa115ed6e46fe16bf5507cb568d47c2c6d7e/output/AndroidManifest.xml:21:5-23:58
-	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:25.1.1] /home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/AndroidManifest.xml:23:9-75
-	android:targetSdkVersion
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:9:9-38
-		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
-		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
-	android:minSdkVersion
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:8:9-35
+	android:versionCode
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:4:5-29
 		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
 		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:11:4-77
-MERGED from [com.google.android.gms:play-services-ads-lite:10.0.1] /home/michael/.android/build-cache/e52165bec651399db6f0167e63ce20eb7ceca019/output/AndroidManifest.xml:20:5-78
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:7:4-77
+MERGED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.0.4] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.0.4.aar/aa48669915752fabbd3afa9587759911/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.0.4] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.0.4.aar/aa48669915752fabbd3afa9587759911/AndroidManifest.xml:24:5-79
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:11:21-75
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:7:21-75
 uses-permission#android.permission.INTERNET
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:12:4-65
-MERGED from [com.google.android.gms:play-services-ads-lite:10.0.1] /home/michael/.android/build-cache/e52165bec651399db6f0167e63ce20eb7ceca019/output/AndroidManifest.xml:19:5-66
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:8:4-65
+MERGED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.0.4] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.0.4.aar/aa48669915752fabbd3afa9587759911/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.0.4] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.0.4.aar/aa48669915752fabbd3afa9587759911/AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:12:21-63
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:8:21-63
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:13:4-79
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:9:4-79
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:13:21-77
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:9:21-77
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:14:4-79
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:10:4-79
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:14:21-76
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:10:21-76
 uses-permission#com.android.browser.permission.READ_HISTORY_BOOKMARKS
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:15:5-93
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:11:5-93
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:15:22-90
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:11:22-90
 application
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:17:5-106:19
-MERGED from [com.android.support:appcompat-v7:25.1.1] /home/michael/.android/build-cache/63d70774a67f0bb783cdadde61c8ac0b4e446692/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] /home/michael/.android/build-cache/860318e564e3e841f0899c56c5567135b0c20d99/output/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.1.1] /home/michael/.android/build-cache/5707ceb7774a9a82d9f0721534e64a955d04e0d3/output/AndroidManifest.xml:23:5-20
-MERGED from [com.google.android.gms:play-services-ads-lite:10.0.1] /home/michael/.android/build-cache/e52165bec651399db6f0167e63ce20eb7ceca019/output/AndroidManifest.xml:23:5-27:19
-MERGED from [com.google.android.gms:play-services-clearcut:10.0.1] /home/michael/.android/build-cache/7fc4524b238b0fd88904d08e9c6a268e8e1c81a1/output/AndroidManifest.xml:18:5-19
-MERGED from [com.google.android.gms:play-services-base:10.0.1] /home/michael/.android/build-cache/bdd1bdbebe9e3fc75f9d4d2a7194c6de46a95df4/output/AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:10.0.1] /home/michael/.android/build-cache/1fee5e6afb40cba168ec40dd5a389e8df8c203c6/output/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-gass:10.0.1] /home/michael/.android/build-cache/b25ea165d865501431adf13581ad64e93efb5b2e/output/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:10.0.1] /home/michael/.android/build-cache/18cf55e2286ffec3d9686a7050fd83f415b7691e/output/AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.1.1] /home/michael/.android/build-cache/3704cde579b628e84bc111bc21c618c5cf09c77d/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.1.1] /home/michael/.android/build-cache/0998b900c42243c92e9ab283faf02000e536684c/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.1.1] /home/michael/.android/build-cache/6bf9f819228186b32e0b09f0199b3d7d5d1fa053/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.1.1] /home/michael/.android/build-cache/832903cc7b22824d8e4a3d10c5962dcfb996e38c/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.1.1] /home/michael/.android/build-cache/951382b6a23d06b518dea20f1ba9a338a0b57b7e/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.1.1] /home/michael/.android/build-cache/2899aa115ed6e46fe16bf5507cb568d47c2c6d7e/output/AndroidManifest.xml:25:5-20
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:13:5-108:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/b66a5c9c778d8dd4fbb3dfd1ffa760ec/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/b66a5c9c778d8dd4fbb3dfd1ffa760ec/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:26:5-40:19
+MERGED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:26:5-40:19
+MERGED from [com.google.android.gms:play-services-gass:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-gass-17.1.2.aar/208fbc595436822bc40d9ba164d09d76/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-gass:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-gass-17.1.2.aar/208fbc595436822bc40d9ba164d09d76/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.0.4] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.0.4.aar/aa48669915752fabbd3afa9587759911/AndroidManifest.xml:27:5-28:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.0.4] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.0.4.aar/aa48669915752fabbd3afa9587759911/AndroidManifest.xml:27:5-28:19
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.5.aar/66fc9895f6eda39e436afcdc4e19f21e/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.5.aar/66fc9895f6eda39e436afcdc4e19f21e/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/f980e6974d6f1e0a678848bbd06c625a/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/f980e6974d6f1e0a678848bbd06c625a/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:customtabs:26.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/customtabs-26.1.0.aar/41116dd55b1e892f522da7228ae31dae/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:customtabs:26.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/customtabs-26.1.0.aar/41116dd55b1e892f522da7228ae31dae/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-ads-base:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-base-17.1.2.aar/83191af14f095405cee2ce673c9204b8/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-ads-base:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-base-17.1.2.aar/83191af14f095405cee2ce673c9204b8/AndroidManifest.xml:7:5-20
 	android:label
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:21:9-38
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:17:9-38
 	android:hardwareAccelerated
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:19:9-43
-	android:allowBackup
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:18:9-35
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:15:9-43
 	android:icon
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:20:9-45
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:16:9-45
+	android:allowBackup
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:14:9-35
 meta-data#com.google.android.gms.version
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:24:9-25:71
-MERGED from [com.google.android.gms:play-services-basement:10.0.1] /home/michael/.android/build-cache/18cf55e2286ffec3d9686a7050fd83f415b7691e/output/AndroidManifest.xml:20:9-121
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:20:9-21:71
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/f980e6974d6f1e0a678848bbd06c625a/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/f980e6974d6f1e0a678848bbd06c625a/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:25:16-69
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:21:16-69
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:24:20-65
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:20:20-65
+meta-data#com.google.android.gms.ads.APPLICATION_ID
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:25:13-67
+	android:name
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:24:13-69
 activity#com.powerpoint45.lucidbrowser.MainActivity
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:26:9-54:20
-	android:label
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:27:13-42
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:28:9-56:20
 	android:stateNotNeeded
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:31:13-42
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:33:13-42
+	android:label
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:29:13-42
 	android:launchMode
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:30:13-44
-	android:configChanges
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:29:13-74
-	android:theme
 		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:32:13-44
+	android:configChanges
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:31:13-74
+	android:theme
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:34:13-44
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:28:13-70
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:33:13-36:29
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:30:13-70
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:35:13-38:29
 action#android.intent.action.MAIN
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:34:17-69
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:36:17-69
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:34:25-66
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:36:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:35:17-77
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:37:17-77
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:35:27-74
-intent-filter#android.intent.action.WEB_SEARCH+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:38:13-45:29
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:37:27-74
+intent-filter#action:name:android.intent.action.WEB_SEARCH+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:+data:scheme:http+data:scheme:https
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:40:13-47:29
 action#android.intent.action.WEB_SEARCH
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:39:17-75
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:41:17-75
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:39:25-72
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:41:25-72
 category#android.intent.category.DEFAULT
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:40:17-76
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:42:17-76
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:40:27-73
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:42:27-73
 category#android.intent.category.BROWSABLE
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:41:17-78
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:43:17-78
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:41:27-75
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:43:27-75
 data
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:42:17-43
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:44:17-43
 	android:scheme
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:42:23-40
-intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:47:13-53:29
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:44:23-40
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:http+data:scheme:https
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:49:13-55:29
 action#android.intent.action.VIEW
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:48:17-69
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:50:17-69
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:48:25-66
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:50:25-66
 activity#com.powerpoint45.lucidbrowser.BookmarksActivity
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:58:9-67:20
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:60:9-69:20
 	android:label
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:59:13-46
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:61:13-46
 	android:configChanges
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:61:13-74
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:63:13-74
 	android:theme
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:62:13-52
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:64:13-54
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:60:13-75
-intent-filter#android.intent.category.DEFAULT+com.powerpoint45.lucidbrowser.BookmarksActivity
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:63:13-66:29
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:62:13-75
+intent-filter#action:name:com.powerpoint45.lucidbrowser.BookmarksActivity+category:name:android.intent.category.DEFAULT
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:65:13-68:29
 action#com.powerpoint45.lucidbrowser.BookmarksActivity
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:64:17-90
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:66:17-90
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:64:25-87
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:66:25-87
 activity#com.powerpoint45.lucidbrowser.SettingsV2
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:69:9-78:20
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:71:9-80:20
 	android:label
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:70:13-50
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:72:13-50
 	android:configChanges
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:73:13-74
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:75:13-74
 	android:theme
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:71:13-47
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:73:13-47
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:72:13-68
-intent-filter#android.intent.category.DEFAULT+com.powerpoint45.lucidbrowser.SettingsV2
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:74:13-77:29
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:74:13-68
+intent-filter#action:name:com.powerpoint45.lucidbrowser.SettingsV2+category:name:android.intent.category.DEFAULT
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:76:13-79:29
 action#com.powerpoint45.lucidbrowser.SettingsV2
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:75:17-83
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:77:17-83
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:75:25-80
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:77:25-80
 activity#com.powerpoint45.lucidbrowser.ImportBookmarksActivity
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:80:9-89:20
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:82:9-91:20
 	android:label
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:81:13-62
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:83:13-62
 	android:configChanges
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:84:13-74
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:86:13-74
 	android:theme
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:82:13-47
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:84:13-47
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:83:13-81
-intent-filter#android.intent.category.DEFAULT+com.powerpoint45.lucidbrowser.ImportBookmarksActivity
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:85:13-88:29
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:85:13-81
+intent-filter#action:name:com.powerpoint45.lucidbrowser.ImportBookmarksActivity+category:name:android.intent.category.DEFAULT
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:87:13-90:29
 action#com.powerpoint45.lucidbrowser.ImportBookmarksActivity
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:86:17-96
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:88:17-96
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:86:25-93
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:88:25-93
 activity#com.powerpoint45.lucidbrowser.OpenFileActivity
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:91:9-100:20
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:93:9-102:20
 	android:label
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:92:13-53
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:94:13-53
 	android:configChanges
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:95:13-74
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:97:13-74
 	android:theme
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:93:13-47
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:95:13-47
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:94:13-74
-intent-filter#android.intent.category.DEFAULT+com.powerpoint45.lucidbrowser.OpenFileActivity
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:96:13-99:29
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:96:13-74
+intent-filter#action:name:com.powerpoint45.lucidbrowser.OpenFileActivity+category:name:android.intent.category.DEFAULT
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:98:13-101:29
 action#com.powerpoint45.lucidbrowser.OpenFileActivity
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:97:17-89
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:99:17-89
 	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:97:25-86
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:99:25-86
 activity#com.google.android.gms.ads.AdActivity
-ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:103:9-104:125
-MERGED from [com.google.android.gms:play-services-ads-lite:10.0.1] /home/michael/.android/build-cache/e52165bec651399db6f0167e63ce20eb7ceca019/output/AndroidManifest.xml:25:9-232
-	android:configChanges
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:104:14-123
-	android:theme
-		ADDED from [com.google.android.gms:play-services-ads-lite:10.0.1] /home/michael/.android/build-cache/e52165bec651399db6f0167e63ce20eb7ceca019/output/AndroidManifest.xml:25:182-230
-	android:name
-		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:103:19-71
-activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
-ADDED from [com.google.android.gms:play-services-ads-lite:10.0.1] /home/michael/.android/build-cache/e52165bec651399db6f0167e63ce20eb7ceca019/output/AndroidManifest.xml:26:9-131
-	android:theme
-		ADDED from [com.google.android.gms:play-services-ads-lite:10.0.1] /home/michael/.android/build-cache/e52165bec651399db6f0167e63ce20eb7ceca019/output/AndroidManifest.xml:26:92-129
-	android:name
-		ADDED from [com.google.android.gms:play-services-ads-lite:10.0.1] /home/michael/.android/build-cache/e52165bec651399db6f0167e63ce20eb7ceca019/output/AndroidManifest.xml:26:19-91
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/michael/.android/build-cache/bdd1bdbebe9e3fc75f9d4d2a7194c6de46a95df4/output/AndroidManifest.xml:19:9-172
+ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:105:9-106:125
+MERGED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:29:9-33:64
+MERGED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:29:9-33:64
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/michael/.android/build-cache/bdd1bdbebe9e3fc75f9d4d2a7194c6de46a95df4/output/AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:32:13-37
+	android:configChanges
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:106:14-123
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/michael/.android/build-cache/bdd1bdbebe9e3fc75f9d4d2a7194c6de46a95df4/output/AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:33:13-61
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/michael/.android/build-cache/bdd1bdbebe9e3fc75f9d4d2a7194c6de46a95df4/output/AndroidManifest.xml:19:19-85
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml:105:19-71
+uses-sdk
+INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/da09aae4ec0e3111c33c7ab4c0a847b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/da09aae4ec0e3111c33c7ab4c0a847b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b2e63e8beb01226ac46b06aa33f26c96/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b2e63e8beb01226ac46b06aa33f26c96/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-17.1.2.aar/98525aa78da6fd8d32569f81491b6ecd/AndroidManifest.xml:21:5-23:62
+MERGED from [com.google.android.gms:play-services-ads:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-17.1.2.aar/98525aa78da6fd8d32569f81491b6ecd/AndroidManifest.xml:21:5-23:62
+MERGED from [com.github.amlcurran.showcaseview:library:5.4.3] /home/michael/.gradle/caches/transforms-1/files-1.1/library-5.4.3.aar/4cbe87e5c436600f8883e6076434d29b/AndroidManifest.xml:22:5-24:41
+MERGED from [com.github.amlcurran.showcaseview:library:5.4.3] /home/michael/.gradle/caches/transforms-1/files-1.1/library-5.4.3.aar/4cbe87e5c436600f8883e6076434d29b/AndroidManifest.xml:22:5-24:41
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/b66a5c9c778d8dd4fbb3dfd1ffa760ec/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/b66a5c9c778d8dd4fbb3dfd1ffa760ec/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gass:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-gass-17.1.2.aar/208fbc595436822bc40d9ba164d09d76/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-gass:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-gass-17.1.2.aar/208fbc595436822bc40d9ba164d09d76/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.0.4] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.0.4.aar/aa48669915752fabbd3afa9587759911/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.0.4] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.0.4.aar/aa48669915752fabbd3afa9587759911/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.5.aar/66fc9895f6eda39e436afcdc4e19f21e/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.5.aar/66fc9895f6eda39e436afcdc4e19f21e/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/f980e6974d6f1e0a678848bbd06c625a/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/f980e6974d6f1e0a678848bbd06c625a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/47df083ad5cec41f9da74ae7cfc78516/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/47df083ad5cec41f9da74ae7cfc78516/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/f0bb5f294fad62a572ba82a47545090f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/f0bb5f294fad62a572ba82a47545090f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/db600649195cfc99fb156b86093d8419/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/db600649195cfc99fb156b86093d8419/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/279ac633294b70ba2a5ab72112481492/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/279ac633294b70ba2a5ab72112481492/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/eb60f657e068a84ff490355976eb818b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/eb60f657e068a84ff490355976eb818b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/febc98cfcc03bbb83ac6f6f586254a34/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/febc98cfcc03bbb83ac6f6f586254a34/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/5a48dd20042e70a36de0ec8ac5a16f10/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/5a48dd20042e70a36de0ec8ac5a16f10/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/7d67fbbb0b41f79a0c04a1e5ada2dfde/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/7d67fbbb0b41f79a0c04a1e5ada2dfde/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:26.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/customtabs-26.1.0.aar/41116dd55b1e892f522da7228ae31dae/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:26.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/customtabs-26.1.0.aar/41116dd55b1e892f522da7228ae31dae/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/4421b952dbe557efdafa6a9508755f2c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/4421b952dbe557efdafa6a9508755f2c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9ab5ce88d82adec759f08907b135cdfc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/michael/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9ab5ce88d82adec759f08907b135cdfc/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-base:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-base-17.1.2.aar/83191af14f095405cee2ce673c9204b8/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-base:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-base-17.1.2.aar/83191af14f095405cee2ce673c9204b8/AndroidManifest.xml:5:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/437b5974de4fc6c8f3ecee144d105c77/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/437b5974de4fc6c8f3ecee144d105c77/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/cc86bca8096b4b533816f70c4fa49a6d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/cc86bca8096b4b533816f70c4fa49a6d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c761867b6038894967c169a609ea3eb8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c761867b6038894967c169a609ea3eb8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/85772804ec99fd368870758903b8751e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/85772804ec99fd368870758903b8751e/AndroidManifest.xml:20:5-44
+INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.google.android.gms:play-services-ads:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-17.1.2.aar/98525aa78da6fd8d32569f81491b6ecd/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+		ADDED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+		INJECTED from /home/michael/StudioProjects/LucidBrowser/app/src/main/AndroidManifest.xml
+provider#com.google.android.gms.ads.MobileAdsInitProvider
+ADDED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:35:9-39:39
+	android:authorities
+		ADDED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:37:13-73
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:38:13-37
+	android:initOrder
+		ADDED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:39:13-36
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:17.1.2] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.2.aar/14663e51f7d3448db462a1bcdcc5ab30/AndroidManifest.xml:36:13-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-measurement-sdk-api:16.0.4] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.0.4.aar/aa48669915752fabbd3afa9587759911/AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-sdk-api:16.0.4] /home/michael/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.0.4.aar/aa48669915752fabbd3afa9587759911/AndroidManifest.xml:25:22-65
+meta-data#android.support.VERSION
+ADDED from [com.android.support:customtabs:26.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/customtabs-26.1.0.aar/41116dd55b1e892f522da7228ae31dae/AndroidManifest.xml:23:9-25:38
+	android:value
+		ADDED from [com.android.support:customtabs:26.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/customtabs-26.1.0.aar/41116dd55b1e892f522da7228ae31dae/AndroidManifest.xml:25:13-35
+	android:name
+		ADDED from [com.android.support:customtabs:26.1.0] /home/michael/.gradle/caches/transforms-1/files-1.1/customtabs-26.1.0.aar/41116dd55b1e892f522da7228ae31dae/AndroidManifest.xml:24:13-51

@@ -18,4 +18,6 @@
 
     <color name="sv_backgroundColor">#F50A39B1</color>
 
+    <color name="material_dark_blue">#607d8b</color>
+
 </resources>

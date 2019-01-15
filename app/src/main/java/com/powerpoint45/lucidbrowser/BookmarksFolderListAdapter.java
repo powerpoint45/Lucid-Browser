@@ -60,7 +60,7 @@ public class BookmarksFolderListAdapter extends BaseAdapter {
 		RelativeLayout RL = (RelativeLayout) MainActivity.inflater.inflate(
 				R.layout.bookmarkfolder_item, null);
 
-		if (Properties.appProp.holoDark) {
+		if (Properties.appProp.darkTheme) {
 			((TextView)(RL.findViewById(R.id.bookmark_title))).setTextColor(Color.WHITE);
 			((ImageView)(RL.findViewById(R.id.bookmark_icon))).setColorFilter(Color.WHITE, Mode.SRC_ATOP);
 		} else {

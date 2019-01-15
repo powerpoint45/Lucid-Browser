@@ -1,14 +1,11 @@
 package com.powerpoint45.lucidbrowser;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff.Mode;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -17,48 +14,38 @@ import android.widget.TextView;
 import bookmarkModel.Bookmark;
 import bookmarkModel.BookmarkFolder;
 
-public class BookmarkMoveDialog extends Dialog {
+class BookmarkMoveDialog extends Dialog {
 
-	BookmarkFolder folderToMove;
-	Bookmark bookmarkToMove;
-	
-	BookmarkFolder displayFolder = BookmarksActivity.bookmarksMgr.root;
-	BookmarksFolderListAdapter folderListAdapter;
-	RelativeLayout dialogLayout;
+	private BookmarkFolder folderToMove;
+	private Bookmark bookmarkToMove;
 
-	public void setFolderToMove(BookmarkFolder toMove){
+	private BookmarkFolder displayFolder = BookmarksActivity.bookmarksMgr.root;
+	private BookmarksFolderListAdapter folderListAdapter;
+	private RelativeLayout dialogLayout;
+
+	private BookmarksActivity bookmarksActivity;
+
+	void setFolderToMove(BookmarkFolder toMove){
 		this.folderToMove = toMove;
 		this.folderListAdapter.setIgnore(toMove);
 	}
-	
-	public void setBookmarkToMove(Bookmark toMove){
+
+	void setBookmarkToMove(Bookmark toMove){
 		this.bookmarkToMove = toMove;
 	}
-	
-	public BookmarkMoveDialog(Context context, boolean cancelable,
-			OnCancelListener cancelListener) {
-		super(context, cancelable, cancelListener);
-		// TODO Auto-generated constructor stub
-	}
 
-	public BookmarkMoveDialog(Context context, int theme) {
-		super(context, theme);
-		// TODO Auto-generated constructor stub
-	}
-
-	public BookmarkMoveDialog(BookmarksActivity context) {
+	BookmarkMoveDialog(BookmarksActivity context) {
 		super(context);
+		bookmarksActivity = context;
 
-		LayoutInflater inflater = (LayoutInflater)context
-				.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-		dialogLayout = (RelativeLayout) inflater.inflate(
+		dialogLayout = (RelativeLayout) bookmarksActivity.getLayoutInflater().inflate(
 				R.layout.bookmarks_move_dialog, null);
 
 		// Set Theme
-		if (Properties.appProp.holoDark) {
+		if (Properties.appProp.darkTheme) {
 			((TextView) (dialogLayout.findViewById(R.id.bookmark_title)))
 					.setTextColor(Color.WHITE);
-			((TextView) (dialogLayout.findViewById(R.id.current_location)))
+			dialogLayout.findViewById(R.id.current_location)
 					.setBackgroundColor(Color.DKGRAY);
 			((TextView) (dialogLayout.findViewById(R.id.current_location)))
 					.setTextColor(Color.GRAY);
@@ -74,7 +61,7 @@ public class BookmarkMoveDialog extends Dialog {
 				R.string.bookmark_move)
 				+ "...");
 
-		ListView bookmarksFolderListView = (ListView) findViewById(R.id.bookmarksfolder_list);
+		ListView bookmarksFolderListView = findViewById(R.id.bookmarksfolder_list);
 		this.folderListAdapter = new BookmarksFolderListAdapter();
 		folderListAdapter.setFolderList(this.displayFolder
 				.getContainedFolders());
@@ -84,7 +71,7 @@ public class BookmarkMoveDialog extends Dialog {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int pos,
-					long arg3) {
+									long arg3) {
 
 				displayFolder = displayFolder.getFolder(pos);
 				folderListAdapter.setFolderList(displayFolder
@@ -92,22 +79,21 @@ public class BookmarkMoveDialog extends Dialog {
 				folderListAdapter.notifyDataSetChanged();
 				((TextView) (dialogLayout.findViewById(R.id.current_location)))
 						.setText(displayFolder.getDisplayName());
-				((RelativeLayout) dialogLayout.findViewById(R.id.folder_back))
+				dialogLayout.findViewById(R.id.folder_back)
 						.setVisibility(View.VISIBLE);
 				// finish();
 			}
 		};
 
 		bookmarksFolderListView.setOnItemClickListener(clickFolderListener);
-		
-		((RelativeLayout)(dialogLayout.findViewById(R.id.folder_back))).setOnClickListener(new View.OnClickListener() {
-			
+
+		dialogLayout.findViewById(R.id.folder_back).setOnClickListener(new View.OnClickListener() {
+
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				if (!displayFolder.isRoot) {
 					displayFolder = displayFolder.parentFolder;
 					if (displayFolder.isRoot) {
-						((RelativeLayout) dialogLayout.findViewById(R.id.folder_back))
+						dialogLayout.findViewById(R.id.folder_back)
 								.setVisibility(View.GONE);
 					}
 
@@ -119,26 +105,25 @@ public class BookmarkMoveDialog extends Dialog {
 				}
 			}
 		});
-		
-		((Button) (dialogLayout.findViewById(R.id.btn_move_here)))
+
+		dialogLayout.findViewById(R.id.btn_move_here)
 				.setOnClickListener(new View.OnClickListener() {
 
 					public void onClick(View v) {
-						// TODO Auto-generated method stub
 						if (folderToMove != null) {
 							folderToMove.parentFolder.removeFolder(folderToMove
 									.getInternalName());
 							displayFolder.addFolder(folderToMove);
-							BookmarksActivity.refreshBookmarksView();
+							bookmarksActivity.refreshBookmarksView();
 							dismiss();
 						}
-						
+
 						if (bookmarkToMove != null) {
-							System.out.println(bookmarkToMove.getInFolder().getDisplayName());
+							System.out.println("BOOK NAME:"+ bookmarkToMove.getInFolder().getDisplayName());
 							bookmarkToMove.getInFolder().removeBookmark(bookmarkToMove
 									.getInternalName());
 							displayFolder.addBookmark(bookmarkToMove);
-							BookmarksActivity.refreshBookmarksView();
+							bookmarksActivity.refreshBookmarksView();
 							dismiss();
 						}
 					}

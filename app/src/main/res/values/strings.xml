@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Exported via lokaligo.com on Sat, 21 Nov 2015 22:35:33 +0000. -->
+
+
+    <string name="sslIdMismatchMessage" formatted="false">The webpage at\n\n%1s\n\nhas a SSL certificate that is only valid for %2s.</string>
+    <string name="sslExpiredMessage" formatted="false">The webpage at\n\n%1s\n\nhas an expired SSL certificate. It expired after %2s.</string>
+    <string name="sslNotYetValidMessage" formatted="false">The webpage at\n\n%1s\n\nhas an SSL certificate that is not yet valid. It will be valid from %2s.</string>
+    <string name="sslUntrustedMessage" formatted="false">The webpage at\n\n%s\n\nhas a self-signed SSL certificate.</string>
+
     <string name="trans_zoomout">Zoom-Out</string>
     <string name="trans_pagestack">Page Stack</string>
     <string name="trans_flipin">Flip In</string>
@@ -54,8 +62,7 @@
     <string name="websettingstitle">Browser Settings</string>
     <string name="pagetransformationtitle">Scroll Animation</string>
     <string name="pagetransformationsummary">Set the page scroll animation</string>
-    <string name="actionbarcolortitle">ActionBar Color</string>
-    <string name="actionbarcolorsummary">Set the color of the actionbar</string>
+
     <string name="pagetransparencytitle">Page Opacity</string>
     <string name="pagetransparencysummary">Set the opacity of the App and Browser page</string>
     <string name="orientationtitle">Launcher Orientation</string>
@@ -67,7 +74,6 @@
     <string name="transparentstatustitle">Transparent Status Bar</string>
     <string name="transparentstatussummary">Enable or Disable transparent Status Bar</string>
     <string name="searchtexttitle">Custom Search Text</string>
-    <string name="searchtextsummary">Set the search text in the ActionBar</string>
     <string name="searchtextmessage">Enter a Custom Search Text:</string>
     <string name="sidebarthemetitle">Sidebar Theme</string>
     <string name="sidebarthemesummary">Set the Sidebar Theme</string>
@@ -271,8 +277,6 @@
     <string name="widgetpaddingmessage">Select the Widget Padding:</string>
     <string name="holoDarkTitle">Use dark Theme</string>
     <string name="holoDarkSummary">Check to use a dark theme in settings and bookmarks (Will restart settings to apply theme)</string>
-    <string name="hide_actionbar_title">Hide ActionBar</string>
-    <string name="hide_actionbar_summary">Hide the actionbar when scrolling page down</string>
     <string name="folder_color_title">Folder Color</string>
     <string name="folder_color_summary">Set the color of the inside of folders</string>
     <string name="folder_style_title">Folder Style</string>
@@ -342,8 +346,7 @@
     <string name="step_browser_sidebar_summary">Access the browser sidebar by swiping from the edge of the screen</string>
     <string name="step_orientation_title">Launcher Orientation</string>
     <string name="step_orientation_summary">The home screen layout is different based off the orientation. You can place separate apps based off orientation</string>
-    <string name="actionbartextstyletitle">ActionBar Item Style</string>
-    <string name="actionbartextstylesummary">Set ActionBar Item Style</string>
+
     <string name="searchcontactstitle">Search Contacts</string>
     <string name="searchcontactssummary">Enable or disable searching contacts</string>
     <string name="version">Version</string>
@@ -367,14 +370,12 @@
     <string name="folder_apps_size_title">Folder Apps Size</string>
     <string name="folder_apps_size_summary">Set the size of apps inside folders</string>
     <string name="folder_columns_summary">Set the number of columns in folders</string>
-    <string name="actionbar_item_color_title">Action Bar Item Color</string>
-    <string name="actionbar_item_color_summary">Set the color of items in the action bar</string>
-    <string name="disable_new_app_glow_title">Disable New App Glow</string>
-    <string name="disable_new_app_glow_summary">Disable the new app glow in the app drawer</string>
+    <string name="disable_new_app_glow_title">Disable New App Badge</string>
+    <string name="disable_new_app_glow_summary">Disable the new app badge in the app drawer</string>
     <string name="download_started">Download started</string>
     <string name="choose_upload">Choose file for upload</string>
-    <string name="unread_count_title">Unread Count (Beta)</string>
-    <string name="unread_count_summary">Display the unread count on apps. Few apps work at the moment</string>
+    <string name="unread_count_title">Unread Count</string>
+    <string name="unread_count_summary">Display the unread count on apps</string>
     <string name="backup_title">Enter backup title</string>
     <string name="backup_select">Select backup</string>
     <string name="backup_delete">Delete backup</string>
@@ -394,6 +395,7 @@
     <string name="folder_mode_adaptive">Adaptive Folder Size</string>
     <string name="folder_mode_centered">Centered Folder</string>
 
+    <!--Added 11-22-16-->
     <string name="no_bookmarks">No bookmarks found</string>
     <string name="export_bookmarks">Export Bookmarks</string>
     <string name="import_bookmarks">Import Bookmarks</string>
@@ -401,10 +403,79 @@
     <string name="bookmark_settings">Bookmark Settings</string>
     <string name="delete_bookmarks">Delete All Bookmarks</string>
 
+    <!--Added 12-12-16-->
     <string name="lock_screen_permission_request">Enable device administrator to allow Lucid Launcher to lock screen. You must disable device administrator in order to uninstall Lucid Launcher</string>
 
+    <!--Added 1-21-17-->
     <string name="licensing_failed">License check failed. Please ensure app was purchased</string>
     <string name="export_bookmarks_summary">Export bookmarks to file</string>
     <string name="import_bookmarks_summary">Import bookmarks from file</string>
-</resources>
 
+    <!--Added 2-10-17-->
+    <string name="privacy_policy">Privacy Policy and More Info</string>
+    <string name="drawer_fast_scroller">Enable Fast Scrolling</string>
+    <string name="drawer_fast_scroller_orientation">Fast Scrolling Orientation</string>
+    <string name="horizontal">Horizontal</string>
+    <string name="vertical">Vertical</string>
+
+    <!--Added 8-9-17-->
+    <string name="match_layout_title">Match Layout</string>
+    <string name="match_layout_summary">Landscape and portrait setups will be configured identically</string>
+    <string name="numrowwstitle">Number of Rows</string>
+
+    <!--Added 9-8-17-->
+    <string name="fade">Fade</string>
+    <string name="unread_count_popup">In order for full functionality of the unread count feature, you must enable Notification Access for this app</string>
+    <string name="unread_count_disable_popup">You can now disable Notification Access for this app</string>
+
+    <!--Added 9-23-17-->
+    <string name="gesturepinchtitle">Pinch</string>
+    <string name="gesturepinchsummary">Select an action for pinching the home screen</string>
+    <string name="gesturepinchouttitle">Pinch Out</string>
+    <string name="gesturepinchoutsummary">Select an action for unpinching the home screen</string>
+    <string name="unread_count_color_title">Unread Count Color</string>
+    <string name="unread_count_color_summary">Set the color of the unread counter for apps</string>
+
+    <!--Added 10-5-17-->
+    <string name="label_size_title">App Label Size</string>
+    <string name="label_size_summary">Set the size of labels under icons</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+
+
+    <!-- 8-13-18 Any mention of ActionBar has been changed to Search Bar -->
+    <string name="actionbarcolortitle">Search Bar Color</string>
+    <string name="actionbarcolorsummary">Set the color of the search bar</string>
+    <string name="actionbar_item_color_title">Search Bar Item Color</string>
+    <string name="actionbar_item_color_summary">Set the color of items in the search bar</string>
+    <string name="actionbartextstyletitle">Search Bar Item Style</string>
+    <string name="actionbartextstylesummary">Set the search bar item style</string>
+    <string name="searchtextsummary">Set the search text in the search bar</string>
+
+
+    <!--Added 8-13-18-->
+    <string name="hide_searchbar_drawer">Hide Search Bar in App Drawer</string>
+    <string name="hide_searchbar_home">Hide Search Bar on Home Page</string>
+    <string name="hide_searchbar_browser">Hide Search Bar in Browser</string>
+    <string name="searchbar_settings">Search Bar Settings</string>
+    <string name="opacity">Opacity</string>
+    <string name="auto_color">Auto Color</string>
+    <string name="folder_auto_color_summary">Set folder colors automatically</string>
+    <string name="toast_snap_disabled">You must disable Match Layout first</string>
+
+    <!--Added 11-27-18-->
+    <string name="download_file">Download File:</string>
+    <string name="downloads">Downloads</string>
+    <string name="join_discord">Join our Discord Server</string>
+
+    <!--No longer used-->
+    <string name="hide_actionbar_title">Hide Search Bar</string>
+    <string name="hide_actionbar_summary">Hide the search bar when scrolling page down</string>
+
+    <string name="join_facebook">Join our Facebook Group</string>
+    <string name="join_tumblr">Follow our blog on Tumblr</string>
+    <string name="join_google">Join us on Google Groups</string>
+
+    <string name="upgrade_menu_item">Upgrade</string>
+</resources>

@@ -23,7 +23,7 @@ public class BrowserImageAdapter extends BaseAdapter{
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return MainActivity.webWindows.size()+1;
+		return activity.webWindows.size()+1;
 	}
 
 	@Override
@@ -82,7 +82,7 @@ public class BrowserImageAdapter extends BaseAdapter{
 
 
 		viewHolder.closeButton.setTag(pos);
-		if (pos== MainActivity.webWindows.size()){
+		if (pos==activity.webWindows.size()){
 			viewHolder.tabIcon.setVisibility(View.VISIBLE);
 			viewHolder.tabStatus.setText("");
 			viewHolder.closeButton.setVisibility(View.GONE);
@@ -92,7 +92,7 @@ public class BrowserImageAdapter extends BaseAdapter{
 			viewHolder.closeButton.setVisibility(View.VISIBLE);
 
 
-			CustomWebView WV = MainActivity.webWindows.get(pos);
+			CustomWebView WV = activity.webWindows.get(pos);
 			if (WV.getUrl()!=null && WV.getUrl().startsWith("file:///android_asset/"))
 				viewHolder.tabStatus.setText(activity.getResources().getString(R.string.home));
 			else if ((WV.getTitle()!=null && (WV.getTitle().equals("ehome.html")

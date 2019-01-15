@@ -1,0 +1,4 @@
+#Tue Jan 15 16:31:03 GMT 2019
+base.0=/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

@@ -349,4 +349,5 @@
 	<string name="actionbartextstylesummary">アクションバーのアイテムスタイルを指定します。</string>
 	<string name="action_lock_screen">スクリーンを消す</string>
 	<string name="lucidactionstitle">Lucidランチャー アクション</string>
+	<string name="fade">フェード</string>
 </resources>

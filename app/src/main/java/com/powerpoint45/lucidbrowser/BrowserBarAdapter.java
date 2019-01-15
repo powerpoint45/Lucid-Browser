@@ -10,8 +10,6 @@ import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.powerpoint45.lucidbrowser.R;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.StatusLine;
@@ -31,14 +29,14 @@ import java.util.Vector;
 import bookmarkModel.Bookmark;
 
 public class BrowserBarAdapter extends ArrayAdapter<Suggestion> {
-	private List<Suggestion> suggestions;
+    private List<Suggestion> suggestions;
 
-	public BrowserBarAdapter(MainActivity context, int viewResourceId) {
-		super(context, R.layout.browser_bar_suggestion_item, R.id.webTitle);
-		this.suggestions =new Vector<Suggestion>();
-	}
+    public BrowserBarAdapter(MainActivity context) {
+        super(context, R.layout.browser_bar_suggestion_item, R.id.webTitle);
+        this.suggestions =new Vector<>();
+    }
 
-	class ViewHolder {
+    class ViewHolder {
 		ImageView icon;
 		TextView title;
 	}
@@ -77,22 +75,22 @@ public class BrowserBarAdapter extends ArrayAdapter<Suggestion> {
 
 
 	@Override
-	public Filter getFilter() {
-		return nameFilter;
-	}
+    public Filter getFilter() {
+        return nameFilter;
+    }
 
-	Filter nameFilter = new Filter() {
+    Filter nameFilter = new Filter() {
 
-		@Override
-		protected FilterResults performFiltering(CharSequence constraint) {
-			if(constraint != null) {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            if(constraint != null) {
+                
 
+                String responseString = null;
+                suggestions.clear();
+    	    	if (!constraint.toString().equals(getContext().getResources().getString(R.string.urlbardefault))){
 
-				String responseString = null;
-				suggestions.clear();
-				if (!constraint.toString().equals(getContext().getResources().getString(R.string.urlbardefault))){
-
-					//add results from bookmarks if constraint size is over 1
+					//add results from bookmarks_activity if constraint size is over 1
 					if (constraint.length()>1) {
 						if (BookmarksActivity.bookmarksMgr != null) {
 							for (Bookmark b : BookmarksActivity.bookmarksMgr.root.getAllBookMarks()) {
@@ -106,70 +104,70 @@ public class BrowserBarAdapter extends ArrayAdapter<Suggestion> {
 					}
 
 
-					HttpClient httpclient = new DefaultHttpClient();
-					HttpResponse response;
-					try {
-						String url = String.format("https://www.google.com/complete/search?hl=%s&client=firefox&q=%s",
-								Locale.getDefault().getCountry(),
-								URLEncoder.encode(constraint.toString(), "utf-8"));
-
-						response = httpclient.execute(new HttpGet(url));
-						StatusLine statusLine = response.getStatusLine();
-						if(statusLine.getStatusCode() == HttpStatus.SC_OK){
-							responseString = EntityUtils.toString(response.getEntity(), "UTF-8");
-						} else{
-							//Closes the connection.
-							response.getEntity().getContent().close();
-							throw new IOException(statusLine.getReasonPhrase());
-						}
-					} catch (ClientProtocolException e) {
-						//TODO Handle problems..
-					} catch (IOException e) {
-						//TODO Handle problems..
-					}
-				}
-
-				if (responseString!=null){
-
-					try{
-						JSONArray jArray = new JSONArray(responseString).getJSONArray(1);
-
-
-						for (int i=0; i< jArray.length(); i++){
-							suggestions.add(new Suggestion(jArray.getString(i),null));
-						}
-
-
-						FilterResults filterResults = new FilterResults();
-						filterResults.values = suggestions;
-						filterResults.count = suggestions.size();
-						return filterResults;
-					}catch(Exception e){
-						return null;
-					}
-				}else
-					return null;
-			} else {
-				return null;
-			}
-		}
-		@Override
-		protected void publishResults(CharSequence constraint, FilterResults results) {
-			if (results!=null){
-				Vector<Suggestion> filteredList = (Vector<Suggestion>) ((Vector<Suggestion>) results.values).clone();
-				if(results != null && results.count > 0) {
-					clear();
-					for (Suggestion c : filteredList) {
+    		    	HttpClient httpclient = new DefaultHttpClient();
+    		        HttpResponse response;
+    		        try {
+    		        	String url = String.format("https://www.google.com/complete/search?hl=%s&client=firefox&q=%s",
+    		        			Locale.getDefault().getCountry(),
+    		        			URLEncoder.encode(constraint.toString(), "utf-8"));
+    		        	
+    		            response = httpclient.execute(new HttpGet(url));
+    		            StatusLine statusLine = response.getStatusLine();
+    		            if(statusLine.getStatusCode() == HttpStatus.SC_OK){
+    		                responseString = EntityUtils.toString(response.getEntity(), "UTF-8");
+    		            } else{
+    		                //Closes the connection.
+    		                response.getEntity().getContent().close();
+    		                throw new IOException(statusLine.getReasonPhrase());
+    		            }
+    		        } catch (ClientProtocolException e) {
+    		            //TODO Handle problems..
+    		        } catch (IOException e) {
+    		            //TODO Handle problems..
+    		        }
+    	    	}
+    	    	
+    	    	if (responseString!=null){
+    	    		
+    	    		try{
+	    	    	JSONArray jArray = new JSONArray(responseString).getJSONArray(1);
+		        	
+		        	
+		        	for (int i=0; i< jArray.length(); i++){
+		        		suggestions.add(new Suggestion(jArray.getString(i),null));
+		        	}
+	    	    	
+	    	    	
+		        	FilterResults filterResults = new FilterResults();
+	                filterResults.values = suggestions;
+	                filterResults.count = suggestions.size();
+	                return filterResults;
+    	    		}catch(Exception e){
+    	    			return null;
+    	    		}
+    	    	}else
+    	    		return null;
+            } else {
+                return null;
+            }
+        }
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+        	if (results!=null){
+	            Vector<Suggestion> filteredList = (Vector<Suggestion>) ((Vector<Suggestion>) results.values).clone();
+	            if(results != null && results.count > 0) {
+	                clear();
+	                for (Suggestion c : filteredList) {
 						add(c);
-					}
-					notifyDataSetChanged();
-				}
-			}else{
-				clear();
-				notifyDataSetInvalidated();
-			}
-		}
-	};
+	                }
+	                notifyDataSetChanged();
+	            }
+        	}else{
+        		clear();
+        		notifyDataSetInvalidated();
+        	}
+        }
+    };
 
 
 

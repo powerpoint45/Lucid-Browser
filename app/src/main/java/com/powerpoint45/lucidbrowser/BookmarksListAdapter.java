@@ -68,7 +68,7 @@ public class BookmarksListAdapter extends BaseAdapter {
 			}
 		}
 
-		if (Properties.appProp.holoDark) {
+		if (Properties.appProp.darkTheme) {
 			holder.title.setTextColor(Color.WHITE);
 			holder.url.setTextColor(Color.WHITE);
 		} else {
@@ -86,7 +86,7 @@ public class BookmarksListAdapter extends BaseAdapter {
 		if (bookmarkURL.equals(Properties.webpageProp.assetHomePage)){
 			holder.title.setText("about:home");
 			
-			if (!Properties.appProp.holoDark)
+			if (!Properties.appProp.darkTheme)
 				holder.icon.setColorFilter(Color.BLACK);
 			holder.icon.setImageResource(R.drawable.ic_collections_view_as_list);
 			
@@ -102,7 +102,7 @@ public class BookmarksListAdapter extends BaseAdapter {
 					holder.icon.setImageBitmap(bookmark.getIconBitmap());
 				} catch (Exception e) {}
 			}else{
-				if (!Properties.appProp.holoDark)
+				if (!Properties.appProp.darkTheme)
 					holder.icon.setColorFilter(Color.BLACK);
 				holder.icon.setTag(false);
 				holder.icon.setImageResource(R.drawable.ic_collections_view_as_list);

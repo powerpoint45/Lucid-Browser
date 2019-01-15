@@ -1,5 +1,6 @@
 package com.powerpoint45.lucidbrowser;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -17,6 +18,7 @@ import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.util.Log;
+import android.view.MenuItem;
 import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -36,13 +38,17 @@ import bookmarkModel.BookmarkFolder;
 import bookmarkModel.BookmarksManager;
 import preferences.ColorPickerPreference;
 
+@SuppressLint("ExportedPreferenceActivity")
 public class SettingsV2 extends AppCompatPreferenceActivity {
 	SharedPreferences globalPref;
 	ColorPickerPreference sideColor;
 	ColorPickerPreference sideTextColor;
 	Boolean firstStart = true;
 	BookmarksManager manager;
+
 	boolean killBrowser;
+	boolean initWebViewsOnFinish;
+
 	SharedPreferences.OnSharedPreferenceChangeListener changeListener;
 
 	public static class HelperMethods {
@@ -57,40 +63,46 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 
 		static void clearBrowsingTrace(String trace, Activity activity) {
 			ApplicationInfo appInfo = activity.getApplicationInfo();
-			if (trace == "cache") {
-				new WebView(activity).clearCache(true);
-				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/Cache/"));
-				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/GPUCache/"));
-				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/Service Worker/CacheStorage"));
-				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/Service Worker/ScriptCache"));
-				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/Local Storage/"));
-				DeleteRecursive(new File(appInfo.dataDir+"/cache/"));
+			switch (trace) {
+				case "cache":
+					new WebView(activity).clearCache(true);
+					DeleteRecursive(new File(appInfo.dataDir + "/app_webview/Cache/"));
+					DeleteRecursive(new File(appInfo.dataDir + "/app_webview/GPUCache/"));
+					DeleteRecursive(new File(appInfo.dataDir + "/app_webview/Service Worker/CacheStorage"));
+					DeleteRecursive(new File(appInfo.dataDir + "/app_webview/Service Worker/ScriptCache"));
+					DeleteRecursive(new File(appInfo.dataDir + "/app_webview/Local Storage/"));
+					DeleteRecursive(new File(appInfo.dataDir + "/cache/"));
 
-			} else if (trace == "cookies") {
-				DeleteRecursive(new File(appInfo.dataDir+"/databases/webviewCookiesChromium.db"));
-				DeleteRecursive(new File(appInfo.dataDir+"/databases/webviewCookiesChromiumPrivate.db"));
-				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/Cookies"));
-				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/Cookies-journal"));
+					break;
+				case "cookies":
+					DeleteRecursive(new File(appInfo.dataDir + "/databases/webviewCookiesChromium.db"));
+					DeleteRecursive(new File(appInfo.dataDir + "/databases/webviewCookiesChromiumPrivate.db"));
+					DeleteRecursive(new File(appInfo.dataDir + "/app_webview/Cookies"));
+					DeleteRecursive(new File(appInfo.dataDir + "/app_webview/Cookies-journal"));
 
-			} else if (trace == "history") {
-				//DeleteRecursive(new File(appInfo.dataDir+"/databases/webview.db"));
-				DeleteRecursive(new File(appInfo.dataDir+"/databases/webview.db-shm"));
-				DeleteRecursive(new File(appInfo.dataDir+"/databases/webview.db-wal"));
-				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/databases"));
-				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/IndexedDB"));
-				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/Web Data"));
-				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/Service Worker/Database"));
-				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/Web Data-journal"));
-				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/QuotaManager"));
-				DeleteRecursive(new File(appInfo.dataDir+"/app_webview/QuotaManager-journal"));
-			} else if (trace == "all") {
-				clearBrowsingTrace("cache", activity);
-				clearBrowsingTrace("cookies", activity);
-				clearBrowsingTrace("history", activity);
+					break;
+				case "history":
+					//DeleteRecursive(new File(appInfo.dataDir+"/databases/webview.db"));
+					DeleteRecursive(new File(appInfo.dataDir + "/databases/webview.db-shm"));
+					DeleteRecursive(new File(appInfo.dataDir + "/databases/webview.db-wal"));
+					DeleteRecursive(new File(appInfo.dataDir + "/app_webview/databases"));
+					DeleteRecursive(new File(appInfo.dataDir + "/app_webview/IndexedDB"));
+					DeleteRecursive(new File(appInfo.dataDir + "/app_webview/Web Data"));
+					DeleteRecursive(new File(appInfo.dataDir + "/app_webview/Service Worker/Database"));
+					DeleteRecursive(new File(appInfo.dataDir + "/app_webview/Web Data-journal"));
+					DeleteRecursive(new File(appInfo.dataDir + "/app_webview/QuotaManager"));
+					DeleteRecursive(new File(appInfo.dataDir + "/app_webview/QuotaManager-journal"));
+					break;
+				case "all":
+					clearBrowsingTrace("cache", activity);
+					clearBrowsingTrace("cookies", activity);
+					clearBrowsingTrace("history", activity);
 
-			} else {
-				System.err
-						.println("clearBrowsingTrace(String trace) did nothing. Wrong parameter was given");
+					break;
+				default:
+					System.err
+							.println("clearBrowsingTrace(String trace) did nothing. Wrong parameter was given");
+					break;
 			}
 		}
 
@@ -104,17 +116,18 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 
 		boolean useDark = globalPref.getBoolean("holodark", false);
 
-		if (!useDark){
-			setTheme(R.style.NewAppThemeLight);
-		}
+
+		if (useDark)
+			setTheme(R.style.SettingsDark);
+		else
+			setTheme(R.style.SettingsLight);
 
 		super.onCreate(savedInstanceState);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		addPreferencesFromResource(R.xml.settings_v2);
 
 		if (!globalPref.getBoolean("disableads", false))
 			new AdPreference(globalPref, this).setUpAd();
-
-
 
 
 		//START CHANGE LISTENER-------------------------------------------------------------------------------------------
@@ -123,26 +136,25 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 			@Override
 			public void onSharedPreferenceChanged(SharedPreferences pref, String key) {
 				if (!killBrowser) {
-					if (key.equals("fullscreen")) {
-						killBrowser = true;
-					}else if (key.equals("swapLayout")) {
-						killBrowser = true;
-					}else if (key.equals("enableimages")) {
-						killBrowser = true;
-					}else if (key.equals("enablecookies")) {
-						killBrowser = true;
-					}else if (key.equals("usedesktopview")) {
-						killBrowser = true;
-					}else if (key.equals("webfontsize")) {
-						killBrowser = true;
-					}else if (key.equals("systempersistent")){
-						killBrowser = true;
-					}else if (key.equals("systempersistent")){
-						killBrowser = true;
-					}else if (key.equals("transparentnav")){
-						killBrowser = true;
-					}else if ((key.equals("reset")))
-						killBrowser = true;
+					switch (key) {
+						case "fullscreen":
+						case "swapLayout":
+						case "enableimages":
+						case "enablecookies":
+						case "usedesktopview":
+						case "webfontsize":
+						case "systempersistent":
+						case "transparentnav":
+						case "reset":
+						case "disablesuggestions":
+							killBrowser = true;
+							break;
+						case "setsearchengine":
+							initWebViewsOnFinish = true;
+							break;
+						default:
+							break;
+					}
 
 				}
 			}
@@ -151,20 +163,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 		globalPref.registerOnSharedPreferenceChangeListener(changeListener);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-		((Preference) findPreference("holodark"))
+		findPreference("holodark")
 				.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 					public boolean onPreferenceClick(Preference preference) {
 
@@ -176,12 +175,12 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 					}
 				});
 
-		((Preference) findPreference("reset"))
+		findPreference("reset")
 				.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 					public boolean onPreferenceClick(Preference preference) {
 						SharedPreferences.Editor ed = globalPref.edit();
 						ed.clear();
-						ed.commit();
+						ed.apply();
 						Toast.makeText(getApplicationContext(),
 								(getResources().getText(R.string.complete)),
 								Toast.LENGTH_LONG).show();
@@ -189,10 +188,9 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 					}
 				});
 
-		((Preference) findPreference("clearbrowsercache"))
+		findPreference("clearbrowsercache")
 				.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 					public boolean onPreferenceClick(Preference preference) {
-						ApplicationInfo appInfo = getApplicationInfo();
 						HelperMethods.clearBrowsingTrace("cache", SettingsV2.this);
 						Toast.makeText(getApplicationContext(),
 								(getResources().getText(R.string.complete)),
@@ -201,10 +199,9 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 					}
 				});
 
-		((Preference) findPreference("clearbrowserhistory"))
+		findPreference("clearbrowserhistory")
 				.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 					public boolean onPreferenceClick(Preference preference) {
-						ApplicationInfo appInfo = getApplicationInfo();
 						HelperMethods.clearBrowsingTrace("history", SettingsV2.this);
 						Toast.makeText(getApplicationContext(),
 								(getResources().getText(R.string.complete)),
@@ -213,10 +210,9 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 					}
 				});
 
-		((Preference) findPreference("clearbrowsercookies"))
+		findPreference("clearbrowsercookies")
 				.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 					public boolean onPreferenceClick(Preference preference) {
-						ApplicationInfo appInfo = getApplicationInfo();
 						HelperMethods.clearBrowsingTrace("cookies", SettingsV2.this);
 						Toast.makeText(getApplicationContext(),
 								(getResources().getText(R.string.complete)),
@@ -226,7 +222,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 				});
 
 		/*
-		 * Customizable side bar
+		 * Customizable side barHolder
 		 *
 		 * 1. Remove sidebar color settings from settings_v2.xml Save it
 		 * globally, so that it can be added later
@@ -254,20 +250,15 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 
 				firstStart = false;
 			}
-			;
 		}
-		;
 
-		((Preference) findPreference("sidebartheme"))
+		findPreference("sidebartheme")
 				.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
 					public boolean onPreferenceChange(Preference preference,
 													  Object newValue) {
 
-						String sidebarTheme = (String) newValue;
 						if (!newValue.equals("c")) {
 							try {
-								PreferenceScreen preferenceScreen = getPreferenceScreen();
-
 								((PreferenceGroup) findPreference("sideappearance"))
 										.removePreference(sideColor);
 								((PreferenceGroup) findPreference("sideappearance"))
@@ -292,12 +283,11 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 							}
 
 						}
-						;
 						return true;
 					}
 				});
 
-		((Preference)findPreference("import_bookmark_external")).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+		findPreference("import_bookmark_external").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
 				startActivity(new Intent(SettingsV2.this,ImportBookmarksActivity.class));
@@ -305,7 +295,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 			}
 		});
 
-		((Preference)findPreference("delete_bookmarks")).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+		findPreference("delete_bookmarks").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
 				manager = new BookmarksManager();
@@ -316,13 +306,13 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 			}
 		});
 
-		((Preference)findPreference("bookmark_export")).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+		findPreference("bookmark_export").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
 
 				final EditText inputText = new EditText(SettingsV2.this);
-				DateFormat df = new SimpleDateFormat("ddMMyyyyhhmm");
-				inputText.setHint(getResources().getString(R.string.bookmarks)+df.format(new Date()).toString()+".txt");
+				@SuppressLint("SimpleDateFormat") DateFormat df = new SimpleDateFormat("ddMMyyyyhhmm");
+				inputText.setHint(getResources().getString(R.string.bookmarks)+ df.format(new Date()) +".txt");
 
 				new AlertDialog.Builder(SettingsV2.this)
 						.setTitle(R.string.backup_title)
@@ -341,7 +331,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 
 										PrintWriter printWriter = new PrintWriter(folderLoc.getPath()+"/"+fileNameToWrite);
 
-										//add bookmarks from root first
+										//add bookmarks_activity from root first
 										for (int i =0; i<manager.root.getContainedBookmarks().size(); i++){
 											JSONObject obj = new JSONObject();
 											//export root first
@@ -380,7 +370,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 			}
 		});
 
-		((Preference)findPreference("bookmark_import")).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+		findPreference("bookmark_import").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
 				startActivityForResult(new Intent(SettingsV2.this, OpenFileActivity.class), ActivityIds.REQUEST_PICK_FILE);
@@ -391,10 +381,10 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 
 
 		if (Build.VERSION.SDK_INT >= 23) {
-			//importing global bookmarks is not allowed in marshamallow +
+			//importing global bookmarks_activity is not allowed in marshamallow +
 			try {
 				PreferenceScreen screen = (PreferenceScreen) findPreference("browsersettings_tools");
-				screen.removePreference((Preference) findPreference("import_bookmark_external"));
+				screen.removePreference(findPreference("import_bookmark_external"));
 			}catch(Exception e){
 				e.printStackTrace();
 			}
@@ -410,12 +400,12 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 				try {
 					//PreferenceScreen mCategory = (PreferenceScreen) findPreference("mainsettings");
 					mCategory
-							.removePreference(((Preference) findPreference("transparentnav")));
+							.removePreference(findPreference("transparentnav"));
 					mCategory
-							.removePreference(((Preference) findPreference("transparentstatus")));
+							.removePreference(findPreference("transparentstatus"));
 				} catch (Exception e) {
+					e.printStackTrace();
 				}
-				;
 			}
 		}
 
@@ -463,7 +453,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 					Log.d("LL", object.getString("url"));
 					Bookmark bookmark = new Bookmark(url, title);
 					importBookmark(bookmark, folder, manager);
-				}else if (fileType == FILE_HTML){
+				}else {
 					//Log.d("LL", line);
 					if (line.contains("<DT>") && line.contains("<H3")){//has a bookmark folder name
 						String part = line.substring(line.indexOf("<H3"));
@@ -474,14 +464,10 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 						String part1 = line.substring(line.indexOf("<A HREF="+'"')+9);
 						String url = part1.substring(0, part1.indexOf('"'));
 						String title = part1.substring(part1.indexOf(">")+1,part1.indexOf("<"));
-						Log.d("LL", title);
-						Log.d("LL", url);
-						if (title!=null && url!=null){
-							Bookmark bookmark = new Bookmark();
-							bookmark.setDisplayName(title);
-							bookmark.setUrl(url);
-							importBookmark(bookmark,currentFolderName, manager);
-						}
+						Bookmark bookmark = new Bookmark();
+						bookmark.setDisplayName(title);
+						bookmark.setUrl(url);
+						importBookmark(bookmark,currentFolderName, manager);
 
 					}
 
@@ -559,10 +545,25 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 	}
 
 
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case android.R.id.home:
+				onBackPressed();
+				return true;
+
+			default:
+				return super.onOptionsItemSelected(item);
+		}
+	}
+
+
 	@Override
 	public void finish() {
 		Intent i = new Intent();
 		i.putExtra("restart",killBrowser);
+		i.putExtra("initBrowser", initWebViewsOnFinish && !killBrowser);
 		setResult(RESULT_OK,i);
 
 		super.finish();

@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::This is the localization file for Dutch:::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <resources>
 	<string name="trans_zoomout">Uitzoomen</string>
 	<string name="trans_pagestack">Stapelen</string>
@@ -376,8 +381,8 @@
 	<string name="disable_new_app_glow_summary">Schakel het oplichten van nieuwe apps uit</string>
 	<string name="download_started">Downloaden gestart</string>
 	<string name="choose_upload">Kies een bestand om te uploaden</string>
-	<string name="unread_count_title">Aantal ongelezen tellen (Beta)</string>
-	<string name="unread_count_summary">Toon het aantal ongelezen berichten in apps. Weinig apps werken op dit moment.</string>
+	<string name="unread_count_title">Aantal ongelezen tellen</string>
+	<string name="unread_count_summary">Toon het aantal ongelezen berichten in apps</string>
 	<string name="backup_title">Voer backup titel in</string>
 	<string name="backup_select">Selecteer backup</string>
 	<string name="backup_delete">Verwijder backup</string>
@@ -388,4 +393,5 @@
 	<string name="sort_za">Alfabetisch (Z-A)</string>
 	<string name="sort_new">Installatie datum (Nieuwste eerst)</string>
 	<string name="sort_old">Installatie datum (Oudste eerst)</string>
+	<string name="fade">Vervagen</string>
 </resources>

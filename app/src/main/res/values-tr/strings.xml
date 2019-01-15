@@ -58,8 +58,6 @@
 	<string name="websettingstitle">Tarayıcı Ayarları</string>
 	<string name="pagetransformationtitle">Kaydırma Animasyonu</string>
 	<string name="pagetransformationsummary">Sayfa kaydırma animasyonunu ayarlayın</string>
-	<string name="actionbarcolortitle">Eylem Çubuğu rengi</string>
-	<string name="actionbarcolorsummary">Eylem çubuğunun rengini ayarlayın</string>
 	<string name="pagetransparencytitle">Sayfa Saydamlığı</string>
 	<string name="pagetransparencysummary">Uygulama ve Tarayıcı sayfası saydamlığını ayarlayın</string>
 	<string name="orientationtitle">Ekran Yönlendirme</string>
@@ -71,7 +69,6 @@
 	<string name="transparentstatustitle">Şeffaf Durum Çubuğu</string>
 	<string name="transparentstatussummary">Şeffaf Durum Çubuğunu etkinleştirin veya devre dışı bırakın</string>
 	<string name="searchtexttitle">Özel Arama Metni</string>
-	<string name="searchtextsummary">Eylem Çubuğundaki arama metnini ayarlayın</string>
 	<string name="searchtextmessage">Özel Arama Metnini girin:</string>
 	<string name="sidebarthemetitle">Kenar Çubuğu Teması</string>
 	<string name="sidebarthemesummary">Kenar Çubuğu Temasını ayarlayın</string>
@@ -349,8 +346,6 @@
 	<string name="search_engine">Arama Motoru</string>
 	<string name="searchcontactstitle">Kişileri Ara</string>
 	<string name="searchcontactssummary">Kişileri aramayı etkinleştirin veya devre dışı bırakın</string>
-	<string name="actionbartextstyletitle">Eylem Çubuğu Öğe Stili</string>
-	<string name="actionbartextstylesummary">Eylem Çubuğu Öğe Stilini ayarlayın</string>
 	<string name="action_lock_screen">Ekranı Kapat</string>
 	<string name="lucidactionstitle">Lucid Launcher Eylemleri</string>
 	<string name="version">Sürüm</string>
@@ -373,14 +368,12 @@
 	<string name="folder_apps_size_title">Klasör Uygulamaları Boyutu</string>
 	<string name="folder_apps_size_summary">Klasörlerin içindeki uygulamaların boyutunu ayarlayın</string>
 	<string name="folder_columns_summary">Klasörlerdeki sütunların sayısını ayarlayın</string>
-	<string name="actionbar_item_color_title">Eylem Çubuğu Öğe Rengi</string>
-	<string name="actionbar_item_color_summary">Eylem çubuğundaki ögelerin rengini ayarlayın</string>
 	<string name="disable_new_app_glow_title">Yeni Uygulama Parıltısını Kapat</string>
 	<string name="disable_new_app_glow_summary">Uygulama menüsündeki yeni uygulama parıltısını kapat</string>
 	<string name="download_started">İndirme başlatıldı</string>
     <string name="choose_upload">Yüklenecek dosyayı seçin</string>
-    <string name="unread_count_title">Okunmamış Sayısı (Beta)</string>
-    <string name="unread_count_summary">Uygulamalarda okunmamış sayısını göster. Şu anda birkaç uygulamada çalışıyor</string>
+    <string name="unread_count_title">Okunmamış Sayısı</string>
+    <string name="unread_count_summary">Uygulamalarda okunmamış sayısını göster</string>
     <string name="backup_title">Yedek adını gir</string>
     <string name="backup_select">Yedek seç</string>
     <string name="backup_delete">Yedeği sil</string>
@@ -398,30 +391,83 @@
 	<string name="folder_mode_fullscreen">Tam Ekran Klasör</string>
 	<string name="folder_mode_adaptive">Uyabilen Klasör Boyutu</string>
 	<string name="folder_mode_centered">Ortalanmış Klasör</string>
-	
-	
-	<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+
+	<string name="no_bookmarks">Yer imi bulunamadı</string>
+    <string name="export_bookmarks">Yer İmlerini Aktar</string>
+    <string name="import_bookmarks">Yer İmlerini Al</string>
+    <string name="import_bookmarks_external">Harici Tarayıcılardan Yer İmlerini Al</string>
+    <string name="bookmark_settings">Yer İmi Ayarları</string>
+    <string name="delete_bookmarks">Tüm Yer İmlerini Sil</string>
+    
+    
+    <!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 	<!--:::::The strings above are already translated:::::::::::::::::::-->
 	<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 	<!--::::The strings below need to be translated into turkish::::::::-->
 	<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-	
-	<string name="no_bookmarks">No bookmarks found</string>
-    <string name="export_bookmarks">Export Bookmarks</string>
-    <string name="import_bookmarks">Import Bookmarks</string>
-    <string name="import_bookmarks_external">Import Bookmarks from External Browsers</string>
-    <string name="bookmark_settings">Bookmark Settings</string>
-    <string name="delete_bookmarks">Delete All Bookmarks</string>
-    
-    <string name="lock_screen_permission_request">Enable device administrator to allow Lucid Launcher to lock screen. You must disable device administrator in order to uninstall Lucid Launcher</string>
-    
-    <string name="licensing_failed">License check failed. Please ensure app was purchased</string>
-    <string name="export_bookmarks_summary">Export bookmarks to file</string>
-    <string name="import_bookmarks_summary">Import bookmarks from file</string>
-    <string name="privacy_policy">Privacy Policy and More Info</string>
-<string name="drawer_fast_scroller">Enable Fast Scrolling</string>
-<string name="drawer_fast_scroller_orientation">Fast Scrolling Orientation</string>
-<string name="horizontal">Horizontal</string>
-<string name="vertical">Vertical</string>
+
+<!--Added 12-12-16-->
+
+<string name="lock_screen_permission_request">Lucid Launcher\'ın ekranı kilitlemesine izin vermek için cihaz yöneticisini etkinleştirin. Lucid Launcher\'ı kaldırmak için cihaz yöneticisini devre dışı bırakmanız gerekir</string>
+<!--Added 1-21-17-->
+<string name="licensing_failed">Lisans kontrolü başarısız. Lütfen uygulamanın satın alındığından emin olun</string>
+<string name="export_bookmarks_summary">Yer imlerini dosyaya aktar</string>
+<string name="import_bookmarks_summary">Yer imlerini dosyadan içe aktar</string>
+
+<!--Added 2-10-17-->
+<string name="privacy_policy">Gizlilik Politikası ve Diğer Bilgiler</string>
+<string name="drawer_fast_scroller">Hızlı Kaydırmayı Etkinleştir</string>
+<string name="drawer_fast_scroller_orientation">Hızlı Kaydırma Yönü</string>
+<string name="horizontal">Yatay</string>
+<string name="vertical">Dikey</string>
+
+<!--Added 8-9-17-->
+<string name="match_layout_title">Eşleşme Düzeni</string>
+<string name="match_layout_summary">Yatay ve dikey kurulumlar aynı şekilde yapılandırılır</string>
+<string name="numrowwstitle">Satır Sayısı</string>
+
+<!--Added 9-8-17-->
+<string name="fade">Solma</string>
+<string name="unread_count_popup">Okunmamış sayısı özelliğinin tam işlevselliği için, bu uygulama için Bildirim Erişimini etkinleştirmeniz gerekir</string>
+<string name="unread_count_disable_popup">Artık bu uygulama için Bildirim Erişimini devre dışı bırakabilirsiniz</string>
+
+<!--Added 9-23-17-->
+<string name="gesturepinchtitle">Sıkıştır</string>
+<string name="gesturepinchsummary">Ana ekranda sıkıştırma için bir eylem seçin</string>
+<string name="gesturepinchouttitle">İki Parmağı Aç</string>
+<string name="gesturepinchoutsummary">Ana ekranda iki parmağı açma için bir eylem seçin</string>
+<string name="unread_count_color_title">Okunmamış Sayısı Rengi</string>
+<string name="unread_count_color_summary">Uygulamalar için okunmamış sayacının rengini ayarlayın</string>
+
+<!--Added 10-5-17-->
+<string name="label_size_title">Uygulama Etiket Boyutu</string>
+<string name="label_size_summary">Simgelerin altındaki etiketlerin boyutunu ayarlayın</string>
+<string name="small">Küçük</string>
+<string name="medium">Orta</string>
+<string name="large">Büyük</string>
+
+<!-- 8-13-18 Any mention of ActionBar has been changed to Search Bar -->
+<string name="actionbarcolortitle">Arama Çubuğu Rengi</string>
+<string name="actionbarcolorsummary">Arama çubuğunun rengini ayarlayın</string>
+<string name="actionbar_item_color_title">Arama Çubuğu Öğe Rengi</string>
+<string name="actionbar_item_color_summary">Arama çubuğundaki öğelerin rengini ayarlayın</string>
+<string name="actionbartextstyletitle">Arama Çubuğu Öğe Stili</string>
+<string name="actionbartextstylesummary">Arama çubuğu öğe stilini ayarlayın</string>
+<string name="searchtextsummary">Arama çubuğundaki arama metnini ayarlayın</string>
+
+<!--Added 8-13-18-->
+<string name="hide_searchbar_drawer">Uygulama Çekmecesindeki Arama Çubuğunu Gizle</string>
+<string name="hide_searchbar_home">Ana Sayfadaki Arama Çubuğunu Gizle</string>
+<string name="hide_searchbar_browser">Tarayıcıdaki Arama Çubuğunu Gizle</string>
+<string name="searchbar_settings">Arama Çubuğu Ayarları</string>
+<string name="opacity">Opaklık</string>
+<string name="auto_color">Otomatik Renk</string>
+<string name="folder_auto_color_summary">Klasör renklerini otomatik olarak ayarla</string>
+<string name="toast_snap_disabled">Önce Eşleşme Düzeni\'ni devre dışı bırakmalısınız</string>
+
+<!--Added 11-27-18-->
+<string name="download_file">Dosyayı İndir:</string>
+<string name="downloads">İndirilenler</string>
+<string name="join_discord">Discord Sunucumuza Katıl</string>
     
 </resources>

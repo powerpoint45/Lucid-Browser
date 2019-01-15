@@ -376,10 +376,11 @@
 	<string name="disable_new_app_glow_summary">禁用应用抽屉内新应用高亮显示</string>
 	<string name="download_started">开始下载</string>
 	<string name="choose_upload">选择需要上传的文件</string>
-	<string name="unread_count_title">未读计数 (Beta)</string>
-	<string name="unread_count_summary">在应用上显示未读计数。目前仅支持少数应用</string>
+	<string name="unread_count_title">未读计数 </string>
+	<string name="unread_count_summary">在应用上显示未读计数</string>
 	<string name="backup_title">输入备份名称</string>
 	<string name="backup_select">选择备份</string>
 	<string name="backup_delete">删除备份</string>
 	<string name="lb_pro_description">请购买Lucid浏览器捐赠版以支持本项目的后续开发</string>
+	<string name="fade">淡化</string>
 </resources>

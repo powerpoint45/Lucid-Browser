@@ -48,37 +48,33 @@
 	<string name="saveimage">"Kép mentése"</string>
 	<string name="openinnewtab">"Megnyitás új lapon"</string>
 	<string name="mainsettingstitle">"Fő beállítások"</string>
-	<string name="sidebarsettingstitle">"Sidebar beállítások"</string>
+	<string name="sidebarsettingstitle">"Oldalsáv beállítások"</string>
 	<string name="drawersettingstitle">"App fiók beállítások"</string>
 	<string name="homesettingstitle">"Kezdőlap beállítások"</string>
 	<string name="advancedsettingstitle">"További beállítások"</string>
 	<string name="websettingstitle">"Böngésző beállítások"</string>
 	<string name="pagetransformationtitle">"Görgetés animáció"</string>
 	<string name="pagetransformationsummary">"Állítsa be az oldal görgetési animációját"</string>
-	<string name="actionbarcolortitle">"Műveletsáv színe"</string>
-	<string name="actionbarcolorsummary">"Állítsa be a műveletsáv színét"</string>
 	<string name="pagetransparencytitle">"Oldal Átláthatóság"</string>
 	<string name="pagetransparencysummary">"Állítsa be az átláthatóságot az alkalmazás és a böngésző oldalon"</string>
 	<string name="orientationtitle">"Tájolás"</string>
 	<string name="orientationsummary">"Állítsa be az indító tájolását"</string>
 	<string name="fullscreentitle">"Teljes képernyő"</string>
-	<string name="fullscreensummary">"Értesítés sáv megjelenítése vagy elrejtése"</string>
+	<string name="fullscreensummary">"Értesítési sáv megjelenítése vagy elrejtése"</string>
 	<string name="transparentnavtitle">"Átlátszó navigációs sáv"</string>
 	<string name="transparentnavsummary">"Átlátszó navigációs sáv engedélyezése vagy letiltása"</string>
-	<string name="transparentstatustitle">"Átlátszó értesítés sáv"</string>
-	<string name="transparentstatussummary">"Átlátszó értesítés sáv engedélyezése vagy letiltása"</string>
-	<string name="searchtexttitle">"Egyedi szöveg keresése"</string>
-	<string name="searchtextsummary">"Írja be a keresendő szöveget az műveltsávba"</string>
+	<string name="transparentstatustitle">"Átlátszó értesítési sáv"</string>
+	<string name="transparentstatussummary">"Átlátszó értesítési sáv engedélyezése vagy letiltása"</string>
 	<string name="searchtextmessage">"Írja be a szöveget az egyéni keresőbe:"</string>
 	<string name="sidebarthemetitle">"Oldalsáv téma"</string>
 	<string name="sidebarthemesummary">"Állítsa be a oldalsáv témáját"</string>
 	<string name="sidebarthememessage">"Válasszon ki egy témát:"</string>
-	<string name="sidebariconsizetitle">"Sidebar Ikonméret"</string>
+	<string name="sidebariconsizetitle">"Oldalsáv Ikonméret"</string>
 	<string name="sidebariconsizesummary">"Állítsa be az oldalsáv ikonméretét"</string>
 	<string name="sidebariconsizemessage">"Válassza ki az ikon méretét:"</string>
-	<string name="sidebariconpaddingtitle">"Oldalsáv ikonok közti távolsága"</string>
-	<string name="sidebariconpaddingsummary">"Állítsa be az Oldalsáv ikonjai közti távolságot"</string>
-	<string name="sidebariconpaddingmessage">"Válassza ki az oldalsáv ikonok közti távolságát:"</string>
+	<string name="sidebariconpaddingtitle">"Oldalsáv ikonok közötti távolsága"</string>
+	<string name="sidebariconpaddingsummary">"Állítsa be az Oldalsáv ikonjai közötti távolságot"</string>
+	<string name="sidebariconpaddingmessage">"Válassza ki az oldalsáv ikonok közötti távolságát:"</string>
 	<string name="numcolumnstitle">"Oszlopok száma"</string>
 	<string name="numcolumnssummary">"Állítsa be az alkalmazásfiók oszlopainak számát"</string>
 	<string name="numcolumnsmessage">"Válassza ki az oszlopok számát:"</string>
@@ -88,13 +84,13 @@
 	<string name="drawerlabelcolorsummary">"Állítsa be a alkalmazásikonok címkéjének a színét"</string>
 	<string name="iconsizetitle">"Ikon méret"</string>
 	<string name="iconsizesummary">"Állítsa be az ikon méretét az alkalmazásfiókban"</string>
-	<string name="iconsizemessage">"Válassza ki az Ikon méretét:"</string>
+	<string name="iconsizemessage">"Válassza ki az ikon méretét:"</string>
 	<string name="iconpaddingtitle">"Ikonok közötti távolság"</string>
 	<string name="iconpaddingsummary">"Állítsa be az ikonok közötti távolságot"</string>
 	<string name="iconpaddingmessage">"Válassza ki az ikonok közötti távolságot:"</string>
 	<string name="verticalspacingtitle">"Függőleges távolság az ikonok között"</string>
 	<string name="verticalspacingsummary">"Állítsa be a függőleges távolságot az alkalmazásfiókban</string>
-	<string name="verticalspacingmessage">"Válassza ki a függőleges távolság:"</string>
+	<string name="verticalspacingmessage">"Válassza ki a függőleges távolságot:"</string>
 	<string name="homenumpagestitle">"Kezdőlap oldalainak száma"</string>
 	<string name="homenumpagessummary">"Állítsa be az oldalak számát"</string>
 	<string name="homenumpagesmessage">"Válassza ki az oldalak számát:"</string>
@@ -109,16 +105,16 @@
 	<string name="homelandrowssummary">"Állítsa be a sorok számát a fektetett módban"</string>
 	<string name="homelandrowsmessage">"Válassza ki a sorok számát a fektetett módban:"</string>
 	<string name="homeportcolstitle">"Oszlopok száma (Álló)"</string>
-	<string name="homeportcolssummary">"Állítsa be az oszlopok száma álló módban"</string>
+	<string name="homeportcolssummary">"Állítsa be az oszlopok számát álló módban"</string>
 	<string name="homeportcolsmessage">"Válassza ki az oszlopok számát álló módban:"</string>
 	<string name="homeportrowstitle">"Sorok száma (Álló)"</string>
 	<string name="homeportrowssummary">"Állítsa be a sorok számát álló módban"</string>
-	<string name="homeportrowsmessage">"Válassza ki a sorok száma álló módban:"</string>
+	<string name="homeportrowsmessage">"Válassza ki a sorok számát álló módban:"</string>
 	<string name="homeiconsizetitle">"Ikon méret"</string>
 	<string name="homeiconsizesummary">"Állítsa be a kezdőlap ikonjainak méretét"</string>
 	<string name="homeiconsizemessage">"Válassza ki az ikonok méretét:"</string>
-	<string name="homeindicatortitle">"Oldaljelzők"</string>
-	<string name="homeindicatorsummary">"Oldaljelzők engedélyezése vagy letiltása"</string>
+	<string name="homeindicatortitle">"Oldaljelölők"</string>
+	<string name="homeindicatorsummary">"Oldaljelölők engedélyezése vagy letiltása"</string>
 	<string name="dimwebpagetitle">"Böngésző oldal homályosítása"</string>
 	<string name="dimwebpagesummary">"Homályosítja hátteret a böngésző oldalon"</string>
 	<string name="resettitle">"Beállítások visszaállítása az alapértelmezettre"</string>
@@ -138,8 +134,8 @@
 	<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 	<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 	
-	<string name="zoompercenttitle">"Kicsinítés százaléka"</string>
-	<string name="zoompercentsummary">"Állítsa be a háttérkép kicsinyítésének százalékát"</string>
+	<string name="zoompercenttitle">"Kicsinyítés mértéke"</string>
+	<string name="zoompercentsummary">"Állítsa be a háttérkép kicsinyítésének mértékét"</string>
 	<string name="disablebrowsertitle">"Letiltás"</string>
 	<string name="disablebrowsersummary">"Válassza ezt a böngésző letiltásához"</string>
 	<string name="hidesearchbartitle">"Keresősáv elrejtése"</string>
@@ -211,17 +207,17 @@
 	<string name="clearonexittitle">"Kilépéskor törölje az előzményeket"</string>
 	<string name="clearonexitsummary">"Kilépéskor a böngésző törli az előzményeket, cache-t és a cookie-kat"</string>
 	<string name="nobookmarks">Nincs könyvjelző beállítva</string>
-	<string name="sidebar_custom">"Modosított"</string>
+	<string name="sidebar_custom">"Módosított"</string>
 	<string name="sidebarcolortitle">"Oldalsáv színe"</string>
 	<string name="sidebarcolorsummary">"Állítsa be az oldalsáv színét"</string>
 	<string name="sidebartextcolortitle">"Oldalsáv szövegszín"</string>
 	<string name="sidebartextcolorsummary">"Állítsa be az oldalsáv szövegének a színét"</string>
 	<string name="desktopviewtitle">"Asztali nézet bekapcsolása"</string>
-	<string name="desktopviewsummary">"Weboladalak asztali módban való megjelenítése"</string>
+	<string name="desktopviewsummary">"Weboldalak asztali módban való megjelenítése"</string>
 	<string name="home_folder">"Mappa hozzáadása"</string>
 	<string name="cat_title_content">"Tartalom"</string>
 	<string name="enablecookies">"Cookie-k engedélyezése"</string>
-	<string name="disabledrawersummary">"Válassza ki ha ki szeretné kapcsolni az alkalmazásfiókot"</string>
+	<string name="disabledrawersummary">"Válassza ki, ha ki szeretné kapcsolni az alkalmazásfiókot"</string>
 	<string name="enablejavascript">"Javascript engedélyezése"</string>
 	<string name="enableimages">"Képek betöltése"</string>
 	<string name="prodescription">"Támogassa a projektet azzal, hogy megvásárolja a Lucid Launcher Pro-t"</string>
@@ -233,7 +229,7 @@
 	<string name="exit">"Kilépés"</string>
 	<string name="browserfullscreentitle">"Teljes képernyős böngésző"</string>
 	<string name="browserfullscreensummary">Alsó helyköz eltávolítása a böngésző aljáról</string>
-	<string name="folderhidelabeltitle">2Mappa címke"</string>
+	<string name="folderhidelabeltitle">"Mappa címke"</string>
 	<string name="folderhidelabelsummary">"Mappa címke megjelenítése vagy elrejtése"</string>
 	<string name="folder_label_blank">"Névtelen mappa"</string>
 	<string name="folderlabelcolortitle">"Mappa címke színe"</string>
@@ -243,7 +239,7 @@
 	<string name="copyurl">"Link másolása"</string>
 	<string name="manage_screens">"Képernyők kezelése"</string>
 	<string name="remove">"Eltávolítás"</string>
-	<string name="browser_removed_dialog">"Ez az alkalmazás el lesz távolítva az áruházból írányelvek megsértése miatt. Kérjük kattintson az alábbi linkre, hogy a Lucid Böngésző legújabb verziójának letöltéséhez:"</string>
+	<string name="browser_removed_dialog">"Ez az alkalmazás el lesz távolítva az áruházból az írányelvek megsértése miatt. Kérjük kattintson az alábbi linkre, a Lucid Böngésző legújabb verziójának letöltéséhez:"</string>
 	<string name="sslUntrustedTitle">"SSL tanúsítvány nem megbízható"</string>
 	<string name="sslIdMismatchTitle">"SSL tanúsítvány nem érvényes ezen a webhelyen"</string>
 	
@@ -262,13 +258,13 @@
 	<string name="select_screen">"Válasszon új képernyőt"</string>
 	<string name="paste">"Beillesztés"</string>
 	<string name="close_tabs_on_exit_title">"Fülek bezárása kilépéskor"</string>
-	<string name="close_tabs_on_exit_summary">"Az összes fül bezárása a böngészőböl való kilépéskor"</string>
+	<string name="close_tabs_on_exit_summary">"Az összes fül bezárása a böngészőből való kilépéskor"</string>
 	<string name="edit">"Szerkesztés"</string>
 	<string name="edit_bookmark">"Könyvjelzők szerkesztése"</string>
 	<string name="toggle_desktop_mode">"Váltás asztali nézetre"</string>
 	<string name="find_in_page">"Keresés az oldalon"</string>
 	<string name="confirm_exit_text">"Biztosan ki akar lépni?"</string>
-	<string name="please_wait">"Kérjük várjon\.\.\."</string>
+	<string name="please_wait">"Kérjük várjon..."</string>
 	<string name="exit_confirmation_title">"Kilépés megerősítése"</string>
 	<string name="exit_confirmation_summary">"Jelölje ki a kilépés megerősítéséhez"</string>
 	<string name="widgetpaddingtitle">"Widget helyköz"</string>
@@ -281,7 +277,7 @@
 	<string name="folder_color_title">"Mappa színe"</string>
 	<string name="folder_color_summary">"Állítsa be a mappa belső színét"</string>
 	<string name="folder_style_title">"Mappa stílus"</string>
-	<string name="folder_style_summary">"Válassza ki a mappa ikon stílusát"</string>
+	<string name="folder_style_summary">"Válassza ki a mappaikon stílusát"</string>
 	<string name="action_shortcut">"Parancsikon indítása"</string>
 	<string name="action_lock_screen">"Képernyő kikapcsolása"</string>
 	<string name="drawer_style_title">"Alkalmazásfiók stílusa"</string>
@@ -303,13 +299,13 @@
 	<string name="add_bookmark_folder">"Új mappa hozzáadása"</string>
 	<string name="add_bookmark_folder_hint">"Adja meg az új mappa nevét..."</string>
 	<string name="edit_bookmark_folder">"Könyvjelző mappa szerkesztése"</string>
-	<string name="remove_bookmark_folder_confirm">"Biztosan elszeretné távolítani a mappát? A tartalma törölve lesz." </string>
+	<string name="remove_bookmark_folder_confirm">"Biztosan el szeretné távolítani a mappát? A tartalma törölve lesz." </string>
 	<string name="bookmark_move">"Mozgatás"</string>
 	<string name="move_here">"Mozgatás ide"</string>
 	<string name="lucidactionstitle">"Lucid Launcher műveletek"</string>
 	<string name="lucidactionfavorites">"Kedvencek oldalsáv"</string>
 	<string name="lucidactionbrowser">"Böngésző"</string>
-	<string name="lucidactionlockunlock">"Asztal leázárása/Feloldása"</string>
+	<string name="lucidactionlockunlock">"Asztal lezárása/Feloldása"</string>
 	<string name="lucidactiondrawer">"Alkalmazásfiók"</string>
 	<string name="lucidactionrecents">"Legutóbbi alkalmazások"</string>
 	<string name="add_apps">"Alkalmazás hozzáadása"</string>
@@ -321,7 +317,7 @@
 	<string name="search_icon_action_summary">"Válassza ki, hogy mi történjen a keresés ikon megnyomásakor"</string>
 	<string name="action_start_search">"Keresés indítása"</string>
 	<string name="about">"Rólunk"</string>
-	<string name="contact">"Lépjen velünk kapcsolatb"</string>
+	<string name="contact">"Lépjen velünk kapcsolatba"</string>
 	<string name="tutorial">"Tutorial indítása"</string>
 	<string name="rate">"Értékelés"</string>
 	<string name="more_apps">"További alkalmazások"</string>
@@ -330,13 +326,13 @@
 	<string name="package_info">"Csomaginformáció"</string>
 	<string name="send_mail">"Email küldése a következővel:"</string>
 	<string name="send_mail_error">"Nincs email kliens telepítve"</string>
-	<string name="step_welcome_title">Kezdőlap</string>
+	<string name="step_welcome_title">"Kezdőlap"</string>
 	<string name="step_welcome_summary">"Ez az ön kezdőlapja. Itt helyezhet el alkalmazásokat, widgeteket és egyebeket.Húzza függőlegesen a képernyők váltásához és vízszintesen az oldalak váltásához."</string>
 	<string name="step_basic_actions_title">"Alapműveletek"</string>
 	<string name="step_basic_actions_summary">"Érintse meg a keresés ikont a keresés megkezdéséhez\Érintse meg a a 3 pontos ikont további műveletekért."</string>
 	<string name="step_favorite_title">"Kedvenc alkalmazások"</string>
 	<string name="step_favorite_action_summary">"Érintse meg a 3 soros ikont vagy húzza el a képernyő széléről, hogy hozzáférjen a kedvenc alkalmazásokhoz."</string>
-	<string name="step_favorites_summary">"Az összes kedvenc alkalmazása itt található."All your favorited apps will show here. Hozzáadhat kedvenceket az alkalmazásfiókból."</string>
+	<string name="step_favorites_summary">"Az összes kedvenc alkalmazása itt található. Hozzáadhat kedvenceket az alkalmazásfiókból."</string>
 	<string name="step_drawer_title">"Alkalmazásfiók"</string>
 	<string name="step_drawer_summary">"Ez az alkalmazásfiók. Kikapcsolhatja vagy átrendezheti itt: Képernyők kezelése"</string>
 	<string name="step_drawer_app_long_press_title">"További beállítások"</string>
@@ -344,11 +340,9 @@
 	<string name="step_browser_title">"Web böngésző"</string>
 	<string name="step_browser_summary">"Ez itt a böngésző. Kikapcsolhatja vagy átrendezheti itt: Képernyők kezelése"</string>
 	<string name="step_browser_sidebar_title">"Böngésző oldalsáv"</string>
-	<string name="step_browser_sidebar_summary">"Hozzáférés a böngésző oldalsávhoz. Húzza a el a képernyő széléről az oldalsáv eléréséhez."</string>
+	<string name="step_browser_sidebar_summary">"Hozzáférés a böngésző oldalsávhoz. Húzza el a képernyő széléről az oldalsáv eléréséhez."</string>
 	<string name="step_orientation_title">"Indító tájolás"</string>
 	<string name="step_orientation_summary">"A kezdőlap elrendezése különbözik a különböző tájolásokon.Az alkalmazásokat különbözően elhelyezheti a különböző tájolásokon."</string>
-	<string name="actionbartextstyletitle">"Műveletsáv elemek stílusa"</string>
-	<string name="actionbartextstylesummary">"Állítsa be a műveletsáv elemeinek stílusát"</string>
 	<string name="searchcontactstitle">"Névjegyek keresése"</string>
 	<string name="searchcontactssummary">"Névjegyek keresésének engedélyezése vagy tiltása"</string>
 	<string name="version">"Verzió"</string>
@@ -367,19 +361,17 @@
 	<string name="show_app">"Alkalmazás mutatása"</string>
 	<string name="hide_from_drawer">"Elrejtés az alkalmazásfiókban"</string>
 	<string name="autohide_apps_title">"Alkalmazások automatikus eltüntetése"</string>
-	<string name="autohide_apps_summary">"Rejtse el az alkalmazást ha hozzáadja egy alkalmazásfiók mappában"</string>
+	<string name="autohide_apps_summary">"Rejtse el az alkalmazást, ha hozzáadja egy alkalmazásfiók mappában"</string>
 	<string name="folder_settings">"Mappa beállítások"</string>
 	<string name="folder_apps_size_title">"A mappa alkalmazásainak mérete"</string>
 	<string name="folder_apps_size_summary">"Állítsa be a mappában lévő alkalmazások méretét"</string>
 	<string name="folder_columns_summary">"Állítsa be a mappa oszlopainak számát"</string>
-	<string name="actionbar_item_color_title">"A műveletsáv elemeinek a színe"</string>
-	<string name="actionbar_item_color_summary">"Állítsa be a műveletsáv elemeinek színét"</string>
 	<string name="disable_new_app_glow_title">"Kapcsolja ki az új alkalmazások kiemelését"</string>
 	<string name="disable_new_app_glow_summary">"Kapcsolja ki az új alkalmazások kiemelését az alkalmazásfiókban"</string>
 	<string name="download_started">"Letöltés megkezdése"</string>
 	<string name="choose_upload">"Válasszon ki egy fájlt a feltöltéshez"</string>
-	<string name="unread_count_title">"Olvasatlan üzenetek száma (Béta)"</string>
-	<string name="unread_count_summary">"Megjeleníti az olvasatlan üzenetek számát az alkalmazásokon.Kevés alkalmazással működik jelen pillanatban." </string>
+	<string name="unread_count_title">"Olvasatlan üzenetek száma"</string>
+	<string name="unread_count_summary">"Megjeleníti az olvasatlan üzenetek számát az alkalmazásokon" </string>
 	<string name="backup_title">"Írja be a mentés címét"</string>
 	<string name="backup_select">"Mentés kiválasztása"</string>
 	<string name="backup_delete">"Mentés törlése"</string>
@@ -395,7 +387,7 @@
 	<string name="lb_pro_description">"Frissíts a Lucid Browser támogatói verzióra, hogy támogasd a projektet"</string>
 	<string name="folder_mode_title">"Mappa megjelenítési mód"</string>
 	<string name="folder_mode_summary">"Válassza ki, hogy a mappák hogyan jelenjenek meg"</string>
-	<string name="folder_mode_fullscreen">"Teljesképernyős mapp"</string>
+	<string name="folder_mode_fullscreen">"Teljesképernyős mappa"</string>
 	<string name="folder_mode_adaptive">"Alkalmazkodó mappa mérete"</string>
 	<string name="folder_mode_centered">"Középre igazított mappa"</string>
 
@@ -411,4 +403,44 @@
     <string name="licensing_failed">"Licensz ellenőrzés sikertelen.Kérjük győződjön meg róla, hogy megvásárolta-e az alkalmazást."</string>
     <string name="export_bookmarks_summary">"Könyvjelzők exportálása fájlba"</string>
     <string name="import_bookmarks_summary">"Könyvjelzők importálása fájlba"</string>
+    
+    
+    <string name="match_layout_title">"Egységes elrendezés"</string>
+    <string name="match_layout_summary">"Álló és Portré elrendezés beálllítása azonos"</string>
+    <string name="numrowwstitle">"Sorok száma"</string>
+    
+    
+    <string name="privacy_policy">"Adatvédelmi irányelvek és további információ"</string>
+    <string name="drawer_fast_scroller">"Gyorsgörgetés bekapcsolása"</string>
+    <string name="drawer_fast_scroller_orientation">"Gyorsgörgetés tájolása"</string>
+    <string name="horizontal">"Vízszintes"</string>
+    <string name="vertical">"Függőleges"</string>
+
+    <string name="fade">Áttűnés</string>
+    
+    <string name="unread_count_popup">"Az olvasatlan üzenet számláló funkcióhoz engedélyeznie kell az alkalmazásnak az értesítésekhez való hozzáférést."</string>
+    <string name="unread_count_disable_popup">"Most letilthatja, hogy az alkalmazás ne férjen hozzá az értesítésekhez."</string>
+
+	<string name="hide_searchbar_drawer">"Keresősáv eltüntetése az alkalmazáslistában"</string>
+	<string name="hide_searchbar_home">"Keresősáv eltüntetése a kezdőképernyőn"</string>
+	<string name="hide_searchbar_browser">"Keresősáv eltüntetése a böngésző oldalon"</string>
+	<string name="searchbar_settings">"Keresősáv beállításai"</string>
+	<string name="opacity">"Átlátszóság"</string>
+	<string name="auto_color">"Automatikus szín"</string>
+	<string name="folder_auto_color_summary">"Mappa színének automatikus beállítása"</string>
+	<string name="toast_snap_disabled">"Először tiltsa le az orientációt"</string>
+
+	<string name="actionbarcolortitle">"Keresősáv színe"</string>
+	<string name="actionbarcolorsummary">"Állítsa be a keresősáv színét"</string>
+	<string name="actionbar_item_color_title">"Keresősáv elemeinek a színe"</string>
+	<string name="actionbar_item_color_summary">"Állítsa be a keresősáv elemeinek a színét"</string>
+	<string name="actionbartextstyletitle">"Keresősáv elemeinek stílusa"</string>
+	<string name="actionbartextstylesummary">"Állítsa be a keresősáv elemeinek a stílusát"</string>
+	<string name="searchtexttitle">"Egyedi szöveg keresése"</string>
+	<string name="searchtextsummary">"Állítsa be a kereső szöveget"</string>
+	
+	<string name="download_file">"Fájl letöltése:"</string>
+    <string name="downloads">"Letöltések"</string>
+    <string name="join_discord">"Csatlakozzon hozzánk Discordon"</string>
+
 </resources>

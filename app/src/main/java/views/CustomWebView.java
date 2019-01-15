@@ -1,5 +1,6 @@
 package views;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -8,6 +9,7 @@ import android.app.DownloadManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources.NotFoundException;
@@ -16,6 +18,8 @@ import android.net.Uri;
 import android.net.http.SslError;
 import android.os.Build;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -33,6 +37,7 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
+import com.powerpoint45.lucidbrowser.ActivityIds;
 import com.powerpoint45.lucidbrowser.BookmarksActivity;
 import com.powerpoint45.lucidbrowser.MainActivity;
 import com.powerpoint45.lucidbrowser.Properties;
@@ -45,18 +50,19 @@ import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Calendar;
 import java.util.Date;
 
-public class CustomWebView extends WebView{
 
-	private ProgressBar PB;
-	private boolean videoPlaying;
-	VideoEnabledWebChromeClient chromeClient;
+@SuppressWarnings("deprecation")
+public class CustomWebView extends WebView {
 
 	private static Field sConfigCallback;
 	protected WeakReference<MainActivity> activityRef;
-    private static String origionalUserAgent;
+	private static String origionalUserAgent;
+	Dialog SSLDialog;
+	static DownloadManager.Request request;
 
 	static {
 		try {
@@ -68,34 +74,40 @@ public class CustomWebView extends WebView{
 
 	}
 
-	@SuppressWarnings("deprecation")
-	@SuppressLint({ "SetJavaScriptEnabled", "NewApi" })
-	public CustomWebView(MainActivity activity, AttributeSet set, String url) {
-		super(activity, set);
-		activityRef = new WeakReference<MainActivity>(activity);
-		this.setId(R.id.browser_page);
+	private ProgressBar PB;
+	private boolean videoPlaying;
+	VideoEnabledWebChromeClient chromeClient;
 
+
+	@SuppressLint({ "SetJavaScriptEnabled", "NewApi" })
+	public CustomWebView(MainActivity activity, String url) {
+		super(activity);
+		activityRef = new WeakReference<>(activity);
+
+		//setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+
+		this.setId(R.id.browser_page);
 		if (url!=null && url.equals("na")){
 			//Do nothing. will load from instance
 		}else {
 			if (url == null)
-				this.loadUrl(MainActivity.mPrefs.getString("browserhome",
+				this.loadUrl(MainActivity.prefs.getString("setbrowserhome",
 						Properties.webpageProp.assetHomePage));
 			else
 				this.loadUrl(url);
 		}
 
-        setDesktopMode(Properties.webpageProp.useDesktopView);
+		setDesktopMode(Properties.webpageProp.useDesktopView);
 
 		// Enable / Disable cookies
 		if (!Properties.webpageProp.enablecookies) {
-			CookieSyncManager.createInstance(activity.getApplicationContext());
+			CookieSyncManager.createInstance(activity);
 			CookieManager cookieManager = CookieManager.getInstance();
 			cookieManager.setAcceptCookie(false);
 			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
 				cookieManager.setAcceptThirdPartyCookies(this, false);
 		} else {
-			CookieSyncManager.createInstance(activity.getApplicationContext());
+			CookieSyncManager.createInstance(activity);
 			CookieManager cookieManager = CookieManager.getInstance();
 			cookieManager.setAcceptCookie(true);
 			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
@@ -130,7 +142,6 @@ public class CustomWebView extends WebView{
 		methodInvoke(this.getSettings(), "setAllowUniversalAccessFromFileURLs", new Class[] { boolean.class }, new Object[] { true });
 		methodInvoke(this.getSettings(), "setAllowFileAccessFromFileURLs", new Class[] { boolean.class }, new Object[] { true });
 
-
 		if (Properties.webpageProp.fontSize==0)
 			this.getSettings().setTextSize(WebSettings.TextSize.SMALLEST);
 		if (Properties.webpageProp.fontSize==1)
@@ -153,16 +164,15 @@ public class CustomWebView extends WebView{
 
 				if (url.startsWith("intent://")) {
 					try {
-						Context context = view.getContext();
-						Intent intent = new Intent().parseUri(url, Intent.URI_INTENT_SCHEME);
+						Intent intent = Intent.parseUri(url, Intent.URI_INTENT_SCHEME);
 
 						if (intent != null) {
 							view.stopLoading();
 
-							PackageManager packageManager = context.getPackageManager();
+							PackageManager packageManager = activityRef.get().getPackageManager();
 							ResolveInfo info = packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY);
 							if (info != null) {
-								context.startActivity(intent);
+								activityRef.get().startActivity(intent);
 							} else {
 								String fallbackUrl = intent.getStringExtra("browser_fallback_url");
 								if (fallbackUrl!=null)
@@ -171,7 +181,7 @@ public class CustomWebView extends WebView{
 							}
 							return true;
 						}
-					} catch (URISyntaxException e) {
+					} catch (Exception e) {
 						e.printStackTrace();
 						return false;
 					}
@@ -232,7 +242,7 @@ public class CustomWebView extends WebView{
 						e.printStackTrace();
 						return false;
 					}
-				}else if (url.contains("youtube.com/watch")) {
+				}else if (url.contains("youtube.com/")) {
 					// Might be a bit too generic but saves a lot of comparisons
 
 					Intent intent = new Intent(Intent.ACTION_VIEW, Uri
@@ -245,92 +255,115 @@ public class CustomWebView extends WebView{
 						e.printStackTrace();
 						return false;
 					}
+				}else if (!url.startsWith("http://") && !url.startsWith("https://")){
+					Log.d("LB","SPECIAL "+url);
+					Context context = view.getContext();
+					Intent intent = null;
+					try {
+						intent = Intent.parseUri(url, Intent.URI_INTENT_SCHEME);
+					} catch (URISyntaxException e) {
+						e.printStackTrace();
+					}
+
+					if (intent != null) {
+						view.stopLoading();
+
+						PackageManager packageManager = context.getPackageManager();
+						ResolveInfo info = packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY);
+						if (info != null) {
+							context.startActivity(intent);
+						} else {
+							String fallbackUrl = intent.getStringExtra("browser_fallback_url");
+							if (fallbackUrl!=null)
+								view.loadUrl(fallbackUrl);
+							else return false;
+						}
+						return true;
+					}
 				}
+
 				return false;
 			}
 
 			@Override
 			public void onPageStarted(WebView view, String url, Bitmap favicon) {
-				super.onPageStarted(CustomWebView.this, url, favicon);
-				if (PB == null)
-					try {
-						PB = (ProgressBar) activityRef.get().webLayout
-								.findViewById(R.id.webpgbar);
-					} catch (Exception e) {
+				if (activityRef.get()!=null && activityRef.get().webLayout!=null) {
+					CustomWebView WV = activityRef.get().webLayout
+							.findViewById(R.id.browser_page);
+
+					if (WV != null && CustomWebView.this == WV) {
+						if (PB == null)
+							try {
+								PB = activityRef.get().webLayout
+										.findViewById(R.id.webpgbar);
+							} catch (Exception e) {
+							}
+						if (view.getVisibility() == View.VISIBLE)
+							if (PB != null && PB.getVisibility() != View.VISIBLE
+									&& url.compareTo("about:blank") != 0)
+								PB.setVisibility(ProgressBar.VISIBLE);
+						ImageButton IB = activityRef.get().barHolder.findViewById(R.id.browser_refresh);
+						if (IB != null) {
+							IB.setImageResource(R.drawable.btn_toolbar_stop_loading_normal);
+						}
+						setUrlBarText(url);
+
+						//force colorize toolbar
+						activityRef.get().toolbar.requestLayout();
 					}
-				;
-				if (view.getVisibility() == View.VISIBLE)
-					if (PB != null && PB.getVisibility() != View.VISIBLE
-							&& url.compareTo("about:blank") != 0)
-						PB.setVisibility(ProgressBar.VISIBLE);
-				ImageButton IB = (ImageButton) activityRef.get().bar
-						.findViewById(R.id.browser_refresh);
-				if (IB != null) {
-					IB.setImageResource(R.drawable.btn_toolbar_stop_loading_normal);
-					CustomToolbar.colorizeToolbar(activityRef.get().toolbar,
-							Properties.appProp.primaryIntColor, activityRef.get().activity);
 				}
-				CustomToolbar.colorizeToolbar(activityRef.get().toolbar,
-						Properties.appProp.primaryIntColor, activityRef.get());
-				setUrlBarText(url);
 			}
 
 
 			@Override
 			public void onPageFinished(WebView view, String url) {
-				super.onPageFinished(view, url);
 				if (PB == null)
-					PB = (ProgressBar) activityRef.get().webLayout
+					PB = activityRef.get().webLayout
 							.findViewById(R.id.webpgbar);
 
-				if (MainActivity.browserListViewAdapter != null)
-					MainActivity.browserListViewAdapter.notifyDataSetChanged();
+				if (activityRef.get().browserListViewAdapter != null)
+					activityRef.get().browserListViewAdapter.notifyDataSetChanged();
 
-				CustomWebView WV = (CustomWebView) activityRef.get().webLayout
+				Log.d("LB","pageFinished");
+				if (view.getUrl()!=null && view.getUrl().equals(Properties.webpageProp.assetHomePage)) {
+					//Replace the Search text on the document with properly localized string
+					String js = "javascript:(function() { ";
+					js += "document.getElementById('search').placeholder = '"+getResources().getString(R.string.search)+"';";
+					if (Properties.webpageProp.engine.contains("ecosia.org/search?tt=lucid&q=")) {
+						js += "document.getElementById('add').name = 'tt';";
+						js += "document.getElementById('add').value = 'lucid';";
+					}
+					js+="})()";
+
+					view.loadUrl(js);
+					Log.d("LL","fixing placeholder");
+				}
+
+				CustomWebView WV = activityRef.get().webLayout
 						.findViewById(R.id.browser_page);
-
-                if (view.getUrl()!=null && view.getUrl().equals(Properties.webpageProp.assetHomePage)) {
-                    //Replace the Search text on the document with properly localized string
-                    String js = "javascript:(function() { ";
-                    js += "document.getElementById('search').placeholder = '"+getResources().getString(R.string.search)+"';";
-                    if (Properties.webpageProp.engine.contains("ecosia.org/search?tt=lucid&q=")) {
-                        js += "document.getElementById('add').name = 'tt';";
-                        js += "document.getElementById('add').value = 'lucid';";
-                    }
-                    js+="})()";
-
-                    view.loadUrl(js);
-                    Log.d("LL","fixing placeholder");
-                }
 
 				if (WV == CustomWebView.this) {// check if this webview is being
 					// currently shown/used
-					if (((EditText) activityRef.get().findViewById(R.id.browser_searchbar)) != null) {
-                        if (!((EditText) activityRef.get()
-                                .findViewById(R.id.browser_searchbar))
-                                .isFocused()) {
-                            if (view != null) {
-                                if (view.getUrl() != null && !view.getUrl().equals("about:blank")) {
-                                    setUrlBarText(view.getUrl());
-                                }
-                            }
-                        }
-                    }
-
+					if (activityRef.get().findViewById(R.id.browser_searchbar) != null)
+						if (activityRef.get().findViewById(R.id.browser_searchbar).isFocused())
+							if (view != null)
+								if (view.getUrl() != null  && !view.getUrl().equals("about:blank")) {
+									setUrlBarText(view.getUrl());
+								}
 					if (PB!=null)
 						PB.setVisibility(ProgressBar.INVISIBLE);
 
-					ImageButton IB = (ImageButton) activityRef.get().bar
+					ImageButton IB = activityRef.get().barHolder
 							.findViewById(R.id.browser_refresh);
 					if (IB != null) {
 						IB.setImageResource(R.drawable.btn_toolbar_reload_normal);
 					}
 
-					ImageButton BI = (ImageButton) activityRef.get().bar
+					ImageButton BI = activityRef.get().barHolder
 							.findViewById(R.id.browser_bookmark);
 					if (BI != null) {
 						String bookmarkName = null;
-						if (CustomWebView.this != null && CustomWebView.this.getUrl() != null){
+						if (CustomWebView.this.getUrl() != null){
 							bookmarkName = BookmarksActivity.bookmarksMgr.root.containsBookmarkDeep(CustomWebView.this.getUrl());
 						}
 
@@ -340,126 +373,146 @@ public class CustomWebView extends WebView{
 							BI.setImageResource(R.drawable.btn_omnibox_bookmark_normal);
 						}
 					}
-					CustomToolbar.colorizeToolbar(activityRef.get().toolbar,
-							Properties.appProp.primaryIntColor, activityRef.get().activity);
+					//force colorize toolbar
+					activityRef.get().toolbar.requestLayout();
 				}
+
 			}
 
 			@Override
 			public void onReceivedSslError(WebView view,
 										   SslErrorHandler handler, SslError error) {
 				super.onReceivedSslError(view, handler, error);
+
 				int errorCode = error.getPrimaryError();
 				System.out.println("SSL ERROR " + errorCode + " DETECTED");
 
 				sslCertificateErrorDialog(view, handler, error, errorCode);
 			}
 
-			@SuppressLint("NewApi")
+			@SuppressLint({"NewApi", "StringFormatInvalid", "StringFormatMatches"})
 			// Is surpressed as the code will only be executed on the correct platform
 			private void sslCertificateErrorDialog(WebView view,
 												   final SslErrorHandler handler, SslError error, int errorCode)
 					throws NotFoundException {
 
-				String title = "SSL Error detected";
-				String msg = "";
-				String url = "";
+				if (!(SSLDialog!=null && !SSLDialog.isShowing())) {
+					String title = "SSL Error detected";
+					String msg = "";
+					String url = "";
 
-				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-					url = error.getUrl();
-				} else {
-					url = error.toString();
-					url = url.substring(url.lastIndexOf(" on URL: ") + 9);
-				}
-
-				String sslWarning = getResources().getString(
-						R.string.sslWebsiteWarning);
-				String proceedQuestion = getResources().getString(
-						R.string.sslProceedQuestion);
-
-				if (errorCode == SslError.SSL_UNTRUSTED) {
-					msg = String.format(
-							getResources().getString(
-									R.string.sslUntrustedMessage), url);
-
-					title = String
-							.format(getResources().getString(
-									R.string.sslUntrustedTitle), url);
-				} else if (errorCode == SslError.SSL_IDMISMATCH) {
-					String issuedTo = error.getCertificate().getIssuedTo()
-							.getCName();
-					msg = String.format(
-							getResources().getString(
-									R.string.sslIdMismatchMessage), url,
-							issuedTo);
-
-					title = String.format(
-							getResources().getString(
-									R.string.sslIdMismatchTitle), url);
-				} else if (errorCode == SslError.SSL_DATE_INVALID) {
-
-					Date currentDate = Calendar.getInstance().getTime();
-					Date expiredOn = error.getCertificate()
-							.getValidNotAfterDate();
-
-					if (currentDate.after(expiredOn)) {
-
-						msg = String.format(
-								getResources().getString(
-										R.string.sslExpiredMessage), url,
-								expiredOn.toString());
-
-						title = String.format(
-								getResources().getString(
-										R.string.sslExpiredTitle), url);
+					if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+						url = error.getUrl();
 					} else {
-						Date validFrom = error.getCertificate()
-								.getValidNotBeforeDate();
-						msg = String.format(
-								getResources().getString(
-										R.string.sslNotYetValidMessage), url,
-								validFrom.toString());
-
-						title = String.format(
-								getResources().getString(
-										R.string.sslNotYetValidTitle), url);
-
+						url = error.toString();
+						url = url.substring(url.lastIndexOf(" on URL: ") + 9);
 					}
 
+					String host = null;
+					try {
+						host = new URL(url).getHost();
+					} catch (Exception ignored) {
+					}
+
+
+					final SharedPreferences sslPreferences = activityRef.get().getSharedPreferences("sslurls", 0);
+
+					if (host != null && !sslPreferences.contains(host)) {
+
+
+						String sslWarning = getResources().getString(
+								R.string.sslWebsiteWarning);
+						String proceedQuestion = getResources().getString(
+								R.string.sslProceedQuestion);
+
+						if (errorCode == SslError.SSL_UNTRUSTED) {
+							msg = String.format(
+									getResources().getString(
+											R.string.sslUntrustedMessage), url);
+
+							title = String
+									.format(getResources().getString(
+											R.string.sslUntrustedTitle), url);
+						} else if (errorCode == SslError.SSL_IDMISMATCH) {
+							String issuedTo = error.getCertificate().getIssuedTo()
+									.getCName();
+							msg = String.format(
+									getResources().getString(
+											R.string.sslIdMismatchMessage), url,
+									issuedTo);
+
+							title = String.format(
+									getResources().getString(
+											R.string.sslIdMismatchTitle), url);
+						} else if (errorCode == SslError.SSL_DATE_INVALID) {
+
+							Date currentDate = Calendar.getInstance().getTime();
+							Date expiredOn = error.getCertificate()
+									.getValidNotAfterDate();
+
+							if (currentDate.after(expiredOn)) {
+
+								msg = String.format(
+										getResources().getString(
+												R.string.sslExpiredMessage), url,
+										expiredOn.toString());
+
+								title = String.format(
+										getResources().getString(
+												R.string.sslExpiredTitle), url);
+							} else {
+								Date validFrom = error.getCertificate()
+										.getValidNotBeforeDate();
+								msg = String.format(
+										getResources().getString(
+												R.string.sslNotYetValidMessage), url,
+										validFrom.toString());
+
+								title = String.format(
+										getResources().getString(
+												R.string.sslNotYetValidTitle), url);
+
+							}
+
+						}
+
+						AlertDialog.Builder builder = new AlertDialog.Builder(activityRef.get());
+
+						final String finalHost = host;
+						builder.setMessage(
+								msg + " " + sslWarning + "\n\n" + proceedQuestion)
+								.setTitle(title)
+								.setPositiveButton(android.R.string.ok,
+										new DialogInterface.OnClickListener() {
+											public void onClick(DialogInterface dialog,
+																int id) {
+												handler.proceed();
+												sslPreferences.edit().putBoolean(finalHost, true).apply();
+												SSLDialog = null;
+											}
+										})
+								.setNegativeButton(android.R.string.cancel,
+										new DialogInterface.OnClickListener() {
+											public void onClick(DialogInterface dialog,
+																int id) {
+												handler.cancel();
+												SSLDialog = null;
+											}
+										});
+
+						SSLDialog = builder.create();
+						SSLDialog.setCancelable(false);
+						SSLDialog.setCanceledOnTouchOutside(false);
+						SSLDialog.show();
+
+					}
 				}
-
-				AlertDialog.Builder builder = new AlertDialog.Builder(activityRef.get());
-
-				builder.setMessage(
-						msg + " " + sslWarning + "\n\n" + proceedQuestion)
-						.setTitle(title)
-						.setPositiveButton(android.R.string.ok,
-								new DialogInterface.OnClickListener() {
-									public void onClick(DialogInterface dialog,
-														int id) {
-										handler.proceed();
-									}
-								})
-						.setNegativeButton(android.R.string.cancel,
-								new DialogInterface.OnClickListener() {
-									public void onClick(DialogInterface dialog,
-														int id) {
-										handler.cancel();
-
-									}
-								});
-				Dialog dialog;
-				dialog = builder.create();
-				dialog.setCancelable(false);
-				dialog.setCanceledOnTouchOutside(false);
-				dialog.show();
-
 			}
 		});
 
 
 
-		chromeClient = new VideoEnabledWebChromeClient(CustomWebView.this,activity);
+		chromeClient = new VideoEnabledWebChromeClient(CustomWebView.this, activity);
 		this.setWebChromeClient(chromeClient);
 
 		this.setDownloadListener(new DownloadListener() {
@@ -480,17 +533,6 @@ public class CustomWebView extends WebView{
 
 	}
 
-	private final static Object methodInvoke(Object obj, String method, Class<?>[] parameterTypes, Object[] args) {
-		try {
-			Method m = obj.getClass().getMethod(method, new Class[] { boolean.class });
-			m.invoke(obj, args);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		return null;
-	}
-
 	public CustomWebView(Context context) {
 		super(context);
 	}
@@ -506,20 +548,20 @@ public class CustomWebView extends WebView{
 	public void setDesktopMode(final boolean enabled) {
 		final WebSettings webSettings = getSettings();
 
-        if (origionalUserAgent==null) {
-            origionalUserAgent = webSettings.getUserAgentString();
-            Log.d("LB", "Your user agent is:"+origionalUserAgent);
-        }
+		if (origionalUserAgent==null) {
+			origionalUserAgent = webSettings.getUserAgentString();
+			Log.d("LB", "Your user agent is:"+origionalUserAgent);
+		}
 
 		String newUserAgent = origionalUserAgent;
 		if (enabled) {
-            try {
-                String ua = webSettings.getUserAgentString();
-                String androidOSString = webSettings.getUserAgentString().substring(ua.indexOf("("), ua.indexOf(")") + 1);
-                newUserAgent = origionalUserAgent.replace(androidOSString,"(X11; Linux x86_64)");
-            }catch (Exception e){
-                e.printStackTrace();
-            }
+			try {
+				String ua = webSettings.getUserAgentString();
+				String androidOSString = webSettings.getUserAgentString().substring(ua.indexOf("("), ua.indexOf(")") + 1);
+				newUserAgent = origionalUserAgent.replace(androidOSString,"(X11; Linux x86_64)");
+			}catch (Exception e){
+				e.printStackTrace();
+			}
 		}
 		else {
 			newUserAgent = origionalUserAgent;
@@ -541,18 +583,14 @@ public class CustomWebView extends WebView{
 
 	public void setUrlBarText(String url){
 		if (url!=null){
-			CustomWebView WV = (CustomWebView) activityRef.get().webLayout.findViewById(R.id.browser_page);
+			CustomWebView WV = activityRef.get().webLayout.findViewById(R.id.browser_page);
 			if (WV!=null && this!=null && WV.equals(this)){
-				if ((activityRef.get().findViewById(R.id.browser_searchbar))!=null && !((EditText) ((Activity) activityRef.get()).findViewById(R.id.browser_searchbar)).isFocused()){
+				if ((activityRef.get().findViewById(R.id.browser_searchbar))!=null && !activityRef.get().findViewById(R.id.browser_searchbar).isFocused()){
 					if (url.startsWith("file:///android_asset/")) {
-						((EditText) ((Activity) activityRef.get()).findViewById(R.id.browser_searchbar)).setText("");
-						((EditText) ((Activity) activityRef.get()).findViewById(R.id.browser_searchbar)).setHint(R.string.urlbardefault);
-
-//						((EditText) ((Activity) MainActivity.activity).findViewById(R.id.browser_searchbar)).setText(MainActivity.activity
-//							.getResources()
-//							.getString(R.string.urlbardefault));
+						((EditText) activityRef.get().findViewById(R.id.browser_searchbar)).setText("");
+						((EditText) activityRef.get().findViewById(R.id.browser_searchbar)).setHint(R.string.urlbardefault);
 					}else{
-						((EditText) ((Activity) activityRef.get()).findViewById(R.id.browser_searchbar))
+						((EditText) activityRef.get().findViewById(R.id.browser_searchbar))
 								.setText(url
 										.replace("http://", "")
 										.replace("https://", ""));
@@ -561,30 +599,6 @@ public class CustomWebView extends WebView{
 			}
 		}
 	}
-
-
-//	@Override
-//	public boolean onTouchEvent(MotionEvent event) {
-//
-//        String js = "javascript:";
-//        js+= "var posX = " + event.getX() +";";
-//        js+= "var posY = " + event.getY()+";";
-//        js+= "var wvWidth = " + getWidth()+";";
-//        js+= "var wvHeight = " + getHeight()+";";
-//        js+= "var fixedX = posX * (window.innerWidth / wvWidth);";
-//        js+= "var fixedY = posY * (window.innerHeight / wvHeight);";
-//        js +="var focused = document.elementFromPoint(fixedX,fixedY);";
-//        //js +="console.log(focused.tagName);";
-//        js += "console.log(focused.className);";
-//        loadUrl(js);
-//
-//        return super.onTouchEvent(event);
-//    }
-
-
-
-
-
 
 
 
@@ -599,7 +613,7 @@ public class CustomWebView extends WebView{
 	 * @param fileName The referer associated with the downloaded url
 	 * @param privateBrowsing If the request is coming from a private browsing tab.
 	 */
-	public static void onDownloadStartNoStream(Activity activity,
+	public static void onDownloadStartNoStream(final Activity activity,
 											   String url, String userAgent, String contentDisposition,
 											   String mimetype, String fileName, boolean privateBrowsing) {
 
@@ -617,7 +631,6 @@ public class CustomWebView extends WebView{
 		}
 		String addressString = webAddress.toString();
 		Uri uri = Uri.parse(addressString);
-		final DownloadManager.Request request;
 		try {
 			request = new DownloadManager.Request(uri);
 		} catch (IllegalArgumentException e) {
@@ -649,16 +662,42 @@ public class CustomWebView extends WebView{
 			// are not sure of the mimetype in this case, so do a head request
 			mimetype = "";
 		} else {
-			final DownloadManager manager
-					= (DownloadManager) activity.getSystemService(Context.DOWNLOAD_SERVICE);
 			new Thread("Browser download") {
 				public void run() {
-					manager.enqueue(request);
+					if (!enqueDownload(activity)) {
+						ActivityCompat.requestPermissions(activity,
+								new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+								ActivityIds.PERMISSIONS_REQUEST_ACCESS_FILES_FOR_DOWNLOAD);
+					}
 				}
 			}.start();
 		}
 
-		Tools.toastString(R.string.download_started, activity);
+
+
+	}
+
+	public static boolean enqueDownload(final Activity c){
+		if (ContextCompat.checkSelfPermission(c,
+				Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+
+			DownloadManager manager
+					= (DownloadManager) c.getSystemService(Context.DOWNLOAD_SERVICE);
+
+			if (manager != null) {
+				c.runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						Tools.toastString(R.string.download_started, c);
+					}
+				});
+
+				manager.enqueue(request);
+			}
+
+			return true;
+		}else
+			return false;
 
 	}
 
@@ -677,7 +716,7 @@ public class CustomWebView extends WebView{
 		if (needed == false) {
 			return path;
 		}
-		StringBuilder sb = new StringBuilder("");
+		StringBuilder sb = new StringBuilder();
 		for (char c : chars) {
 			if (c == '[' || c == ']' || c == '|') {
 				sb.append('%');
@@ -688,5 +727,45 @@ public class CustomWebView extends WebView{
 		}
 		return sb.toString();
 	}
+
+	private final static Object methodInvoke(Object obj, String method, Class<?>[] parameterTypes, Object[] args) {
+		try {
+			Method m = obj.getClass().getMethod(method, boolean.class);
+			m.invoke(obj, args);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return null;
+	}
+
+	@Override
+	public void destroy() {
+		super.destroy();
+		Log.d("LL","called destroy on CustomWebView");
+		removeAllViews();
+		setWebChromeClient(null);
+		setWebViewClient(null);
+		setDownloadListener(null);
+
+		chromeClient = null;
+		PB = null;
+		activityRef = null;
+
+		try {
+			if( sConfigCallback!=null )
+				sConfigCallback.set(null, null);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+
+	protected void finalize() throws Throwable {
+		super.finalize();
+
+		Log.d("LL","CustomWebView disposed");
+	}
+
 
 }

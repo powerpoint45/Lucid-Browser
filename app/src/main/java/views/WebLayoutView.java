@@ -1,5 +1,6 @@
 package views;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -27,55 +28,55 @@ public class WebLayoutView extends LinearLayout{
 	}
 	
 	float downY;
-	float upY;
-	
 	float actualY;
 	
 	boolean fingerDown;
 
 	@Override
 	public boolean onInterceptTouchEvent(MotionEvent event) {
-		if (event.getPointerCount() == 1){
-			switch (event.getAction()){
-			case MotionEvent.ACTION_DOWN:
-				fingerDown = true;
-				downY = event.getY();
-				actualY = event.getRawY();
-				//canceled = false;
-				break;
-				
-			case MotionEvent.ACTION_MOVE:
-				if (fingerDown){
-					if (Math.abs(event.getRawY()-actualY)> Properties.numtodp(20, getContext())){
-						MainActivity.actionBarControls.move(event.getY()-downY);
-					}else{
+		if (!((MainActivity) getContext()).isVideoViewOpen()) {
+			if (event.getPointerCount() == 1) {
+				switch (event.getAction()) {
+					case MotionEvent.ACTION_DOWN:
+						fingerDown = true;
 						downY = event.getY();
-					}
+						actualY = event.getRawY();
+						break;
+
+					case MotionEvent.ACTION_MOVE:
+						if (fingerDown) {
+							if (Math.abs(event.getRawY() - actualY) > Properties.numtodp(20, getContext())) {
+								((MainActivity) getContext()).actionBarControls.move(event.getY() - downY);
+							} else {
+								downY = event.getY();
+							}
+						}
+						break;
+
+					case MotionEvent.ACTION_UP:
+						if (fingerDown) {
+							fingerDown = false;
+							((MainActivity) getContext()).actionBarControls.showOrHide();
+						}
+						break;
+
+					case MotionEvent.ACTION_CANCEL:
+						if (fingerDown) {
+							fingerDown = false;
+							((MainActivity) getContext()).actionBarControls.actionCanceled();
+						}
+						break;
+
 				}
-				break;
-				
-			case MotionEvent.ACTION_UP:
-				if (fingerDown){
-					fingerDown = false;
-					MainActivity.actionBarControls.showOrHide();
-				}
-				break;
-				
-			case MotionEvent.ACTION_CANCEL:
-				if (fingerDown){
-					fingerDown = false;
-					MainActivity.actionBarControls.actionCanceled();
-				}
-				break;
-			
+			} else {
+				fingerDown = false;
 			}
-		}else{
-			fingerDown = false;
 		}
 	    return false;
 	    
 	}
 	
+	@SuppressLint("ClickableViewAccessibility")
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {//used when 0 tabs are active
 		onInterceptTouchEvent(event);

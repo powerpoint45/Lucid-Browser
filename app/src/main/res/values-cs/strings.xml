@@ -58,8 +58,6 @@
 	<string name="websettingstitle">Nastavení prohlížeče</string>
 	<string name="pagetransformationtitle">Nastavení animací</string>
 	<string name="pagetransformationsummary">Animace při přechodu stránky</string>
-	<string name="actionbarcolortitle">Barva lišty</string>
-	<string name="actionbarcolorsummary">Nastavit barvu lišty</string>
 	<string name="pagetransparencytitle">Průhlednost stránky</string>
 	<string name="pagetransparencysummary">Nastavit prúhlednost pro prohlížeč a stránku aplikací</string>
 	<string name="orientationtitle">Orientace launcheru</string>
@@ -71,7 +69,6 @@
 	<string name="transparentstatustitle">Průhlednost lišty</string>
 	<string name="transparentstatussummary">Zapnout nebo vypnout průhlednost lišty</string>
 	<string name="searchtexttitle">Vlastní text pro vyhledávání</string>
-	<string name="searchtextsummary">Nastavit vlastní text pro vyhledávání v liště</string>
 	<string name="searchtextmessage">Vložte vlastní text pro vyhledávání:</string>
 	<string name="sidebarthemetitle">Téma postraního panelu</string>
 	<string name="sidebarthemesummary">Nastavit téma postraního panelu</string>
@@ -350,8 +347,6 @@
 	<string name="search_engine">Vyhledávač</string>
 	<string name="searchcontactstitle">Vyhledávání kontaktů</string>
 	<string name="searchcontactssummary">Povolte či zakažte vyhledávání kontaktů</string>
-	<string name="actionbartextstyletitle">Styl lišty</string>
-	<string name="actionbartextstylesummary">Nastavte styl lišty</string>
 	<string name="action_lock_screen">Vypnutí obrazovky</string>
 	<string name="history">Historie</string>
 
@@ -381,5 +376,63 @@
 	<string name="licensing_failed">Kontrola licence se nepodařila. Prosím ujistěte se že byla aplikace skutečně zakoupena.</string>
 	<string name="export_bookmarks_summary">Export záložek do souboru</string>
 	<string name="import_bookmarks_summary">Import záložek ze souboru</string>
+	
+	<!--Added 2-10-17-->
+    <string name="privacy_policy">Ochrana osobních údajů a další informace</string>
+    <string name="drawer_fast_scroller">Povolit rychlé posouvání</string>
+    <string name="drawer_fast_scroller_orientation">Orientace rychlého posouvání</string>
+    <string name="horizontal">Horizontální</string>
+    <string name="vertical">Vertikální</string>
+
+    <!--Added 8-9-17-->
+    <string name="match_layout_title">Shoda rozložení</string>
+    <string name="match_layout_summary">Nastavení na šířku a na výšku budou konfigurovány stejně</string>
+    <string name="numrowwstitle">Počet řádků</string>
+    
+    <!--Added 9-8-17-->
+    <string name="fade">Slábnutí</string>
+    <string name="unread_count_popup">Aby byla funkčnost nepřečtených počtů plně funkční, musíte této aplikaci povolit přístup k oznámení</string>
+    <string name="unread_count_disable_popup">Nyní můžete této aplikaci zakázat přístup k oznámením</string>
+    
+    <!--Added 9-23-17-->
+    <string name="gesturepinchtitle">Gesto přiblížení prstů</string>
+    <string name="gesturepinchsummary">Vyberte akci pro přiblížení prstů na domovské stránce</string>
+    <string name="gesturepinchouttitle">Gesto oddálení prstů</string>
+    <string name="gesturepinchoutsummary">Vyberte akci pro oddálení prstů na domovské stránce</string>
+    <string name="unread_count_color_title">Barva počtu nepřečtených</string>
+    <string name="unread_count_color_summary">Nastavte barvu počtu nepřečtených pro aplikace</string>
+    
+    <!--Added 10-5-17-->
+    <string name="label_size_title">Velikost štítku aplikace</string>
+    <string name="label_size_summary">Nastavte velikost štítků pod ikonami</string>
+    <string name="small">Malá</string>
+    <string name="medium">Střední</string>
+    <string name="large">Velká</string>
+    
+    
+    <!-- 8-13-18 Any mention of ActionBar has been changed to Search Bar -->
+    <string name="actionbarcolortitle">Barva panelu vyhledávání</string>
+    <string name="actionbarcolorsummary">Nastavte byrvu panelu vyhledávání</string>
+    <string name="actionbar_item_color_title">Barva položek panelu vyhledávání</string>
+    <string name="actionbar_item_color_summary">Nastavte barvu položek v panelu vyhledávání</string>
+    <string name="actionbartextstyletitle">Styl položek panelu vyhledávání</string>
+    <string name="actionbartextstylesummary">Nastavte styl položek v panelu vyhledávání</string>
+    <string name="searchtextsummary">Nastavte text vyhledávání v panelu vyhledávání</string>
+    
+    
+    <!--Added 8-13-18-->
+    <string name="hide_searchbar_drawer">Skrýt panel vyhledávání v menu aplikací</string>
+    <string name="hide_searchbar_home">Skrýt panel vyhledávání na domovské stránce</string>
+    <string name="hide_searchbar_browser">Skrýt panel vyhledávání v prohlížeči</string>
+    <string name="searchbar_settings">Nastavení panelu vyhledávání</string>
+    <string name="opacity">Neprůhlednost</string>
+    <string name="auto_color">Automatická barva</string>
+    <string name="folder_auto_color_summary">Nastaví barvu složek automaticky</string>
+    <string name="toast_snap_disabled">Nejprve musíte vypnout shodu rozložení</string>
+    
+    <!--Added 11-27-18-->
+    <string name="download_file">Stáhnout soubor:</string>
+    <string name="downloads">Stahování</string>
+    <string name="join_discord">Připojte se k serveru Discord</string>
 
 </resources>

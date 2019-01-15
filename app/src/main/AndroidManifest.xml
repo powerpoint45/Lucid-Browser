@@ -3,10 +3,6 @@
     package="com.powerpoint45.lucidbrowser"
     android:versionCode="55"
     android:versionName="5.41" >
-
-    <uses-sdk
-        android:minSdkVersion="11"
-        android:targetSdkVersion="22" />
     
    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
    <uses-permission android:name="android.permission.INTERNET"/>
@@ -23,6 +19,12 @@
          
         <meta-data android:name="com.google.android.gms.version"
                android:value="@integer/google_play_services_version"/>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5849487494074701~1856109472"/>
+
+
         <activity
             android:label="@string/label"
             android:name="com.powerpoint45.lucidbrowser.MainActivity"
@@ -59,7 +61,7 @@
             android:label="@string/bookmarks"
             android:name="com.powerpoint45.lucidbrowser.BookmarksActivity" 
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/CustomLightTheme">
+            android:theme="@style/BookmarksThemeDark">
             <intent-filter >
                 <action android:name="com.powerpoint45.lucidbrowser.BookmarksActivity" />
                 <category android:name="android.intent.category.DEFAULT" />

@@ -1,4 +1,4 @@
-/*
+package com.powerpoint45.lucidbrowser;/*
  * Copyright (C) 2013 readyState Software Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-package com.powerpoint45.lucidbrowser;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -35,17 +34,42 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout.LayoutParams;
 
+import java.lang.reflect.Method;
+
 /**
- * Class to manage status and navigation bar tint effects when using KitKat 
+ * Class to manage status and navigation bar tint effects when using KitKat
  * translucent system UI modes.
  *
  */
+@SuppressWarnings({ "rawtypes", "unchecked" })
 public class SystemBarTintManager {
+
+    public boolean isLollipop;
+
+    static {
+        // Android allows a system property to override the presence of the navigation bar.
+        // Used by the emulator.
+        // See https://github.com/android/platform_frameworks_base/blob/master/policy/src/com/android/internal/policy/impl/PhoneWindowManager.java#L1076
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            try {
+                Class c = Class.forName("android.os.SystemProperties");
+                Method m = c.getDeclaredMethod("get", String.class);
+                m.setAccessible(true);
+                sNavBarOverride = (String) m.invoke(null, "qemu.hw.mainkeys");
+            } catch (Throwable e) {
+                sNavBarOverride = null;
+            }
+        }
+
+    }
+
 
     /**
      * The default system bar tint color value.
      */
     public static final int DEFAULT_TINT_COLOR = 0x99000000;
+
+    private static String sNavBarOverride;
 
     private final SystemBarConfig mConfig;
     private boolean mStatusBarAvailable;
@@ -53,7 +77,9 @@ public class SystemBarTintManager {
     private boolean mStatusBarTintEnabled;
     private boolean mNavBarTintEnabled;
     private View mStatusBarTintView;
-    private View mNavBarTintView;
+    private static View mNavBarTintView;
+
+    private MainActivity activity;
 
     /**
      * Constructor. Call this in the host activity onCreate method after its
@@ -64,8 +90,8 @@ public class SystemBarTintManager {
      */
     @TargetApi(19)
     @SuppressWarnings("ResourceType")
-    public SystemBarTintManager(Activity activity) {
-
+    public SystemBarTintManager(MainActivity activity) {
+        this.activity = activity;
         Window win = activity.getWindow();
         ViewGroup decorViewGroup = (ViewGroup) win.getDecorView();
 
@@ -92,6 +118,9 @@ public class SystemBarTintManager {
                 mNavBarAvailable = true;
             }
         }
+
+        if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.LOLLIPOP)
+            isLollipop = true;
 
         mConfig = new SystemBarConfig(activity, mStatusBarAvailable, mNavBarAvailable);
         // device might not have virtual navigation keys
@@ -135,7 +164,7 @@ public class SystemBarTintManager {
      */
     public void setNavigationBarTintEnabled(boolean enabled) {
         mNavBarTintEnabled = enabled;
-        if (mNavBarAvailable) {
+        if (mNavBarAvailable && !isLollipop) {
             mNavBarTintView.setVisibility(enabled ? View.VISIBLE : View.GONE);
         }
     }
@@ -185,10 +214,20 @@ public class SystemBarTintManager {
      *
      * @param color The color of the background tint.
      */
+    int color;//only for lollipop
+    @SuppressLint("NewApi")
     public void setStatusBarTintColor(int color) {
-        if (mStatusBarAvailable) {
+        this.color = color;
+        if (isLollipop){
+            activity.getWindow().setStatusBarColor(color);
+        }
+        else if (mStatusBarAvailable) {
             mStatusBarTintView.setBackgroundColor(color);
         }
+    }
+
+    public int getStatusBarTintColor(){
+        return color;
     }
 
     /**
@@ -219,9 +258,10 @@ public class SystemBarTintManager {
      *
      * @param alpha The alpha to use
      */
+    @SuppressLint("NewApi")
     @TargetApi(11)
     public void setStatusBarAlpha(float alpha) {
-        if (mStatusBarAvailable && Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+        if (mStatusBarAvailable && Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB && !isLollipop) {
             mStatusBarTintView.setAlpha(alpha);
         }
     }
@@ -312,6 +352,7 @@ public class SystemBarTintManager {
         decorViewGroup.addView(mStatusBarTintView);
     }
 
+    @SuppressLint("RtlHardcoded")
     private void setupNavBarView(Context context, ViewGroup decorViewGroup) {
         mNavBarTintView = new View(context);
         LayoutParams params;
@@ -328,6 +369,7 @@ public class SystemBarTintManager {
         decorViewGroup.addView(mNavBarTintView);
     }
 
+
     /**
      * Class which describes system bar sizing and other characteristics for the current
      * device configuration.
@@ -339,6 +381,7 @@ public class SystemBarTintManager {
         private static final String NAV_BAR_HEIGHT_RES_NAME = "navigation_bar_height";
         private static final String NAV_BAR_HEIGHT_LANDSCAPE_RES_NAME = "navigation_bar_height_landscape";
         private static final String NAV_BAR_WIDTH_RES_NAME = "navigation_bar_width";
+        private static final String SHOW_NAV_BAR_RES_NAME = "config_showNavigationBar";
 
         private final boolean mTranslucentStatusBar;
         private final boolean mTranslucentNavBar;
@@ -369,7 +412,7 @@ public class SystemBarTintManager {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
                 TypedValue tv = new TypedValue();
                 context.getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true);
-                result = context.getResources().getDimensionPixelSize(tv.resourceId);
+                result = TypedValue.complexToDimensionPixelSize(tv.data, context.getResources().getDisplayMetrics());
             }
             return result;
         }
@@ -379,7 +422,7 @@ public class SystemBarTintManager {
             Resources res = context.getResources();
             int result = 0;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-                if (!ViewConfiguration.get(context).hasPermanentMenuKey()) {
+                if (hasNavBar(context)) {
                     String key;
                     if (mInPortrait) {
                         key = NAV_BAR_HEIGHT_RES_NAME;
@@ -397,11 +440,29 @@ public class SystemBarTintManager {
             Resources res = context.getResources();
             int result = 0;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-                if (!ViewConfiguration.get(context).hasPermanentMenuKey()) {
+                if (hasNavBar(context)) {
                     return getInternalDimensionSize(res, NAV_BAR_WIDTH_RES_NAME);
                 }
             }
             return result;
+        }
+
+        @TargetApi(14)
+        private boolean hasNavBar(Context context) {
+            Resources res = context.getResources();
+            int resourceId = res.getIdentifier(SHOW_NAV_BAR_RES_NAME, "bool", "android");
+            if (resourceId != 0) {
+                boolean hasNav = res.getBoolean(resourceId);
+                // check override flag (see static block)
+                if ("1".equals(sNavBarOverride)) {
+                    hasNav = false;
+                } else if ("0".equals(sNavBarOverride)) {
+                    hasNav = true;
+                }
+                return hasNav;
+            } else { // fallback
+                return !ViewConfiguration.get(context).hasPermanentMenuKey();
+            }
         }
 
         private int getInternalDimensionSize(Resources res, String key) {
@@ -520,6 +581,9 @@ public class SystemBarTintManager {
                 return 0;
             }
         }
+
+
+
 
     }
 

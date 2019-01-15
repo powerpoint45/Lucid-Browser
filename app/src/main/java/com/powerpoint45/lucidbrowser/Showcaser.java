@@ -28,10 +28,10 @@ class Showcaser {
 		showcaseClick = new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				activity.contentView.closeDrawer(activity.browserListView);
+				activity.drawerLayout.closeDrawer(activity.browserListView);
 				uncolorBars();
 				showcase.hide();
-                MainActivity.mGlobalPrefs.edit().putBoolean("showcased",true).commit();
+                MainActivity.globalPrefs.edit().putBoolean("showcased",true).commit();
                 Log.d("LB","DONESHOWCASE");
 			}
 		};
@@ -98,7 +98,7 @@ class Showcaser {
 		step++;
 		switch (step){
 			case STEP_BROWSER_CLOSE_SIDEBAR:
-				activity.contentView.closeDrawer(activity.browserListView);
+				activity.drawerLayout.closeDrawer(activity.browserListView);
 				break;
 			default:
 				break;
@@ -107,7 +107,7 @@ class Showcaser {
 
 	private void startShowcase(){
 		Log.d("LL","startShowcase");
-		activity.contentView.openDrawer(activity.browserListView);
+		activity.drawerLayout.openDrawer(activity.browserListView);
 		showcase = new ShowcaseView.Builder(activity)
 				.setContentTitle(activity.getResources().getString(R.string.step_browser_sidebar_title))
 				.setContentText(activity.getResources().getString(R.string.step_browser_sidebar_summary))

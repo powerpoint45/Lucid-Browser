@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:custom="http://schemas.android.com/apk/res-auto" >
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceScreen
         android:key="mainsettings"
-        android:title="@string/mainsettingstitle" >
+        android:title="@string/mainsettingstitle"
+        android:icon="@drawable/ic_settings">
         <PreferenceCategory
             android:key="mainsettings_appearance"
             android:title="@string/cat_title_appearance" >
@@ -29,52 +29,17 @@
                 android:summary="@string/holoDarkSummary"
                 android:title="@string/holoDarkTitle" />
         </PreferenceCategory>
-        <PreferenceCategory android:title="@string/cat_title_actionbar" >
-            <preferences.ColorPickerPreference
-                android:defaultValue="@color/urlback"
-                android:key="actionbarcolor"
-                android:summary="@string/actionbarcolortitle"
-                android:title="@string/actionbarcolorsummary" />
-            <preferences.ColorPickerPreference
-                android:defaultValue="@android:color/black"
-                android:key="textcolor"
-                android:summary="@string/actionbar_item_color_summary"
-                android:title="@string/actionbar_item_color_title" />
-        </PreferenceCategory>
-    </PreferenceScreen>
-    <PreferenceScreen
-        android:key="sidebarsettings"
-        android:title="@string/sidebarsettingstitle" >
-        <PreferenceCategory
-            android:key="sideappearance"
-            android:title="@string/cat_title_appearance" >
-            <ListPreference
-                android:defaultValue="w"
-                android:entries="@array/sidebarthemes"
-                android:entryValues="@array/sidebartheme_values"
-                android:key="sidebartheme"
-                android:summary="@string/sidebarthemesummary"
-                android:title="@string/sidebarthemetitle" />
-
-            <preferences.ColorPickerPreference
-                android:defaultValue="@android:color/black"
-                android:key="sidebarcolor"
-                android:summary="@string/sidebarcolorsummary"
-                android:title="@string/sidebarcolortitle" />
-            <preferences.ColorPickerPreference
-                android:defaultValue="@android:color/white"
-                android:key="sidebartextcolor"
-                android:summary="@string/sidebartextcolorsummary"
-                android:title="@string/sidebartextcolortitle" />
-
+        <PreferenceCategory android:title="@string/cat_title_tools" >
             <CheckBoxPreference
                 android:defaultValue="false"
-                android:key="swapLayout"
-                android:summary="@string/sidebar_switched_summary"
-                android:title="@string/sidebar_switched_title" />
+                android:key="exitconfirmation"
+                android:summary="@string/exit_confirmation_summary"
+                android:title="@string/exit_confirmation_title" />
         </PreferenceCategory>
     </PreferenceScreen>
-    <PreferenceScreen android:title="@string/websettingstitle" >
+
+    <PreferenceScreen android:title="@string/websettingstitle"
+        android:icon="@drawable/ic_public">
         <PreferenceCategory android:title="@string/cat_title_content" >
             <CheckBoxPreference
                 android:defaultValue="true"
@@ -117,18 +82,7 @@
             </PreferenceScreen>
         </PreferenceCategory>
         <PreferenceCategory android:title="@string/cat_title_appearance" >
-            <CheckBoxPreference
-                android:defaultValue="true"
-                android:key="showbrowserbackdrop"
-                android:summary="@string/showbackgroundonurlbarsummary"
-                android:title="@string/showbackgroundonurlbartitle" />
 
-            <preferences.ColorPickerPreference
-                android:defaultValue="@color/urlfront"
-                android:dependency="showbrowserbackdrop"
-                android:key="urlbarcolor"
-                android:summary="@string/urlbarcolorsummary"
-                android:title="@string/urlbarcolortitle" />
 
             <CheckBoxPreference
                 android:defaultValue="false"
@@ -150,46 +104,105 @@
                 android:entryValues="@array/searchengines_values"
                 android:key="setsearchengine"
                 android:title="@string/search_engine" />
-            <CheckBoxPreference
-                android:defaultValue="false"
-                android:key="disablesuggestions"
-                android:title="@string/disable_suggestions_title" />
+
             <CheckBoxPreference
                 android:defaultValue="false"
                 android:key="closetabsonexit"
                 android:summary="@string/close_tabs_on_exit_summary"
                 android:title="@string/close_tabs_on_exit_title" />
-            <CheckBoxPreference
-                android:defaultValue="false"
-                android:key="exitconfirmation"
-                android:summary="@string/exit_confirmation_summary"
-                android:title="@string/exit_confirmation_title" />
         </PreferenceCategory>
     </PreferenceScreen>
-    <PreferenceScreen android:title="@string/bookmark_settings" android:key="browsersettings_tools">
+
+    <PreferenceScreen
+        android:key="searchbar_settings"
+        android:title="@string/searchbar_settings"
+        android:icon="@drawable/ic_search_settings">
+        <PreferenceCategory
+            android:key="searchbar_appearance"
+            android:title="@string/cat_title_appearance" >
+
+            <preferences.ColorPickerPreference
+                android:defaultValue="@color/urlback"
+                android:key="actionbarcolor"
+                android:summary="@string/actionbarcolortitle"
+                android:title="@string/actionbarcolorsummary" />
+            <preferences.ColorPickerPreference
+                android:defaultValue="@android:color/black"
+                android:key="textcolor"
+                android:summary="@string/actionbar_item_color_summary"
+                android:title="@string/actionbar_item_color_title" />
+
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="showbrowserbackdrop"
+                android:summary="@string/showbackgroundonurlbarsummary"
+                android:title="@string/showbackgroundonurlbartitle" />
+
+            <preferences.ColorPickerPreference
+                android:defaultValue="@color/urlfront"
+                android:dependency="showbrowserbackdrop"
+                android:key="urlbarcolor"
+                android:summary="@string/urlbarcolorsummary"
+                android:title="@string/urlbarcolortitle" />
+
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/cat_title_tools" >
+
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="disablesuggestions"
+                android:title="@string/disable_suggestions_title" />
+
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+
+    <PreferenceScreen
+        android:key="sidebarsettings"
+        android:title="@string/sidebarsettingstitle"
+        android:icon="@drawable/ic_format_list_bulleted">
+        <PreferenceCategory
+            android:key="sideappearance"
+            android:title="@string/cat_title_appearance" >
+            <ListPreference
+                android:defaultValue="w"
+                android:entries="@array/sidebarthemes"
+                android:entryValues="@array/sidebartheme_values"
+                android:key="sidebartheme"
+                android:summary="@string/sidebarthemesummary"
+                android:title="@string/sidebarthemetitle" />
+
+            <preferences.ColorPickerPreference
+                android:defaultValue="@android:color/black"
+                android:key="sidebarcolor"
+                android:summary="@string/sidebarcolorsummary"
+                android:title="@string/sidebarcolortitle" />
+            <preferences.ColorPickerPreference
+                android:defaultValue="@android:color/white"
+                android:key="sidebartextcolor"
+                android:summary="@string/sidebartextcolorsummary"
+                android:title="@string/sidebartextcolortitle" />
+
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="swapLayout"
+                android:summary="@string/sidebar_switched_summary"
+                android:title="@string/sidebar_switched_title" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+    <PreferenceScreen android:title="@string/bookmark_settings" android:key="browsersettings_tools" android:icon="@drawable/ic_bookmark">
         <Preference android:title="@string/export_bookmarks" android:summary="@string/export_bookmarks_summary" android:key="bookmark_export" />
         <Preference android:title="@string/import_bookmarks" android:summary="@string/import_bookmarks_summary" android:key="bookmark_import" />
         <Preference android:title="@string/import_bookmarks_external" android:key="import_bookmark_external" />
         <Preference android:title="@string/delete_bookmarks" android:key="delete_bookmarks" />
     </PreferenceScreen>
-    <PreferenceScreen android:title="@string/advancedsettingstitle" >
+    <PreferenceScreen android:title="@string/advancedsettingstitle" android:icon="@drawable/ic_settings_applications">
         <PreferenceCategory android:title="@string/cat_title_setup" >
             <Preference
                 android:key="reset"
                 android:summary="@string/resetsummary"
                 android:title="@string/resettitle" />
-        </PreferenceCategory>
-        <PreferenceCategory android:title="@string/cat_title_other" >
-            <CheckBoxPreference
-                android:defaultValue="false"
-                android:key="systempersistent"
-                android:summary="@string/persistentsummary"
-                android:title="@string/persistenttitle" />
-
-            <CheckBoxPreference
-                android:defaultValue="false"
-                android:key="disableads"
-                android:title="@string/disable_ads" />
         </PreferenceCategory>
     </PreferenceScreen>
 
@@ -197,7 +210,7 @@
         android:icon="@drawable/pro"
         android:key="pro"
         android:summary="@string/prodescription"
-        android:title="@string/pro_name" >
+        android:title="@string/llp_name" >
         <intent
             android:action="android.intent.action.VIEW"
             android:data="http://play.google.com/store/apps/details?id=com.powerpoint45.launcherpro" />
@@ -212,4 +225,6 @@
             android:action="android.intent.action.VIEW"
             android:data="http://play.google.com/store/apps/details?id=com.powerpoint45.lucidbrowserpro" />
     </Preference>
+
 </PreferenceScreen>
+

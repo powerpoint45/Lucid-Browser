@@ -2,109 +2,160 @@ package com.powerpoint45.lucidbrowser;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
-import android.content.ClipboardManager;
-import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff.Mode;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.DrawerLayout.DrawerListener;
-import android.view.Gravity;
+import android.support.v7.widget.AppCompatAutoCompleteTextView;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnKeyListener;
-import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
-import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
-import android.widget.PopupWindow.OnDismissListener;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.util.Vector;
-
 import views.CustomWebView;
 
+@SuppressLint("Registered")
 public class SetupLayouts extends MainActivity {
 	static int actionBarNum;
-	public static PopupWindow popup;
+	static final int ACTIONBAR_BROWSER   = 2;
+	static final int ACTIONBAR_FIND      = 4;
 
-	@SuppressLint("NewApi")
 	public static void setuplayouts(final MainActivity activity) {
-		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-		activity.bar.setClickable(true);
-		activity.bar.setFocusable(true);
-		activity.bar.setFocusableInTouchMode(true);
+		activity.actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+		activity.barHolder.setClickable(true);
+		activity.barHolder.setFocusable(true);
+		activity.barHolder.setFocusableInTouchMode(true);
 		setupWindow(activity);
-		activity.webLayout.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
-			
-			@Override
-			public void onGlobalLayout() {
-				//MainActivity.actionBarControls.show();
-				activity.webLayout.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-			}
-		});
-		
-		//bar.setBackgroundColor(Color.TRANSPARENT);
-		//contentFrame.setFitsSystemWindows(true);
-		setUpActionBar(activity);
-		actionBar.setCustomView(activity.bar
+
+		setUpActionBar(ACTIONBAR_BROWSER, activity);
+		activity.actionBar.setCustomView(activity.barHolder
 				,new android.support.v7.app.ActionBar.LayoutParams(android.support.v7.app.ActionBar.LayoutParams.MATCH_PARENT
 				,android.support.v7.app.ActionBar.LayoutParams.MATCH_PARENT));
-		//actionBar.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
+		setBarColors(activity);
+
+		AppCompatAutoCompleteTextView browserEditText = activity.browserBar.findViewById(R.id.browser_searchbar);
+
+		if (!Properties.webpageProp.disablesuggestions)
+			browserEditText.setAdapter(new BrowserBarAdapter(activity));
+
+		browserEditText.setFocusable(true);
+		browserEditText.setFocusableInTouchMode(true);
+		browserEditText.setScrollContainer(true);
+		browserEditText.setDropDownAnchor(R.id.toolbar);
+		browserEditText.setDropDownWidth(LayoutParams.MATCH_PARENT);
+		browserEditText.setThreshold(0);
+		browserEditText.setHint(activity.getResources().getString(R.string.urlbardefault));
+		browserEditText.setHintTextColor(Properties.appProp.primaryIntColor);
+
+
+		browserEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
+			@Override
+			public boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
+				if (actionId == EditorInfo.IME_ACTION_GO) {
+					activity.webLayout.postDelayed(new Runnable() {
+						@Override
+						public void run() {
+							imm.hideSoftInputFromWindow(activity.browserBar.findViewById(R.id.browser_searchbar).getWindowToken(), 0);
+							activity.browserSearch();
+							Log.d("LL", "GO");
+						}
+					}, 300);
+				}
+				return true;   // Consume the event
+			}
+		});
+
+		//detect when keyboard press enter or go in browser
+		browserEditText.setOnKeyListener(new View.OnKeyListener() {
+			public boolean onKey(View v, int keyCode, KeyEvent event) {
+				if ((event.getAction() == KeyEvent.ACTION_DOWN)
+						&& (keyCode == KeyEvent.KEYCODE_ENTER)) {
+					Log.d("LL", "key press");
+					activity.webLayout.postDelayed(new Runnable() {
+						@Override
+						public void run() {
+							imm.hideSoftInputFromWindow(activity.browserBar.findViewById(R.id.browser_searchbar).getWindowToken(), 0);
+							activity.browserSearch();
+							Log.d("LL", "GO");
+						}
+					}, 300);
+					return true;
+				}
+				return false;
+			}
+		});
+
+
+		//detect when clicking a browser suggested search
+		browserEditText.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1,
+									int arg2, long arg3) {
+				activity.webLayout.postDelayed(new Runnable() {
+					@Override
+					public void run() {
+						Log.d("LL", "key click");
+						final EditText ET = activity.browserBar.findViewById(R.id.browser_searchbar);
+						imm.hideSoftInputFromWindow(ET.getWindowToken(), 0);
+						activity.browserSearch();
+						ET.clearFocus();
+					}
+				}, 300);
+			}
+		});
 
 
 		colorizeSidebar(activity);
-		activity.browserListView.setAdapter(MainActivity.browserListViewAdapter);
-
-
-
+		activity.browserListView.setAdapter(activity.browserListViewAdapter);
 		activity.browserListView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int pos,long arg3) {
 				
-				if (activity.bar.findViewById(R.id.finder)!=null)
+				if (activity.barHolder.findViewById(R.id.finder)!=null)
 					SetupLayouts.dismissFindBar(activity);
 				
-				MainActivity.imm.hideSoftInputFromInputMethod(((EditText) activity.bar.findViewById(R.id.browser_searchbar)).getWindowToken(), 0);
+				MainActivity.imm.hideSoftInputFromInputMethod(activity.barHolder.findViewById(R.id.browser_searchbar).getWindowToken(), 0);
 				
-				ImageButton BookmarkButton = (ImageButton) activity.bar.findViewById(R.id.browser_bookmark);
-				ImageButton refreshButton = (ImageButton) activity.bar.findViewById(R.id.browser_refresh);
+				ImageButton BookmarkButton = activity.barHolder.findViewById(R.id.browser_bookmark);
+				ImageButton refreshButton = activity.barHolder.findViewById(R.id.browser_refresh);
 				
-				if (((EditText) activity.bar.findViewById(R.id.browser_searchbar))!=null)
-					((EditText) activity.bar.findViewById(R.id.browser_searchbar)).clearFocus();
+				if (activity.barHolder.findViewById(R.id.browser_searchbar) !=null)
+					activity.barHolder.findViewById(R.id.browser_searchbar).clearFocus();
 				
-				if (pos==webWindows.size()){
-					activity.contentView.closeDrawer(activity.browserListView);
-					webWindows.add(new CustomWebView(activity,null,null));
-					if (activity.webLayout!=null)
-						if (((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder))!=null){
-							((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).removeAllViews();
-							((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).addView(webWindows.get(pos));
-						}
-					if (((EditText) activity.bar.findViewById(R.id.browser_searchbar))!=null)
-						((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setText("");
+				if (pos==activity.webWindows.size()){
+					activity.drawerLayout.closeDrawer(activity.browserListView);
+					activity.openNewTab();
+					if (activity.barHolder.findViewById(R.id.browser_searchbar) !=null)
+						((EditText) activity.barHolder.findViewById(R.id.browser_searchbar)).setText("");
 					
 				}
 				else{
-					activity.contentView.closeDrawer(activity.browserListView);
+					activity.drawerLayout.closeDrawer(activity.browserListView);
 					((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).removeAllViews();
-					((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).addView(webWindows.get(pos));
+					((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).addView(activity.webWindows.get(pos));
 					if (activity.webLayout.findViewById(R.id.webpgbar)!=null){
-						if (webWindows.get(pos).getProgress()<100){
+						if (activity.webWindows.get(pos).getProgress()<100){
 							refreshButton.setImageResource(R.drawable.btn_toolbar_stop_loading_normal);
 							activity.webLayout.findViewById(R.id.webpgbar).setVisibility(View.VISIBLE);
 						}
@@ -117,9 +168,9 @@ public class SetupLayouts extends MainActivity {
 
 		    		String bookmarkName = null;
 		    		
-		    		if (webWindows.get(pos)!=null)
-						if (webWindows.get(pos).getUrl()!=null)
-							bookmarkName = BookmarksActivity.bookmarksMgr.root.containsBookmarkDeep(webWindows.get(pos).getUrl());
+		    		if (activity.webWindows.get(pos)!=null)
+						if (activity.webWindows.get(pos).getUrl()!=null)
+							bookmarkName = BookmarksActivity.bookmarksMgr.root.containsBookmarkDeep(activity.webWindows.get(pos).getUrl());
 					
 		    		if (BookmarkButton!=null){
 		    			if (bookmarkName!=null)
@@ -129,30 +180,22 @@ public class SetupLayouts extends MainActivity {
 		    		}
 					
 					
-					if (webWindows.get(pos).getUrl()!=null){
-						if (webWindows.get(pos).getUrl().startsWith("file:///android_asset/")){
-							((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setText("");
-							((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setHint(R.string.urlbardefault);
+					if (activity.webWindows.get(pos).getUrl()!=null){
+						if (activity.webWindows.get(pos).getUrl().startsWith("file:///android_asset/")){
+							((EditText) activity.barHolder.findViewById(R.id.browser_searchbar)).setText("");
+							((EditText) activity.barHolder.findViewById(R.id.browser_searchbar)).setHint(R.string.urlbardefault);
 						}
 						else
-							((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setText(webWindows.get(pos).getUrl().replace("http://", "").replace("https://", ""));
+							((EditText) activity.barHolder.findViewById(R.id.browser_searchbar)).setText(activity.webWindows.get(pos).getUrl().replace("http://", "").replace("https://", ""));
 					}
 					else
-						((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setText("");
+						((EditText) activity.barHolder.findViewById(R.id.browser_searchbar)).setText("");
 				}
-				MainActivity.browserListViewAdapter.notifyDataSetChanged();
+				activity.browserListViewAdapter.notifyDataSetChanged();
 			}
 		   });
-		
-		
-		//Padding and adjustments start-----
-		//enabling transparent statusbar or navbar messes with padding so this will fix it
-		if (Properties.appProp.transparentNav || Properties.appProp.TransparentStatus){
-			activity.webLayout.setPadding(0, MainActivity.NavMargine, 0, 0);
-		}
-		//Padding and adjustments end-----
 
-		activity.contentView.setDrawerListener(new DrawerListener() {
+		activity.drawerLayout.setDrawerListener(new DrawerListener() {
 
 			@Override
 			public void onDrawerStateChanged(int state) {
@@ -166,23 +209,23 @@ public class SetupLayouts extends MainActivity {
 					}
 				});
 				
-				if (state == DrawerLayout.STATE_IDLE && activity.contentView.isDrawerOpen(activity.browserListView)){
-					MainActivity.actionBarControls.clearFocuses();
+				if (state == DrawerLayout.STATE_IDLE && activity.drawerLayout.isDrawerOpen(activity.browserListView)){
+					activity.actionBarControls.clearFocuses();
 				}
 			    
 			}
 
 			@Override
-			public void onDrawerSlide(View v, float arg1) {
+			public void onDrawerSlide(@NonNull View v, float arg1) {
 			}
 
 			@Override
-			public void onDrawerOpened(View arg0) {
+			public void onDrawerOpened(@NonNull View arg0) {
 
 			}
 
 			@Override
-			public void onDrawerClosed(View arg0) {
+			public void onDrawerClosed(@NonNull View arg0) {
 
 			}
 		});
@@ -194,7 +237,7 @@ public class SetupLayouts extends MainActivity {
 	static public int addTransparencyToColor(int alpha, int color) {
 		int[] colorARGB = new int[4];
 
-		// Cap the Alpha value at 255. (Happens at around 75% action bar
+		// Cap the Alpha value at 255. (Happens at around 75% action barHolder
 		// opacity)
 		if (alpha > 255) {
 			colorARGB[0] = 255;
@@ -210,179 +253,67 @@ public class SetupLayouts extends MainActivity {
 
 	}
 
-	static public void setUpActionBar(final MainActivity activity) {
-		activity.bar.removeAllViews();
+	@SuppressLint({"InflateParams", "PrivateResource"})
+	static void setUpActionBar(int actionBarType, MainActivity activity) {
 
-		View browserBar = (RelativeLayout) inflater.inflate(
-				R.layout.browser_bar, null);
+		//if activity is restarted actionBarNum could still be set but bar layout is empty
+		boolean forceLayout = activity.barHolder.getChildCount()==0;
 
-		ImageView urlBarBackdrop = (ImageView) browserBar
-				.findViewById(R.id.backdrop);
+		if (forceLayout || actionBarType != actionBarNum) {
+			switch (actionBarType) {
+				case ACTIONBAR_BROWSER:
+					activity.barHolder = (RelativeLayout) activity.getLayoutInflater().inflate(R.layout.browser_bar, null);
+					activity.barHolder.removeAllViews();
+					activity.barHolder.addView(activity.browserBar,
+							new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 
-		RelativeLayout.LayoutParams relativeParams = new RelativeLayout.LayoutParams(
-				LayoutParams.MATCH_PARENT, Properties.numtodp(3, activity));
-		relativeParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+					activity.actionBar.setDisplayHomeAsUpEnabled(false);
+					activity.actionBar.setCustomView(activity.barHolder);
+					break;
+				case ACTIONBAR_FIND:
+					SetupLayouts.setUpFindBar(activity);
+					activity.actionBar.setDisplayHomeAsUpEnabled(false);
+					activity.actionBar.setHomeAsUpIndicator(R.drawable.abc_ic_clear_material);
+					activity.setUpFindBarListeners();
+					TextView findText = activity.actionBar.getCustomView().findViewById(R.id.find_searchbar);
+					findText.requestFocus();
+					MainActivity.imm.showSoftInput(findText, InputMethodManager.SHOW_IMPLICIT);
+					break;
 
-		// URL bar backdrop color
-		// ----------------------------------------------
-		if (Properties.webpageProp.showBackdrop) {
-			// ShowBackdrop is active -> Set chosen backdrop color (with
-			// opacity)
-			
-			// Apply color filter on backdrop with a little more opacity to make
-			// it always visible
-			urlBarBackdrop.setColorFilter(Properties.appProp.urlBarColor, Mode.SRC);
-		} else {
-			// ShowBackdrop is inactive -> make backdrop invisible
-			urlBarBackdrop.setColorFilter(Color.TRANSPARENT, Mode.CLEAR);
+			}
+
+			actionBarNum = actionBarType;
+		}
+	}
+
+	static void setBarColors(MainActivity activity){
+		activity.actionBarControls.setColor(Properties.appProp.actionBarColor);
+		activity.barHolder.setBackgroundColor(Color.TRANSPARENT);
+		activity.barHolder.requestLayout();
+
+		if (Properties.webpageProp.showBackdrop){
+			((ImageView)activity.browserBar.findViewById(R.id.backdrop)).setColorFilter(Color.argb(255, Color.red(Properties.appProp.urlBarColor), Color.green(Properties.appProp.urlBarColor), Color.blue(Properties.appProp.urlBarColor)),Mode.SRC_ATOP);
+			activity.browserBar.findViewById(R.id.backdrop).setAlpha(Color.alpha(Properties.appProp.urlBarColor)/255f);
+		}else{
+			activity.browserBar.findViewById(R.id.backdrop).setAlpha(0f);
 		}
 
 
-		((EditText) browserBar.findViewById(R.id.browser_searchbar))
-		.setHintTextColor(Properties.appProp.primaryIntColor);
-
-		final AutoCompleteTextView ET = ((AutoCompleteTextView) browserBar
-				.findViewById(R.id.browser_searchbar));
-		
-		// Suggestions
-		if (!Properties.webpageProp.disablesuggestions){
-			suggestionsAdapter        = new BrowserBarAdapter(activity, 0);
-
-			ET.setAdapter(suggestionsAdapter);
-			ET.setScrollContainer(true);
-
-			ET.setDropDownAnchor(R.id.address_bar);
-			ET.setDropDownWidth(LayoutParams.MATCH_PARENT);
-
-			ET.setThreshold(0);
-		}
-		
-		ET.setOnLongClickListener(new OnLongClickListener() {
-
-			@Override
-			public boolean onLongClick(View v) {
-
-				boolean noCopyOption = false;
-				boolean noPasteOption = false;
-
-				if (((EditText) activity.bar.findViewById(R.id.browser_searchbar))!=null){
-					((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setFocusable(false);
-		    		((EditText) activity.bar.findViewById(R.id.browser_searchbar)).selectAll();
-		    		if (((EditText) activity.bar.findViewById(R.id.browser_searchbar)).getText().toString().compareTo("")==0)
-		    			noCopyOption = true;
-				}
-
-
-				System.out.println("LONG PRESSED");
-				popup = new PopupWindow(inflater.inflate(R.layout.copy_url_popup, null), LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, true);
-
-				ClipboardManager clipboard = (ClipboardManager)
-						activity.activity.getSystemService(Context.CLIPBOARD_SERVICE);
-
-				if (!clipboard.hasPrimaryClip())
-					noPasteOption = true;
-
-				if (noPasteOption)
-					popup.getContentView().findViewById(R.id.pastebutton).setVisibility(View.GONE);
-
-				if (noCopyOption)
-					popup.getContentView().findViewById(R.id.copyurlbutton).setVisibility(View.GONE);
-
-				popup.setFocusable(true);
-				popup.setBackgroundDrawable(new ColorDrawable());
-				int[] loc = new int[2];
-				v.getLocationOnScreen(loc);
-
-				if (noCopyOption && noPasteOption)
-					((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setFocusableInTouchMode(true);
-				else
-					popup.showAtLocation(activity.bar, Gravity.NO_GRAVITY, loc[0], loc[1]+v.getHeight());
-
-				OnDismissListener dismissListener = new OnDismissListener() {
-
-					@Override
-					public void onDismiss() {
-						// TODO Auto-generated method stub
-						if (((EditText) activity.bar.findViewById(R.id.browser_searchbar))!=null){
-							((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setFocusableInTouchMode(true);
-						}
-					}
-				};
-
-				popup.setOnDismissListener(dismissListener);
-
-				return false;
-			}
-		});
-		
-		ET.setOnKeyListener(new OnKeyListener() {
-			public boolean onKey(View v, int keyCode, KeyEvent event) {
-				// If the event is a key-down event on the "enter" button
-				if ((event.getAction() == KeyEvent.ACTION_DOWN)
-						&& (keyCode == KeyEvent.KEYCODE_ENTER)) {
-					System.out.println("key press");
-
-					activity.webLayout.postDelayed(new Runnable() {
-						@Override
-						public void run() {
-							imm.hideSoftInputFromWindow(ET.getWindowToken(), 0);
-							activity.browserSearch();
-							ET.clearFocus();
-						}
-					}, 300);
-
-					return true;
-				}
-				return false;
-			}
-		});
-		
-		ET.setOnItemClickListener(new OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> arg0, View arg1,
-					int arg2, long arg3) {
-
-				activity.webLayout.postDelayed(new Runnable() {
-					@Override
-					public void run() {
-						final EditText ET = ((AutoCompleteTextView) activity.bar.findViewById(R.id.browser_searchbar));
-						imm.hideSoftInputFromWindow(ET.getWindowToken(), 0);
-						activity.browserSearch();
-						ET.clearFocus();
-					}
-				}, 300);
-			}
-		});
-		
-//		ET.setOnFocusChangeListener(new OnFocusChangeListener() {
-//			
-//			@Override
-//			public void onFocusChange(View urlBar, boolean hasFocus) {
-//				// TODO Auto-generated method stub
-//				if (((EditText) urlBar).getText().toString().equals(MainActivity.activity.getResources().getString(R.string.urlbardefault)))
-//					((EditText) urlBar).setText("");
-//			}
-//		});
-
-		activity.bar.addView(browserBar);
-		Tools.setActionBarColor(Properties.appProp.actionBarColor);
 	}
 	
 	static public void setUpFindBar(MainActivity activity) {
-		activity.bar.removeAllViews();
+		activity.barHolder.removeAllViews();
 
-		View finderBar = (RelativeLayout) inflater.inflate(
+		@SuppressLint("InflateParams") View finderBar = inflater.inflate(
 				R.layout.browser_bar_find_mode, null);
 
-		ImageView finderBackdrop = (ImageView) finderBar
-				.findViewById(R.id.backdrop);
+		ImageView finderBackdrop = finderBar.findViewById(R.id.backdrop);
 
 		RelativeLayout.LayoutParams relativeParams = new RelativeLayout.LayoutParams(
 				LayoutParams.MATCH_PARENT, Properties.numtodp(3,activity));
 		relativeParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 
-		// URL bar backdrop color
+		// URL barHolder backdrop color
 		// ----------------------------------------------
 		if (Properties.webpageProp.showBackdrop) {
 			// ShowBackdrop is active -> Set chosen backdrop color (with
@@ -391,13 +322,13 @@ public class SetupLayouts extends MainActivity {
 			// Apply color filter on backdrop with a little more opacity to make
 			// it always visible
 			finderBackdrop.setColorFilter(Properties.appProp.urlBarColor, Mode.SRC);
-			((EditText) finderBar.findViewById(R.id.find_searchbar)).getBackground().setAlpha(0);
+			finderBar.findViewById(R.id.find_searchbar).getBackground().setAlpha(0);
 		} else {
 			// ShowBackdrop is inactive -> make backdrop invisible but show underlining
 			finderBackdrop.setColorFilter(Color.TRANSPARENT, Mode.CLEAR);
-			((EditText) finderBar.findViewById(R.id.find_searchbar)).getBackground()
+			finderBar.findViewById(R.id.find_searchbar).getBackground()
 			.setColorFilter(Properties.appProp.primaryIntColor, Mode.SRC_ATOP);
-			((EditText) finderBar.findViewById(R.id.find_searchbar)).getBackground().setAlpha(255);
+			finderBar.findViewById(R.id.find_searchbar).getBackground().setAlpha(255);
 
 
 		}
@@ -415,33 +346,33 @@ public class SetupLayouts extends MainActivity {
 		((EditText) finderBar.findViewById(R.id.find_searchbar))
 				.setTextColor(Properties.appProp.primaryIntColor);
 
-		activity.bar.addView(finderBar);
+		activity.barHolder.addView(finderBar, new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 	}
 
 	static public void dismissFindBar(MainActivity activity){
-		actionBarControls.lock(false);
-		if (activity.bar.findViewById(R.id.find_searchbar)!=null)
-			MainActivity.imm.hideSoftInputFromWindow(activity.bar.findViewById(R.id.find_searchbar).getWindowToken(),0);
+		activity.actionBarControls.lock(false);
+		if (activity.barHolder.findViewById(R.id.find_searchbar)!=null)
+			MainActivity.imm.hideSoftInputFromWindow(activity.barHolder.findViewById(R.id.find_searchbar).getWindowToken(),0);
 		
-		setUpActionBar(activity);
+		setUpActionBar(ACTIONBAR_BROWSER,activity);
 
-		CustomWebView WV = (CustomWebView) activity.webLayout.findViewById(R.id.browser_page);
+		CustomWebView WV = activity.webLayout.findViewById(R.id.browser_page);
 		WV.clearMatches();
 
 		if (WV.getUrl()!=null && WV.getUrl().startsWith("file:///android_asset/")){
-			((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setText("");
-			((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setHint(R.string.urlbardefault);
-			//((TextView) bar.findViewById(R.id.browser_searchbar)).setText(activity.getResources().getString(R.string.urlbardefault));					
+			((EditText) activity.barHolder.findViewById(R.id.browser_searchbar)).setText("");
+			((EditText) activity.barHolder.findViewById(R.id.browser_searchbar)).setHint(R.string.urlbardefault);
+			//((TextView) barHolder.findViewById(R.id.browser_searchbar)).setText(activity.getResources().getString(R.string.urlbardefault));
 		} else if (WV.getUrl()!=null){
-			((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setText(WV.getUrl().replace("http://", "").replace("https://", ""));
+			((EditText) activity.barHolder.findViewById(R.id.browser_searchbar)).setText(WV.getUrl().replace("http://", "").replace("https://", ""));
 		} else {
-			((EditText) activity.bar.findViewById(R.id.browser_searchbar)).setText("");
+			((EditText) activity.barHolder.findViewById(R.id.browser_searchbar)).setText("");
 		}
 	}
 	
 
 	public static void colorizeSidebar(MainActivity activity){
-		LinearLayout LL = (LinearLayout) inflater.inflate(
+		@SuppressLint("InflateParams") LinearLayout LL = (LinearLayout) inflater.inflate(
 				R.layout.web_sidebar_footer, null);
 
 		if (Properties.sidebarProp.theme.compareTo("w") == 0) {
@@ -517,7 +448,7 @@ public class SetupLayouts extends MainActivity {
 		if (Properties.appProp.transparentNav || Properties.appProp.TransparentStatus)
 			if (id == 0) {
 				if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT)
-					activity.contentView.setSystemUiVisibility(4096);
+					activity.drawerLayout.setSystemUiVisibility(4096);
 			}
 		
 		if (activity.tintManager!=null){
@@ -561,8 +492,8 @@ public class SetupLayouts extends MainActivity {
 		    }
 		}
 
-		activity.contentView.setScrimColor(Color.TRANSPARENT);
-		activity.contentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+		activity.drawerLayout.setScrimColor(Color.TRANSPARENT);
+		activity.drawerLayout.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
 		activity.contentFrame.setFitsSystemWindows(true);
 		activity.browserListView.setY(Tools.getStatusMargine(activity));
 		activity.webLayout.setY(Properties.ActionbarSize);
@@ -579,6 +510,98 @@ public class SetupLayouts extends MainActivity {
 	    }
 		
 
+	}
+
+
+
+
+    /**
+     * Restore tabs that were saved when browser was closed
+     */
+	static void setupWebWindows(MainActivity activity){
+		if (activity.webLayout!=null){
+
+			if (activity.webWindows!=null)
+				activity.webWindows.clear();
+
+			((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).removeAllViews();
+
+			class LoadRunner implements Runnable{
+				MainActivity activity;
+
+				private LoadRunner(MainActivity activity){
+					this.activity = activity;
+				}
+
+				@Override
+				public void run() {
+					Bundle mainBundle = new BundleManager(activity).restoreFromPreferences();
+
+					class UIRunner implements Runnable{
+						private Bundle mainBundle;
+						private UIRunner(Bundle mainBundle){
+							this.mainBundle = mainBundle;
+						}
+
+						@Override
+						public void run() {
+							int numSavedTabs = -1;
+							if (mainBundle!=null)
+								numSavedTabs = mainBundle.getInt("numtabs",-1);
+
+							Intent intent = activity.getIntent();
+
+							//detect if app was opened from a different app to open a site
+							boolean urlOpenRequested =  (intent.getAction()!=null
+									&& (intent.getAction().equals(Intent.ACTION_WEB_SEARCH) || intent.getAction().equals(Intent.ACTION_VIEW))
+									&& intent.getDataString()!=null);
+
+							if (numSavedTabs>0){
+								Log.d("LB","RESTORING STATE");
+
+								int tabNumber = mainBundle.getInt("tabnumber",0);
+								for (int I=0;I<numSavedTabs;I++){
+									CustomWebView wv = new CustomWebView(activity, "na");
+									wv.restoreState(mainBundle.getBundle("WV"+I));
+									if (wv.getUrl()!=null && wv.getUrl().startsWith("file:///android_asset/")
+											&& wv.getUrl().contains("home.html") && !wv.getUrl().equals(Properties.webpageProp.assetHomePage)) {
+										wv = new CustomWebView(activity, null);
+									}
+									activity.webWindows.add(wv);
+									activity.browserListViewAdapter.notifyDataSetChanged();
+								}
+								if (!urlOpenRequested)
+									((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).addView(activity.webWindows.get(tabNumber));
+							}else if (numSavedTabs!=0){//If no InstanceState is found, just add a single page
+								if (activity.getIntent().getAction()!=null && !activity.getIntent().getAction().equals(Intent.ACTION_WEB_SEARCH)
+										&& !activity.getIntent().getAction().equals(Intent.ACTION_VIEW)){//if page was requested from a different app, do not load home page
+									activity.webWindows.add(new CustomWebView(activity, null));
+									if (!urlOpenRequested)
+										((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).addView(activity.webWindows.get(0));
+									activity.browserListViewAdapter.notifyDataSetChanged();
+								}
+							}else{
+								if (!urlOpenRequested)
+									activity.displayNoTabsView();
+							}
+
+							if (urlOpenRequested){
+								activity.webWindows.add(new CustomWebView(activity, intent.getDataString()));
+								((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).removeAllViews();
+								((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder))
+										.addView(activity.webWindows.get(activity.webWindows.size()-1));
+								((EditText) activity.barHolder.findViewById(R.id.browser_searchbar)).setText(intent.getDataString());
+								activity.browserListViewAdapter.notifyDataSetChanged();
+								Log.d("LB", "onCreate ACTION_VIEW");
+							}
+						}
+					}
+					activity.runOnUiThread(new UIRunner(mainBundle));
+				}
+			}
+
+			new Thread(new LoadRunner(activity)).start();
+		}
 	}
 	
 	

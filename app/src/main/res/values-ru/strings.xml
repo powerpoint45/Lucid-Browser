@@ -64,8 +64,8 @@
 	<string name="websettingstitle">Настройки браузера</string>
 	<string name="pagetransformationtitle">Анимация прокрутки</string>
 	<string name="pagetransformationsummary">Установка анимации прокрутки страниц</string>
-	<string name="actionbarcolortitle">Цвет строки меню</string>
-	<string name="actionbarcolorsummary">Установка цвета строки меню</string>
+	<string name="actionbarcolortitle">Цвет строки поиска</string>
+	<string name="actionbarcolorsummary">Установка цвета строки поиска</string>
 	<string name="pagetransparencytitle">Прозрачность страницы</string>
 	<string name="pagetransparencysummary">Установка прозрачности меню приложений и браузера</string>
 	<string name="orientationtitle">Ориентация лончера</string>
@@ -77,7 +77,7 @@
 	<string name="transparentstatustitle">Прозрачная строка состояния</string>
 	<string name="transparentstatussummary">Включение/отключение прозрачности строки состояния</string>
 	<string name="searchtexttitle">Текст в строке поиска</string>
-	<string name="searchtextsummary">Установка своего текста для поиска в строке меню</string>
+	<string name="searchtextsummary">Установка своего текста для поиска в строке поиска</string>
 	<string name="searchtextmessage">Введите текст:</string>
 	<string name="sidebarthemetitle">Стиль боковой панели</string>
 	<string name="sidebarthemesummary">Установка стиля боковой панели</string>
@@ -349,8 +349,8 @@
 	<string name="step_browser_sidebar_summary">Боковая панель браузера вытягивается из края экрана</string>
 	<string name="step_orientation_title">Ориентация лончера</string>
 	<string name="step_orientation_summary">Раскладка домашнего экрана отличается в зависимости от ориентации. Вы можете размещать разные приложения для разной ориентации</string>
-	<string name="actionbartextstyletitle">Стиль элементов строки меню</string>
-	<string name="actionbartextstylesummary">Установка стиля элементов строки меню</string>
+	<string name="actionbartextstyletitle">Стиль элементов строки поиска</string>
+	<string name="actionbartextstylesummary">Установка стиля элементов строки поиска</string>
 	<string name="searchcontactstitle">Поиск контактов</string>
 	<string name="searchcontactssummary">Включение/отключение поиска контактов</string>
 	<string name="version">Версия</string>
@@ -374,14 +374,14 @@
 	<string name="folder_apps_size_title">Размер приложений в папке</string>
 	<string name="folder_apps_size_summary">Установка размера приложений в папках</string>
 	<string name="folder_columns_summary">Установка количества колонок в папках</string>
-	<string name="actionbar_item_color_title">Цвет элемента строки меню</string>
-	<string name="actionbar_item_color_summary">Установка цвета элементов в строке меню</string>
+	<string name="actionbar_item_color_title">Цвет элемента строки поиска</string>
+	<string name="actionbar_item_color_summary">Установка цвета элементов в строке поиска</string>
 	<string name="disable_new_app_glow_title">Откл подсветку новых</string>
 	<string name="disable_new_app_glow_summary">Отключение подсветки новых приложений в меню</string>
 	<string name="download_started">Загрузка началась</string>
 	<string name="choose_upload">Выберите файл для загрузки</string>
-	<string name="unread_count_title">Количество непрочитанных (бета)</string>
-	<string name="unread_count_summary">Отображение непрочитанного. На текущий момент поддерживаются только несколько приложений</string>
+	<string name="unread_count_title">Количество непрочитанных</string>
+	<string name="unread_count_summary">Отображение непрочитанного</string>
 	<string name="backup_title">Введите заголовок копии</string>
 	<string name="backup_select">Выбрать копию</string>
 	<string name="backup_delete">Удалить копию</string>
@@ -414,5 +414,46 @@
     <string name="export_bookmarks_summary">Экспорт закладок в файл</string>
     <string name="import_bookmarks_summary">Импорт закладок из файла</string>
     
+    <string name="privacy_policy">Политика конфиденциальности и др. информация</string>
+    <string name="drawer_fast_scroller">Вкл быструю прокрутку</string>
+    <string name="drawer_fast_scroller_orientation">Ориентация быстрой прокрутки</string>
+    <string name="horizontal">По горизонтали</string>
+    <string name="vertical">По вертикали</string>
     
-</resources>
+    <string name="match_layout_title">Совместить раскладку</string>
+    <string name="match_layout_summary">Альбомная и книжная раскладки будут настроены идентично</string>
+    <string name="numrowwstitle">Количество колонок</string>
+
+    <string name="fade">Затухание</string>
+    <string name="unread_count_popup">Для полной работоспособности функции счётчика непрочтённых сообщений, необходимо включить доступ к уведомлениям для данного приложения</string>
+    <string name="unread_count_disable_popup">Теперь Вы можете отключить доступ к уведомлениям для данного приложения</string>
+
+    <string name="gesturepinchtitle">Щипок</string>
+    <string name="gesturepinchsummary">Выберите действие для щипка на главном экране</string>
+    <string name="gesturepinchouttitle">Щипок от центра</string>
+    <string name="gesturepinchoutsummary">Выберите действие для щипка от центра на главном экране</string>
+    <string name="unread_count_color_title">Цвет счётчика непрочтённого</string>
+    <string name="unread_count_color_summary">Выберите цвет счётчика непрочтённого для приложений</string>
+
+   <string name="label_size_title">Размер текста названия приложения</string>
+   <string name="label_size_summary">Выберите размер текста под значками</string>
+   <string name="small">Маленький</string>
+   <string name="medium">Средний</string>
+   <string name="large">Большой</string>
+
+
+    <!--Added 8-13-18-->
+    <string name="hide_searchbar_drawer">Скрыть строку поиска в меню приложений</string>
+	<string name="hide_searchbar_home">Скрыть строку поиска на домашнем экране</string>
+	<string name="hide_searchbar_browser">Скрыть строку поиска в браузере</string>
+	<string name="searchbar_settings">Настройки строки поиска</string>
+	<string name="opacity">Непрозрачность</string>
+	<string name="auto_color">Автоцвет</string>
+	<string name="folder_auto_color_summary">Автоустановка цветов папок</string>
+	<string nae="toast_snap_disabled">Сперва необходимо отключить параметр Совместить раскладку</string>
+
+	<!--Added 11-27-18-->
+	<string name="download_file">Загрузка файла:</string>
+    <string name="downloads">Загрузки</string>
+    <string name="join_discord">Присоединяйтесь к нашему серверу Discord</string>
+    </resources>

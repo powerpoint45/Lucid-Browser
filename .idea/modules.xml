@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LucidBrowser.iml" filepath="$PROJECT_DIR$/LucidBrowser.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/showcaseView/showcaseView.iml" filepath="$PROJECT_DIR$/showcaseView/showcaseView.iml" />
     </modules>
   </component>
 </project>

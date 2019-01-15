@@ -1,4 +1,0 @@
-#Sat Mar 18 03:25:28 CDT 2017
-base.0=/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
-renamed.0=classes.dex
-file.0=/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

@@ -9,16 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
-        android:drawableLeft="@drawable/ic_content_add_circle_outline"
+        android:padding="10dp"
         android:onClick="webviewActionClicked"
-        android:text="@string/openinnewtab" />
+        android:text="@string/openinnewtab"/>
 
     <Button
         android:id="@+id/copyurl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
-        android:drawableLeft="@drawable/ic_content_content_copy"
+        android:padding="10dp"
         android:onClick="webviewActionClicked"
         android:text="@string/copyurl" />
 
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
-        android:drawableLeft="@drawable/ic_content_save"
+        android:padding="10dp"
         android:onClick="webviewActionClicked"
         android:text="@string/saveimage" />
 

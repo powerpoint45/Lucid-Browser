@@ -386,8 +386,8 @@
 	<string name="disable_new_app_glow_summary">Desativa o brilho indicador de nova aplicação adicionada</string>
 	<string name="download_started">Transferência iniciada</string>
 	<string name="choose_upload">Escolha o ficheiro a ser enviado</string>
-	<string name="unread_count_title">Contagem de itens não lidos (Beta)</string>
-	<string name="unread_count_summary">Mostra a contagem de itens não lidos nas apps. Atualmente, apenas algumas aplicações funcionam com este contador</string>
+	<string name="unread_count_title">Contagem de itens não lidos</string>
+	<string name="unread_count_summary">Mostra a contagem de itens não lidos nas apps</string>
 	<string name="backup_title">Insira um nome da cópia de segurança</string>
 	<string name="backup_select">Selecione cópia de segurança</string>
 	<string name="backup_delete">Apagar cópia de segurança</string>
