@@ -4,7 +4,7 @@
             "outputFile": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/michael/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b2e63e8beb01226ac46b06aa33f26c96/res/values-v24/values-v24.xml",
+                    "source": "/home/michael/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/55e94f468c8a7726ca04370b79da1105/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/michael/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/4421b952dbe557efdafa6a9508755f2c/res/values-v24/values-v24.xml",
+                    "source": "/home/michael/.gradle/caches/transforms-1/files-1.1/media-1.0.0-rc01.aar/ccd58bf82e136cdd49f2c9b6c746aba5/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

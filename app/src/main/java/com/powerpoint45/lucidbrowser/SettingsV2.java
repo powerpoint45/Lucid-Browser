@@ -1,6 +1,5 @@
 package com.powerpoint45.lucidbrowser;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -8,11 +7,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
@@ -20,20 +19,22 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
+import android.provider.DocumentsContract;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.powerpoint45.lucidbrowser.R;
+import androidx.annotation.RequiresApi;
+import androidx.core.view.WindowCompat;
 
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -44,10 +45,14 @@ import java.util.Scanner;
 import bookmarkModel.Bookmark;
 import bookmarkModel.BookmarkFolder;
 import bookmarkModel.BookmarksManager;
+import database.AppDatabase;
 import preferences.ColorPickerPreference;
 
 @SuppressLint("ExportedPreferenceActivity")
 public class SettingsV2 extends AppCompatPreferenceActivity {
+	private static final int OPEN_BOOKMARKS_FILE = 88;
+	private static final int CREATE_BOOKMARKS_FILE = 19;
+
 	SharedPreferences globalPref;
 	ColorPickerPreference sideColor;
 	ColorPickerPreference sideTextColor;
@@ -70,6 +75,9 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 		}
 
 		static void clearBrowsingTrace(String trace, Activity activity) {
+			SharedPreferences sslPreferences = activity.getSharedPreferences("sslurls", 0);
+			sslPreferences.edit().clear().apply();
+
 			ApplicationInfo appInfo = activity.getApplicationInfo();
 			switch (trace) {
 				case "cache":
@@ -130,6 +138,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 		else
 			setTheme(R.style.SettingsLight);
 
+
 		super.onCreate(savedInstanceState);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		addPreferencesFromResource(R.xml.settings_v2);
@@ -138,7 +147,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 			new AdPreference(globalPref, this).setUpAd();
 
 
-		//START CHANGE LISTENER-------------------------------------------------------------------------------------------
+		//START CHANGE LISTENER------------------------------------------------------------------------------------------
 		changeListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
 
 			@Override
@@ -210,6 +219,13 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 		findPreference("clearbrowserhistory")
 				.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 					public boolean onPreferenceClick(Preference preference) {
+						new Thread(new Runnable() {
+							@Override
+							public void run() {
+								AppDatabase.getDb(getApplicationContext()).historyItemDao().deleteAll();
+							}
+						}).start();
+
 						HelperMethods.clearBrowsingTrace("history", SettingsV2.this);
 						Toast.makeText(getApplicationContext(),
 								(getResources().getText(R.string.complete)),
@@ -317,15 +333,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 		findPreference("bookmark_export").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
-
-				if (ContextCompat.checkSelfPermission(SettingsV2.this,
-						Manifest.permission.WRITE_EXTERNAL_STORAGE)
-						!= PackageManager.PERMISSION_GRANTED) {
-					ActivityCompat.requestPermissions(SettingsV2.this,
-							new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-							ActivityIds.PERMISSIONS_REQUEST_ACCESS_FILES_FOR_BOOKMARK_EXPORT);
-				}else
-					bookmarkExport();
+				bookmarkExportPopup();
 				return false;
 			}
 		});
@@ -334,14 +342,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 		findPreference("bookmark_import").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
-				if (ContextCompat.checkSelfPermission(SettingsV2.this,
-						Manifest.permission.WRITE_EXTERNAL_STORAGE)
-						!= PackageManager.PERMISSION_GRANTED) {
-					ActivityCompat.requestPermissions(SettingsV2.this,
-							new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-							ActivityIds.PERMISSIONS_REQUEST_ACCESS_FILES_FOR_BOOKMARK_IMPORT);
-				}else
-					bookmarkImport();
+				bookmarkImport();
 				return true;
 			}
 		});
@@ -381,7 +382,7 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 
 
 
-	public void importBookmarksFromFile(String file){
+	public void importBookmarksFromFile(File file, Uri uri){
 		BookmarksManager manager = BookmarksManager.loadBookmarksManager(this);
 		if (manager == null){
 			Log.d("LB","BookmarksActivity.bookmarksMgr is null. Making new one");
@@ -394,12 +395,28 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 		int fileType = 0;
 		boolean failed = false;
 
-		if(new File(file).getName().endsWith(".html"))
+		if (uri!=null){
+
+			String t = getContentResolver().getType(uri);
+
+			if (t.endsWith("plain"))
+				fileType = FILE_JSON;
+			else if (t.endsWith("html"))
+				fileType = FILE_HTML;
+
+		}
+
+		if(file!=null && file.getName().endsWith(".html"))
 			fileType = FILE_HTML;
 
 		try {
 			String currentFolderName = null;
-			Scanner s = new Scanner(new File(file));
+			Scanner s = null;
+			if (file!=null)
+				s= new Scanner(file);
+			if (uri!=null)
+				s = new Scanner(getContentResolver().openInputStream(uri));
+
 			while (s.hasNext()) {
 				String line = s.nextLine();
 				if (fileType == 0) {
@@ -498,40 +515,143 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 		}
 	}
 
+	public void bookmarkImport(){
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+			//Save Via Documents Provider
+			openBookmarks();
+		}else {
+			startActivityForResult(new Intent(SettingsV2.this, OpenFileActivity.class), ActivityIds.REQUEST_OPEN_BOOKMARK);
+		}
+	}
+
+	public final String filePickerInitialUri = "content://com.android.externalstorage.documents/document/primary:Documents/";
+	@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+	public void openBookmarks(){
+		Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+		intent.addCategory(Intent.CATEGORY_OPENABLE);
+		intent.setType("text/plain");
+		String [] mimeTypes = {"text/plain", "text/html"};
+		intent.setType("*/*");
+		intent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
+
+		// Optionally, specify a URI for the file that should appear in the
+		// system file picker when it loads.
+		Uri folderUri = Uri.parse(filePickerInitialUri);
+		intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, folderUri);
+
+		startActivityForResult(intent, OPEN_BOOKMARKS_FILE);
+	}
+
+	public void bookmarkExportPopup(){
+		final EditText inputText = new EditText(SettingsV2.this);
+		@SuppressLint("SimpleDateFormat") DateFormat df = new SimpleDateFormat("ddMMyyyyhhmm");
+		inputText.setHint(getResources().getString(R.string.bookmarks)+ df.format(new Date()) + "LB".replace(" ","")+".txt");
+
+		new AlertDialog.Builder(SettingsV2.this)
+				.setTitle(R.string.backup_title)
+				.setView(inputText)
+				.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int whichButton) {
+						manager = BookmarksManager.loadBookmarksManager(SettingsV2.this);
+
+						if (manager!=null) {
+							try {
+								File folderLoc = new File(Environment.getExternalStorageDirectory().getPath()+"/LucidBrowser/");
+								folderLoc.mkdirs();
+
+								String fileNameToWrite = inputText.getHint().toString();
+								String nameInput = inputText.getText().toString().replace(".txt","")+".txt";
+								if (!inputText.getText().toString().equals(""))
+									fileNameToWrite = nameInput;
+
+								if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+									//Save Via Documents Provider
+									exportBookmarksToDocuments(fileNameToWrite);
+								}else{
+									writeBookmarks(new FileOutputStream(folderLoc.getAbsolutePath()+fileNameToWrite),folderLoc.getAbsolutePath()+fileNameToWrite);
+								}
+
+							} catch (Exception e) {
+								e.printStackTrace();
+							}
+						}
+					}}).setNegativeButton(android.R.string.cancel, null).show();
+	}
+
+	@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+	public void exportBookmarksToDocuments(String documentTitle){
+		Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+		intent.addCategory(Intent.CATEGORY_OPENABLE);
+		intent.setType("text/plain");
+
+		intent.putExtra(Intent.EXTRA_TITLE, documentTitle);
+
+
+		// Optionally, specify a URI for the directory that should be opened in
+		// the system file picker when your app creates the document.
+
+		Uri folderUri = Uri.parse(filePickerInitialUri);
+		intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, folderUri);
+
+		startActivityForResult(intent, CREATE_BOOKMARKS_FILE);
+	}
+
+	public void writeBookmarks(OutputStream os, String fileLocationToast) throws Exception{
+		PrintWriter printWriter = new PrintWriter(os);
+
+		//add bookmarks from root first
+		for (int i =0; i<manager.root.getContainedBookmarks().size(); i++){
+			JSONObject obj = new JSONObject();
+			//export root first
+			obj.put("order",i);
+			obj.put("folder","");
+			obj.put("title", manager.root.getContainedBookmarks().get(i).getDisplayName());
+			obj.put("url", manager.root.getContainedBookmarks().get(i).getURL());
+			printWriter.write(obj.toString()+"\n");
+		}
+
+		for (int i=0; i<manager.root.getContainedFolders().size(); i++){
+			for (int j = 0; j<manager.root.getContainedFolders().get(i).getContainedBookmarks().size(); j++){
+				JSONObject obj = new JSONObject();
+				//export root first
+				obj.put("order",j);
+				obj.put("folder",manager.root.getContainedFolders().get(i).getDisplayName());
+				obj.put("title", manager.root.getContainedFolders().get(i).getContainedBookmarks().get(j).getDisplayName());
+				obj.put("url", manager.root.getContainedFolders().get(i).getContainedBookmarks().get(j).getURL());
+				printWriter.write(obj.toString()+"\n");
+			}
+		}
+
+		printWriter.close();
+		Tools.toastString(R.string.complete, SettingsV2.this);
+		Tools.toastString(fileLocationToast,SettingsV2.this);
+	}
+
 
 	@SuppressWarnings("unchecked")
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (resultCode == RESULT_OK) {
 			switch (requestCode) {
-				case ActivityIds.REQUEST_PICK_FILE:
-					String fileString = data.getStringExtra("file");
-					importBookmarksFromFile(fileString);
+				case CREATE_BOOKMARKS_FILE:
+					if (data!=null){
+						try {
+							writeBookmarks(getContentResolver().openOutputStream(data.getData()),data.getStringExtra(Intent.EXTRA_TITLE));
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+					break;
+				case OPEN_BOOKMARKS_FILE:
+					if (data!=null){
+						Uri fUri = data.getData();
+						importBookmarksFromFile(null, fUri);
+					}
 					break;
 			}
 		}
 	}
 
-
-	@Override
-	public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
-		switch (requestCode) {
-
-			case ActivityIds.PERMISSIONS_REQUEST_ACCESS_FILES_FOR_BOOKMARK_EXPORT:
-				//Permission granted
-				if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-					bookmarkExport();
-				}
-				break;
-
-			case ActivityIds.PERMISSIONS_REQUEST_ACCESS_FILES_FOR_BOOKMARK_IMPORT:
-				//Permission granted
-				if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-					bookmarkImport();
-				}
-				break;
-		}
-	}
 
 
 
@@ -592,10 +712,6 @@ public class SettingsV2 extends AppCompatPreferenceActivity {
 				})
 				.setNegativeButton(android.R.string.cancel, null)
 				.show();
-	}
-
-	public void bookmarkImport(){
-		startActivityForResult(new Intent(SettingsV2.this, OpenFileActivity.class), ActivityIds.REQUEST_PICK_FILE);
 	}
 
 

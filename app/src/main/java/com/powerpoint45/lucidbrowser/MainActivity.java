@@ -9,18 +9,17 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.preference.PreferenceManager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -31,7 +30,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
+import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.CookieManager;
@@ -40,6 +39,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewDatabase;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -48,13 +48,23 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Vector;
 
 import bookmarkModel.Bookmark;
 import bookmarkModel.BookmarksManager;
+import database.AppDatabase;
 import views.CustomToolbar;
 import views.CustomWebView;
 import views.WebLayoutView;
@@ -67,21 +77,26 @@ public class MainActivity extends BrowserHandler {
 	static LayoutInflater inflater;
 	public static InputMethodManager imm;
 
-	public RelativeLayout barHolder;
-	public RelativeLayout browserBar;
+	public LinearLayout barHolder;
+	public LinearLayout browserBar;
 	public ActionBar actionBar;
 	public ActionBarControls actionBarControls;
 	public Toolbar toolbar;
+
+	ChipGroup tabsChipGroup;
+	HorizontalScrollView tabsScrollView;
 	FrameLayout contentFrame;
+	public FrameLayout mainLayout;
 	public DrawerLayout drawerLayout;
-	
+
 	public WebLayoutView webLayout;
 	public ListView browserListView;
 	public BrowserImageAdapter browserListViewAdapter;
 	public Vector <CustomWebView> webWindows;
 	public SystemBarTintManager tintManager;
-	
+
 	static Dialog dialog;
+	AdPreference adPreference;
 
 
 	@SuppressLint("InflateParams")
@@ -89,18 +104,21 @@ public class MainActivity extends BrowserHandler {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+
+
 		activity     = this;
 		context = getApplicationContext();
+
 
 		prefs = getSharedPreferences("pref",0);
 		globalPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 
 		inflater     = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
 		imm          = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
-		
-		barHolder = new RelativeLayout(this);
-		browserBar = (RelativeLayout)inflater.inflate(R.layout.browser_bar,null);
-		
+
+		barHolder = new LinearLayout(this);
+		browserBar = (LinearLayout)inflater.inflate(R.layout.browser_bar,null);
+
 		webLayout                 = (WebLayoutView) inflater.inflate(R.layout.page_web, null);
 		browserListViewAdapter    = new BrowserImageAdapter(this);
 		webWindows                = new Vector<>();
@@ -110,31 +128,40 @@ public class MainActivity extends BrowserHandler {
 
 
 		if (Properties.sidebarProp.swapLayout)
-			drawerLayout = (DrawerLayout) inflater.inflate(R.layout.main_swapped, null);
+			mainLayout = (FrameLayout) inflater.inflate(R.layout.main_swapped, null);
 		else
-			drawerLayout = (DrawerLayout) inflater.inflate(R.layout.main, null);
-		
-		contentFrame = drawerLayout.findViewById(R.id.content_frame);
-		browserListView = drawerLayout.findViewById(R.id.right_drawer);
-		toolbar = drawerLayout.findViewById(R.id.toolbar);
-		
+			mainLayout = (FrameLayout) inflater.inflate(R.layout.main, null);
+
+		drawerLayout = mainLayout.findViewById(R.id.drawer_layout);
+
+		tabsScrollView = mainLayout.findViewById(R.id.tabs_sv);
+		tabsChipGroup = mainLayout.findViewById(R.id.tabs_cg);
+		contentFrame = mainLayout.findViewById(R.id.content_frame);
+		browserListView = mainLayout.findViewById(R.id.right_drawer);
+		toolbar = mainLayout.findViewById(R.id.toolbar);
+
 		contentFrame.addView(webLayout,0);
 		setSupportActionBar(toolbar);
-		actionBar = getSupportActionBar(); 
+		actionBar = getSupportActionBar();
 		actionBarControls = new ActionBarControls(actionBar,activity);
-		setContentView(drawerLayout);
-		
-		
+		setContentView(mainLayout);
+
+
 		if (Properties.appProp.fullscreen)
 			getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		
+
 		tintManager = new SystemBarTintManager(activity);
 
 		SetupLayouts.setuplayouts(activity);
-        SetupLayouts.setupWebWindows(activity);
+		SetupLayouts.setupWebWindows(activity);
 
-        if (!globalPrefs.getBoolean("showcased",false))
-            new Showcaser(activity, Showcaser.STEP_BROWSER_SIDEBAR);
+		if (!globalPrefs.getBoolean("showcased",false))
+			new Showcaser(activity, Showcaser.STEP_BROWSER_SIDEBAR);
+
+		adPreference = new AdPreference(prefs, this);
+		adPreference.setUpAd();
+
+
 	}
 
 	/**
@@ -158,13 +185,32 @@ public class MainActivity extends BrowserHandler {
 	}
 
 	/**
+	 *
+	 * @param url
+	 */
+	public void loadURL(String url){
+		if (webWindows.size() == 0) {
+			webWindows.add(new CustomWebView(activity, null));
+			((ViewGroup) webLayout.findViewById(R.id.webviewholder)).removeAllViews();
+			((ViewGroup) webLayout.findViewById(R.id.webviewholder)).addView(webWindows.get(0));
+		}
+
+		WebView WV = getFocussedWebView();
+		if (WV!=null){
+			WV.stopLoading();
+			WV.loadUrl(Tools.fixURL(url));
+		}
+	}
+
+	/**
 	 * onClick method for most all buttons relating to the web browser
 	 * @param v provided by onClick
 	 */
 	@SuppressLint("InflateParams")
 	public void browserActionClicked(View v) {
 
-		if (v.getId() != R.id.browser_bookmark) {
+		boolean justAddedWV = false;
+		if (v.getId() != R.id.browser_bookmark && v.getId() != R.id.browser_menu_btn) {
 			Handler handler = new Handler();
 			Runnable r = new Runnable() {
 				public void run() {
@@ -172,6 +218,7 @@ public class MainActivity extends BrowserHandler {
 				}
 			};
 			handler.postDelayed(r, 500);
+			justAddedWV = true;
 		}
 
 		dismissDialog();
@@ -183,6 +230,7 @@ public class MainActivity extends BrowserHandler {
 				((ViewGroup) webLayout.findViewById(R.id.webviewholder)).removeAllViews();
 				((ViewGroup) webLayout.findViewById(R.id.webviewholder)).addView(webWindows.get(0));
 			}
+			browserListViewAdapter.notifyDataSetChanged();
 		}
 
 		assert webLayout != null;
@@ -193,6 +241,13 @@ public class MainActivity extends BrowserHandler {
 				WV.loadUrl(prefs.getString("setbrowserhome", Properties.webpageProp.assetHomePage));
 				WV.clearHistory();
 				break;
+			case R.id.browser_menu_btn:
+				if (drawerLayout.isDrawerOpen(browserListView)){
+					drawerLayout.closeDrawer(browserListView);
+				}else {
+					drawerLayout.openDrawer(browserListView);
+				}
+				break;
 			case R.id.browser_share:
 				Intent sharingIntent = new Intent(Intent.ACTION_SEND);
 				sharingIntent.setType("text/plain");
@@ -201,16 +256,18 @@ public class MainActivity extends BrowserHandler {
 				startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share)));
 				break;
 			case R.id.browser_back:
-				WV.goBack();
+				backPressed();
 				break;
 			case R.id.browser_forward:
 				WV.goForward();
 				break;
 			case R.id.browser_refresh:
-				if (WV.getProgress() != 100)
-					WV.stopLoading();
-				else
-					WV.reload();
+				if (!justAddedWV) {
+					if (WV.getProgress() != 100)
+						WV.stopLoading();
+					else
+						WV.reload();
+				}
 				break;
 			case R.id.browser_find_on_page:
 				SetupLayouts.setUpActionBar(SetupLayouts.ACTIONBAR_FIND, activity);
@@ -253,6 +310,10 @@ public class MainActivity extends BrowserHandler {
 				BookmarksActivity.bookmarksMgr.saveBookmarksManager(MainActivity.this);
 				CustomToolbar.colorizeToolbar(toolbar, Properties.appProp.primaryIntColor);
 				break;
+			case R.id.browser_open_history:
+				Intent historyActivity = new Intent(MainActivity.this, HistoryActivity.class);
+				startActivityForResult(historyActivity, ActivityIds.REQUEST_PICK_HISTORY);
+				break;
 			case R.id.browser_open_bookmarks:
 				Intent i = new Intent(activity, BookmarksActivity.class);
 				Tools.launchIntentForResult(i,v,activity,ActivityIds.REQUEST_PICK_BOOKMARK);
@@ -289,14 +350,19 @@ public class MainActivity extends BrowserHandler {
 				globalPrefs.edit().putBoolean("usedesktopview", !Properties.webpageProp.useDesktopView).apply();
 				Properties.webpageProp.useDesktopView = !Properties.webpageProp.useDesktopView;
 
+				((ImageView) findViewById(R.id.status_toggle_desktop_icon)).setImageResource(Properties.webpageProp.useDesktopView ? R.drawable.circle_green : R.drawable.circle_gray);
+
+				//Reload windows
 				for (int I = 0; I < webWindows.size(); I++) {
 					webWindows.get(I).setDesktopMode(Properties.webpageProp.useDesktopView);
 					webWindows.get(I).reload();
 				}
 				break;
 			case R.id.browser_settings:
+
 				Intent settingsIntent = new Intent(activity, SettingsV2.class);
 				Tools.launchIntentForResult(settingsIntent,v,activity,ActivityIds.REQUEST_OPEN_SETTINGS);
+				adPreference.showAd();
 				break;
 
 			case R.id.find_exit:
@@ -307,6 +373,7 @@ public class MainActivity extends BrowserHandler {
 				break;
 		}
 	}
+
 
 
 
@@ -386,17 +453,24 @@ public class MainActivity extends BrowserHandler {
 	private void exitBrowserWithConfirmation() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(activity);
 		builder.setMessage(R.string.confirm_exit_text)
-		       .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-		           public void onClick(DialogInterface dialog, int id) {
-		        	   exitBrowser();
-		           }
-		       })
-		       .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-		           public void onClick(DialogInterface dialog, int id) {
-		           }
-		       });
+				.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						exitBrowser();
+					}
+				})
+				.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+					}
+				});
 		Dialog d = builder.create();
 		d.show();
+	}
+
+
+	public void closeTab(int position) {
+		View v = new View(this);
+		v.setTag(position);
+		closeTab(v);
 	}
 
 
@@ -410,6 +484,7 @@ public class MainActivity extends BrowserHandler {
 		ImageButton BookmarkButton = browserBar.findViewById(R.id.browser_bookmark);
 		ImageButton refreshButton = browserBar.findViewById(R.id.browser_refresh);
 		webWindows.get(pos).loadUrl("about:blank");
+		webWindows.get(pos).client.dismissSSLSnack();
 		unregisterForContextMenu(webWindows.get(pos));
 		webWindows.get(pos).destroy();
 
@@ -453,7 +528,7 @@ public class MainActivity extends BrowserHandler {
 							BookmarkButton.setImageResource(R.drawable.btn_omnibox_bookmark_normal);
 						}
 					} else {
-                        displayNoTabsView();
+						displayNoTabsView();
 						PB.setVisibility(View.INVISIBLE);
 						BookmarkButton.setImageResource(R.drawable.btn_omnibox_bookmark_normal);
 						if (refreshButton != null)
@@ -467,60 +542,86 @@ public class MainActivity extends BrowserHandler {
 		browserListViewAdapter.notifyDataSetChanged();
 	}
 
-    /**
-     * remove any visible webview and place a web icon in its place to show no tabs are open
-     */
-    public void displayNoTabsView() {
-        ((ViewGroup) webLayout.findViewById(R.id.webviewholder)).removeAllViews();
-        if (browserBar.findViewById(R.id.browser_searchbar) != null)
-            ((TextView) browserBar.findViewById(R.id.browser_searchbar)).setText("");
-        ImageView IV = new ImageView(activity);
-        IV.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-        IV.setScaleType(ImageView.ScaleType.CENTER);
-        IV.setImageResource(R.drawable.web_logo_material);
-        ((ViewGroup) webLayout.findViewById(R.id.webviewholder)).addView(IV);
-    }
+	/**
+	 * remove any visible webview and place a web icon in its place to show no tabs are open
+	 */
+	public void displayNoTabsView() {
+		findViewById(R.id.swipe_refresh).setEnabled(false);
+		((ViewGroup) webLayout.findViewById(R.id.webviewholder)).removeAllViews();
+		if (browserBar.findViewById(R.id.browser_searchbar) != null)
+			((TextView) browserBar.findViewById(R.id.browser_searchbar)).setText("");
 
-    /**
-     * adds a new WebView and displays it in webLayout
-     */
-    public void openNewTab(){
-        activity.webWindows.add(new CustomWebView(activity, null));
-        if (activity.webLayout!=null)
-            if (activity.webLayout.findViewById(R.id.webviewholder) !=null){
-                ((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).removeAllViews();
-                ((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).addView(activity.webWindows.get(activity.webWindows.size()-1));
-            }
-    }
+		LinearLayoutCompat noTabsLayout = (LinearLayoutCompat) getLayoutInflater().inflate(R.layout.no_tabs_layout, null);
 
-    /**
+		if (BookmarksActivity.bookmarksMgr!=null){
+			if (BookmarksActivity.bookmarksMgr.root!=null){
+				ArrayList<Bookmark> bookmarks = BookmarksActivity.bookmarksMgr.root.getAllBookMarks();
+				OnClickListener cl = new OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						loadURL(view.getTag().toString());
+					}
+				};
+
+				for (Bookmark b: bookmarks) {
+					Chip c = new Chip(this);
+					c.setChipIconVisible(true);
+					c.setTag(b.getUrl());
+					c.setText(b.getDisplayName());
+					Bitmap bit = b.getIconBitmap();
+					c.setOnClickListener(cl);
+					if (bit == null)
+						c.setChipIcon(getResources().getDrawable(R.drawable.ic_browser));
+					else
+						c.setChipIcon(new BitmapDrawable(b.getIconBitmap()));
+					((ChipGroup) noTabsLayout.findViewById(R.id.bookmarks_chip_group)).addView(c);
+				}
+			}
+		}
+
+		((ViewGroup) webLayout.findViewById(R.id.webviewholder)).addView(noTabsLayout);
+	}
+
+	/**
+	 * adds a new WebView and displays it in webLayout
+	 */
+	public void openNewTab(){
+		activity.webWindows.add(new CustomWebView(activity, null));
+		if (activity.webLayout!=null)
+			if (activity.webLayout.findViewById(R.id.webviewholder) !=null){
+				((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).removeAllViews();
+				((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).addView(activity.webWindows.get(activity.webWindows.size()-1));
+			}
+	}
+
+	/**
 	 * When an app chooses to open a link with this browser (and the browser is already open), onNewIntent is called
 	 * @param intent provided by different app/activity
 	 */
 	@Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-        Log.d("LB", "onNewIntent");
-        if ((intent.getFlags() & Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT) !=
-                Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT) {
-        	drawerLayout.closeDrawers();
-        }
-        
-        if (intent.getAction()!=null && (intent.getAction().equals(Intent.ACTION_WEB_SEARCH) ||intent.getAction().equals(Intent.ACTION_VIEW))){
-        		if (intent.getDataString()!=null){
-        			int tabNumber = intent.getIntExtra("tabNumber", -1); //used if intent is coming from Lucid Browser
-        			
-        			if (tabNumber!=-1 && tabNumber < webWindows.size()){
-        				webWindows.get(tabNumber).loadUrl(intent.getDataString());
-        			}else
-        				tabNumber=-1;
-        				
-        			if (tabNumber==-1){
-	    	    		openURLInNewTab(intent.getDataString());
-        			}
-        			
-        		}
-        }
+	protected void onNewIntent(Intent intent) {
+		super.onNewIntent(intent);
+		Log.d("LB", "onNewIntent");
+		if ((intent.getFlags() & Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT) !=
+				Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT) {
+			drawerLayout.closeDrawers();
+		}
+
+		if (intent.getAction()!=null && (intent.getAction().equals(Intent.ACTION_WEB_SEARCH) ||intent.getAction().equals(Intent.ACTION_VIEW))){
+			if (intent.getDataString()!=null){
+				int tabNumber = intent.getIntExtra("tabNumber", -1); //used if intent is coming from Lucid Browser
+
+				if (tabNumber!=-1 && tabNumber < webWindows.size()){
+					webWindows.get(tabNumber).loadUrl(intent.getDataString());
+				}else
+					tabNumber=-1;
+
+				if (tabNumber==-1){
+					openURLInNewTab(intent.getDataString());
+				}
+
+			}
+		}
 	}
 
 	/**
@@ -588,74 +689,74 @@ public class MainActivity extends BrowserHandler {
 	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
 		Handler mHandler = new Handler() {
 
-	    @Override
-	        public void handleMessage(Message msg) {
-	            // Get link-URL.
-	            final String url = (String) msg.getData().get("url");
+			@Override
+			public void handleMessage(Message msg) {
+				// Get link-URL.
+				final String url = (String) msg.getData().get("url");
 
-	            // Do something with it.
-	            if (url != null){
-	            	runOnUiThread(new Runnable() {
-						
+				// Do something with it.
+				if (url != null){
+					runOnUiThread(new Runnable() {
+
 						@Override
 						public void run() {
 							LinearLayout inflateView = ((LinearLayout) MainActivity.inflater.inflate(R.layout.web_menu_popup, null));
-			            	inflateView.findViewById(R.id.saveimage).setVisibility(View.GONE);
-			            	inflateView.setTag(url);
-			                MainActivity.dialog = new Dialog(activity);
-						    MainActivity.dialog.setTitle(R.string.wallpaper_instructions);
+							inflateView.findViewById(R.id.saveimage).setVisibility(View.GONE);
+							inflateView.setTag(url);
+							MainActivity.dialog = new Dialog(activity);
+							MainActivity.dialog.setTitle(R.string.wallpaper_instructions);
 							MainActivity.dialog.setContentView(inflateView);
-						    MainActivity.dialog.show();
+							MainActivity.dialog.show();
 						}
 					});
-	            	 
-	            }
-	        }
-	    };
-	    
- 	    // Confirm the view is a webview
- 	    if (v instanceof WebView) {
- 	        WebView.HitTestResult result = ((WebView) v).getHitTestResult();
- 	       if (result != null && result.getExtra()!=null && !result.getExtra().startsWith("file:")) {
- 	            int type = result.getType();
 
- 	            if (type == WebView.HitTestResult.SRC_ANCHOR_TYPE || result.getExtra().startsWith("data:")) {
-	                LinearLayout inflateView = ((LinearLayout) MainActivity.inflater.inflate(R.layout.web_menu_popup, null));
-	                
-		           if (type != WebView.HitTestResult.SRC_IMAGE_ANCHOR_TYPE || result.getExtra().startsWith("data:")){
-		        	   inflateView.findViewById(R.id.saveimage).setVisibility(View.GONE);	        	   
-		           }
-		                
-		                
-	                if (type == WebView.HitTestResult.SRC_IMAGE_ANCHOR_TYPE){
-		                Message msg = mHandler.obtainMessage();
-		                webWindows.get(getTabNumber()).requestFocusNodeHref(msg);
-	                }else{
-	                	inflateView.setTag(result.getExtra());
-	                	MainActivity.dialog = new Dialog(activity);
+				}
+			}
+		};
+
+		// Confirm the view is a webview
+		if (v instanceof WebView) {
+			WebView.HitTestResult result = ((WebView) v).getHitTestResult();
+			if (result != null && result.getExtra()!=null && !result.getExtra().startsWith("file:")) {
+				int type = result.getType();
+
+				if (type == WebView.HitTestResult.SRC_ANCHOR_TYPE || result.getExtra().startsWith("data:")) {
+					LinearLayout inflateView = ((LinearLayout) MainActivity.inflater.inflate(R.layout.web_menu_popup, null));
+
+					if (type != WebView.HitTestResult.SRC_IMAGE_ANCHOR_TYPE || result.getExtra().startsWith("data:")){
+						inflateView.findViewById(R.id.saveimage).setVisibility(View.GONE);
+					}
+
+
+					if (type == WebView.HitTestResult.SRC_IMAGE_ANCHOR_TYPE){
+						Message msg = mHandler.obtainMessage();
+						webWindows.get(getTabNumber()).requestFocusNodeHref(msg);
+					}else{
+						inflateView.setTag(result.getExtra());
+						MainActivity.dialog = new Dialog(activity);
 						MainActivity.dialog.setTitle(R.string.wallpaper_instructions);
 						MainActivity.dialog.setContentView(inflateView);
 						MainActivity.dialog.show();
-	                }
-		                
-	           }
- 	           else if (type == WebView.HitTestResult.IMAGE_TYPE || type == WebView.HitTestResult.SRC_IMAGE_ANCHOR_TYPE) {
- 	                LinearLayout inflateView = ((LinearLayout) MainActivity.inflater.inflate(R.layout.web_menu_popup, null));
- 	                
- 	                if (type==WebView.HitTestResult.IMAGE_TYPE){
- 	                	inflateView.findViewById(R.id.copyurl).setVisibility(View.GONE); 	                	
- 	                }
- 	                
- 	                inflateView.setTag(result.getExtra());
- 	                MainActivity.dialog = new Dialog(activity);
+					}
+
+				}
+				else if (type == WebView.HitTestResult.IMAGE_TYPE || type == WebView.HitTestResult.SRC_IMAGE_ANCHOR_TYPE) {
+					LinearLayout inflateView = ((LinearLayout) MainActivity.inflater.inflate(R.layout.web_menu_popup, null));
+
+					if (type==WebView.HitTestResult.IMAGE_TYPE){
+						inflateView.findViewById(R.id.copyurl).setVisibility(View.GONE);
+					}
+
+					inflateView.setTag(result.getExtra());
+					MainActivity.dialog = new Dialog(activity);
 					MainActivity.dialog.setTitle(R.string.wallpaper_instructions);
 					MainActivity.dialog.setContentView(inflateView);
 					MainActivity.dialog.show();
- 	            }
- 	           
- 	        }
- 	    }
- 	}
+				}
+
+			}
+		}
+	}
 
 	/**
 	 * Deals with menu buttons after long pressing on a WebView item
@@ -678,6 +779,8 @@ public class MainActivity extends BrowserHandler {
 				((ViewGroup) webLayout.findViewById(R.id.webviewholder)).addView(webWindows.get(webWindows.size() - 1));
 				((EditText) barHolder.findViewById(R.id.browser_searchbar)).setText("...");
 				browserListViewAdapter.notifyDataSetChanged();
+				if (activity.barHolder.findViewById(R.id.browser_searchbar) !=null)
+					activity.barHolder.findViewById(R.id.browser_searchbar).clearFocus();
 				break;
 			case R.id.copyurl:
 				dismissDialog();
@@ -703,70 +806,78 @@ public class MainActivity extends BrowserHandler {
 			else
 				drawerLayout.closeDrawer(browserListView);
 			return true;
-        }
+		}
 		if (event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
 			//Finder is active, close it then
-			 if (barHolder.findViewById(R.id.finder)!=null){
-			    SetupLayouts.dismissFindBar(activity);
-			 	return true;
-			 }else{
-
-				CustomWebView WV = webLayout.findViewById(R.id.browser_page);
-
-				if (WV!=null){
-					if(WV.canGoBack())
-		            {
-		            	if (!drawerLayout.isDrawerOpen(browserListView))
-		            		WV.goBack();
-		                return true;
-		            }
-				}
-				if ((WV!=null && !WV.canGoBack()) || webWindows.size()==0){
-					doExiting();
-
-				}
-			}
+			if (barHolder.findViewById(R.id.finder)!=null){
+				SetupLayouts.dismissFindBar(activity);
 				return true;
-        }
-	    return false;
+			}else{
+				backPressed();
+			}
+			return true;
+		}
+		return false;
+	}
+
+	public void backPressed(){
+		Log.d("LB", "backPressed");
+		CustomWebView WV = webLayout.findViewById(R.id.browser_page);
+
+		if (WV!=null && WV.isVideoPlaying()) {
+			WV.getChromeClient().onHideCustomView();
+		}else if (WV!=null && WV.canGoBack()) {
+			WV.goBack();
+			Log.d("LB", "WV.goBack();");
+		}else if (drawerLayout.isDrawerOpen(browserListView)) {
+			doExiting();
+		}else {
+			drawerLayout.openDrawer(browserListView);
+		}
 	}
 
 	@Override
-	public void onUserLeaveHint(){
-		// TODO Check: Should tabs be closed too?
+	protected void onDestroy() {
 		if (Properties.webpageProp.clearonexit){
 			clearTraces();
-			
 		}
-		
+		super.onDestroy();
 	}
 
 	/**
 	 * closes any open popup windows etc
 	 */
-    static void dismissDialog(){
-   	 if (dialog!=null){
-   		 dialog.dismiss();
-   		 dialog=null;
-   	 }
-    }
+	static void dismissDialog(){
+		if (dialog!=null){
+			dialog.dismiss();
+			dialog=null;
+		}
+	}
 
 	/**
 	 * Clears browser cache etc
 	 */
-    protected void clearTraces(){
-    	CustomWebView WV = webLayout.findViewById(R.id.browser_page);
-    	if (WV!=null){
+	protected void clearTraces(){
+		webWindows.clear();
+		CustomWebView WV = webLayout.findViewById(R.id.browser_page);
+		if (WV!=null){
 			WV.clearHistory();
 			WV.clearCache(true);
-    	}
-		
+		}
+
 		WebViewDatabase wDB = WebViewDatabase.getInstance(activity);
 		wDB.clearFormData();
-		
+
 		CookieSyncManager.createInstance(activity);
 		CookieManager cookieManager = CookieManager.getInstance();
 		cookieManager.removeAllCookie();
+
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				AppDatabase.getDb(getApplicationContext()).historyItemDao().deleteAll();
+			}
+		}).start();
 		// Usefull for future commits:
 //			cookieManager.setAcceptCookie(false)
 //
@@ -774,7 +885,7 @@ public class MainActivity extends BrowserHandler {
 //			WebSettings ws = webview.getSettings();
 //			ws.setSaveFormData(false);
 //			ws.setSavePassword(false); // Not needed for API level 18 or greater (deprecat
-    }
+	}
 
 
 
@@ -805,61 +916,70 @@ public class MainActivity extends BrowserHandler {
 //            }
 //        }
 //    }
- 
-	 @Override
-	 public void onPause(){
-	 	//BookmarksActivity.bookmarksMgr.saveBookmarksManager();
-	 	super.onPause();
-	 }
- 
-	@Override
- 	public void onStop(){
-	    super.onStop();
-        saveState();
-        if (isFinishing())
-            clearAllTabsForExit();
-	}
-	
-	@SuppressLint("NewApi")
-	@Override   
-	 protected void onActivityResult(int requestCode, int resultCode,  
-	                                    Intent intent) {
 
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		adPreference.resumeCalled();
+	}
+
+	@Override
+	public void onPause(){
+		//BookmarksActivity.bookmarksMgr.saveBookmarksManager();
+		super.onPause();
+	}
+
+	@Override
+	public void onStop(){
+		super.onStop();
+		saveState();
+		if (isFinishing())
+			clearAllTabsForExit();
+	}
+
+	@SuppressLint("NewApi")
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode,
+									Intent intent) {
+
+		super.onActivityResult(requestCode, resultCode, intent);
 		switch (requestCode) {
 			case ActivityIds.REQUEST_OPEN_SETTINGS:
 
-				if (intent!=null && intent.getExtras()!=null && intent.getExtras().getBoolean("restart",false)){
+				if (intent != null && intent.getExtras() != null && intent.getExtras().getBoolean("restart", false)) {
 					finish();
 					startActivity(new Intent(MainActivity.this, MainActivity.class));
-				}else{
+				} else {
 					//update settings and appearence
 					Properties.update_preferences(MainActivity.this);
-					SetupLayouts.setUpActionBar(SetupLayouts.ACTIONBAR_BROWSER,MainActivity.this);
+					SetupLayouts.setUpActionBar(SetupLayouts.ACTIONBAR_BROWSER, MainActivity.this);
 					SetupLayouts.colorizeSidebar(activity);
 					SetupLayouts.setupWindow(activity);
 					SetupLayouts.setBarColors(activity);
-					if (webWindows.size()>0)
+					if (webWindows.size() > 0)
 						webWindows.get(getTabNumber()).setUrlBarText(webWindows.get(getTabNumber()).getUrl());
 					browserListViewAdapter.notifyDataSetChanged();
 					actionBarControls.show();
 				}
 
-				if (intent!=null && intent.getBooleanExtra("initBrowser",false))
+				if (intent != null && intent.getBooleanExtra("initBrowser", false))
 					SetupLayouts.setupWebWindows(activity);
 
 				break;
 			case ActivityIds.REQUEST_PICK_BOOKMARK:
-				if (intent!=null) {
+			case ActivityIds.REQUEST_PICK_HISTORY:
+				if (intent != null) {
 					String url = intent.getStringExtra("url");
 					if (url != null) {
-						if (intent.getBooleanExtra("newtab",true))
+						if (intent.getBooleanExtra("newtab", true))
 							openURLInNewTab(url);
 						else {
 							CustomWebView WV = webLayout.findViewById(R.id.browser_page);
-							if (WV!=null) {
+							if (WV != null) {
 								WV.stopLoading();
 								WV.loadUrl(url);
-							}else
+							} else
 								openURLInNewTab(url);
 						}
 					}
@@ -886,39 +1006,39 @@ public class MainActivity extends BrowserHandler {
 						VideoEnabledWebChromeClient.mUploadMessageLol.onReceiveValue(uriss);
 						VideoEnabledWebChromeClient.mUploadMessageLol = null;
 					}
-				break;
+					break;
 
-			}
+				}
 		}
-	  }
+	}
 
 	/**
 	 * Saves tabs that are opened to be reopened when app is opened again
 	 */
- 	void saveState(){
-        Log.d("LB","saving state now");
-         Bundle mainBundle = new Bundle();
-         if (Properties.webpageProp.closetabsonexit && isFinishing()){
-             new BundleManager(activity).saveToPreferences(new Bundle());
-         } else{
-			 CustomWebView WV = webLayout.findViewById(R.id.browser_page);
-             int tabNumber = getTabNumber();
-             mainBundle.putInt("numtabs",webWindows.size());
+	void saveState(){
+		Log.d("LB","saving state now");
+		Bundle mainBundle = new Bundle();
+		if (Properties.webpageProp.closetabsonexit && isFinishing()){
+			new BundleManager(activity).saveToPreferences(new Bundle());
+		} else{
+			CustomWebView WV = webLayout.findViewById(R.id.browser_page);
+			int tabNumber = getTabNumber();
+			mainBundle.putInt("numtabs",webWindows.size());
 
-			 if (tabNumber==-1)
-				 tabNumber = 0;
-			 mainBundle.putInt("tabnumber", tabNumber);
+			if (tabNumber==-1)
+				tabNumber = 0;
+			mainBundle.putInt("tabnumber", tabNumber);
 
-			 if (WV!=null)
-				 for (int I=0;I<webWindows.size();I++){
-					 Bundle bundle = new Bundle();
-					 webWindows.get(I).saveState(bundle);
-					 mainBundle.putBundle("WV"+I,bundle);
-				 }
+			if (WV!=null)
+				for (int I=0;I<webWindows.size();I++){
+					Bundle bundle = new Bundle();
+					webWindows.get(I).saveState(bundle);
+					mainBundle.putBundle("WV"+I,bundle);
+				}
 
-			 new BundleManager(activity).saveToPreferences(mainBundle);
-         }
-    }
+			new BundleManager(activity).saveToPreferences(mainBundle);
+		}
+	}
 
 	/**
 	 * @return active browser tab.
@@ -942,9 +1062,162 @@ public class MainActivity extends BrowserHandler {
 	/**
 	 * Gets webviews ready for app close. Helps to clear out memory
 	 */
- 	void clearAllTabsForExit(){
-         for (int i =0; i<webWindows.size();i++){
-             webWindows.get(i).loadUrl("about:blank");
-         }
-    }
+	void clearAllTabsForExit(){
+		for (int i =0; i<webWindows.size();i++){
+			webWindows.get(i).loadUrl("about:blank");
+		}
+	}
+
+
+
+
+
+
+
+
+
+	public void refreshTabs() {
+		if (Properties.appProp.useQuickTabs) {
+			tabsChipGroup.removeAllViews();
+			for (int i = 0; i < webWindows.size(); i++) {
+				addTabChip(i);
+			}
+			addNewTabChip();
+
+			if (tabsChipGroup.getVisibility()!=View.VISIBLE)
+				tabsChipGroup.setVisibility(View.VISIBLE);
+		}else {
+			if (tabsChipGroup.getChildCount() > 0)
+				tabsChipGroup.removeAllViews();
+
+			if (tabsChipGroup.getVisibility()!=View.GONE)
+				tabsChipGroup.setVisibility(View.GONE);
+		}
+
+
+	}
+
+
+	private void addNewTabChip() {
+		Chip chip = new Chip(this);
+
+		chip.setFocusable(true);
+		// Remove text from the chip
+		chip.setText(null); // or chip.setText("") to ensure no text is shown
+
+		int p = 0;
+		chip.setPadding(p, p, p, p);
+
+		float chipPadding = 8f; // Example padding value in pixels or dp converted to pixels as needed
+
+		// Remove text padding and check if more settings are needed for full padding removal
+		//chip.setPadding(0, 0, 0, 0);  // This sets padding for the whole chip
+		chip.setTextStartPadding(0);
+		chip.setTextEndPadding(0);
+		chip.setTextSize(0); // This effectively hides any default text size that might take space
+
+		// Set chip icon and remove padding around it
+		chip.setChipIcon(getResources().getDrawable(R.drawable.ic_content_add_circle_outline));
+		chip.setChipIconSize(Properties.numtodp(40,MainActivity.this)); // Adjust if needed based on your icon's size
+
+
+		chip.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				openNewTab();
+				//openURLInNewTab(Properties.webpageProp.assetHomePage);
+			}
+		});
+
+		// Set the background color of the chip
+		ColorStateList bgColor = ColorStateList.valueOf(Properties.appProp.urlBarColor);
+		chip.setChipBackgroundColor(bgColor);
+
+		ColorStateList bgColor2 = ColorStateList.valueOf(Properties.appProp.primaryIntColor);
+
+		chip.setChipIconTint(bgColor2);
+
+		// Set the text color of the chip
+		chip.setTextColor(Properties.appProp.primaryIntColor);
+
+		tabsChipGroup.addView(chip);
+
+		// Force layout update if needed
+		//tabsChipGroup.requestLayout();
+		//tabsChipGroup.invalidate();
+		chip.postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				chip.requestFocus();
+			}
+		},100);
+	}
+
+
+	private void addTabChip(int index) {
+		Chip chip = new Chip(this);
+		String title = webWindows.get(index).getTitle() != null
+				? webWindows.get(index).getTitle()
+				: webWindows.get(index).getUrl();
+
+		String postString = "";
+		if (title.length() > 15) {
+			postString = "..";
+		}
+
+		if (webWindows.get(index).getUrl().equals(Properties.webpageProp.assetHomePage))
+			title = getResources().getString(R.string.home);
+
+		// Assuming 'p' is for padding, set to 0 in this example
+		int p = 0;
+		chip.setPadding(p, p, p, p);
+		chip.setText(title.substring(0, Math.min(title.length(), 15)) + postString);
+		chip.setCloseIconVisible(true);
+		chip.setTag(index);
+		chip.setFocusable(true);
+
+		// Set the background color of the chip
+		ColorStateList bgColor = ColorStateList.valueOf(Properties.appProp.urlBarColor);
+		chip.setChipBackgroundColor(bgColor);
+
+		// Set the text color of the chip
+		chip.setTextColor(Properties.appProp.primaryIntColor);
+
+		chip.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				int position = (int) v.getTag();
+				Log.d("MainActivity", "Switching to tab: " + position);
+				switchToTab(position);
+			}
+		});
+
+		chip.setOnCloseIconClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				int position = (int) v.getTag();
+				Log.d("MainActivity", "Closing tab: " + position);
+				closeTab(position);
+			}
+		});
+
+		tabsChipGroup.addView(chip);
+	}
+
+
+
+
+
+
+	private void switchToTab(int position) {
+		((ViewGroup) webLayout.findViewById(R.id.webviewholder)).removeAllViews();
+		((ViewGroup) webLayout.findViewById(R.id.webviewholder)).addView(webWindows.get(position));
+		CustomWebView WV = webLayout.findViewById(R.id.browser_page);
+		WV.setUrlBarText(WV.getUrl());
+	}
+
+
+
+
+
 }

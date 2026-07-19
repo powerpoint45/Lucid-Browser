@@ -17,6 +17,10 @@ public class Properties extends MainActivity {
 		static boolean TransparentStatus;
 		static boolean systemPersistent;
 		public static boolean darkTheme;
+
+		public static boolean useQuickTabs;
+
+		public static boolean historyPaused = false;
 	}
 	public static class sidebarProp{
 		static int SidebarIconSize;
@@ -43,7 +47,7 @@ public class Properties extends MainActivity {
 		public static String assetHomePage = "file:///android_asset/ehome.html";
 	}
 
-	
+
 	public static void update_preferences(MainActivity context){
 		webpageProp.showBackdrop=MainActivity.globalPrefs.getBoolean("showbrowserbackdrop",true);
 		webpageProp.useDesktopView=MainActivity.globalPrefs.getBoolean("usedesktopview",false);
@@ -60,14 +64,7 @@ public class Properties extends MainActivity {
 
 		if (webpageProp.engine.equals("ec")) {
 			webpageProp.assetHomePage = "file:///android_asset/ehome.html";
-			//I need to check if I can use my custom ecosia URL
-			if (!webpageProp.engine.equals("https://www.ecosia.org/search?tt=lucid&q=")) {
-				if (context.globalPrefs.getBoolean("useCustomEcosia",true))
-					webpageProp.engine = "https://www.ecosia.org/search?tt=lucid&q=";
-				else
-					webpageProp.engine = "https://www.ecosia.org/search?q=";
-				new GEOIPParser(context).new setEcosiaURL().start();
-			}
+			webpageProp.engine = "https://www.ecosia.org/search?tt=lucid&q=";
 		}else if (webpageProp.engine.equals("g")) {
 			webpageProp.assetHomePage = "file:///android_asset/home.html";
 			webpageProp.engine = "https://www.google.com/search?q=";
@@ -105,26 +102,28 @@ public class Properties extends MainActivity {
 		appProp.TransparentStatus=MainActivity.globalPrefs.getBoolean("transparentstatus"    ,true);
 		appProp.systemPersistent=MainActivity.globalPrefs.getBoolean ("systempersistent"     ,false);
 		appProp.darkTheme =MainActivity.globalPrefs.getBoolean         ("holodark"             ,false);
-		appProp.primaryIntColor=MainActivity.globalPrefs.getInt      ("textcolor",Color.BLACK);
-		appProp.actionBarColor=MainActivity.globalPrefs.getInt       ("actionbarcolor", context.getResources().getColor(R.color.urlback));
+		appProp.actionBarColor = globalPrefs.getInt("actionbarcolor", context.getResources().getColor(R.color.def_url_ab_bg));
+		appProp.primaryIntColor = globalPrefs.getInt("textcolor", context.getResources().getColor(R.color.def_url_txt));
 		appProp.urlBarColor=MainActivity.globalPrefs.getInt          ("urlbarcolor", context.getResources().getColor(R.color.urlfront));
-		
+		appProp.useQuickTabs = globalPrefs.getBoolean("enablequicktabs", true);
+		appProp.historyPaused = globalPrefs.getBoolean("history_paused", false);
+
 		sidebarProp.SidebarIconSize=numtodp(MainActivity.globalPrefs.getInt    ("sidebariconsize"  ,80),context);
 		sidebarProp.SidebarIconPadding=numtodp(MainActivity.globalPrefs.getInt ("sidebariconpadding",10),context);
 		sidebarProp.theme=MainActivity.globalPrefs.getString                   ("sidebartheme", "w");
 		sidebarProp.sideBarColor=MainActivity.globalPrefs.getInt               ("sidebarcolor"    , Color.BLACK);
-        sidebarProp.sideBarTextColor=MainActivity.globalPrefs.getInt           ("sidebartextcolor", Color.WHITE);
+		sidebarProp.sideBarTextColor=MainActivity.globalPrefs.getInt           ("sidebartextcolor", Color.WHITE);
 		sidebarProp.showLabel=MainActivity.globalPrefs.getBoolean              ("showfavoriteslabels", true);
 		sidebarProp.swapLayout     =MainActivity.globalPrefs.getBoolean        ("swapLayout"          ,false);
 		if (sidebarProp.showLabel)
 			sidebarProp.SidebarSize=numtodp(250,context);
 		else
-			sidebarProp.SidebarSize= sidebarProp.SidebarIconSize;
-		
+			sidebarProp.SidebarSize=sidebarProp.SidebarIconSize;
+
 		float alpha= (sidebarProp.sideBarColor >> 24) & 0xFF;
-		
+
 		if (alpha>254f){
-			sidebarProp.sideBarColor = SetupLayouts.addTransparencyToColor(254, sidebarProp.sideBarColor);
+			sidebarProp.sideBarColor = SetupLayouts.addTransparencyToColor(254,sidebarProp.sideBarColor);
 		}
 
 
@@ -137,7 +136,7 @@ public class Properties extends MainActivity {
 					Properties.appProp.TransparentStatus=false;
 				}
 	}
-	
+
 	public static int numtodp(int in, Context context){
 		int out =(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, in, context.getResources().getDisplayMetrics());
 		return out;
@@ -145,6 +144,6 @@ public class Properties extends MainActivity {
 
 
 
-	
+
 
 }

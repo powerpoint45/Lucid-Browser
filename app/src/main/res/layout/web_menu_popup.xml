@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/openinnewtab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,7 +13,7 @@
         android:onClick="webviewActionClicked"
         android:text="@string/openinnewtab"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/copyurl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
         android:onClick="webviewActionClicked"
         android:text="@string/copyurl" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/saveimage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

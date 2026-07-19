@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:background="?selectableItemBackground"
+    android:padding="5dp"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/history_url_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/history_title"
+        android:layout_toRightOf="@+id/history_icon"
+        android:background="@drawable/button"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center|left"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/history_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/history_icon"
+        android:background="@drawable/button"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center|left"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black" />
+
+    <com.github.curioustechizen.ago.RelativeTimeTextView
+        android:id="@+id/history_time"
+        android:layout_width="match_parent"
+        android:layout_toEndOf="@+id/history_icon"
+        android:layout_below="@id/history_url_title"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/history_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_public" />
+
+</RelativeLayout>

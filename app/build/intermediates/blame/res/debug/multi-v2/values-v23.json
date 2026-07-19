@@ -4,7 +4,17 @@
             "outputFile": "/home/michael/StudioProjects/LucidBrowser/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/home/michael/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b2e63e8beb01226ac46b06aa33f26c96/res/values-v23/values-v23.xml",
+                    "source": "/home/michael/.gradle/caches/transforms-1/files-1.1/jetified-work-runtime-2.7.0.aar/f54c12aaf39f8ca8cf61596c3ec071b6/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,121",
+                        "endColumns": "65,62",
+                        "endOffsets": "116,179"
+                    }
+                },
+                {
+                    "source": "/home/michael/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/55e94f468c8a7726ca04370b79da1105/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -12,6 +22,33 @@
                         "endLines": "2,3,4,5,18,31,32,33,34,35,36",
                         "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
                         "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,21,34,35,36,37,38",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "184,319,454,529,616,1406,2208,2335,2440,2555,2662",
+                        "endLines": "4,5,6,7,20,33,34,35,36,37,38",
+                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
+                        "endOffsets": "314,449,524,611,1401,2203,2330,2435,2550,2657,2770"
+                    }
+                },
+                {
+                    "source": "/home/michael/.gradle/caches/transforms-1/files-1.1/cardview-1.0.0.aar/3bf895a573be635112c3b53cd45ef810/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "39",
+                        "startColumns": "4",
+                        "startOffsets": "2775",
+                        "endLines": "41",
+                        "endColumns": "12",
+                        "endOffsets": "2920"
                     }
                 }
             ]

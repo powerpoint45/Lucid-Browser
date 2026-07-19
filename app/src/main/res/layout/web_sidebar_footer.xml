@@ -18,6 +18,19 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@android:color/white" />
 
+    <TextView
+        android:id="@+id/browser_open_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:onClick="browserActionClicked"
+        android:fontFamily="sans-serif-light"
+        android:padding="10dp"
+        android:text="@string/history"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
+
 
     <TextView
         android:id="@+id/browser_home"
@@ -71,19 +84,39 @@
         android:text="@string/set_home"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@android:color/white" />
-    
-    <TextView
-        android:id="@+id/browser_toggle_desktop"
+
+
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
-        android:clickable="true"
-        android:fontFamily="sans-serif-light"
-        android:onClick="browserActionClicked"
-        android:padding="10dp"
-        android:text="@string/toggle_desktop_mode"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@android:color/white" />
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/browser_toggle_desktop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:fontFamily="sans-serif-light"
+            android:onClick="browserActionClicked"
+            android:padding="10dp"
+            android:text="@string/toggle_desktop_mode"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/status_toggle_desktop_icon"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginStart="4dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/circle_green"/>
+
+    </FrameLayout>
 
     <TextView
         android:id="@+id/browser_settings"
@@ -97,7 +130,7 @@
         android:text="@string/menu_settings"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@android:color/white" />
-    
+
     <TextView
         android:id="@+id/browser_exit"
         android:layout_width="match_parent"
@@ -109,6 +142,6 @@
         android:padding="10dp"
         android:text="@string/exit"
         android:textAppearance="?android:attr/textAppearanceMedium"
-		android:textColor="@android:color/white"/>
+        android:textColor="@android:color/white"/>
 
 </LinearLayout>

@@ -9,22 +9,48 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.webkit.MimeTypeMap;
 import android.widget.Toast;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.ActivityOptionsCompat;
+
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import views.CustomWebView;
 
 public abstract class Tools {
+
+	public static String getTime(){
+		SimpleDateFormat sdf = new SimpleDateFormat ("yyyyMMddHHmmss", Locale.US);
+		Date today = Calendar.getInstance().getTime();
+		return sdf.format(today);
+	}
+
+	public static long getDateLong(String date){
+		SimpleDateFormat sdf = new SimpleDateFormat ("yyyyMMddHHmmss",Locale.US);
+		//sdf.setTimeZone(TimeZone.getTimeZone(Properties.SERVER_ZONE));
+		Date theDate = null;
+
+		try {
+			theDate = sdf.parse(date);
+			return theDate.getTime();
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
 
 	public static String fixURL(String q){
 		while (q.endsWith(" "))
@@ -259,62 +285,117 @@ public abstract class Tools {
       }
       return px / context.getResources().getDisplayMetrics().density;
   }
-  
-  public static int getStatusMargine(Context context){
-	  int margine =0;
+
+	public static int getStatusMargine(Context context){
+		int margine =0;
 		int id = context.getResources().getIdentifier("config_enableTranslucentDecor", "bool", "android");
 		if (Properties.appProp.transparentNav || Properties.appProp.TransparentStatus){
 			if (id != 0) {
-		        if (Properties.appProp.fullscreen && Properties.appProp.transparentNav){
-		        	//do nothing
-		        }else if (Properties.appProp.fullscreen){
-		        	margine=Properties.ActionbarSize;
-		        }else if (Properties.appProp.transparentNav){
-		        	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-		        		margine=Properties.ActionbarSize;
-		        	else
-		        		margine=Properties.ActionbarSize+Tools.getStatusBarHeight(context.getResources());
-		        }else{
-		        	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-		        		margine=Properties.ActionbarSize;
-		        	else
-		        		margine=Properties.ActionbarSize+Tools.getStatusBarHeight(context.getResources());
-		        }
+				if (Properties.appProp.fullscreen && Properties.appProp.transparentNav){
+					//do nothing
+				}else if (Properties.appProp.fullscreen){
+					margine=((MainActivity)context).toolbar.getHeight();
+				}else if (Properties.appProp.transparentNav){
+					if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+						margine=((MainActivity)context).toolbar.getHeight();
+					else
+						margine=((MainActivity)context).toolbar.getHeight()+Tools.getStatusBarHeight(context.getResources());
+				}else{
+					if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+						margine=((MainActivity)context).toolbar.getHeight();
+					else
+						margine=((MainActivity)context).toolbar.getHeight()+Tools.getStatusBarHeight(context.getResources());
+				}
 
-		        if (Properties.appProp.fullscreen){
-		        	margine=Properties.ActionbarSize;
-		        }
-		    }else
-		    	margine = Properties.ActionbarSize;
+				if (Properties.appProp.fullscreen){
+					margine=((MainActivity)context).toolbar.getHeight();;
+				}
+			}else
+				margine = ((MainActivity)context).toolbar.getHeight();;
 		}else
-			margine = Properties.ActionbarSize;
-		
+			margine = ((MainActivity)context).toolbar.getHeight();;
+
 		return margine;
 	}
-  
-  public static int getStatusSize(Context context){
-	  int margine =0;
-		int id = context.getResources().getIdentifier("config_enableTranslucentDecor", "bool", "android");
-		if (Properties.appProp.transparentNav || Properties.appProp.TransparentStatus)
-			if (id != 0) {
-		        if (Properties.appProp.fullscreen && Properties.appProp.transparentNav){
-		        	//do nothing
-		        }else if (Properties.appProp.fullscreen){
-		        	margine=0;
-		        }else if (Properties.appProp.transparentNav){
-		        	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-		        		margine=0;
-		        	else
-		        		margine=Tools.getStatusBarHeight(context.getResources());
-		        }else{
-		        	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-		        		margine=0;
-		        	else
-		        		margine=Tools.getStatusBarHeight(context.getResources());
-		        }
-		    }
-		return margine;
+
+
+	public static int getStatusSize(Activity activity) {
+		int result = 0;
+
+		// Check if the app has properties for transparency and fullscreen
+		boolean isTransparentNav = Properties.appProp.transparentNav;
+		boolean isTransparentStatus = Properties.appProp.TransparentStatus;
+		boolean isFullscreen = Properties.appProp.fullscreen;
+
+		// Check API level and apply different logic accordingly
+		if (Build.VERSION.SDK_INT > Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+			//Log.d("LL", "getStatusSize new");
+			// Newer Android versions
+			int resourceId = activity.getResources().getIdentifier("status_bar_height", "dimen", "android");
+			if (resourceId > 0) {
+				result = activity.getResources().getDimensionPixelSize(resourceId);
+			}
+		} else {
+			//Log.d("LL", "getStatusSize old");
+			// Android 11 and earlier
+			int id = activity.getResources().getIdentifier("config_enableTranslucentDecor", "bool", "android");
+			if (isTransparentNav || isTransparentStatus) {
+				if (id != 0) {
+					if (isFullscreen && isTransparentNav) {
+						// Do nothing, keep result as 0
+					} else if (isFullscreen) {
+						result = 0;
+					} else if (isTransparentNav) {
+						if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+							result = 0;
+						} else {
+							result = Tools.getStatusBarHeight(activity.getResources());
+						}
+					} else {
+						if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+							result = 0;
+						} else {
+							result = Tools.getStatusBarHeight(activity.getResources());
+						}
+					}
+				}
+			}
+		}
+
+		return result;
 	}
+
+	public static boolean hasPermissions(Context context, String... permissions) {
+		if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
+			for (String permission : permissions) {
+				if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+
+//  public static int getStatusSize(Context context){
+//	  int margine =0;
+//		int id = context.getResources().getIdentifier("config_enableTranslucentDecor", "bool", "android");
+//		if (Properties.appProp.transparentNav || Properties.appProp.TransparentStatus)
+//			if (id != 0) {
+//		        if (Properties.appProp.fullscreen && Properties.appProp.transparentNav){
+//		        	//do nothing
+//		        }else if (Properties.appProp.fullscreen){
+//		        	margine=0;
+//		        }else if (Properties.appProp.transparentNav){
+//
+//		        		margine=Tools.getStatusBarHeight(context.getResources());
+//		        }else{
+//
+//		        		margine=Tools.getStatusBarHeight(context.getResources());
+//		        }
+//		    }
+//		return margine;
+//	}
   
   public static int getActionBarSize(Context context){
 //	  int actionBarHeight = LayoutParams.MATCH_PARENT;//fallback size

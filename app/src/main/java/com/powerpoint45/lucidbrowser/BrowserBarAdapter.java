@@ -10,17 +10,13 @@ import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.StatusLine;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.net.URLEncoder;
 import java.util.List;
 import java.util.Locale;
@@ -81,17 +77,15 @@ public class BrowserBarAdapter extends ArrayAdapter<Suggestion> {
 
     Filter nameFilter = new Filter() {
 
-        @Override
-        protected FilterResults performFiltering(CharSequence constraint) {
-            if(constraint != null) {
-                
-
-                String responseString = null;
-                suggestions.clear();
-    	    	if (!constraint.toString().equals(getContext().getResources().getString(R.string.urlbardefault))){
+		@Override
+		protected FilterResults performFiltering(CharSequence constraint) {
+			if (constraint != null) {
+				String responseString = null;
+				suggestions.clear();
+				if (!constraint.toString().equals(getContext().getResources().getString(R.string.urlbardefault))) {
 
 					//add results from bookmarks_activity if constraint size is over 1
-					if (constraint.length()>1) {
+					if (constraint.length() > 1) {
 						if (BookmarksActivity.bookmarksMgr != null) {
 							for (Bookmark b : BookmarksActivity.bookmarksMgr.root.getAllBookMarks()) {
 								if (b.getDisplayName().toLowerCase().contains(constraint.toString().toLowerCase())
@@ -104,53 +98,57 @@ public class BrowserBarAdapter extends ArrayAdapter<Suggestion> {
 					}
 
 
-    		    	HttpClient httpclient = new DefaultHttpClient();
-    		        HttpResponse response;
-    		        try {
-    		        	String url = String.format("https://www.google.com/complete/search?hl=%s&client=firefox&q=%s",
-    		        			Locale.getDefault().getCountry(),
-    		        			URLEncoder.encode(constraint.toString(), "utf-8"));
-    		        	
-    		            response = httpclient.execute(new HttpGet(url));
-    		            StatusLine statusLine = response.getStatusLine();
-    		            if(statusLine.getStatusCode() == HttpStatus.SC_OK){
-    		                responseString = EntityUtils.toString(response.getEntity(), "UTF-8");
-    		            } else{
-    		                //Closes the connection.
-    		                response.getEntity().getContent().close();
-    		                throw new IOException(statusLine.getReasonPhrase());
-    		            }
-    		        } catch (ClientProtocolException e) {
-    		            //TODO Handle problems..
-    		        } catch (IOException e) {
-    		            //TODO Handle problems..
-    		        }
-    	    	}
-    	    	
-    	    	if (responseString!=null){
-    	    		
-    	    		try{
-	    	    	JSONArray jArray = new JSONArray(responseString).getJSONArray(1);
-		        	
-		        	
-		        	for (int i=0; i< jArray.length(); i++){
-		        		suggestions.add(new Suggestion(jArray.getString(i),null));
-		        	}
-	    	    	
-	    	    	
-		        	FilterResults filterResults = new FilterResults();
-	                filterResults.values = suggestions;
-	                filterResults.count = suggestions.size();
-	                return filterResults;
-    	    		}catch(Exception e){
-    	    			return null;
-    	    		}
-    	    	}else
-    	    		return null;
-            } else {
-                return null;
-            }
-        }
+					URL obj = null;
+					HttpURLConnection con = null;
+					try {
+						String url = String.format("https://www.google.com/complete/search?hl=%s&client=firefox&q=%s",
+								Locale.getDefault().getCountry(),
+								URLEncoder.encode(constraint.toString(), "utf-8"));
+						obj = new URL(url);
+						con = (HttpURLConnection) obj.openConnection();
+
+
+						int responseCode = con.getResponseCode();
+
+						if (responseCode == HttpURLConnection.HTTP_OK) { //success
+							BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+							String inputLine;
+							StringBuffer response = new StringBuffer();
+
+							while ((inputLine = in.readLine()) != null) {
+								response.append(inputLine);
+							}
+							in.close();
+							responseString = response.toString();
+						}
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+
+					if (responseString != null) {
+						try {
+							JSONArray jArray = new JSONArray(responseString).getJSONArray(1);
+
+							for (int i = 0; i < jArray.length(); i++) {
+								suggestions.add(new Suggestion(jArray.getString(i), null));
+							}
+
+							FilterResults filterResults = new FilterResults();
+							filterResults.values = suggestions;
+							filterResults.count = suggestions.size();
+							return filterResults;
+						} catch (Exception e) {
+							return null;
+						}
+					} else
+						return null;
+				} else {
+					return null;
+				}
+			}
+			return null;
+		}
+
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
         	if (results!=null){

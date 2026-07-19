@@ -38,6 +38,13 @@ public class BrowserImageAdapter extends BaseAdapter{
 		return 0;
 	}
 
+
+
+	public void notifyDataSetChanged() {
+		super.notifyDataSetChanged();
+		activity.refreshTabs();
+	}
+
 	
 	static class ViewHolder {
 		  TextView tabStatus;

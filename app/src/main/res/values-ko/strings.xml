@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="sslIdMismatchMessage" formatted="false">웹페이지\n\n%1s\n\n에는 유효한 SSL 인증서가 %2s에만 유효합니다.</string>
+<string name="sslExpiredMessage" formatted="false">웹페이지\n\n%1s\n\n에는 만료된 SSL 인증서가 있습니다. 만료일은 %2s입니다.</string>
+<string name="sslNotYetValidMessage" formatted="false">웹페이지\n\n%1s\n\n에는 아직 유효하지 않은 SSL 인증서가 있습니다. 유효 시작일은 %2s입니다.</string>
+<string name="sslUntrustedMessage" formatted="false">웹페이지\n\n%s\n\n에는 자체 서명된 SSL 인증서가 있습니다.</string>
+
+    <string name="sidebar_dark">다크</string>
+<string name="sidebar_light">라이트</string>
+    <string name="menu_settings">설정</string>
+<string name="wallpaper_instructions">동작 선택</string>
+<string name="search">검색</string>
+    <string name="bookmarks">북마크</string>
+    <string name="home">홈</string>
+<string name="set_home">홈페이지로 설정</string>
+<string name="share">공유</string>
+    <string name="saveimage">이미지 저장</string>
+<string name="openinnewtab">새 탭에서 열기</string>
+<string name="mainsettingstitle">주요 설정</string>
+<string name="sidebarsettingstitle">사이드바 설정</string>
+    <string name="advancedsettingstitle">고급 설정</string>
+<string name="websettingstitle">브라우저 설정</string>
+    <string name="fullscreentitle">전체 화면</string>
+<string name="fullscreensummary">상태 바 표시 또는 숨기기</string>
+<string name="transparentnavtitle">투명 내비게이션 바</string>
+<string name="transparentnavsummary">내비게이션 바 투명 또는 불투명 설정</string>
+<string name="transparentstatustitle">투명 상태 바</string>
+<string name="transparentstatussummary">상태 바 투명 또는 불투명 설정</string>
+    <string name="sidebarthemetitle">사이드바 테마</string>
+<string name="sidebarthemesummary">사이드바 테마 설정</string>
+    <string name="resettitle">기본 설정으로 복원</string>
+<string name="resetsummary">모든 설정을 기본값으로 복원</string>
+    <string name="showbackgroundonurlbartitle">URL 바에 백그라운드 표시</string>
+<string name="showbackgroundonurlbarsummary">URL 바에 백그라운드 추가</string>
+    <string name="clearhistorytitle">히스토리 지우기</string>
+<string name="clearcachetitle">캐시 지우기</string>
+<string name="clearcookiestitle">쿠키 지우기</string>
+    <string name="complete">작업 완료</string>
+<string name="failed">작업 실패</string>
+    <string name="savedimage">이미지 저장됨:</string>
+    <string name="cat_title_appearance">외관</string>
+    <string name="cat_title_tools">도구</string>
+    <string name="cat_title_setup">설정</string>
+    <string name="urlbarcolortitle">URL 바 색상</string>
+<string name="urlbarcolorsummary">URL 바의 배경색 설정</string>
+<string name="clearonexittitle">종료 시 브라우저 추적 지우기</string>
+<string name="clearonexitsummary">브라우저 종료 시 히스토리, 캐시 및 쿠키 지우기</string>
+    <string name="sidebar_custom">사용자 정의</string>
+<string name="sidebarcolortitle">사이드바 색상</string>
+<string name="sidebarcolorsummary">사이드바 색상 설정</string>
+<string name="sidebartextcolortitle">사이드바 텍스트 색상</string>
+<string name="sidebartextcolorsummary">사이드바 텍스트 색상 설정</string>
+<string name="desktopviewtitle">데스크톱 보기 활성화</string>
+<string name="desktopviewsummary">웹 페이지를 데스크톱 브라우저처럼 표시</string>
+    <string name="cat_title_content">컨텐츠</string>
+<string name="enablecookies">쿠키 허용</string>
+    <string name="enableimages">이미지 로드</string>
+    <string name="urlbardefault">검색 또는 주소 입력</string>
+<string name="font_size_title">글꼴 크기</string>
+<string name="font_size_summary">텍스트 글꼴 크기 설정</string>
+<string name="sidebar_switched_title">사이드바 위치 전환</string>
+<string name="sidebar_switched_summary">사이드바가 화면의 반대쪽으로 전환됩니다.</string>
+<string name="exit">종료</string>
+    <string name="copyurl">링크 복사</string>
+    <string name="remove">제거</string>
+    <string name="sslUntrustedTitle">SSL 인증서가 신뢰할 수 없음</string>
+<string name="sslIdMismatchTitle">SSL 인증서가 이 웹페이지에 대해 유효하지 않음</string>
+<string name="sslExpiredTitle">SSL 인증서가 만료됨</string>
+<string name="sslNotYetValidTitle">SSL 인증서가 아직 유효하지 않음</string>
+<string name="sslWebsiteWarning">웹 페이지는 인증서를 확인할 수 없기 때문에 위험할 수 있습니다. 주의하여 진행하십시오.</string>
+<string name="sslProceedQuestion">이 인증서를 수락하시겠습니까?</string>
+    <string name="close_tabs_on_exit_title">종료 시 탭 닫기</string>
+<string name="close_tabs_on_exit_summary">브라우저를 종료하면 모든 탭이 닫힙니다.</string>
+<string name="edit">편집</string>
+<string name="edit_bookmark">북마크 편집</string>
+<string name="toggle_desktop_mode">데스크톱 모드 전환</string>
+<string name="find_in_page">페이지에서 찾기</string>
+<string name="confirm_exit_text">정말 종료하시겠습니까?</string>
+    <string name="exit_confirmation_title">종료 확인</string>
+<string name="exit_confirmation_summary">종료 확인을 활성화하려면 선택하십시오.</string>
+    <string name="holoDarkTitle">어두운 테마 사용</string>
+<string name="holoDarkSummary">설정 및 즐겨찾기에 어두운 테마 사용 (테마를 적용하려면 설정을 재시작합니다)</string>
+    <string name="remove_browsing_traces">브라우저 트레이스 제거...</string>
+<string name="disable_suggestions_title">검색 제안 비활성화</string>
+    <string name="add_bookmark_folder">새 폴더 추가</string>
+<string name="add_bookmark_folder_hint">새 폴더 이름 입력...</string>
+<string name="edit_bookmark_folder">북마크 폴더 편집</string>
+<string name="remove_bookmark_folder_confirm">이 폴더를 정말로 삭제하시겠습니까? 그 내용도 함께 삭제됩니다.</string>
+<string name="bookmark_move">이동</string>
+<string name="move_here">여기로 이동</string>
+    <string name="step_browser_sidebar_title">브라우저 사이드바</string>
+<string name="step_browser_sidebar_summary">화면 가장자리에서 스와이프하여 브라우저 사이드바에 액세스하세요.</string>
+
+    <string name="search_engine">검색 엔진</string>
+    <string name="download_started">다운로드 시작됨</string>
+<string name="choose_upload">업로드할 파일 선택</string>
+    <string name="backup_title">백업 제목 입력</string>
+    <string name="history">기록</string>
+
+    <!--Added 11-22-16-->
+<string name="no_bookmarks">북마크를 찾을 수 없습니다</string>
+<string name="export_bookmarks">북마크 내보내기</string>
+<string name="import_bookmarks">북마크 가져오기</string>
+<string name="import_bookmarks_external">외부 브라우저에서 북마크 가져오기</string>
+<string name="bookmark_settings">북마크 설정</string>
+<string name="delete_bookmarks">모든 북마크 삭제</string>
+
+<!--Added 12-12-16-->
+
+    <!--Added 1-21-17-->
+    <string name="export_bookmarks_summary">북마크를 파일로 내보내기</string>
+<string name="import_bookmarks_summary">파일에서 북마크 가져오기</string>
+
+<!--Added 2-10-17-->
+    <!--Added 8-9-17-->
+
+    <!--Added 9-8-17-->
+
+    <!--Added 9-23-17-->
+
+    <!--Added 10-5-17-->
+
+
+    <!-- 8-13-18 Any mention of ActionBar has been changed to Search Bar -->
+<string name="actionbarcolortitle">검색 바 색상</string>
+<string name="actionbarcolorsummary">검색 바의 색상 설정</string>
+<string name="actionbar_item_color_title">검색 바 항목 색상</string>
+<string name="actionbar_item_color_summary">검색 바 항목의 색상 설정</string>
+
+    <!--Added 8-13-18-->
+    <string name="searchbar_settings">검색 바 설정</string>
+
+    <!--Added 11-27-18-->
+
+    <!--No longer used-->
+
+    <!-- 3-12-22 -->
+
+    <!-- 9-04-22 -->
+
+    <!--11-02-22 -->
+
+    <!--03-14-23 -->
+    <string name="adblock_hosts_file_loaded">광고 차단 호스트 파일이 업데이트되었습니다!</string>
+    <string name="adblock_hosts_file_failed_to_load">광고 차단 호스트 로딩 오류</string>
+    <string name="toggle_adblock">광고 차단 토글</string>
+    <string name="adblock_settings">광고 차단 설정</string>
+    <string name="update_hosts">광고 차단 호스트 업데이트</string>
+    <string name="update_hosts_summary">최신 광고 차단 호스트 파일 가져오기</string>
+    <string name="auto_update_hosts">광고 차단 호스트 파일 자동 업데이트</string>
+    <string name="enable_ad_blocking">광고 차단 활성화</string>
+    <string name="auto_update_hosts_summary">24시간마다 호스트 파일 업데이트</string>
+    <string name="hosts_attribution">광고 차단 호스트 파일은 AdAway에서 제공합니다 (github.com/AdAway/)</string>
+    <string name="enable_tabs_summary">화면 하단에서 탭을 빠르게 전환</string>
+    <string name="use_quick_tabs">빠른 탭 사용</string>
+
+</resources>
+
+

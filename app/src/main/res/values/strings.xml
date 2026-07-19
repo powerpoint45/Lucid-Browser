@@ -478,4 +478,26 @@
     <string name="join_google">Join us on Google Groups</string>
 
     <string name="upgrade_menu_item">Upgrade</string>
+
+
+    <string name="pause_history">Pause History</string>
+    <string name="resume_history">Resume History</string>
+    <string name="history_paused">History Paused</string>
+    <string name="history_active">History Active</string>
+
+
+    <!--Added 2-25-24-->
+    <string name="adblock_hosts_file_loaded">Ad blocking hosts file updated!</string>
+    <string name="adblock_hosts_file_failed_to_load">Error loading Ad Blocking Hosts</string>
+    <string name="toggle_adblock">Toggle Ad Blocking</string>
+    <string name="adblock_settings">Ad Blocking Settings</string>
+    <string name="update_hosts">Update Ad Blocking Hosts</string>
+    <string name="update_hosts_summary">Get the latest adblocking hosts file</string>
+    <string name="auto_update_hosts">Auto Update Ad Blocking Hosts File</string>
+    <string name="enable_ad_blocking">Activate Ad Blocking</string>
+    <string name="auto_update_hosts_summary">Update hosts file every 24 hours</string>
+
+    <string name="hosts_attribution">Ad blocking hosts file provided by AdAway (github.com/AdAway/)</string>
+    <string name="enable_tabs_summary">Switch between tabs quickly from the bottom of screen</string>
+    <string name="use_quick_tabs">Use Quick Tabs</string>
 </resources>

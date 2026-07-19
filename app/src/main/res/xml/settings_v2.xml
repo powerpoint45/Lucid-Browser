@@ -5,6 +5,7 @@
         android:key="mainsettings"
         android:title="@string/mainsettingstitle"
         android:icon="@drawable/ic_settings">
+
         <PreferenceCategory
             android:key="mainsettings_appearance"
             android:title="@string/cat_title_appearance" >
@@ -28,6 +29,11 @@
                 android:key="holodark"
                 android:summary="@string/holoDarkSummary"
                 android:title="@string/holoDarkTitle" />
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="enablequicktabs"
+                android:summary="@string/enable_tabs_summary"
+                android:title="@string/use_quick_tabs" />
         </PreferenceCategory>
         <PreferenceCategory android:title="@string/cat_title_tools" >
             <CheckBoxPreference
@@ -122,12 +128,13 @@
             android:title="@string/cat_title_appearance" >
 
             <preferences.ColorPickerPreference
-                android:defaultValue="@color/urlback"
+                android:defaultValue="@color/def_url_ab_bg"
                 android:key="actionbarcolor"
                 android:summary="@string/actionbarcolortitle"
                 android:title="@string/actionbarcolorsummary" />
+
             <preferences.ColorPickerPreference
-                android:defaultValue="@android:color/black"
+                android:defaultValue="@color/def_url_txt"
                 android:key="textcolor"
                 android:summary="@string/actionbar_item_color_summary"
                 android:title="@string/actionbar_item_color_title" />

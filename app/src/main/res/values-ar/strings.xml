@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>  
+    <string name="sslIdMismatchMessage" formatted="false">الصفحة الإلكترونية على\n\n%1s\n\nتحتوي على شهادة SSL غير صالحة فقط لـ %2s.</string>
+    <string name="sslExpiredMessage" formatted="false">الصفحة الإلكترونية على\n\n%1s\n\nتحتوي على شهادة SSL منتهية. انتهت بعد %2s.</string>
+    <string name="sslNotYetValidMessage" formatted="false">الصفحة الإلكترونية على\n\n%1s\n\nتحتوي على شهادة SSL غير صالحة حتى الآن. ستكون صالحة اعتبارًا من %2s.</string>
+    <string name="sslUntrustedMessage" formatted="false">الصفحة الإلكترونية على\n\n%s\n\nتحتوي على شهادة SSL موقعة ذاتيًا.</string>
+
+    <string name="sidebar_dark">داكن</string>
+    <string name="sidebar_light">فاتح</string>
+    <string name="menu_settings">الإعدادات</string>
+    <string name="wallpaper_instructions">حدد الإجراء</string>
+    <string name="search">بحث</string>
+    <string name="bookmarks">المرجعية</string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="set_home">تعيين كصفحة رئيسية</string>
+    <string name="share">مشاركة</string>
+    <string name="saveimage">حفظ الصورة</string>
+    <string name="openinnewtab">فتح في علامة تبويب جديدة</string>
+    <string name="mainsettingstitle">الإعدادات الرئيسية</string>
+    <string name="sidebarsettingstitle">إعدادات الشريط الجانبي</string>
+    <string name="advancedsettingstitle">الإعدادات المتقدمة</string>
+    <string name="websettingstitle">إعدادات المتصفح</string>
+
+    <string name="fullscreentitle">وضع كامل الشاشة</string>
+    <string name="fullscreensummary">إظهار أو إخفاء شريط الحالة</string>
+    <string name="transparentnavtitle">شريط التنقل شفاف</string>
+    <string name="transparentnavsummary">تمكين أو تعطيل شريط التنقل الشفاف</string>
+    <string name="transparentstatustitle">شريط الحالة شفاف</string>
+    <string name="transparentstatussummary">تمكين أو تعطيل شريط الحالة الشفاف</string>
+    <string name="sidebarthemetitle">سمة الشريط الجانبي</string>
+    <string name="sidebarthemesummary">تعيين سمة الشريط الجانبي</string>
+    <string name="resettitle">استعادة الإعدادات إلى الوضع الافتراضي</string>
+    <string name="resetsummary">إعادة تعيين جميع الإعدادات إلى قيمها الافتراضية</string>
+    <string name="showbackgroundonurlbartitle">إظهار الخلفية على شريط عنوان URL</string>
+    <string name="showbackgroundonurlbarsummary">إضافة خلفية إلى شريط عنوان URL</string>
+    <string name="clearhistorytitle">مسح التاريخ</string>
+    <string name="clearcachetitle">مسح ذاكرة التخزين المؤقت</string>
+    <string name="clearcookiestitle">مسح ملفات الارتباط</string>
+    <string name="complete">تم الإنجاز</string>
+    <string name="failed">فشل الإجراء</string>
+    <string name="savedimage">تم حفظ الصورة إلى</string>
+    <string name="cat_title_appearance">المظهر</string>
+    <string name="cat_title_tools">الأدوات</string>
+    <string name="cat_title_setup">الإعداد</string>
+    <string name="urlbarcolortitle">لون شريط عنوان URL</string>
+    <string name="urlbarcolorsummary">تعيين لون خلفية شريط عنوان URL</string>
+    <string name="clearonexittitle">مسح آثار التصفح عند الخروج</string>
+    <string name="clearonexitsummary">عند الخروج من المتصفح، ستتم مسح التاريخ وذاكرة التخزين المؤقت وملفات الارتباط</string>
+    <string name="sidebar_custom">مخصص</string>
+    <string name="sidebarcolortitle">لون الشريط الجانبي</string>
+    <string name="sidebarcolorsummary">تعيين لون الشريط الجانبي</string>
+    <string name="sidebartextcolortitle">لون نص الشريط الجانبي</string>
+    <string name="sidebartextcolorsummary">تعيين لون نص الشريط الجانبي</string>
+    <string name="desktopviewtitle">تمكين عرض سطح المكتب</string>
+    <string name="desktopviewsummary">عرض صفحات الويب مثل متصفح الحاسوب</string>
+    <string name="cat_title_content">المحتوى</string>
+    <string name="enablecookies">السماح بملفات الارتباط</string>
+    <string name="enableimages">تحميل الصور</string>
+    <string name="urlbardefault">أدخل عنوان البحث أو العنوان</string>
+    <string name="font_size_title">حجم الخط</string>
+    <string name="font_size_summary">تعيين حجم النص</string>
+    <string name="sidebar_switched_title">تبديل موقع الشريط الجانبي</string>
+    <string name="sidebar_switched_summary">سيتم تبديل الشرائط الجانبية على جوانب الشاشة</string>
+    <string name="exit">الخروج</string>
+    <string name="copyurl">نسخ الرابط</string>
+    <string name="remove">إزالة</string>
+    <string name="sslUntrustedTitle">شهادة SSL غير موثوق بها</string>
+    <string name="sslIdMismatchTitle">شهادة SSL غير صالحة لهذه الصفحة الإلكترونية</string>
+    
+    <string name="sslExpiredTitle">شهادة SSL منتهية</string>
+
+    <string name="sslNotYetValidTitle">شهادة SSL غير صالحة حتى الآن</string>
+    
+    <string name="sslWebsiteWarning">ربما تكون الصفحة الإلكترونية غير آمنة حيث لا يمكن التحقق من صحة الشهادة. يرجى المتابعة بحذر.</string>
+    <string name="sslProceedQuestion">هل ترغب في قبول هذه الشهادة؟</string>
+    <string name="close_tabs_on_exit_title">إغلاق التبويبات عند الخروج</string>
+    <string name="close_tabs_on_exit_summary">عند الخروج من المتصفح، سيتم إغلاق جميع التبويبات</string>
+    <string name="edit">تعديل</string>
+    <string name="edit_bookmark">تعديل الإشارة المرجعية</string>
+    <string name="toggle_desktop_mode">تبديل وضع سطح المكتب</string>
+    <string name="find_in_page">البحث في الصفحة</string>
+    <string name="confirm_exit_text">هل أنت متأكد أنك تريد الخروج؟</string>
+    <string name="exit_confirmation_title">تأكيد الخروج</string>
+    <string name="exit_confirmation_summary">قم بالتحقق لتمكين تأكيد الخروج</string>
+    <string name="holoDarkTitle">استخدام السمة الداكنة</string>
+    <string name="holoDarkSummary">قم بالتحقق لاستخدام سمة داكنة في الإعدادات والمرجعيات (سيتم إعادة تشغيل الإعدادات لتطبيق السمة)</string>
+    <string name="remove_browsing_traces">إزالة آثار التصفح...</string>
+    <string name="disable_suggestions_title">تعطيل اقتراحات البحث</string>
+    <string name="add_bookmark_folder">إضافة مجلد جديد</string>
+    <string name="add_bookmark_folder_hint">أدخل اسم المجلد الجديد...</string>
+    <string name="edit_bookmark_folder">تعديل مجلد الإشارات المرجعية</string>
+    <string name="remove_bookmark_folder_confirm">هل ترغب حقًا في إزالة هذا المجلد؟ سيتم حذف محتواه أيضًا.</string>
+    <string name="bookmark_move">نقل</string>
+    <string name="move_here">نقل هنا</string>
+    <string name="step_browser_sidebar_title">شريط جانبي للمتصفح</string>
+    <string name="step_browser_sidebar_summary">الوصول إلى شريط الجانبي للمتصفح عن طريق السحب من حافة الشاشة</string>
+
+    <string name="search_engine">محرك البحث</string>
+    <string name="download_started">بدأ التنزيل</string>
+    <string name="choose_upload">اختر ملفًا للتحميل</string>
+    <string name="backup_title">أدخل عنوان النسخ الاحتياطي</string>
+    <string name="history">التاريخ</string>
+
+    <!--Added 11-22-16-->
+    <string name="no_bookmarks">لم يتم العثور على مرجعيات</string>
+    <string name="export_bookmarks">تصدير المرجعيات</string>
+    <string name="import_bookmarks">استيراد المرجعيات</string>
+    <string name="import_bookmarks_external">استيراد المرجعيات من المتصفحات الخارجية</string>
+    <string name="bookmark_settings">إعدادات المرجعيات</string>
+    <string name="delete_bookmarks">حذف جميع المرجعيات</string>
+
+    <!--Added 1-21-17-->
+    <string name="export_bookmarks_summary">تصدير المرجعيات إلى ملف</string>
+    <string name="import_bookmarks_summary">استيراد المرجعيات من ملف</string>
+
+    <!-- 8-13-18 تم تغيير أي إشارة إلى ActionBar إلى Search Bar -->
+    <string name="actionbarcolortitle">لون شريط البحث</string>
+    <string name="actionbarcolorsummary">تعيين لون شريط البحث</string>
+    <string name="actionbar_item_color_title">لون عنصر شريط البحث</string>
+    <string name="actionbar_item_color_summary">تعيين لون العناصر في شريط البحث</string>
+
+    <!--Added 8-13-18-->
+    <string name="searchbar_settings">إعدادات شريط البحث</string>
+    <string name="pause_history">إيقاف تاريخ التصفح</string>
+    <string name="resume_history">استئناف تاريخ التصفح</string>
+    <string name="history_paused">تم إيقاف تاريخ التصفح</string>
+    <string name="history_active">تاريخ التصفح نشط</string>
+
+    <string name="adblock_hosts_file_loaded">تم تحديث ملف مضيفي حظر الإعلانات!</string>
+    <string name="adblock_hosts_file_failed_to_load">خطأ في تحميل مضيفي حظر الإعلانات</string>
+    <string name="toggle_adblock">تبديل حظر الإعلانات</string>
+    <string name="adblock_settings">إعدادات حظر الإعلانات</string>
+    <string name="update_hosts">تحديث مضيفي حظر الإعلانات</string>
+    <string name="update_hosts_summary">احصل على أحدث ملف لمضيفي حظر الإعلانات</string>
+    <string name="auto_update_hosts">تحديث تلقائي لملف مضيفي حظر الإعلانات</string>
+    <string name="enable_ad_blocking">تفعيل حظر الإعلانات</string>
+    <string name="auto_update_hosts_summary">تحديث الملف كل 24 ساعة</string>
+    <string name="hosts_attribution">ملف مضيفي حظر الإعلانات مقدم من AdAway (github.com/AdAway/)</string>
+    <string name="enable_tabs_summary">التبديل بين علامات التبويب بسرعة من أسفل الشاشة</string>
+    <string name="use_quick_tabs">استخدام علامات التبويب السريعة</string>
+
+</resources>
+

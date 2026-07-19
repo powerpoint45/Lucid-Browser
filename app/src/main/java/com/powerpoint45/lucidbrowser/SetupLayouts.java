@@ -1,17 +1,13 @@
 package com.powerpoint45.lucidbrowser;
 
 import android.annotation.SuppressLint;
-import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.PorterDuff.Mode;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v4.widget.DrawerLayout.DrawerListener;
-import android.support.v7.widget.AppCompatAutoCompleteTextView;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -29,6 +25,13 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.drawerlayout.widget.DrawerLayout.DrawerListener;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import views.CustomWebView;
 
 @SuppressLint("Registered")
@@ -38,6 +41,8 @@ public class SetupLayouts extends MainActivity {
 	static final int ACTIONBAR_FIND      = 4;
 
 	public static void setuplayouts(final MainActivity activity) {
+
+		//Setup actionbar
 		activity.actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 		activity.barHolder.setClickable(true);
 		activity.barHolder.setFocusable(true);
@@ -46,11 +51,13 @@ public class SetupLayouts extends MainActivity {
 
 		setUpActionBar(ACTIONBAR_BROWSER, activity);
 		activity.actionBar.setCustomView(activity.barHolder
-				,new android.support.v7.app.ActionBar.LayoutParams(android.support.v7.app.ActionBar.LayoutParams.MATCH_PARENT
-				,android.support.v7.app.ActionBar.LayoutParams.MATCH_PARENT));
+				,new androidx.appcompat.app.ActionBar.LayoutParams(androidx.appcompat.app.ActionBar.LayoutParams.MATCH_PARENT
+						, androidx.appcompat.app.ActionBar.LayoutParams.MATCH_PARENT));
 
 		setBarColors(activity);
 
+
+		//setup url bar
 		AppCompatAutoCompleteTextView browserEditText = activity.browserBar.findViewById(R.id.browser_searchbar);
 
 		if (!Properties.webpageProp.disablesuggestions)
@@ -65,7 +72,7 @@ public class SetupLayouts extends MainActivity {
 		browserEditText.setHint(activity.getResources().getString(R.string.urlbardefault));
 		browserEditText.setHintTextColor(Properties.appProp.primaryIntColor);
 
-
+		//When keyboard action go pressed, perform search
 		browserEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
 			@Override
@@ -125,30 +132,31 @@ public class SetupLayouts extends MainActivity {
 		});
 
 
+		//setup sidebar
 		colorizeSidebar(activity);
 		activity.browserListView.setAdapter(activity.browserListViewAdapter);
 		activity.browserListView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int pos,long arg3) {
-				
+
 				if (activity.barHolder.findViewById(R.id.finder)!=null)
 					SetupLayouts.dismissFindBar(activity);
-				
+
 				MainActivity.imm.hideSoftInputFromInputMethod(activity.barHolder.findViewById(R.id.browser_searchbar).getWindowToken(), 0);
-				
+
 				ImageButton BookmarkButton = activity.barHolder.findViewById(R.id.browser_bookmark);
 				ImageButton refreshButton = activity.barHolder.findViewById(R.id.browser_refresh);
-				
+
 				if (activity.barHolder.findViewById(R.id.browser_searchbar) !=null)
 					activity.barHolder.findViewById(R.id.browser_searchbar).clearFocus();
-				
+
 				if (pos==activity.webWindows.size()){
 					activity.drawerLayout.closeDrawer(activity.browserListView);
 					activity.openNewTab();
 					if (activity.barHolder.findViewById(R.id.browser_searchbar) !=null)
 						((EditText) activity.barHolder.findViewById(R.id.browser_searchbar)).setText("");
-					
+
 				}
 				else{
 					activity.drawerLayout.closeDrawer(activity.browserListView);
@@ -164,22 +172,22 @@ public class SetupLayouts extends MainActivity {
 							activity.webLayout.findViewById(R.id.webpgbar).setVisibility(View.INVISIBLE);
 						}
 					}
-					
 
-		    		String bookmarkName = null;
-		    		
-		    		if (activity.webWindows.get(pos)!=null)
+
+					String bookmarkName = null;
+
+					if (activity.webWindows.get(pos)!=null)
 						if (activity.webWindows.get(pos).getUrl()!=null)
 							bookmarkName = BookmarksActivity.bookmarksMgr.root.containsBookmarkDeep(activity.webWindows.get(pos).getUrl());
-					
-		    		if (BookmarkButton!=null){
-		    			if (bookmarkName!=null)
-		    				BookmarkButton.setImageResource(R.drawable.btn_omnibox_bookmark_selected_normal);
-		    			else
-		    				BookmarkButton.setImageResource(R.drawable.btn_omnibox_bookmark_normal);
-		    		}
-					
-					
+
+					if (BookmarkButton!=null){
+						if (bookmarkName!=null)
+							BookmarkButton.setImageResource(R.drawable.btn_omnibox_bookmark_selected_normal);
+						else
+							BookmarkButton.setImageResource(R.drawable.btn_omnibox_bookmark_normal);
+					}
+
+					//set url bar initial text
 					if (activity.webWindows.get(pos).getUrl()!=null){
 						if (activity.webWindows.get(pos).getUrl().startsWith("file:///android_asset/")){
 							((EditText) activity.barHolder.findViewById(R.id.browser_searchbar)).setText("");
@@ -191,10 +199,12 @@ public class SetupLayouts extends MainActivity {
 					else
 						((EditText) activity.barHolder.findViewById(R.id.browser_searchbar)).setText("");
 				}
+				//refresh sidebar tabs
 				activity.browserListViewAdapter.notifyDataSetChanged();
 			}
-		   });
+		});
 
+		//setup drawer change state listener
 		activity.drawerLayout.setDrawerListener(new DrawerListener() {
 
 			@Override
@@ -208,11 +218,11 @@ public class SetupLayouts extends MainActivity {
 						activity.closeVideoViewIfOpen();
 					}
 				});
-				
+
 				if (state == DrawerLayout.STATE_IDLE && activity.drawerLayout.isDrawerOpen(activity.browserListView)){
 					activity.actionBarControls.clearFocuses();
 				}
-			    
+
 			}
 
 			@Override
@@ -230,10 +240,20 @@ public class SetupLayouts extends MainActivity {
 			}
 		});
 
+		//setup swipe refresh
+		((SwipeRefreshLayout)activity.findViewById(R.id.swipe_refresh)).setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+			@Override
+			public void onRefresh() {
+				if (activity.getFocussedWebView()!=null)
+					activity.getFocussedWebView().reload();
+				((SwipeRefreshLayout)activity.findViewById(R.id.swipe_refresh)).setRefreshing(false);
+			}
+		});
+
 	}
-	
-	
-	
+
+
+
 	static public int addTransparencyToColor(int alpha, int color) {
 		int[] colorARGB = new int[4];
 
@@ -262,7 +282,7 @@ public class SetupLayouts extends MainActivity {
 		if (forceLayout || actionBarType != actionBarNum) {
 			switch (actionBarType) {
 				case ACTIONBAR_BROWSER:
-					activity.barHolder = (RelativeLayout) activity.getLayoutInflater().inflate(R.layout.browser_bar, null);
+					activity.barHolder = (LinearLayout) activity.getLayoutInflater().inflate(R.layout.browser_bar, null);
 					activity.barHolder.removeAllViews();
 					activity.barHolder.addView(activity.browserBar,
 							new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
@@ -292,7 +312,7 @@ public class SetupLayouts extends MainActivity {
 		activity.barHolder.requestLayout();
 
 		if (Properties.webpageProp.showBackdrop){
-			((ImageView)activity.browserBar.findViewById(R.id.backdrop)).setColorFilter(Color.argb(255, Color.red(Properties.appProp.urlBarColor), Color.green(Properties.appProp.urlBarColor), Color.blue(Properties.appProp.urlBarColor)),Mode.SRC_ATOP);
+			((ImageView)activity.browserBar.findViewById(R.id.backdrop)).setColorFilter(Color.argb(255, Color.red(Properties.appProp.urlBarColor), Color.green(Properties.appProp.urlBarColor), Color.blue(Properties.appProp.urlBarColor)),PorterDuff.Mode.SRC_ATOP);
 			activity.browserBar.findViewById(R.id.backdrop).setAlpha(Color.alpha(Properties.appProp.urlBarColor)/255f);
 		}else{
 			activity.browserBar.findViewById(R.id.backdrop).setAlpha(0f);
@@ -300,7 +320,7 @@ public class SetupLayouts extends MainActivity {
 
 
 	}
-	
+
 	static public void setUpFindBar(MainActivity activity) {
 		activity.barHolder.removeAllViews();
 
@@ -327,7 +347,7 @@ public class SetupLayouts extends MainActivity {
 			// ShowBackdrop is inactive -> make backdrop invisible but show underlining
 			finderBackdrop.setColorFilter(Color.TRANSPARENT, Mode.CLEAR);
 			finderBar.findViewById(R.id.find_searchbar).getBackground()
-			.setColorFilter(Properties.appProp.primaryIntColor, Mode.SRC_ATOP);
+					.setColorFilter(Properties.appProp.primaryIntColor, Mode.SRC_ATOP);
 			finderBar.findViewById(R.id.find_searchbar).getBackground().setAlpha(255);
 
 
@@ -346,14 +366,14 @@ public class SetupLayouts extends MainActivity {
 		((EditText) finderBar.findViewById(R.id.find_searchbar))
 				.setTextColor(Properties.appProp.primaryIntColor);
 
-		activity.barHolder.addView(finderBar, new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+		activity.barHolder.addView(finderBar, new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, Properties.numtodp(50,activity)));
 	}
 
 	static public void dismissFindBar(MainActivity activity){
 		activity.actionBarControls.lock(false);
 		if (activity.barHolder.findViewById(R.id.find_searchbar)!=null)
 			MainActivity.imm.hideSoftInputFromWindow(activity.barHolder.findViewById(R.id.find_searchbar).getWindowToken(),0);
-		
+
 		setUpActionBar(ACTIONBAR_BROWSER,activity);
 
 		CustomWebView WV = activity.webLayout.findViewById(R.id.browser_page);
@@ -369,14 +389,15 @@ public class SetupLayouts extends MainActivity {
 			((EditText) activity.barHolder.findViewById(R.id.browser_searchbar)).setText("");
 		}
 	}
-	
+
 
 	public static void colorizeSidebar(MainActivity activity){
 		@SuppressLint("InflateParams") LinearLayout LL = (LinearLayout) inflater.inflate(
 				R.layout.web_sidebar_footer, null);
 
 		if (Properties.sidebarProp.theme.compareTo("w") == 0) {
-
+			((TextView) LL.findViewById(R.id.browser_open_history))
+					.setTextColor(Color.BLACK);
 			((TextView) LL.findViewById(R.id.browser_open_bookmarks))
 					.setTextColor(Color.BLACK);
 			((TextView) LL.findViewById(R.id.browser_home))
@@ -395,7 +416,8 @@ public class SetupLayouts extends MainActivity {
 					.setTextColor(Color.BLACK);
 		} else if (Properties.sidebarProp.theme.compareTo("c") == 0) {
 			int sidebarTextColor = Properties.sidebarProp.sideBarTextColor;
-
+			((TextView) LL.findViewById(R.id.browser_open_history))
+					.setTextColor(sidebarTextColor);
 			((TextView) LL.findViewById(R.id.browser_open_bookmarks))
 					.setTextColor(sidebarTextColor);
 			((TextView) LL.findViewById(R.id.browser_home))
@@ -432,25 +454,26 @@ public class SetupLayouts extends MainActivity {
 		}
 
 
+		((ImageView) LL.findViewById(R.id.status_toggle_desktop_icon)).setImageResource(Properties.webpageProp.useDesktopView ? R.drawable.circle_green : R.drawable.circle_gray);
 	}
-	
-	
-	
+
+
+
 	@SuppressLint({ "InlinedApi", "NewApi" })
 	public static void setupWindow(MainActivity activity){
 		//enable fullscreen
 		if (Properties.appProp.fullscreen)
 			activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-					
+
 		int id =activity.getResources().getIdentifier("config_enableTranslucentDecor", "bool", "android");
-		
-		
+
+
 		if (Properties.appProp.transparentNav || Properties.appProp.TransparentStatus)
 			if (id == 0) {
 				if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT)
 					activity.drawerLayout.setSystemUiVisibility(4096);
 			}
-		
+
 		if (activity.tintManager!=null){
 			activity.tintManager.setStatusBarTintEnabled(false);
 			activity.tintManager.setNavigationBarTintEnabled(false);
@@ -459,26 +482,26 @@ public class SetupLayouts extends MainActivity {
 
 		activity.activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 		activity.activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-		
+
 		if (Properties.appProp.transparentNav || Properties.appProp.TransparentStatus){
 			if (id != 0) {
 				if (Build.VERSION.SDK_INT<Build.VERSION_CODES.LOLLIPOP){
-			        if (Properties.appProp.transparentNav)
+					if (Properties.appProp.transparentNav)
 						activity.activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-			        
-			        if (Properties.appProp.TransparentStatus)
+
+					if (Properties.appProp.TransparentStatus)
 						activity.activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 				}
-		        
-		        if (Properties.appProp.TransparentStatus){
+
+				if (Properties.appProp.TransparentStatus){
 					activity.tintManager = new SystemBarTintManager(activity);
 					activity.tintManager.setStatusBarTintEnabled(true);
 					activity.tintManager.setStatusBarTintColor(Properties.appProp.actionBarColor);
-		        	if (Properties.appProp.fullscreen)
+					if (Properties.appProp.fullscreen)
 						activity.tintManager.setStatusBarAlpha(0.0f);
-		        }
-		        
-		        if (Properties.appProp.transparentNav){
+				}
+
+				if (Properties.appProp.transparentNav){
 					if (activity.tintManager==null)
 						activity.tintManager = new SystemBarTintManager(activity);
 					activity.tintManager.setNavigationBarTintEnabled(true);
@@ -489,15 +512,15 @@ public class SetupLayouts extends MainActivity {
 						activity.tintManager.setNavigationBarTintEnabled(false);
 					}
 				}
-		    }
+			}
 		}
 
 		activity.drawerLayout.setScrimColor(Color.TRANSPARENT);
 		activity.drawerLayout.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
 		activity.contentFrame.setFitsSystemWindows(true);
 		activity.browserListView.setY(Tools.getStatusMargine(activity));
-		activity.webLayout.setY(Properties.ActionbarSize);
-		
+		//activity.webLayout.setY(Properties.ActionbarSize);
+
 
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 			activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -507,17 +530,17 @@ public class SetupLayouts extends MainActivity {
 				activity.getWindow().setStatusBarColor(Properties.appProp.actionBarColor);
 			else
 				activity.getWindow().setStatusBarColor(Color.BLACK);
-	    }
-		
+		}
+
 
 	}
 
 
 
 
-    /**
-     * Restore tabs that were saved when browser was closed
-     */
+	/**
+	 * Restore tabs that were saved when browser was closed
+	 */
 	static void setupWebWindows(MainActivity activity){
 		if (activity.webLayout!=null){
 
@@ -570,8 +593,12 @@ public class SetupLayouts extends MainActivity {
 									activity.webWindows.add(wv);
 									activity.browserListViewAdapter.notifyDataSetChanged();
 								}
-								if (!urlOpenRequested)
-									((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).addView(activity.webWindows.get(tabNumber));
+								if (!urlOpenRequested) {
+									if (activity.webWindows.get(tabNumber).getParent()==null) {
+										if (activity.webWindows.get(tabNumber).getParent()==null)
+											((ViewGroup) activity.webLayout.findViewById(R.id.webviewholder)).addView(activity.webWindows.get(tabNumber));
+									}
+								}
 							}else if (numSavedTabs!=0){//If no InstanceState is found, just add a single page
 								if (activity.getIntent().getAction()!=null && !activity.getIntent().getAction().equals(Intent.ACTION_WEB_SEARCH)
 										&& !activity.getIntent().getAction().equals(Intent.ACTION_VIEW)){//if page was requested from a different app, do not load home page
@@ -603,9 +630,9 @@ public class SetupLayouts extends MainActivity {
 			new Thread(new LoadRunner(activity)).start();
 		}
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 }

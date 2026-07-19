@@ -1,44 +1,28 @@
 package views;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.DownloadManager;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.content.res.Resources.NotFoundException;
-import android.graphics.Bitmap;
 import android.net.Uri;
-import android.net.http.SslError;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.View;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 import android.webkit.DownloadListener;
-import android.webkit.SslErrorHandler;
+import android.webkit.WebBackForwardList;
 import android.webkit.WebSettings;
 import android.webkit.WebSettings.PluginState;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
-import com.powerpoint45.lucidbrowser.ActivityIds;
-import com.powerpoint45.lucidbrowser.BookmarksActivity;
+import com.google.android.material.appbar.AppBarLayout;
+import com.powerpoint45.lucidbrowser.CustomWebViewClient;
 import com.powerpoint45.lucidbrowser.MainActivity;
 import com.powerpoint45.lucidbrowser.Properties;
 import com.powerpoint45.lucidbrowser.R;
@@ -49,10 +33,6 @@ import com.powerpoint45.lucidbrowser.WebAddress;
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.Calendar;
-import java.util.Date;
 
 
 @SuppressWarnings("deprecation")
@@ -61,8 +41,8 @@ public class CustomWebView extends WebView {
 	private static Field sConfigCallback;
 	protected WeakReference<MainActivity> activityRef;
 	private static String origionalUserAgent;
-	Dialog SSLDialog;
 	static DownloadManager.Request request;
+	public CustomWebViewClient client;
 
 	static {
 		try {
@@ -74,7 +54,7 @@ public class CustomWebView extends WebView {
 
 	}
 
-	private ProgressBar PB;
+
 	private boolean videoPlaying;
 	VideoEnabledWebChromeClient chromeClient;
 
@@ -84,19 +64,11 @@ public class CustomWebView extends WebView {
 		super(activity);
 		activityRef = new WeakReference<>(activity);
 
+		//setWebContentsDebuggingEnabled(true);
+
 		//setLayerType(View.LAYER_TYPE_SOFTWARE, null);
 
 		this.setId(R.id.browser_page);
-		if (url!=null && url.equals("na")){
-			//Do nothing. will load from instance
-		}else {
-			if (url == null)
-				this.loadUrl(MainActivity.prefs.getString("setbrowserhome",
-						Properties.webpageProp.assetHomePage));
-			else
-				this.loadUrl(url);
-		}
-
 		setDesktopMode(Properties.webpageProp.useDesktopView);
 
 		// Enable / Disable cookies
@@ -158,366 +130,32 @@ public class CustomWebView extends WebView {
 
 
 		activity.registerForContextMenu(this);
-		this.setWebViewClient(new WebViewClient() {
-			@Override
-			public boolean shouldOverrideUrlLoading(WebView view, String url) {
-
-				if (url.startsWith("intent://")) {
-					try {
-						Intent intent = Intent.parseUri(url, Intent.URI_INTENT_SCHEME);
-
-						if (intent != null) {
-							view.stopLoading();
-
-							PackageManager packageManager = activityRef.get().getPackageManager();
-							ResolveInfo info = packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY);
-							if (info != null) {
-								activityRef.get().startActivity(intent);
-							} else {
-								String fallbackUrl = intent.getStringExtra("browser_fallback_url");
-								if (fallbackUrl!=null)
-									view.loadUrl(fallbackUrl);
-								else return false;
-							}
-							return true;
-						}
-					} catch (Exception e) {
-						e.printStackTrace();
-						return false;
-					}
-				}
-				else if (url.startsWith("mailto:")) {
-
-					Intent intent = new Intent(Intent.ACTION_VIEW, Uri
-							.parse(url));
-					intent.putExtra("tabNumber", activityRef.get().getTabNumber());
-					try {
-						activityRef.get().startActivity(intent);
-						return true;
-					}catch (Exception e){
-						e.printStackTrace();
-						return false;
-					}
-				}
-				else if (url.startsWith("tel:")) {
-					Intent intent = new Intent(Intent.ACTION_VIEW, Uri
-							.parse(url));
-					intent.putExtra("tabNumber", activityRef.get().getTabNumber());
-					try{
-						activityRef.get().startActivity(intent);
-						return true;
-					}catch (Exception e){
-						e.printStackTrace();
-						return false;
-					}
-				}else if (url.startsWith("https://play.google.com/store/")
-						|| url.startsWith("market://")) {
-					try {
-						Intent intent = new Intent(Intent.ACTION_VIEW, Uri
-								.parse(url));
-						intent.putExtra("tabNumber", activityRef.get().getTabNumber());
-						activityRef.get().startActivity(intent);
-						System.out.println("Play Store!!");
-						return true;
-					}catch(Exception e){
-						e.printStackTrace();
-						return false;
-					}
-				}else if (url.startsWith("https://maps.google.")
-						|| url.startsWith("intent://maps.google.")) {
-
-					// Convert maps intent to normal http link
-					if (url.contains("intent://")) {
-						url = url.replace("intent://", "https://");
-						url = url.substring(0, url.indexOf("#Intent;"));
-
-					}
-					Intent intent = new Intent(Intent.ACTION_VIEW, Uri
-							.parse(url));
-					intent.putExtra("tabNumber", activityRef.get().getTabNumber());
-					try {
-						activityRef.get().startActivity(intent);
-						return true;
-					}catch(Exception e){
-						e.printStackTrace();
-						return false;
-					}
-				}else if (url.contains("youtube.com/")) {
-					// Might be a bit too generic but saves a lot of comparisons
-
-					Intent intent = new Intent(Intent.ACTION_VIEW, Uri
-							.parse(url));
-					intent.putExtra("tabNumber", activityRef.get().getTabNumber());
-					try {
-						activityRef.get().startActivity(intent);
-						return true;
-					}catch(Exception e){
-						e.printStackTrace();
-						return false;
-					}
-				}else if (!url.startsWith("http://") && !url.startsWith("https://")){
-					Log.d("LB","SPECIAL "+url);
-					Context context = view.getContext();
-					Intent intent = null;
-					try {
-						intent = Intent.parseUri(url, Intent.URI_INTENT_SCHEME);
-					} catch (URISyntaxException e) {
-						e.printStackTrace();
-					}
-
-					if (intent != null) {
-						view.stopLoading();
-
-						PackageManager packageManager = context.getPackageManager();
-						ResolveInfo info = packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY);
-						if (info != null) {
-							context.startActivity(intent);
-						} else {
-							String fallbackUrl = intent.getStringExtra("browser_fallback_url");
-							if (fallbackUrl!=null)
-								view.loadUrl(fallbackUrl);
-							else return false;
-						}
-						return true;
-					}
-				}
-
-				return false;
-			}
-
-			@Override
-			public void onPageStarted(WebView view, String url, Bitmap favicon) {
-				if (activityRef.get()!=null && activityRef.get().webLayout!=null) {
-					CustomWebView WV = activityRef.get().webLayout
-							.findViewById(R.id.browser_page);
-
-					if (WV != null && CustomWebView.this == WV) {
-						if (PB == null)
-							try {
-								PB = activityRef.get().webLayout
-										.findViewById(R.id.webpgbar);
-							} catch (Exception e) {
-							}
-						if (view.getVisibility() == View.VISIBLE)
-							if (PB != null && PB.getVisibility() != View.VISIBLE
-									&& url.compareTo("about:blank") != 0)
-								PB.setVisibility(ProgressBar.VISIBLE);
-						ImageButton IB = activityRef.get().barHolder.findViewById(R.id.browser_refresh);
-						if (IB != null) {
-							IB.setImageResource(R.drawable.btn_toolbar_stop_loading_normal);
-						}
-						setUrlBarText(url);
-
-						//force colorize toolbar
-						activityRef.get().toolbar.requestLayout();
-					}
-				}
-			}
-
-
-			@Override
-			public void onPageFinished(WebView view, String url) {
-				if (PB == null)
-					PB = activityRef.get().webLayout
-							.findViewById(R.id.webpgbar);
-
-				if (activityRef.get().browserListViewAdapter != null)
-					activityRef.get().browserListViewAdapter.notifyDataSetChanged();
-
-				Log.d("LB","pageFinished");
-				if (view.getUrl()!=null && view.getUrl().equals(Properties.webpageProp.assetHomePage)) {
-					//Replace the Search text on the document with properly localized string
-					String js = "javascript:(function() { ";
-					js += "document.getElementById('search').placeholder = '"+getResources().getString(R.string.search)+"';";
-					if (Properties.webpageProp.engine.contains("ecosia.org/search?tt=lucid&q=")) {
-						js += "document.getElementById('add').name = 'tt';";
-						js += "document.getElementById('add').value = 'lucid';";
-					}
-					js+="})()";
-
-					view.loadUrl(js);
-					Log.d("LL","fixing placeholder");
-				}
-
-				CustomWebView WV = activityRef.get().webLayout
-						.findViewById(R.id.browser_page);
-
-				if (WV == CustomWebView.this) {// check if this webview is being
-					// currently shown/used
-					if (activityRef.get().findViewById(R.id.browser_searchbar) != null)
-						if (activityRef.get().findViewById(R.id.browser_searchbar).isFocused())
-							if (view != null)
-								if (view.getUrl() != null  && !view.getUrl().equals("about:blank")) {
-									setUrlBarText(view.getUrl());
-								}
-					if (PB!=null)
-						PB.setVisibility(ProgressBar.INVISIBLE);
-
-					ImageButton IB = activityRef.get().barHolder
-							.findViewById(R.id.browser_refresh);
-					if (IB != null) {
-						IB.setImageResource(R.drawable.btn_toolbar_reload_normal);
-					}
-
-					ImageButton BI = activityRef.get().barHolder
-							.findViewById(R.id.browser_bookmark);
-					if (BI != null) {
-						String bookmarkName = null;
-						if (CustomWebView.this.getUrl() != null){
-							bookmarkName = BookmarksActivity.bookmarksMgr.root.containsBookmarkDeep(CustomWebView.this.getUrl());
-						}
-
-						if (bookmarkName != null){
-							BI.setImageResource(R.drawable.btn_omnibox_bookmark_selected_normal);
-						} else {
-							BI.setImageResource(R.drawable.btn_omnibox_bookmark_normal);
-						}
-					}
-					//force colorize toolbar
-					activityRef.get().toolbar.requestLayout();
-				}
-
-			}
-
-			@Override
-			public void onReceivedSslError(WebView view,
-										   SslErrorHandler handler, SslError error) {
-				super.onReceivedSslError(view, handler, error);
-
-				int errorCode = error.getPrimaryError();
-				System.out.println("SSL ERROR " + errorCode + " DETECTED");
-
-				sslCertificateErrorDialog(view, handler, error, errorCode);
-			}
-
-			@SuppressLint({"NewApi", "StringFormatInvalid", "StringFormatMatches"})
-			// Is surpressed as the code will only be executed on the correct platform
-			private void sslCertificateErrorDialog(WebView view,
-												   final SslErrorHandler handler, SslError error, int errorCode)
-					throws NotFoundException {
-
-				if (!(SSLDialog!=null && !SSLDialog.isShowing())) {
-					String title = "SSL Error detected";
-					String msg = "";
-					String url = "";
-
-					if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-						url = error.getUrl();
-					} else {
-						url = error.toString();
-						url = url.substring(url.lastIndexOf(" on URL: ") + 9);
-					}
-
-					String host = null;
-					try {
-						host = new URL(url).getHost();
-					} catch (Exception ignored) {
-					}
-
-
-					final SharedPreferences sslPreferences = activityRef.get().getSharedPreferences("sslurls", 0);
-
-					if (host != null && !sslPreferences.contains(host)) {
-
-
-						String sslWarning = getResources().getString(
-								R.string.sslWebsiteWarning);
-						String proceedQuestion = getResources().getString(
-								R.string.sslProceedQuestion);
-
-						if (errorCode == SslError.SSL_UNTRUSTED) {
-							msg = String.format(
-									getResources().getString(
-											R.string.sslUntrustedMessage), url);
-
-							title = String
-									.format(getResources().getString(
-											R.string.sslUntrustedTitle), url);
-						} else if (errorCode == SslError.SSL_IDMISMATCH) {
-							String issuedTo = error.getCertificate().getIssuedTo()
-									.getCName();
-							msg = String.format(
-									getResources().getString(
-											R.string.sslIdMismatchMessage), url,
-									issuedTo);
-
-							title = String.format(
-									getResources().getString(
-											R.string.sslIdMismatchTitle), url);
-						} else if (errorCode == SslError.SSL_DATE_INVALID) {
-
-							Date currentDate = Calendar.getInstance().getTime();
-							Date expiredOn = error.getCertificate()
-									.getValidNotAfterDate();
-
-							if (currentDate.after(expiredOn)) {
-
-								msg = String.format(
-										getResources().getString(
-												R.string.sslExpiredMessage), url,
-										expiredOn.toString());
-
-								title = String.format(
-										getResources().getString(
-												R.string.sslExpiredTitle), url);
-							} else {
-								Date validFrom = error.getCertificate()
-										.getValidNotBeforeDate();
-								msg = String.format(
-										getResources().getString(
-												R.string.sslNotYetValidMessage), url,
-										validFrom.toString());
-
-								title = String.format(
-										getResources().getString(
-												R.string.sslNotYetValidTitle), url);
-
-							}
-
-						}
-
-						AlertDialog.Builder builder = new AlertDialog.Builder(activityRef.get());
-
-						final String finalHost = host;
-						builder.setMessage(
-								msg + " " + sslWarning + "\n\n" + proceedQuestion)
-								.setTitle(title)
-								.setPositiveButton(android.R.string.ok,
-										new DialogInterface.OnClickListener() {
-											public void onClick(DialogInterface dialog,
-																int id) {
-												handler.proceed();
-												sslPreferences.edit().putBoolean(finalHost, true).apply();
-												SSLDialog = null;
-											}
-										})
-								.setNegativeButton(android.R.string.cancel,
-										new DialogInterface.OnClickListener() {
-											public void onClick(DialogInterface dialog,
-																int id) {
-												handler.cancel();
-												SSLDialog = null;
-											}
-										});
-
-						SSLDialog = builder.create();
-						SSLDialog.setCancelable(false);
-						SSLDialog.setCanceledOnTouchOutside(false);
-						SSLDialog.show();
-
-					}
-				}
-			}
-		});
-
-
+		client = new CustomWebViewClient(activity);
+		this.setWebViewClient(client);
 
 		chromeClient = new VideoEnabledWebChromeClient(CustomWebView.this, activity);
 		this.setWebChromeClient(chromeClient);
 
+
+		//Load initial page
+		if (url!=null && url.equals("na")){
+			//Do nothing. will load from instance
+		}else {
+			if (url == null) {
+				String urlLoad = MainActivity.prefs.getString("setbrowserhome",
+						Properties.webpageProp.assetHomePage);
+
+				Log.d("LB","url load:" + urlLoad);
+				this.loadUrl(urlLoad);
+			}
+			else
+				this.loadUrl(url);
+		}
+
 		this.setDownloadListener(new DownloadListener() {
 
 			public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
+				Log.d("LB","onDownloadStart");
 				Uri downloadUri = Uri.parse(url);
 
 				// get file name. if filename exists in contentDisposition, use it. otherwise, use the last part of the url.
@@ -531,7 +169,29 @@ public class CustomWebView extends WebView {
 			}
 		});
 
+
 	}
+
+
+
+
+	public void notifyVideoEnded(){
+		Log.d("LB","notifyVideoEnded");
+	}
+
+
+
+	//Only Enable Swipe refresh when top of page is reeched
+	@Override
+	protected void onScrollChanged(int l, int t, int oldl, int oldt) {
+
+		boolean enableSwipeRefresh = this.getScrollY()==0 && activityRef.get().webLayout.getY()==Tools.getStatusMargine(getContext());
+		if (activityRef.get().findViewById(R.id.swipe_refresh).isEnabled()!= enableSwipeRefresh)
+			activityRef.get().findViewById(R.id.swipe_refresh).setEnabled(enableSwipeRefresh);
+		super.onScrollChanged(l, t, oldl, oldt);
+	}
+
+
 
 	public CustomWebView(Context context) {
 		super(context);
@@ -544,6 +204,8 @@ public class CustomWebView extends WebView {
 	public boolean isVideoPlaying() {
 		return videoPlaying;
 	}
+
+
 
 	public void setDesktopMode(final boolean enabled) {
 		final WebSettings webSettings = getSettings();
@@ -572,6 +234,29 @@ public class CustomWebView extends WebView {
 		webSettings.setLoadWithOverviewMode(enabled);
 	}
 
+	boolean justRestoredState;
+	@Override
+	public WebBackForwardList restoreState(Bundle inState) {
+		justRestoredState = true;
+		return super.restoreState(inState);
+
+	}
+
+	@Override
+	protected void onWindowVisibilityChanged(int visibility) {
+		super.onWindowVisibilityChanged(visibility);
+		Log.d("LB", "onWindowVisibilityChanged");
+		if (justRestoredState){
+			justRestoredState = false;
+			reload();
+		}
+	}
+
+	@Override
+	public void setVisibility(int visibility) {
+		super.setVisibility(visibility);
+		Log.d("LB", "vis:"+visibility);
+	}
 
 	public void setVideoPlaying(boolean b) {
 		videoPlaying = b;
@@ -617,6 +302,7 @@ public class CustomWebView extends WebView {
 											   String url, String userAgent, String contentDisposition,
 											   String mimetype, String fileName, boolean privateBrowsing) {
 
+		Log.d("LB", "onDownloadStartNoStream " + url);
 		// java.net.URI is a lot stricter than KURL so we have to encode some
 		// extra characters. Fix for b 2538060 and b 1634719
 		WebAddress webAddress;
@@ -634,8 +320,20 @@ public class CustomWebView extends WebView {
 		try {
 			request = new DownloadManager.Request(uri);
 		} catch (IllegalArgumentException e) {
+			Log.e("LB", "IllegalArgumentException:" + url);
+			e.printStackTrace();
 			return;
 		}
+
+		// Ensure the fileName is not null or empty.
+		if (fileName == null || fileName.isEmpty()) {
+			fileName = uri.getLastPathSegment();
+			if (fileName == null || fileName.isEmpty()) {
+				fileName = "default_download_file"; // Fallback to a default file name.
+			}
+		}
+
+
 		request.setTitle(fileName);
 
 		request.setMimeType(mimetype);
@@ -661,26 +359,16 @@ public class CustomWebView extends WebView {
 			// We must have long pressed on a link or image to download it. We
 			// are not sure of the mimetype in this case, so do a head request
 			mimetype = "";
-		} else {
-			new Thread("Browser download") {
-				public void run() {
-					if (!enqueDownload(activity)) {
-						ActivityCompat.requestPermissions(activity,
-								new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-								ActivityIds.PERMISSIONS_REQUEST_ACCESS_FILES_FOR_DOWNLOAD);
-					}
-				}
-			}.start();
 		}
-
-
-
+		new Thread("Browser download") {
+			public void run() {
+				enqueDownload(activity);
+			}
+		}.start();
 	}
 
 	public static boolean enqueDownload(final Activity c){
-		if (ContextCompat.checkSelfPermission(c,
-				Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-
+			Log.d("LB", "enqueDownload");
 			DownloadManager manager
 					= (DownloadManager) c.getSystemService(Context.DOWNLOAD_SERVICE);
 
@@ -696,9 +384,6 @@ public class CustomWebView extends WebView {
 			}
 
 			return true;
-		}else
-			return false;
-
 	}
 
 	// This is to work around the fact that java.net.URI throws Exceptions
@@ -749,7 +434,6 @@ public class CustomWebView extends WebView {
 		setDownloadListener(null);
 
 		chromeClient = null;
-		PB = null;
 		activityRef = null;
 
 		try {
